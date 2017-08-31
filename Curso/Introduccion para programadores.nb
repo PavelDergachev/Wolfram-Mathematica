@@ -1,0 +1,207 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5658,        197]
+NotebookOptionsPosition[      4794,        162]
+NotebookOutlinePosition[      5141,        177]
+CellTagsIndexPosition[      5098,        174]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"GeoDistance", "[", 
+  RowBox[{
+   RowBox[{"Entity", "[", 
+    RowBox[{"\"\<City\>\"", ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Chicago\>\"", ",", "\"\<Illinois\>\"", ",", 
+       "\"\<UnitedStates\>\""}], "}"}]}], "]"}], ",", 
+   RowBox[{"Entity", "[", 
+    RowBox[{"\"\<City\>\"", ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Tokyo\>\"", ",", "\"\<Tokyo\>\"", ",", "\"\<Japan\>\""}], 
+      "}"}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6707589239386845`*^9, 3.6707589239386845`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"10132.524463154945`","\"km\"","kilometers","\"Kilometers\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.670758932054978*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], ":=", " ", 
+   RowBox[{
+    RowBox[{"x", "^", "2"}], " ", "+", 
+    RowBox[{"12", "x"}], "+", "2"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.670759295074152*^9, 3.6707593169835124`*^9}, 
+   3.6707593691347775`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "1", ",", "12", ",", "2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.670759372088095*^9, 3.670759402460068*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"15", ",", "47", ",", "87", ",", "135", ",", "191", ",", "255"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.670759403085024*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"t", ":=", "Now"}]], "Input",
+ CellChangeTimes->{{3.6707594395793347`*^9, 3.6707594449638777`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["t"], "Input",
+ CellChangeTimes->{3.6707594483560133`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{RowBox[{"\"Wed 27 Apr 2016 10:24:08\"", 
+     StyleBox[
+      RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+        RowBox[{"-", "5.`"}]}], FontColor -> GrayLevel[0.5]]}],
+   RowBox[{"DateObject", "[", 
+     RowBox[{
+       RowBox[{"{", 
+         RowBox[{"2016", ",", "4", ",", "27"}], "}"}], ",", 
+       RowBox[{"TimeObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"10", ",", "24", ",", "8.4654406`"}], "}"}], ",", 
+           RowBox[{"TimeZone", "\[Rule]", 
+             RowBox[{"-", "5.`"}]}]}], "]"}], ",", 
+       RowBox[{"TimeZone", "\[Rule]", 
+         RowBox[{"-", "5.`"}]}]}], "]"}]},
+  "DateObject",
+  Editable->False]], "Output",
+ CellChangeTimes->{3.6707594484966383`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"s", "[", 
+      RowBox[{"3", "+", "1"}], "]"}], ",", 
+     RowBox[{"s", "[", 
+      RowBox[{"s", "+", "1"}], "]"}], ",", 
+     RowBox[{"s", "[", "r", "]"}], ",", 
+     RowBox[{"R", "[", "1", "]"}], ",", 
+     RowBox[{"R", "[", "12", "]"}]}], "}"}], ",", 
+   RowBox[{"s", "[", 
+    RowBox[{"_", "+", "1"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6707596535256724`*^9, 3.670759656781461*^9}, {
+  3.6707597109284754`*^9, 3.670759834303029*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"s", "[", 
+   RowBox[{"1", "+", "s"}], "]"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.670759747199235*^9, {3.670759783159189*^9, 3.6707598348654823`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<`Global*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.670760044777171*^9, 3.670760061929767*^9}, {
+  3.670760112460328*^9, 3.6707601203043833`*^9}, {3.670760180768753*^9, 
+  3.670760181214475*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"F", "[", 
+      RowBox[{"a", ",", "s"}], "]"}], ",", 
+     RowBox[{"g", "[", "2", "]"}], ",", 
+     RowBox[{"s", "[", "d", "]"}], ",", 
+     RowBox[{"F", "[", "s", "]"}]}], "}"}], ",", 
+   RowBox[{"F", "[", "__", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6707599884725046`*^9, 3.6707600315393953`*^9}, {
+  3.6707601604153705`*^9, 3.6707601939433036`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"F", "[", 
+    RowBox[{"a", ",", "s"}], "]"}], ",", 
+   RowBox[{"F", "[", "s", "]"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.6707600323674955`*^9, 3.6707601237875147`*^9, {3.6707601853382235`*^9, 
+   3.670760194380776*^9}}]
+}, Open  ]]
+},
+WindowSize->{759, 581},
+WindowMargins->{{Automatic, 295}, {24, Automatic}},
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (December 10, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 529, 14, 52, "Input"],
+Cell[1112, 38, 158, 3, 38, "Output"]
+}, Open  ]],
+Cell[1285, 44, 284, 8, 31, "Input"],
+Cell[CellGroupData[{
+Cell[1594, 56, 246, 6, 31, "Input"],
+Cell[1843, 64, 167, 4, 31, "Output"]
+}, Open  ]],
+Cell[2025, 71, 122, 2, 31, "Input"],
+Cell[CellGroupData[{
+Cell[2172, 77, 71, 1, 31, "Input"],
+Cell[2246, 80, 739, 19, 41, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3022, 104, 543, 15, 31, "Input"],
+Cell[3568, 121, 195, 5, 31, "Output"]
+}, Open  ]],
+Cell[3778, 129, 239, 4, 31, "Input"],
+Cell[CellGroupData[{
+Cell[4042, 137, 454, 12, 31, "Input"],
+Cell[4499, 151, 279, 8, 31, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

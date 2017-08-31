@@ -1,0 +1,2278 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     95492,       2268]
+NotebookOptionsPosition[     93511,       2201]
+NotebookOutlinePosition[     94159,       2226]
+CellTagsIndexPosition[     94116,       2223]
+WindowTitle->Engineering-Style Smith Chart - Source
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Engineering-Style Smith Chart", "Section",
+ CellFrame->{{0, 0}, {0, 0}},
+ ShowCellBracket->False,
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[BoxData[
+ GraphicsBox[RasterBox[CompressedData["
+1:eJztnVuO40QUQFuAxGyBT5YCSxhWABL8IgESYpOjmR6+gA3Mb/s13Xk0jssu
+19vXjhMn9jkqIqeq7q37qHIuTge+/enXt7988fDw8Pub+uXtj39+99tvP/71
+w1f1m+//+uPnn76sL76p/3nz9cPD6fr1xP719fB6rNv+dH1s3qrOGdpkPfvL
+6DlHiVxVbKZQwyzTxjq+j1/MHs/rt8X38+y+nGPJ+V7cQhzmiqR8QjDyifMi
+6fGHjpHmDR11f9OO++Ph5bh/Puyqpn0+1Nd1z3F3PJpGnlrdWQ/t9y/73akd
+9vXbw/GkEACuD2WYUMmNl2GkUq7kxlN5puNU1NfUc74NVNRzRVI+gYoaAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAALbFEWB7LH3sAAAAYFUsXdoA3DpLn1EA
+AIAwS39CroqDzdLmTGeCI/fl+9LHDgAAAFbF0qXNqrivqjLB6ivqUSx9RgEA
+AFrMj6cDwCZZ+hQCAADAfUNFDSCHR6MAIORT9u+np3+XtuGfT9l/y9qg+fT0
+z+IBWRkUbwAHnosCAKwaKmoHKurZoaIGGEXwuejSRgEAAAAAAAAAAABckOBz
+0T3AddntdkubAEvCBgBYDTubpc25Klv2HQBuAe48G4cNALAatlxVXtl3/WiU
+56IAQmY5mFu7s60VYR5J94rZcsUCAAAwGSpq0FBRAxU1LEjsuegOAAAAAAAA
+AAAAYKWoR6P+T+mXtgsAAAAAAAAAAADgUvBcFAAAAAAAAAAAALZG7Lnoy83w
+/Py8tAmrhdhOhtABwLw8e1xaEEACO2o1kMrLQWwnQ+gAYF6oqEGIk+vdbuf/
+J0aXthEAAADuEr+wnMbSfkxhy74DAAAAwFxsuaq8gu/OtOBz0bnMAAAAAAAA
+AAAAALgFPjdUVVW/1m/Vr+l5LgqwLDN+LQIAAAAAsEGoqAEAYBDJc9HPAAAA
+AAAAAAAAACuiah6Klt2D0ZfQc9E8z4uasqxbTX2ZZVn95tTnvGbFqXU9ipOY
+nlO2c9oJmRrVrX1ryZaloaesiioveilz9bKXalt7Xfb9+qJSy2d1eypO7iin
+CuVeL5I1czopNafnNLPspYzV9fwiiTNhcH6eZ4rTdekE2YqJGcbCjH/R5sjO
+QiuS27JRPUWvx5QyBbvOPh15FygdusIIaTutT3cbfNWpxXs9RTfaTWiVN/r7
+RfWcZAraqHabvOyu/NhakcmK8KsdsbJxsX21Nnx/mvqtnqkrQ0nZ5k4fsVIf
+N+N86ZYbx8rw0zbJSlahXXaC4+8EdYTbV0t/f0zM+DuHy8yg2ZwJsWmlZZtx
+Zs0z6BzS4F1FnDt9WKbmrkrkrr6bebkLbLZE7ipx7oLbuBvuqC/zpmVNy/uD
+0LqQN1nJ2tZPCBkQpf5AqZs6qqqpngixDRAcjTZn0Tyve3qF+YmsI28mSzV7
+tuVdG2dhQm3IvFk0X8H42EISUkFQ22YmR+7C96a3pAy79zKMVGqpe08lFXUs
+BVTUkqqs6I4wFbU4d1TUHlTUY9VSUftB2F5FHfVd7+1m036uKv1XowfFfq+W
+znue6gPclHanN+rupc5w2dVS6lWN6uvWttJ6Va3Tkxe9ErNIUeJKW2nM6VVZ
+7uu7Ti/rDpnofnWhX7WIYbyl2ZxjSjlqGw0q5JUplbe5aoW6OTqHlc6PnVXL
+o2YVHb3cCFShL/yQGh5YnWWbMqOOsfUUdga1BnfFtr90IulHxomb/9bsd3Kk
+4uCE3ZkTf6tPVbtBC4tcbcuisALYOWjtfD1HT+h8Nze/u//NkDo9+hMxj3+0
+mSkwk6tPom25es30CfIEc52rsjPYMFtdZ8ai5lHV2gJ3KWcDFJEz6B8rs8eZ
+Y6be1+/1l3buirNz1+6BC+euv3kaJ2tC7rLu2myWJU6zGScb15MivRPmYvIS
+g4KJLX0d5orJKLVzWesPGcVGfokV79J3d5Qy7G7LsC4gpPLuUxkIGhV1u0EL
+CypqKurWcypqKuq0YGJLX4e5YjJK7VzW+kNU1KN8V1LtA/O6bqiql5cX9VD0
+eDyqJ6OnCXmWh1CCekX96k8zn8wHNTij/kxnclAqJhgc9WcWzddVaW2S5WI2
+xFZPuOOI96NFoD/te1RV3GyJI3koboPazP0QTGtQMBF8YV6CIu2mtUOaEMyN
+fa59H7sVhWT5wKkZrVCWqeBB1qOjtn1QMHajSGsY1C/p33LuhKvEOEetfMUL
+rXIOk2PifGpfx7xRo3AvUIbFetJ2CldPuOOI96NTyzBSGeu5u1QmFpL0BPup
+qINz5OlIcINVWWyXDhpjClJRL5I74SoxzlErX/FCq5zD5JhQUcOlqXP61KDO
+ftX8vajzXDTr/p7f/0lK5nWlHwtn3S8shCJqyDAgIJ4wRj4tZoOzdPBicFTC
+4OP04HIS1MmVTCviofY1SHrkowmpQUFh6NTtK9hfGB/rgwY7iciMny859sSM
+T6cynQjn2vd9Wpx9JYP5VV+smDOzriIKZsSJv9zO2FYcPBHKPNOYLefO+RCf
+pjz9nV0eqXb0x01Qp/4k8uc7Q1pJ4uvCWfBNGvRCouecyC+On6P0qDDd5szg
+l7bpAE5LSux037LvWX9XcdX6vlCGjTJm0AB/ibHK7QySypWkclB/LNS+BkmP
+fDQhNShIRS0xexRBy/1jS0UtMfVGcqehoh6EitrnFqrKLVfUCd8dwyr/d/TN
+34vm3ZcmwVtiZtysMvuWZd4Vg345/YnYOgdWkoVs6D7vW564LYzKu0SJ5BaU
+cMGJ/zQbpk3OvA9Hx86g2c5FzH3JvwjEeuTbLNgTszyBaa3ccj96quQI2pZW
+FRSRp1jLahGhF8GSLGi8KeLM9G8ag9Y6PTpu6WlBtpY7n1gFlZ4/9qNz1CrB
+Ckponpyx9ZXp9dhwxXxJ60lXDnfE2FALuXQlPwsz+k4ZJl9xlEnXL8NIpXzF
+USZRUQdXpKIeXFfizqDljqwWoaJOr3u/ufOhohaqpaKeDBX1pX3Puz8ZVfcB
+9Tv6w+Fg/n+X3r9//2jz8eNH59Xs9zvNt44eR4kzOTYaXNS5jnX6GnyPgoYl
+lAR1+m7GlCdm+l6YRtYXHwydvoi5ljxQsfzGGHTk0TbSl0047uiPrTU4Jybl
+m/ohvvGct4O+pM3wlSRkP3gJffRSllYe0x+Lg++ms3RshyTSFyQY3oRH6QjH
+3HHW2lrugiJCnWlxiZ5YZMYyuOhkVbOYNyOJOI+1Nq3qEkEYtTFmMWmC1H35
+Thk2qCSo03czpjwx0/fCNPJxZBlGKgeV3EsqYzGJLZFwKigYc+TRNtKXTTju
+6I+tNTgnJuWbSkXtOBLbGLEdkkhfkGB4Ex6lIxxzx1lra7kLigh1psUlemKR
+GcvgopNVzWLejCTiPNbatKpLBGHUxpjFpAlSq/E9uMTfDY9NKf7u3btXAAAA
+AAAAAAAAgI3xP5e3Sto=
+   "], {{0, 0}, {1800, 25}}, {0, 255},
+   ColorFunction->RGBColor],
+  ImageSize->{1800, 25},
+  PlotRange->{{0, 1800}, {0, 25}}]], "Section",
+ CellFrame->{{0, 0}, {0, 0}},
+ ShowCellBracket->False],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"t", "=", 
+   FractionBox["15", "10"]}], ";", 
+  RowBox[{"b", "=", 
+   RowBox[{"-", 
+    FractionBox["15", "10"]}]}], ";", 
+  RowBox[{"l", "=", 
+   RowBox[{"-", "2"}]}], ";", 
+  RowBox[{"r", "=", "3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"psteps", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     FractionBox["2", "100"], ",", 
+     FractionBox["5", "100"], ",", 
+     FractionBox["1", "10"], ",", 
+     FractionBox["2", "10"], ",", 
+     FractionBox["3", "10"], ",", 
+     FractionBox["4", "10"], ",", 
+     FractionBox["5", "10"], ",", 
+     FractionBox["6", "10"], ",", 
+     FractionBox["7", "10"], ",", 
+     FractionBox["8", "10"], ",", 
+     FractionBox["9", "10"], ",", "1", ",", 
+     FractionBox["11", "10"], ",", 
+     FractionBox["12", "10"], ",", 
+     FractionBox["14", "10"], ",", 
+     FractionBox["16", "10"], ",", 
+     FractionBox["18", "10"], ",", "\[IndentingNewLine]", "2", ",", 
+     FractionBox["25", "10"], ",", "3", ",", "4", ",", "5", ",", "6", ",", 
+     "7", ",", "8", ",", "10", ",", "12", ",", "14", ",", "18"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nsteps", "=", 
+    RowBox[{"-", 
+     RowBox[{"Select", "[", 
+      RowBox[{"psteps", ",", 
+       RowBox[{
+        RowBox[{"#", "\[NotEqual]", "1"}], "&"}]}], "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"N", ".", "B", "."}], ",", " ", 
+    RowBox[{
+    "the", " ", "first", " ", "angles", " ", "are", " ", "from", " ", "the", 
+     " ", "centers", " ", "of", " ", "the", " ", "reactance", " ", "circles", 
+     " ", "measured", " ", 
+     FractionBox[
+      RowBox[{"from", " "}], "\[Placeholder]"]}]}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"arcSteps", "=", " ", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y", ",", "r", ",", "s"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"s", "=", 
+         RowBox[{"Solve", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["x", "2"], "+", 
+               SuperscriptBox["y", "2"]}], "\[Equal]", "1"}], ",", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{"x", "-", "1"}], ")"}], "2"], "+", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{"y", "-", 
+                  FractionBox["1", "r"]}], ")"}], "2"]}], "\[Equal]", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "r"], ")"}], "2"]}], ",", 
+             RowBox[{"x", "\[NotEqual]", " ", "1"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"r", ",", 
+          RowBox[{
+           RowBox[{"ArcTan", "[", 
+            RowBox[{
+             RowBox[{"x", "/.", 
+              RowBox[{
+              "s", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
+             ",", 
+             RowBox[{"y", "/.", 
+              RowBox[{
+              "s", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}]}],
+             "]"}], "//", "N"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"r", ",", "psteps"}], "}"}]}], "\[IndentingNewLine]", "]"}]}],
+     "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"swrSteps", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{"psteps", ",", " ", 
+     RowBox[{
+      RowBox[{"1", "<", "#", "\[LessEqual]", "12"}], "&"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"formIsImpedance", " ", "=", " ", "1"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"unitResistance", "=", " ", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"unitReactance", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"plot", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"p", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0"}], "}"}]}], ";"}]}], "Input",
+ InitializationCell->True,
+ CellID->11411590],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "formIsImpedance", ",", " ", "unitResistance", ",", " ", 
+       "unitReactance", ",", " ", "plot", ",", " ", "p"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"formIsImpedance", "=", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"form", "\[Equal]", " ", "\"\<impedance\>\""}], ",", "1", 
+         ",", 
+         RowBox[{"-", "1"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"unitResistance", "=", " ", 
+       FractionBox["plotResistance", "standard"]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"unitReactance", "=", 
+       FractionBox["plotReactance", "standard"]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"plot", "=", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"unitReactance", "\[Equal]", "0.0"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"x", "\[Rule]", 
+            RowBox[{"formIsImpedance", 
+             FractionBox[
+              RowBox[{"unitResistance", "-", "1"}], 
+              RowBox[{"unitResistance", "+", "1"}]]}]}], ",", 
+           RowBox[{"y", "\[Rule]", "0"}]}], "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"Select", "[", 
+           RowBox[{
+            RowBox[{"NSolve", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{
+                  SuperscriptBox[
+                   RowBox[{"(", 
+                    RowBox[{"x", "-", "formIsImpedance"}], ")"}], "2"], "+", 
+                  SuperscriptBox[
+                   RowBox[{"(", 
+                    RowBox[{"y", "-", 
+                    FractionBox["formIsImpedance", "unitReactance"]}], ")"}], 
+                   "2"]}], "\[Equal]", 
+                 SuperscriptBox[
+                  RowBox[{"(", 
+                   FractionBox["1", "unitReactance"], ")"}], "2"]}], ",", 
+                RowBox[{
+                 RowBox[{
+                  SuperscriptBox[
+                   RowBox[{"(", 
+                    RowBox[{"x", "-", 
+                    RowBox[{"formIsImpedance", 
+                    FractionBox["unitResistance", 
+                    RowBox[{"1", "+", "unitResistance"}]]}]}], ")"}], "2"], 
+                  "+", 
+                  SuperscriptBox["y", "2"]}], "\[Equal]", 
+                 SuperscriptBox[
+                  RowBox[{"(", 
+                   FractionBox["1", 
+                    RowBox[{"1", "+", "unitResistance"}]], ")"}], "2"]}]}], 
+               "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"x", ",", "y"}], "}"}]}], "]"}], ",", 
+            RowBox[{
+             RowBox[{"\[Not]", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"Abs", "[", 
+                   RowBox[{"x", "/.", "#"}], "]"}], "\[Equal]", "1.0"}], 
+                 ")"}], " ", "&&", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"y", "/.", "#"}], ")"}], " ", "\[Equal]", " ", 
+                  "0.0"}], ")"}]}], ")"}]}], "&"}]}], "]"}], 
+          "\[IndentingNewLine]", "\[LeftDoubleBracket]", "1", 
+          "\[RightDoubleBracket]"}]}], "\[IndentingNewLine]", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"p", "=", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x", "/.", " ", "plot"}], ",", 
+         RowBox[{"y", "/.", "plot"}]}], "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Show", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{"labels", ",", "\[IndentingNewLine]", 
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"Graphics", "[", 
+               RowBox[{"{", 
+                RowBox[{"Orange", ",", 
+                 RowBox[{"Arrowheads", "[", "0.02", "]"}], ",", 
+                 RowBox[{"Arrow", "[", 
+                  RowBox[{"Line", "[", 
+                   RowBox[{"1.075", " ", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cos", "[", "\[Theta]", "]"}], ",", 
+                    RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\[Theta]", ",", 
+                    RowBox[{"165", " ", "Degree"}], " ", ",", 
+                    RowBox[{"135", " ", "Degree"}], ",", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], "Degree"}]}], "}"}]}], "]"}]}], "]"}],
+                   "]"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"Graphics", "[", "\[IndentingNewLine]", 
+               RowBox[{"{", "\[IndentingNewLine]", 
+                RowBox[{"Orange", ",", "\[IndentingNewLine]", 
+                 RowBox[{"Table", "[", "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{"Text", "[", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"StringTake", "[", "\[IndentingNewLine]", 
+                    RowBox[{"\"\<toward generator\>\"", ",", 
+                    RowBox[{"{", "i", "}"}]}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"1.10", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cos", "[", 
+                    RowBox[{
+                    RowBox[{"166", " ", "Degree"}], " ", "-", 
+                    RowBox[{"1.5", " ", "i", " ", "Degree"}]}], "]"}], ",", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{
+                    RowBox[{"166", " ", "Degree"}], " ", "-", 
+                    RowBox[{"1.5", " ", "i", " ", "Degree"}]}], "]"}]}], 
+                    "}"}]}], ",", "\[IndentingNewLine]", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Sin", "[", 
+                    RowBox[{
+                    RowBox[{"166", " ", "Degree"}], " ", "-", 
+                    RowBox[{"1.5", " ", "i", " ", "Degree"}]}], "]"}], ",", 
+                    RowBox[{"-", 
+                    RowBox[{"Cos", "[", 
+                    RowBox[{
+                    RowBox[{"166", " ", "Degree"}], " ", "-", 
+                    RowBox[{"1.5", " ", "i", " ", "Degree"}]}], "]"}]}]}], 
+                    "}"}]}], "\[IndentingNewLine]", "]"}], ",", 
+                   "\[IndentingNewLine]", 
+                   RowBox[{"{", 
+                    RowBox[{"i", ",", "1", ",", 
+                    RowBox[{
+                    "StringLength", "[", "\"\<toward generator\>\"", "]"}]}], 
+                    "}"}]}], "]"}]}], "\[IndentingNewLine]", "}"}], 
+               "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Thickness", "[", ".002", "]"}], ",", "Gray", ",", 
+                 RowBox[{"Table", "[", 
+                  RowBox[{
+                   RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cos", "[", "r", " ", "]"}], ",", 
+                    RowBox[{"Sin", "[", "r", "]"}]}], "}"}], ",", 
+                    RowBox[{"1.01", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cos", "[", "r", " ", "]"}], ",", 
+                    RowBox[{"Sin", "[", "r", "]"}]}], "}"}]}]}], "}"}], "]"}],
+                    ",", 
+                   RowBox[{"{", 
+                    RowBox[{"r", ",", 
+                    RowBox[{"0", " ", "Degree"}], ",", 
+                    RowBox[{"350", " ", "Degree"}], ",", 
+                    RowBox[{"10", " ", "Degree"}]}], "}"}]}], "]"}]}], "}"}], 
+               "]"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Thickness", "[", ".001", "]"}], ",", "Gray", ",", 
+                 RowBox[{"Table", "[", 
+                  RowBox[{
+                   RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cos", "[", "r", " ", "]"}], ",", 
+                    RowBox[{"Sin", "[", "r", "]"}]}], "}"}], ",", 
+                    RowBox[{"1.01", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cos", "[", "r", " ", "]"}], ",", 
+                    RowBox[{"Sin", "[", "r", "]"}]}], "}"}]}]}], "}"}], "]"}],
+                    ",", 
+                   RowBox[{"{", 
+                    RowBox[{"r", ",", 
+                    RowBox[{"5", " ", "Degree"}], ",", 
+                    RowBox[{"355", " ", "Degree"}], ",", 
+                    RowBox[{"10", " ", "Degree"}]}], "}"}]}], "]"}]}], "}"}], 
+               "]"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Thickness", "[", ".002", "]"}], ",", 
+                 RowBox[{"Table", "[", 
+                  RowBox[{
+                   RowBox[{"Text", "[", 
+                    RowBox[{"r", ",", 
+                    RowBox[{"0.96", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cos", "[", "r", " ", "]"}], ",", 
+                    RowBox[{"Sin", "[", "r", "]"}]}], "}"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Sin", "[", "r", "]"}], ",", 
+                    RowBox[{"-", 
+                    RowBox[{"Cos", "[", "r", " ", "]"}]}]}], "}"}]}], "]"}], 
+                   ",", 
+                   RowBox[{"{", 
+                    RowBox[{"r", ",", 
+                    RowBox[{"0", " ", "Degree"}], ",", 
+                    RowBox[{"180", " ", "Degree"}], ",", 
+                    RowBox[{"10", " ", "Degree"}]}], "}"}]}], "]"}]}], "}"}], 
+               "]"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Thickness", "[", ".002", "]"}], ",", 
+                 RowBox[{"Table", "[", 
+                  RowBox[{
+                   RowBox[{"Text", "[", 
+                    RowBox[{"r", ",", 
+                    RowBox[{"0.96", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cos", "[", "r", " ", "]"}], ",", 
+                    RowBox[{"Sin", "[", "r", "]"}]}], "}"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"Sin", "[", "r", "]"}]}], ",", 
+                    RowBox[{"Cos", "[", "r", " ", "]"}]}], "}"}]}], "]"}], 
+                   ",", 
+                   RowBox[{"{", 
+                    RowBox[{"r", ",", 
+                    RowBox[{"0", " ", "Degree"}], ",", 
+                    RowBox[{
+                    RowBox[{"-", "170"}], " ", "Degree"}], ",", 
+                    RowBox[{
+                    RowBox[{"-", "10"}], " ", "Degree"}]}], "}"}]}], "]"}]}], 
+                "}"}], "]"}]}], "\[IndentingNewLine]", "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", "}"}]}], "\[IndentingNewLine]", "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{"swr", ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"Graphics", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Thickness", "[", ".0005", "]"}], ",", "Red", ",", 
+                RowBox[{"Table", "[", 
+                 RowBox[{
+                  RowBox[{"Circle", "[", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    FractionBox[
+                    RowBox[{"r", "-", "1"}], 
+                    RowBox[{"r", "+", "1"}]]}], "]"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"r", ",", "swrSteps"}], "}"}]}], "]"}]}], "}"}], 
+              "]"}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", "}"}]}], "\[IndentingNewLine]", "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Graphics", "[", 
+           RowBox[{"{", 
+            RowBox[{"Green", ",", 
+             RowBox[{"Line", "[", 
+              RowBox[{"If", "[", 
+               RowBox[{"negative", ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"l", ",", "0"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"r", ",", "0"}], "}"}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "1"}], ",", "0"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"1", ",", "0"}], "}"}]}], "}"}]}], "]"}], "]"}]}], 
+            "}"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{"reactance", ",", "\[IndentingNewLine]", 
+            RowBox[{"If", "[", 
+             RowBox[{"negative", ",", "\[IndentingNewLine]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"Graphics", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Thickness", "[", ".0005", "]"}], ",", 
+                   RowBox[{"Lighter", "[", 
+                    RowBox[{"Green", ",", 
+                    FractionBox["1", "3"]}], "]"}], ",", 
+                   RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"Circle", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"formIsImpedance", ",", 
+                    FractionBox["1", 
+                    RowBox[{
+                    "r", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]]}], "}"}], ",", 
+                    FractionBox["1", 
+                    RowBox[{
+                    "r", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"r", ",", "arcSteps"}], "}"}]}], "]"}]}], "}"}], 
+                 "]"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"Graphics", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Thickness", "[", ".0005", "]"}], ",", 
+                   RowBox[{"Lighter", "[", 
+                    RowBox[{"Green", ",", 
+                    FractionBox["1", "3"]}], "]"}], ",", 
+                   RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"Circle", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"formIsImpedance", ",", 
+                    RowBox[{"-", 
+                    FractionBox["1", 
+                    RowBox[{
+                    "r", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]]}]}], "}"}], ",", 
+                    FractionBox["1", 
+                    RowBox[{
+                    "r", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"r", ",", "arcSteps"}], "}"}]}], "]"}]}], "}"}], 
+                 "]"}]}], "\[IndentingNewLine]", "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"Graphics", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Thickness", "[", ".0005", "]"}], ",", 
+                   RowBox[{"Lighter", "[", 
+                    RowBox[{"Green", ",", 
+                    FractionBox["1", "3"]}], "]"}], ",", 
+                   RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"Circle", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"formIsImpedance", ",", 
+                    FractionBox["1", 
+                    RowBox[{
+                    "r", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]]}], "}"}], ",", 
+                    FractionBox["1", 
+                    RowBox[{
+                    "r", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]], ",", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"formIsImpedance", "\[Equal]", "1"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    "r", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "+", 
+                    FractionBox["\[Pi]", "2"]}], ",", 
+                    FractionBox[
+                    RowBox[{"3", "\[Pi]"}], "2"]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"3", "\[Pi]"}], "2"], ",", 
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"5", "\[Pi]"}], "2"], "-", 
+                    RowBox[{
+                    "r", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}]}]}], "}"}]}], "]"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"{", 
+                    RowBox[{"r", ",", "arcSteps"}], "}"}]}], "]"}]}], "}"}], 
+                 "]"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"Graphics", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Thickness", "[", ".0005", "]"}], ",", 
+                   RowBox[{"Lighter", "[", 
+                    RowBox[{"Green", ",", 
+                    FractionBox["1", "3"]}], "]"}], ",", 
+                   RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"Circle", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"formIsImpedance", ",", 
+                    RowBox[{"-", 
+                    FractionBox["1", 
+                    RowBox[{
+                    "r", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]]}]}], "}"}], ",", 
+                    FractionBox["1", 
+                    RowBox[{
+                    "r", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]], ",", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"formIsImpedance", "\[Equal]", "1"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    FractionBox["\[Pi]", "2"], ",", 
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"3", "\[Pi]"}], "2"], "-", 
+                    RowBox[{
+                    "r", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}]}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"3", "\[Pi]"}], "2"], "+", 
+                    RowBox[{
+                    "r", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}]}], ",", 
+                    FractionBox[
+                    RowBox[{"5", "\[Pi]"}], "2"]}], "}"}]}], "]"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"{", 
+                    RowBox[{"r", ",", "arcSteps"}], "}"}]}], "]"}]}], "}"}], 
+                 "]"}]}], "\[IndentingNewLine]", "}"}]}], 
+             "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", "}"}]}], "\[IndentingNewLine]", "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{"resistance", ",", "\[IndentingNewLine]", 
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"Graphics", "[", 
+               RowBox[{"{", 
+                RowBox[{"Blue", ",", 
+                 RowBox[{"Circle", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", "1"}], "]"}]}], 
+                "}"}], "]"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Thickness", "[", ".0005", "]"}], ",", 
+                 RowBox[{"Lighter", "[", 
+                  RowBox[{"Blue", ",", 
+                   FractionBox["1", "3"]}], "]"}], ",", 
+                 RowBox[{"Table", "[", 
+                  RowBox[{
+                   RowBox[{"Circle", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"formIsImpedance", 
+                    FractionBox["r", 
+                    RowBox[{"1", "+", "r"}]]}], ",", "0"}], "}"}], ",", 
+                    FractionBox["1", 
+                    RowBox[{"1", "+", "r"}]]}], "]"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"r", ",", "psteps"}], "}"}]}], "]"}]}], "}"}], 
+               "]"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"If", "[", 
+               RowBox[{"negative", ",", "\[IndentingNewLine]", 
+                RowBox[{"{", "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"Graphics", "[", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Lighter", "[", 
+                    RowBox[{"Blue", ",", 
+                    FractionBox["2", "3"]}], "]"}], ",", "Dashed", ",", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"formIsImpedance", ",", "b"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"formIsImpedance", ",", "t"}], "}"}]}], "}"}], 
+                    "]"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"Graphics", "[", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Thickness", "[", ".0005", "]"}], ",", 
+                    RowBox[{"Lighter", "[", 
+                    RowBox[{"Blue", ",", 
+                    FractionBox["2", "3"]}], "]"}], ",", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"Circle", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"formIsImpedance", 
+                    FractionBox["r", 
+                    RowBox[{"1", "+", "r"}]]}], ",", "0"}], "}"}], ",", 
+                    RowBox[{"Abs", "[", 
+                    FractionBox["1", 
+                    RowBox[{"1", "+", "r"}]], "]"}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"r", ",", "nsteps"}], "}"}]}], "]"}]}], "}"}], 
+                   "]"}]}], "\[IndentingNewLine]", "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", "}"}]}], "\[IndentingNewLine]", "]"}]}], 
+             "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", "}"}]}], "\[IndentingNewLine]", "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Graphics", "[", 
+           RowBox[{"Text", "[", 
+            RowBox[{
+             RowBox[{"SetterBar", "[", 
+              RowBox[{
+               RowBox[{"Dynamic", "[", "form", "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\"\<impedance\>\"", ",", "\"\<admittance\>\""}], 
+                "}"}]}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "1.02"}], ",", "0.92"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "1"}], ",", "0"}], "}"}]}], "]"}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Graphics", "[", 
+           RowBox[{"Text", "[", 
+            RowBox[{
+             RowBox[{"Checkbox", "[", 
+              RowBox[{"Dynamic", "[", "negative", "]"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0.90", ",", 
+               RowBox[{"-", "0.70"}]}], "}"}]}], "]"}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Graphics", "[", 
+           RowBox[{"{", 
+            RowBox[{"Text", "[", 
+             RowBox[{"\"\<negative\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{"0.85", ",", 
+                RowBox[{"-", "0.62"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "1"}], ",", "0"}], "}"}]}], "]"}], "}"}], "]"}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"Graphics", "[", 
+           RowBox[{"Text", "[", 
+            RowBox[{
+             RowBox[{"Checkbox", "[", 
+              RowBox[{"Dynamic", "[", "resistance", "]"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0.75", ",", 
+               RowBox[{"-", "0.80"}]}], "}"}]}], "]"}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Graphics", "[", 
+           RowBox[{"{", 
+            RowBox[{"Blue", ",", 
+             RowBox[{"Text", "[", 
+              RowBox[{"\"\<resistance\>\"", ",", 
+               RowBox[{"{", 
+                RowBox[{"0.80", ",", 
+                 RowBox[{"-", "0.80"}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "0"}], "}"}]}], "]"}]}], "}"}], 
+           "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Graphics", "[", 
+           RowBox[{"Text", "[", 
+            RowBox[{
+             RowBox[{"Checkbox", "[", 
+              RowBox[{"Dynamic", "[", "reactance", "]"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0.75", ",", 
+               RowBox[{"-", "0.90"}]}], "}"}]}], "]"}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Graphics", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Darker", "[", "Green", "]"}], ",", 
+             RowBox[{"Text", "[", 
+              RowBox[{"\"\<reactance\>\"", ",", 
+               RowBox[{"{", 
+                RowBox[{"0.80", ",", 
+                 RowBox[{"-", "0.90"}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "0"}], "}"}]}], "]"}]}], "}"}], 
+           "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Graphics", "[", 
+           RowBox[{"Text", "[", 
+            RowBox[{
+             RowBox[{"Checkbox", "[", 
+              RowBox[{"Dynamic", "[", "swr", "]"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0.75", ",", 
+               RowBox[{"-", "1.00"}]}], "}"}]}], "]"}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Graphics", "[", 
+           RowBox[{"{", 
+            RowBox[{"Red", ",", 
+             RowBox[{"Text", "[", 
+              RowBox[{"\"\<SWR\>\"", ",", 
+               RowBox[{"{", 
+                RowBox[{"0.80", ",", 
+                 RowBox[{"-", "1.00"}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "0"}], "}"}]}], "]"}]}], "}"}], 
+           "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Graphics", "[", 
+           RowBox[{"{", 
+            RowBox[{"Purple", ",", 
+             RowBox[{"Disk", "[", 
+              RowBox[{"p", ",", ".01"}], "]"}], ",", 
+             RowBox[{"Thickness", "[", "0.001", "]"}]}], "}"}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Graphics", "[", 
+           RowBox[{"{", 
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", "0"}], "}"}], ",", "p"}], "}"}], "]"}], 
+            "}"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{"labels", ",", "\[IndentingNewLine]", 
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"Graphics", "[", 
+               RowBox[{"Table", "[", 
+                RowBox[{
+                 RowBox[{"Text", "[", 
+                  RowBox[{
+                   RowBox[{"ToString", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"formIsImpedance", " ", 
+                    RowBox[{
+                    "r", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]}], "//", "N"}], "//", 
+                    "TraditionalForm"}], "]"}], ",", 
+                   RowBox[{"1.03", "*", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"formIsImpedance", " ", 
+                    RowBox[{"Cos", "[", 
+                    RowBox[{
+                    "r", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "]"}]}], ",", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{
+                    "r", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "]"}]}], "}"}]}]}], "]"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"r", ",", "arcSteps"}], "}"}]}], "]"}], "]"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"Table", "[", 
+                RowBox[{
+                 RowBox[{"Text", "[", 
+                  RowBox[{
+                   RowBox[{"ToString", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "formIsImpedance"}], " ", 
+                    RowBox[{
+                    "r", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]}], "//", "N"}], "//", 
+                    "TraditionalForm"}], "]"}], ",", 
+                   RowBox[{"1.03", "*", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"formIsImpedance", " ", 
+                    RowBox[{"Cos", "[", 
+                    RowBox[{
+                    "r", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "]"}]}], ",", 
+                    RowBox[{"-", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{
+                    "r", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "]"}]}]}], "}"}]}]}], "]"}], 
+                 ",", 
+                 RowBox[{"{", 
+                  RowBox[{"r", ",", "arcSteps"}], "}"}]}], "]"}], "]"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"Text", "[", 
+                RowBox[{
+                 RowBox[{"ToString", "[", 
+                  RowBox[{"\"\<\[Infinity]\>\"", "//", "TraditionalForm"}], 
+                  "]"}], ",", 
+                 RowBox[{"1.03", "*", 
+                  RowBox[{"{", 
+                   RowBox[{"formIsImpedance", ",", "0"}], "}"}]}]}], "]"}], 
+               "]"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"Text", "[", 
+                RowBox[{
+                 RowBox[{"ToString", "[", 
+                  RowBox[{
+                   RowBox[{"0", "//", "N"}], "//", "TraditionalForm"}], "]"}],
+                  ",", 
+                 RowBox[{"1.03", "*", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "formIsImpedance"}], " ", ",", "0"}], 
+                   "}"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"Table", "[", 
+                RowBox[{
+                 RowBox[{"Text", "[", 
+                  RowBox[{
+                   RowBox[{"ToString", "[", 
+                    RowBox[{
+                    RowBox[{"r", "//", "N"}], "//", "TraditionalForm"}], 
+                    "]"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"formIsImpedance", 
+                    FractionBox[
+                    RowBox[{"r", "-", "1"}], 
+                    RowBox[{"r", "+", "1"}]]}], ",", "0"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "1.2"}], "}"}]}], "]"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"r", ",", "psteps"}], "}"}]}], "]"}], "]"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"If", "[", 
+               RowBox[{"negative", ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"Graphics", "[", 
+                  RowBox[{"Table", "[", 
+                   RowBox[{
+                    RowBox[{"Text", "[", 
+                    RowBox[{
+                    RowBox[{"ToString", "[", 
+                    RowBox[{
+                    RowBox[{"r", "//", "N"}], "//", "TraditionalForm"}], 
+                    "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"formIsImpedance", 
+                    FractionBox[
+                    RowBox[{"r", "-", "1"}], 
+                    RowBox[{"r", "+", "1"}]]}], ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "1.2"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"r", ",", 
+                    RowBox[{"Select", "[", 
+                    RowBox[{"nsteps", ",", 
+                    RowBox[{
+                    RowBox[{"\[Not]", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", 
+                    FractionBox["3", "10"]}], " ", ">", " ", "#", ">", 
+                    RowBox[{"-", "2"}]}], ")"}]}], "&"}]}], "]"}]}], "}"}]}], 
+                   "]"}], "]"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", "}"}]}], "\[IndentingNewLine]", "]"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"Text", "[", 
+                RowBox[{
+                 RowBox[{
+                 "\"\<standard \>\"", "<>", " ", "form", " ", "<>", " ", 
+                  "\"\< is \>\"", "<>", " ", 
+                  RowBox[{"ToString", "[", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"standard", "//", "N"}], "//", " ", 
+                    "TraditionalForm"}], ")"}], "]"}], "<>", " ", "\"\< \>\"",
+                   "<>", 
+                  RowBox[{"If", "[", 
+                   RowBox[{
+                    RowBox[{
+                    "form", " ", "\[Equal]", " ", "\"\<smpedance\>\""}], ",", 
+                    "\"\<ohms\>\"", ",", "\"\<siemens\>\""}], "]"}]}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1.02"}], ",", "1.02"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "0"}], "}"}]}], "]"}], "]"}], ",",
+               "\[IndentingNewLine]", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"Text", "[", 
+                RowBox[{
+                 RowBox[{
+                 "\"\<plot \>\"", "<>", " ", "form", " ", "<>", " ", 
+                  "\"\< is \>\"", "<>", " ", 
+                  RowBox[{"ToString", "[", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"plotResistance", "//", "N"}], "//", " ", 
+                    "TraditionalForm"}], ")"}], "]"}], "<>", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"If", "[", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"formIsImpedance", " ", "plotReactance"}], ")"}], 
+                    "\[GreaterEqual]", "0"}], ",", "\"\<+\>\"", ",", 
+                    "\"\<-\>\""}], "]"}], "<>", 
+                  RowBox[{"ToString", "[", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Abs", "[", "plotReactance", "]"}], "//", "N"}], "//",
+                     " ", "TraditionalForm"}], ")"}], "]"}], "<>", " ", 
+                  "\"\<j \>\"", "<>", 
+                  RowBox[{"If", "[", 
+                   RowBox[{
+                    RowBox[{
+                    "form", " ", "\[Equal]", " ", "\"\<impedance\>\""}], ",", 
+                    "\"\<ohms\>\"", ",", "\"\<siemens\>\""}], "]"}]}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"1.00", ",", "1.02"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", "0"}], "}"}]}], "]"}], "]"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"Text", "[", 
+                RowBox[{
+                 RowBox[{"\"\<or \>\"", "<>", " ", 
+                  RowBox[{"ToString", "[", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"unitResistance", "//", "N"}], "//", " ", 
+                    "TraditionalForm"}], ")"}], "]"}], "<>", " ", 
+                  RowBox[{"If", "[", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"formIsImpedance", " ", "unitReactance"}], ")"}], 
+                    "\[GreaterEqual]", "0"}], ",", "\"\<+\>\"", ",", 
+                    "\"\<-\>\""}], "]"}], "<>", 
+                  RowBox[{"ToString", "[", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Abs", "[", "unitReactance", "]"}], "//", "N"}], "//",
+                     " ", "TraditionalForm"}], ")"}], "]"}], "<>", " ", 
+                  "\"\<j std. units\>\""}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"1.00", ",", "0.97"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", "0"}], "}"}]}], "]"}], "]"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"Text", "[", 
+                RowBox[{
+                 RowBox[{"\"\<phase angle is \>\"", "<>", 
+                  RowBox[{"ToString", "[", 
+                   RowBox[{
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"ArcTan", "[", 
+                    RowBox[{
+                    RowBox[{"x", "/.", " ", "plot"}], ",", 
+                    RowBox[{"y", "/.", "plot"}]}], "]"}], "Degree"], "//", 
+                    "N"}], "//", "TraditionalForm"}], "]"}], " ", "<>", " ", 
+                  "\"\<\[Degree]\>\""}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1.02"}], ",", 
+                   RowBox[{"-", "0.95"}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "0"}], "}"}]}], "]"}], "]"}], ",",
+               "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"radius", "=", 
+                SqrtBox[
+                 RowBox[{
+                  SuperscriptBox[
+                   RowBox[{"(", 
+                    RowBox[{"x", "/.", " ", "plot"}], ")"}], "2"], "+", 
+                  SuperscriptBox[
+                   RowBox[{"(", 
+                    RowBox[{"y", "/.", "plot"}], ")"}], "2"]}]]}], ";", 
+               "\[IndentingNewLine]", 
+               RowBox[{"Graphics", "[", 
+                RowBox[{"Text", "[", 
+                 RowBox[{
+                  RowBox[{"\"\<SWR is \>\"", "<>", 
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"radius", "\[Equal]", "1.0"}], ",", 
+                    "\"\<\[Infinity]\>\"", ",", 
+                    RowBox[{"ToString", "[", 
+                    RowBox[{
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{"-", "1"}], "-", "radius"}], 
+                    RowBox[{
+                    RowBox[{"-", "1"}], "+", "radius"}]], "//", "N"}], "//", 
+                    "TraditionalForm"}], "]"}]}], "]"}]}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "1.02"}], ",", 
+                    RowBox[{"-", "1.00"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "1"}], ",", "0"}], "}"}]}], "]"}], "]"}]}], 
+              ",", "\[IndentingNewLine]", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"Text", "[", 
+                RowBox[{"\"\<inductive\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "0.90"}], ",", "0.75"}], "}"}]}], "]"}], 
+               "]"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"Text", "[", 
+                RowBox[{"\"\<capacitive\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "0.90"}], ",", 
+                   RowBox[{"-", "0.75"}]}], "}"}]}], "]"}], "]"}]}], 
+             "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", "}"}]}], "\[IndentingNewLine]", "]"}]}], 
+         "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"If", "[", 
+          RowBox[{"negative", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"form", "\[Equal]", " ", "\"\<impedance\>\""}], ",", 
+               RowBox[{"{", 
+                RowBox[{"l", ",", "r"}], "}"}], ",", 
+               RowBox[{"-", 
+                RowBox[{"{", 
+                 RowBox[{"r", ",", "l"}], "}"}]}]}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"b", ",", "t"}], "}"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "1.08"}], ",", "1.05"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "1.05"}], ",", "1.05"}], "}"}]}], "}"}]}], 
+          "]"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"PlotRangeClipping", "\[Rule]", " ", "False"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Axes", "\[Rule]", " ", "False"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"ImageSize", "\[Rule]", 
+         RowBox[{"If", "[", 
+          RowBox[{"negative", ",", 
+           RowBox[{"{", 
+            RowBox[{"900", ",", "450"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"450", ",", "450"}], "}"}]}], "]"}]}]}], 
+       "\[IndentingNewLine]", "]"}]}]}], "\[IndentingNewLine]", "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Row", "[", "\[IndentingNewLine]", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Control", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "standard", ",", "50", ",", 
+           "\"\<standard impedance/admittance value\>\""}], "}"}], ",", "1", 
+         ",", "600", ",", 
+         RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
+         RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], "]"}],
+       ",", "\[IndentingNewLine]", 
+      RowBox[{"Spacer", "[", "20", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Control", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"labels", ",", "True", ",", "\"\<labels\>\""}], "}"}], ",", 
+         
+         RowBox[{"{", 
+          RowBox[{"True", ",", "False"}], "}"}]}], "}"}], "]"}]}], 
+     "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Row", "[", "\[IndentingNewLine]", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Control", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "plotResistance", ",", "100", ",", "\"\<impedance/admittance\>\""}],
+           "}"}], ",", "0", ",", "2000", ",", 
+         RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
+         RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], "]"}],
+       ",", "\[IndentingNewLine]", 
+      RowBox[{"Spacer", "[", "20", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Control", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "plotReactance", ",", "100", ",", "\"\<reactance/susceptance\>\""}],
+           "}"}], ",", 
+         RowBox[{"-", "2000"}], ",", "2000", ",", 
+         RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
+         RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], 
+       "]"}]}], "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", "]"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"form", ",", "\"\<impedance\>\"", ",", "\"\<\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<impedance\>\"", ",", "\"\<admittance\>\""}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", " ", "None"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"resistance", ",", "True", ",", "\"\<\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"True", ",", "False"}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", " ", "None"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"reactance", ",", "True", ",", "\"\<\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"True", ",", "False"}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", " ", "None"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"swr", ",", "False", ",", "\"\<\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"True", ",", "False"}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", " ", "None"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"negative", ",", "False", ",", "\"\<\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"True", ",", "False"}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", " ", "None"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"ControlPlacement", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{"Top", ",", "Top"}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"SaveDefinitions", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"AutorunSequencing", "\[Rule]", 
+    RowBox[{"{", "1", "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"TrackedSymbols", "\[RuleDelayed]", 
+    RowBox[{"{", 
+     RowBox[{
+     "standard", ",", " ", "size", ",", " ", "plotResistance", ",", " ", 
+      "plotReactance", ",", " ", "form", ",", " ", "resistance", ",", " ", 
+      "reactance", ",", " ", "swr", ",", " ", "negative", ",", " ", 
+      "labels"}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"ContentSize", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"625", ",", " ", "465"}], "}"}]}], ",", " ", 
+   RowBox[{"Alignment", "\[Rule]", " ", "Center"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{
+  3.5764100434243116`*^9, {3.576410219108878*^9, 3.5764103599089565`*^9}, {
+   3.5764106550201964`*^9, 3.5764106669541965`*^9}, {3.5764106991981964`*^9, 
+   3.576410735713538*^9}, {3.5764166879525666`*^9, 3.5764167626745663`*^9}, {
+   3.5764168457625666`*^9, 3.5764170231835666`*^9}, 3.576581688015852*^9, 
+   3.576581806953661*^9, 3.576581882286193*^9, {3.576581981439967*^9, 
+   3.5765820029056053`*^9}, {3.5765820533404937`*^9, 
+   3.5765820601733055`*^9}, {3.5765825419410915`*^9, 
+   3.5765825458722982`*^9}, {3.576582626695639*^9, 3.5765826274600406`*^9}, {
+   3.576582674540923*^9, 3.5765827604814744`*^9}, {3.576582801119546*^9, 
+   3.576582835112005*^9}, {3.576582926902567*^9, 3.5765829910654793`*^9}, {
+   3.5765830340719547`*^9, 3.5765831187645035`*^9}, {3.576583180150612*^9, 
+   3.5765832515831375`*^9}, {3.5765832911448064`*^9, 3.576583403901805*^9}, 
+   3.5765834682051177`*^9, {3.576584013764677*^9, 3.5765840801115932`*^9}, {
+   3.5765842133046274`*^9, 3.5765844460726357`*^9}, {3.576584484121103*^9, 
+   3.57658448813031*^9}, {3.5765845415760036`*^9, 3.5765845769100657`*^9}, {
+   3.576584755405579*^9, 3.57658475593598*^9}, {3.5765848007236586`*^9, 
+   3.576584837882924*^9}, {3.5765848700501804`*^9, 3.5765849908567924`*^9}, {
+   3.576585038936077*^9, 3.5765851704911084`*^9}, {3.576859618594708*^9, 
+   3.5768597364994974`*^9}, {3.5768598446743135`*^9, 3.576859881007947*^9}, 
+   3.5768599112709727`*^9, {3.5768599609059353`*^9, 3.576859981969042*^9}, {
+   3.576867015875005*^9, 3.5768670167499523`*^9}, {3.576867094775566*^9, 
+   3.57686712937621*^9}, {3.576867408718038*^9, 3.576867446821887*^9}, 
+   3.576925911558868*^9, {3.5770295918585463`*^9, 3.5770295946935463`*^9}},
+ CellID->48271678]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`form$$ = 
+    "impedance", $CellContext`labels$$ = True, $CellContext`negative$$ = 
+    False, $CellContext`plotReactance$$ = 100, $CellContext`plotResistance$$ =
+     100, $CellContext`reactance$$ = True, $CellContext`resistance$$ = 
+    True, $CellContext`standard$$ = 50, $CellContext`swr$$ = False, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`standard$$], 50, 
+       "standard impedance/admittance value"}, 1, 600}, {{
+       Hold[$CellContext`labels$$], True, "labels"}, {True, False}}, {
+      Hold[
+       Row[{
+         Manipulate`Place[1], 
+         Spacer[20], 
+         Manipulate`Place[2]}]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`plotResistance$$], 100, "impedance/admittance"}, 0, 
+      2000}, {{
+       Hold[$CellContext`plotReactance$$], 100, 
+       "reactance/susceptance"}, -2000, 2000}, {
+      Hold[
+       Row[{
+         Manipulate`Place[3], 
+         Spacer[20], 
+         Manipulate`Place[4]}]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`form$$], "impedance", ""}, {
+      "impedance", "admittance"}}, {{
+       Hold[$CellContext`resistance$$], True, ""}, {True, False}}, {{
+       Hold[$CellContext`reactance$$], True, ""}, {True, False}}, {{
+       Hold[$CellContext`swr$$], False, ""}, {True, False}}, {{
+       Hold[$CellContext`negative$$], False, ""}, {True, False}}}, 
+    Typeset`size$$ = {450., {223., 227.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`standard$84103$$ = 0, $CellContext`labels$84104$$ = 
+    False, $CellContext`plotResistance$84105$$ = 
+    0, $CellContext`plotReactance$84106$$ = 0, $CellContext`form$84107$$ = 
+    False, $CellContext`resistance$84108$$ = 
+    False, $CellContext`reactance$84109$$ = False, $CellContext`swr$84110$$ = 
+    False, $CellContext`negative$84111$$ = False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     2, StandardForm, 
+      "Variables" :> {$CellContext`form$$ = 
+        "impedance", $CellContext`labels$$ = True, $CellContext`negative$$ = 
+        False, $CellContext`plotReactance$$ = 
+        100, $CellContext`plotResistance$$ = 100, $CellContext`reactance$$ = 
+        True, $CellContext`resistance$$ = True, $CellContext`standard$$ = 
+        50, $CellContext`swr$$ = False}, "ControllerVariables" :> {
+        Hold[$CellContext`standard$$, $CellContext`standard$84103$$, 0], 
+        Hold[$CellContext`labels$$, $CellContext`labels$84104$$, False], 
+        Hold[$CellContext`plotResistance$$, \
+$CellContext`plotResistance$84105$$, 0], 
+        Hold[$CellContext`plotReactance$$, $CellContext`plotReactance$84106$$,
+          0], 
+        Hold[$CellContext`form$$, $CellContext`form$84107$$, False], 
+        Hold[$CellContext`resistance$$, $CellContext`resistance$84108$$, 
+         False], 
+        Hold[$CellContext`reactance$$, $CellContext`reactance$84109$$, False], 
+        Hold[$CellContext`swr$$, $CellContext`swr$84110$$, False], 
+        Hold[$CellContext`negative$$, $CellContext`negative$84111$$, False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Module[{$CellContext`formIsImpedance$, $CellContext`unitResistance$, \
+$CellContext`unitReactance$, $CellContext`plot$, $CellContext`p$}, \
+$CellContext`formIsImpedance$ = 
+         If[$CellContext`form$$ == "impedance", 
+           1, -1]; $CellContext`unitResistance$ = \
+$CellContext`plotResistance$$/$CellContext`standard$$; \
+$CellContext`unitReactance$ = \
+$CellContext`plotReactance$$/$CellContext`standard$$; $CellContext`plot$ = 
+         If[$CellContext`unitReactance$ == 
+           0., {$CellContext`x -> $CellContext`formIsImpedance$ \
+(($CellContext`unitResistance$ - 1)/($CellContext`unitResistance$ + 
+              1)), $CellContext`y -> 0}, 
+           Part[
+            Select[
+             
+             NSolve[{($CellContext`x - $CellContext`formIsImpedance$)^2 + \
+($CellContext`y - \
+$CellContext`formIsImpedance$/$CellContext`unitReactance$)^2 == (
+                 1/$CellContext`unitReactance$)^2, ($CellContext`x - \
+$CellContext`formIsImpedance$ ($CellContext`unitResistance$/(
+                   1 + $CellContext`unitResistance$)))^2 + $CellContext`y^2 == \
+(1/(1 + $CellContext`unitResistance$))^2}, {$CellContext`x, $CellContext`y}], 
+             Not[
+              And[Abs[
+                 ReplaceAll[$CellContext`x, #]] == 1., 
+               ReplaceAll[$CellContext`y, #] == 0.]]& ], 1]]; $CellContext`p$ = {
+           ReplaceAll[$CellContext`x, $CellContext`plot$], 
+           ReplaceAll[$CellContext`y, $CellContext`plot$]}; Show[{
+           If[$CellContext`labels$$, {
+             Graphics[{Orange, 
+               Arrowheads[0.02], 
+               Arrow[
+                Line[1.075 Table[{
+                    Cos[$CellContext`\[Theta]], 
+                    Sin[$CellContext`\[Theta]]}, {$CellContext`\[Theta], 165 
+                    Degree, 135 Degree, -Degree}]]]}], 
+             Graphics[{Orange, 
+               Table[
+                Text[
+                 StringTake["toward generator", {$CellContext`i}], 1.1 {
+                   Cos[166 Degree - (1.5 $CellContext`i) Degree], 
+                   Sin[166 Degree - (1.5 $CellContext`i) Degree]}, {0, 0}, {
+                  Sin[166 Degree - (1.5 $CellContext`i) Degree], -
+                  Cos[166 Degree - (1.5 $CellContext`i) 
+                    Degree]}], {$CellContext`i, 1, 
+                 StringLength["toward generator"]}]}], 
+             Graphics[{
+               Thickness[0.002], Gray, 
+               Table[
+                Line[{{
+                   Cos[$CellContext`r], 
+                   Sin[$CellContext`r]}, 1.01 {
+                    Cos[$CellContext`r], 
+                    Sin[$CellContext`r]}}], {$CellContext`r, 0 Degree, 350 
+                 Degree, 10 Degree}]}], 
+             Graphics[{
+               Thickness[0.001], Gray, 
+               Table[
+                Line[{{
+                   Cos[$CellContext`r], 
+                   Sin[$CellContext`r]}, 1.01 {
+                    Cos[$CellContext`r], 
+                    Sin[$CellContext`r]}}], {$CellContext`r, 5 Degree, 355 
+                 Degree, 10 Degree}]}], 
+             Graphics[{
+               Thickness[0.002], 
+               Table[
+                Text[$CellContext`r, 0.96 {
+                   Cos[$CellContext`r], 
+                   Sin[$CellContext`r]}, {0, 0}, {
+                  Sin[$CellContext`r], -
+                  Cos[$CellContext`r]}], {$CellContext`r, 0 Degree, 180 
+                 Degree, 10 Degree}]}], 
+             Graphics[{
+               Thickness[0.002], 
+               Table[
+                Text[$CellContext`r, 0.96 {
+                   Cos[$CellContext`r], 
+                   Sin[$CellContext`r]}, {0, 0}, {-Sin[$CellContext`r], 
+                  Cos[$CellContext`r]}], {$CellContext`r, 0 Degree, (-170) 
+                 Degree, (-10) Degree}]}]}, {}], 
+           If[$CellContext`swr$$, {
+             Graphics[{
+               Thickness[0.0005], Red, 
+               Table[
+                
+                Circle[{0, 0}, ($CellContext`r - 1)/($CellContext`r + 
+                 1)], {$CellContext`r, $CellContext`swrSteps}]}]}, {}], 
+           Graphics[{Green, 
+             Line[
+              
+              If[$CellContext`negative$$, {{$CellContext`l, 
+                 0}, {$CellContext`r, 0}}, {{-1, 0}, {1, 0}}]]}], 
+           If[$CellContext`reactance$$, 
+            If[$CellContext`negative$$, {
+              Graphics[{
+                Thickness[0.0005], 
+                Lighter[Green, 1/3], 
+                Table[
+                 
+                 Circle[{$CellContext`formIsImpedance$, 1/
+                   Part[$CellContext`r, 1]}, 1/
+                  Part[$CellContext`r, 
+                   1]], {$CellContext`r, $CellContext`arcSteps}]}], 
+              Graphics[{
+                Thickness[0.0005], 
+                Lighter[Green, 1/3], 
+                Table[
+                 
+                 Circle[{$CellContext`formIsImpedance$, -(1/
+                    Part[$CellContext`r, 1])}, 1/
+                  Part[$CellContext`r, 
+                   1]], {$CellContext`r, $CellContext`arcSteps}]}]}, {
+              Graphics[{
+                Thickness[0.0005], 
+                Lighter[Green, 1/3], 
+                Table[
+                 
+                 Circle[{$CellContext`formIsImpedance$, 1/
+                   Part[$CellContext`r, 1]}, 1/Part[$CellContext`r, 1], 
+                  
+                  If[$CellContext`formIsImpedance$ == 1, {
+                   Part[$CellContext`r, 2] + Pi/2, 3 (Pi/2)}, {
+                   3 (Pi/2), 5 (Pi/2) - 
+                    Part[$CellContext`r, 
+                    2]}]], {$CellContext`r, $CellContext`arcSteps}]}], 
+              Graphics[{
+                Thickness[0.0005], 
+                Lighter[Green, 1/3], 
+                Table[
+                 
+                 Circle[{$CellContext`formIsImpedance$, -(1/
+                    Part[$CellContext`r, 1])}, 1/Part[$CellContext`r, 1], 
+                  
+                  If[$CellContext`formIsImpedance$ == 1, {
+                   Pi/2, 3 (Pi/2) - Part[$CellContext`r, 2]}, {
+                   3 (Pi/2) + Part[$CellContext`r, 2], 
+                    5 (Pi/2)}]], {$CellContext`r, \
+$CellContext`arcSteps}]}]}], {}], 
+           If[$CellContext`resistance$$, {
+             Graphics[{Blue, 
+               Circle[{0, 0}, 1]}], 
+             Graphics[{
+               Thickness[0.0005], 
+               Lighter[Blue, 1/3], 
+               Table[
+                
+                Circle[{$CellContext`formIsImpedance$ ($CellContext`r/(
+                   1 + $CellContext`r)), 0}, 1/(
+                 1 + $CellContext`r)], {$CellContext`r, \
+$CellContext`psteps}]}], 
+             If[$CellContext`negative$$, {
+               Graphics[{
+                 Lighter[Blue, 2/3], Dashed, 
+                 
+                 Line[{{$CellContext`formIsImpedance$, $CellContext`b}, \
+{$CellContext`formIsImpedance$, $CellContext`t}}]}], 
+               Graphics[{
+                 Thickness[0.0005], 
+                 Lighter[Blue, 2/3], 
+                 Table[
+                  
+                  Circle[{$CellContext`formIsImpedance$ ($CellContext`r/(
+                    1 + $CellContext`r)), 0}, 
+                   Abs[
+                   1/(1 + $CellContext`r)]], {$CellContext`r, \
+$CellContext`nsteps}]}]}, {}]}, {}], 
+           Graphics[
+            Text[
+             SetterBar[
+              Dynamic[$CellContext`form$$], {
+              "impedance", "admittance"}], {-1.02, 0.92}, {-1, 0}]], 
+           Graphics[
+            Text[
+             Checkbox[
+              Dynamic[$CellContext`negative$$]], {0.9, -0.7}]], 
+           Graphics[{
+             Text["negative", {0.85, -0.62}, {-1, 0}]}], 
+           Graphics[
+            Text[
+             Checkbox[
+              Dynamic[$CellContext`resistance$$]], {0.75, -0.8}]], 
+           Graphics[{Blue, 
+             Text["resistance", {0.8, -0.8}, {-1, 0}]}], 
+           Graphics[
+            Text[
+             Checkbox[
+              Dynamic[$CellContext`reactance$$]], {0.75, -0.9}]], 
+           Graphics[{
+             Darker[Green], 
+             Text["reactance", {0.8, -0.9}, {-1, 0}]}], 
+           Graphics[
+            Text[
+             Checkbox[
+              Dynamic[$CellContext`swr$$]], {0.75, -1.}]], 
+           Graphics[{Red, 
+             Text["SWR", {0.8, -1.}, {-1, 0}]}], 
+           Graphics[{Purple, 
+             Disk[$CellContext`p$, 0.01], 
+             Thickness[0.001]}], 
+           Graphics[{
+             Line[{{0, 0}, $CellContext`p$}]}], 
+           If[$CellContext`labels$$, {
+             Graphics[
+              Table[
+               Text[
+                ToString[
+                 TraditionalForm[
+                  N[$CellContext`formIsImpedance$ Part[$CellContext`r, 1]]]], 
+                1.03 {$CellContext`formIsImpedance$ Cos[
+                    Part[$CellContext`r, 2]], 
+                  Sin[
+                   
+                   Part[$CellContext`r, 
+                    2]]}], {$CellContext`r, $CellContext`arcSteps}]], 
+             Graphics[
+              Table[
+               Text[
+                ToString[
+                 TraditionalForm[
+                  
+                  N[(-$CellContext`formIsImpedance$) 
+                   Part[$CellContext`r, 1]]]], 
+                1.03 {$CellContext`formIsImpedance$ Cos[
+                    Part[$CellContext`r, 2]], -Sin[
+                    
+                    Part[$CellContext`r, 
+                    2]]}], {$CellContext`r, $CellContext`arcSteps}]], 
+             Graphics[
+              Text[
+               ToString[
+                TraditionalForm["\[Infinity]"]], 
+               1.03 {$CellContext`formIsImpedance$, 0}]], 
+             Graphics[
+              Text[
+               ToString[
+                TraditionalForm[
+                 N[0]]], 1.03 {-$CellContext`formIsImpedance$, 0}]], 
+             Graphics[
+              Table[
+               Text[
+                ToString[
+                 TraditionalForm[
+                  
+                  N[$CellContext`r]]], {$CellContext`formIsImpedance$ \
+(($CellContext`r - 1)/($CellContext`r + 1)), 0}, {
+                0, 1.2}], {$CellContext`r, $CellContext`psteps}]], 
+             If[$CellContext`negative$$, {
+               Graphics[
+                Table[
+                 Text[
+                  ToString[
+                   TraditionalForm[
+                    
+                    N[$CellContext`r]]], {$CellContext`formIsImpedance$ \
+(($CellContext`r - 1)/($CellContext`r + 1)), 0}, {0, 1.2}], {$CellContext`r, 
+                  
+                  Select[$CellContext`nsteps, 
+                   Not[-(3/10) > # > -2]& ]}]]}, {}], 
+             Graphics[
+              Text[
+               StringJoin["standard ", $CellContext`form$$, " is ", 
+                ToString[
+                 TraditionalForm[
+                  N[$CellContext`standard$$]]], " ", 
+                
+                If[$CellContext`form$$ == "smpedance", "ohms", 
+                 "siemens"]], {-1.02, 1.02}, {-1, 0}]], 
+             Graphics[
+              Text[
+               StringJoin["plot ", $CellContext`form$$, " is ", 
+                ToString[
+                 TraditionalForm[
+                  N[$CellContext`plotResistance$$]]], 
+                
+                If[$CellContext`formIsImpedance$ $CellContext`plotReactance$$ >= 
+                 0, "+", "-"], 
+                ToString[
+                 TraditionalForm[
+                  N[
+                   Abs[$CellContext`plotReactance$$]]]], "j ", 
+                If[$CellContext`form$$ == "impedance", "ohms", "siemens"]], {
+               1., 1.02}, {1, 0}]], 
+             Graphics[
+              Text[
+               StringJoin["or ", 
+                ToString[
+                 TraditionalForm[
+                  N[$CellContext`unitResistance$]]], 
+                
+                If[$CellContext`formIsImpedance$ $CellContext`unitReactance$ >= 
+                 0, "+", "-"], 
+                ToString[
+                 TraditionalForm[
+                  N[
+                   Abs[$CellContext`unitReactance$]]]], "j std. units"], {1., 
+               0.97}, {1, 0}]], 
+             Graphics[
+              Text[
+               StringJoin["phase angle is ", 
+                ToString[
+                 TraditionalForm[
+                  N[ArcTan[
+                    ReplaceAll[$CellContext`x, $CellContext`plot$], 
+                    ReplaceAll[$CellContext`y, $CellContext`plot$]]/Degree]]],
+                 "\[Degree]"], {-1.02, -0.95}, {-1, 
+               0}]], $CellContext`radius = (
+                ReplaceAll[$CellContext`x, $CellContext`plot$]^2 + 
+                ReplaceAll[$CellContext`y, $CellContext`plot$]^2)^
+               Rational[1, 2]; Graphics[
+               Text[
+                StringJoin["SWR is ", 
+                 If[$CellContext`radius == 1., "\[Infinity]", 
+                  ToString[
+                   TraditionalForm[
+                    
+                    N[(-1 - $CellContext`radius)/(-1 + \
+$CellContext`radius)]]]]], {-1.02, -1.}, {-1, 0}]], 
+             Graphics[
+              Text["inductive", {-0.9, 0.75}]], 
+             Graphics[
+              Text["capacitive", {-0.9, -0.75}]]}, {}]}, PlotRange -> 
+          If[$CellContext`negative$$, {
+             
+             If[$CellContext`form$$ == 
+              "impedance", {$CellContext`l, $CellContext`r}, \
+-{$CellContext`r, $CellContext`l}], {$CellContext`b, $CellContext`t}}, \
+{{-1.08, 1.05}, {-1.05, 1.05}}], PlotRangeClipping -> False, Axes -> False, 
+          ImageSize -> If[$CellContext`negative$$, {900, 450}, {450, 450}]]], 
+      "Specifications" :> {{{$CellContext`standard$$, 50, 
+          "standard impedance/admittance value"}, 1, 600, ImageSize -> Small, 
+         Appearance -> "Labeled", ControlPlacement -> 
+         1}, {{$CellContext`labels$$, True, "labels"}, {True, False}, 
+         ControlPlacement -> 2}, 
+        Row[{
+          Manipulate`Place[1], 
+          Spacer[20], 
+          Manipulate`Place[2]}], {{$CellContext`plotResistance$$, 100, 
+          "impedance/admittance"}, 0, 2000, ImageSize -> Small, Appearance -> 
+         "Labeled", ControlPlacement -> 
+         3}, {{$CellContext`plotReactance$$, 100, 
+          "reactance/susceptance"}, -2000, 2000, ImageSize -> Small, 
+         Appearance -> "Labeled", ControlPlacement -> 4}, 
+        Row[{
+          Manipulate`Place[3], 
+          Spacer[20], 
+          Manipulate`Place[4]}], {{$CellContext`form$$, "impedance", ""}, {
+         "impedance", "admittance"}, ControlType -> 
+         None}, {{$CellContext`resistance$$, True, ""}, {True, False}, 
+         ControlType -> None}, {{$CellContext`reactance$$, True, ""}, {
+         True, False}, ControlType -> 
+         None}, {{$CellContext`swr$$, False, ""}, {True, False}, ControlType -> 
+         None}, {{$CellContext`negative$$, False, ""}, {True, False}, 
+         ControlType -> None}}, 
+      "Options" :> {
+       ControlPlacement -> {Top, Top}, AutorunSequencing -> {1}, 
+        TrackedSymbols :> {$CellContext`standard$$, $CellContext`size, \
+$CellContext`plotResistance$$, $CellContext`plotReactance$$, \
+$CellContext`form$$, $CellContext`resistance$$, $CellContext`reactance$$, \
+$CellContext`swr$$, $CellContext`negative$$, $CellContext`labels$$}, 
+        ContentSize -> {625, 465}, Alignment -> Center}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{641., {272., 279.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>(({$CellContext`formIsImpedance = 
+        1, $CellContext`unitResistance = 1, $CellContext`unitReactance = 
+        1, $CellContext`plot = 1, $CellContext`p = {0, 0}, $CellContext`r = 
+        3, $CellContext`swrSteps = {
+         11/10, 6/5, 7/5, 8/5, 9/5, 2, 5/2, 3, 4, 5, 6, 7, 8, 10, 
+          12}, $CellContext`l = -2, $CellContext`arcSteps = {{
+          1/50, 3.101597985643492}, {1/20, 3.0416758621459077`}, {
+          1/10, 2.942255348607469}, {1/5, 2.7468015338900313`}, {
+          3/10, 2.5586790646340587`}, {2/5, 2.3805798993650633`}, {
+          1/2, 2.214297435588181}, {3/5, 2.060753653048625}, {
+          7/10, 1.920140724811376}, {4/5, 1.7921107691426879`}, {
+          9/10, 1.67596245001678}, {1, 1.5707963267948966`}, {
+          11/10, 1.4756301202409299`}, {6/5, 1.3894765523934063`}, {
+          7/5, 1.240498971965643}, {8/5, 1.1171986306871249`}, {
+          9/5, 1.014197008784674}, {2, 0.9272952180016122}, {
+          5/2, 0.7610127542247297}, {3, 0.6435011087932844}, {
+          4, 0.4899573262537283}, {5, 0.39479111969976155`}, {
+          6, 0.33029735482925365`}, {7, 0.28379410920832787`}, {
+          8, 0.24870998909352285`}, {10, 0.19933730498232405`}, {
+          12, 0.16628246377688247`}, {14, 0.14261492957058064`}, {
+          18, 0.11099701049143366`}}, $CellContext`psteps = {
+         1/50, 1/20, 1/10, 1/5, 3/10, 2/5, 1/2, 3/5, 7/10, 4/5, 9/10, 1, 11/
+          10, 6/5, 7/5, 8/5, 9/5, 2, 5/2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 
+          18}, $CellContext`b = (-3)/2, $CellContext`t = 
+        3/2, $CellContext`nsteps = {(-1)/50, (-1)/20, (-1)/10, (-1)/5, (-3)/
+          10, (-2)/5, (-1)/2, (-3)/5, (-7)/10, (-4)/5, (-9)/10, (-11)/
+          10, (-6)/5, (-7)/5, (-8)/5, (-9)/5, -2, (-5)/
+          2, -3, -4, -5, -6, -7, -8, -10, -12, -14, -18}, $CellContext`radius = 
+        0.6201736729460424}; Typeset`initDone$$ = True); ReleaseHold[
+       HoldComplete[{$CellContext`t = 
+          15/10; $CellContext`b = -(15/
+            10); $CellContext`l = -2; $CellContext`r = 3; 
+         Null, $CellContext`psteps = {
+           2/100, 5/100, 1/10, 2/10, 3/10, 4/10, 5/10, 6/10, 7/10, 8/10, 9/10,
+             1, 11/10, 12/10, 14/10, 16/10, 18/10, 2, 25/10, 3, 4, 5, 6, 7, 8,
+             10, 12, 14, 18}; 
+         Null, $CellContext`nsteps = -Select[$CellContext`psteps, # != 1& ]; 
+         Null, $CellContext`arcSteps = 
+          Block[{$CellContext`x, $CellContext`y, $CellContext`r, \
+$CellContext`s}, 
+            
+            Table[$CellContext`s = 
+              Solve[{$CellContext`x^2 + $CellContext`y^2 == 
+                 1, ($CellContext`x - 1)^2 + ($CellContext`y - 
+                    1/$CellContext`r)^2 == (
+                   1/$CellContext`r)^2, $CellContext`x != 
+                 1}, {$CellContext`x, $CellContext`y}]; {$CellContext`r, 
+               N[
+                ArcTan[
+                 ReplaceAll[$CellContext`x, 
+                  Part[$CellContext`s, 1]], 
+                 ReplaceAll[$CellContext`y, 
+                  
+                  Part[$CellContext`s, 
+                   1]]]]}, {$CellContext`r, $CellContext`psteps}]]; 
+         Null, $CellContext`swrSteps = 
+          Select[$CellContext`psteps, Inequality[
+            1, Less, #, LessEqual, 12]& ]; 
+         Null, $CellContext`formIsImpedance = 1; 
+         Null, $CellContext`unitResistance = 1; 
+         Null, $CellContext`unitReactance = 1; Null, $CellContext`plot = 1; 
+         Null, $CellContext`p = {0, 0}; Null}]]; Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->552277418],
+
+Cell[CellGroupData[{
+
+Cell["CAPTION", "Section",
+ CellFrame->{{0, 0}, {1, 0}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->12,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell["\<\
+A Smith chart is a conformal mapping of the complex plane to the complex \
+plane such that the non-negative resistance or conductance half-plane is \
+mapped onto a unit circle. Excepting cases where circuits with gain are being \
+analyzed, all plotting occurs in the non-negative half-plane, permitting a \
+compact nomogram for plotting and computing impedances and admittances. \
+Resistances (conductances) and reactances (suspectances) are normalized by \
+the standard resistance (conductance), which is plotted as 1 on the zero \
+reactance (suspectance) line.\
+\>", "Text"]
+}, Close]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["DETAILS", "Section",
+ CellFrame->{{0, 0}, {1, 0}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->12,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[TextData[{
+ "Snapshot 1: This shows resistance circles; the dark blue circle is the zero \
+resistance (conductance) \"line.\" The resistance (conductance) circles have \
+radii ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"1", "/", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", "r"}], ")"}]}], TraditionalForm]], "InlineMath"],
+ ", where ",
+ Cell[BoxData[
+  FormBox["r", TraditionalForm]], "InlineMath"],
+ " is the standardized resistance (conductance), with centers on the zero \
+resistance (conductance) line and touching the infinite resistance \
+(conductance) point."
+}], "Text"],
+
+Cell["\<\
+Snapshot 2: This shows reactance arcs; the horizontal line is zero reactance \
+(suspectance). The reactance (suspectance) arcs are parts of circles with \
+radii the reciprocals of the reactances (suspectances). The circles are \
+tangent to the zero reactance (suspectance) line and touch the infinite \
+resistance (conductance) point.\
+\>", "Text"],
+
+Cell[TextData[{
+ "Snapshot 3: This shows SWR circles. The circles are centered on the \
+standard resistance (conductance) point. Their radii are ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"r", "-", "1"}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"r", "+", "1"}], ")"}]}], TraditionalForm]], "InlineMath"],
+ ", where ",
+ Cell[BoxData[
+  FormBox["r", TraditionalForm]], "InlineMath"],
+ " is the SWR ratio. The SWR ratios are greater or equal to 1."
+}], "Text"],
+
+Cell["\<\
+Snapshot 4: a simple form of the Smith chart showing some the negative \
+impedance region\
+\>", "Text"],
+
+Cell["\<\
+Snapshot 5: a simple form of the Smith chart showing some the negative \
+admittance region\
+\>", "Text"],
+
+Cell[TextData[{
+ "Quoted from the English Wikipedia [2]: \"The Smith chart, invented by \
+Phillip H. Smith (1905\[Dash]1987), is a graphical aid or nomogram designed \
+for electrical and electronics engineers specializing in radio frequency (RF) \
+engineering to assist in solving problems with transmission lines and \
+matching circuits. Use of the Smith chart utility has grown steadily over the \
+years and it is still widely used today, not only as a problem-solving aid, \
+but as a graphical demonstrator of how many RF parameters behave at one or \
+more frequencies, an alternative to using tabular information. The Smith \
+chart can be used to simultaneously display multiple parameters including \
+impedances, admittances, reflection coefficients, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["S", "nn"], TraditionalForm]], "InlineMath"],
+ ", scattering parameters, noise figure circles, constant gain contours, and \
+regions for unconditional stability, including mechanical vibrations \
+analysis. The Smith chart is most frequently used at or within the unity \
+radius region. However, the remainder is still mathematically relevant, being \
+used, for example, in oscillator design and stability analysis.\""
+}], "Text"],
+
+Cell["\<\
+The orange \"toward generator\" arrow is a reminder of how cable length \
+affects the appearance of an impedance at the far end of a cable to a \
+generator (transmitter) at the near end of the cable. Because a signal goes \
+from the generator to the far end and then returns to the transmitter, the \
+length of the cable is measured by the wave length of the signal scaled by \
+the wave propagation speed (velocity factor). In a vacuum, the velocity \
+factor is 1; in air, it is very close to 1; and in typical coaxial cables, it \
+is about 0.7. For example, a half-wave length cable open at the far end \
+appears to the generator as a short, which easily could damage the generator.\
+\
+\>", "Text"],
+
+Cell["\<\
+The chart looks better when larger. It is sized this small to accommodate \
+small screens. To enlarge the image, first drag a corner of the window and \
+drag it to be larger. Then click the image. A red line appears enclosing the \
+image, which you can drag by any of the small red squares on the border.\
+\>", "Text"],
+
+Cell["References", "Text"],
+
+Cell[TextData[{
+ "[1] P. H. Smith, ",
+ StyleBox["Electronic Applications of the Smith Chart, ",
+  FontSlant->"Italic"],
+ "New York: McGraw-Hill, 1969."
+}], "Text"],
+
+Cell[TextData[{
+ "[2] Wikipedia. \"Smith Chart.\" (Mar 13, 2013) ",
+ ButtonBox["en.wikipedia.org/wiki/Smith_chart",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://en.wikipedia.org/wiki/Smith_chart"], None},
+  ButtonNote->"http://en.wikipedia.org/wiki/Smith_chart"],
+ "."
+}], "Text"],
+
+Cell[TextData[{
+ "[3] S. D. Stearns, K6OIK, \"Mysteries of the Smith Chart: Transmission \
+Lines, Impedance Matching, and Little Known Facts,\" presentation given at \
+Pacificon 2001, Concord, CA. ",
+ ButtonBox["https://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&\
+cad=rja&uact=8&ved=0CB0QFjAAahUKEwiU7JrTuubIAhXGaz4KHYFwDqQ&url=http%3A%2F%\
+2Farchive.k6ya.org%2Fdocs%2Fsmith_chart.pdf&usg=\
+AFQjCNE8ZqPj9jvTN4pZtYKKjcVEXTM02g&sig2=XjmqOz4dfeT7xi59GJVo9Q",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=\
+rja&uact=8&ved=0CB0QFjAAahUKEwiU7JrTuubIAhXGaz4KHYFwDqQ&url=http%3A%2F%\
+2Farchive.k6ya.org%2Fdocs%2Fsmith_chart.pdf&usg=\
+AFQjCNE8ZqPj9jvTN4pZtYKKjcVEXTM02g&sig2=XjmqOz4dfeT7xi59GJVo9Q"], None},
+  ButtonNote->
+   "https://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&\
+uact=8&ved=0CB0QFjAAahUKEwiU7JrTuubIAhXGaz4KHYFwDqQ&url=http%3A%2F%2Farchive.\
+k6ya.org%2Fdocs%2Fsmith_chart.pdf&usg=AFQjCNE8ZqPj9jvTN4pZtYKKjcVEXTM02g&sig2=\
+XjmqOz4dfeT7xi59GJVo9Q"],
+ "."
+}], "Text"],
+
+Cell[TextData[{
+ "[4] F. Caspers, \"RF Engineering Basic Concepts: The Smith Chart.\" (Jan \
+19, 2012) ",
+ ButtonBox["arxiv.org/abs/1201.4068",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://arxiv.org/abs/1201.4068"], None},
+  ButtonNote->"http://arxiv.org/abs/1201.4068"],
+ "."
+}], "Text"],
+
+Cell[TextData[{
+ "[5] Wikipedia. \"Conformal Map.\" (Feb 22, 2013) ",
+ ButtonBox["en.wikipedia.org/wiki/Conformal_map",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://en.wikipedia.org/wiki/Conformal_map"], None},
+  ButtonNote->"http://en.wikipedia.org/wiki/Conformal_map"],
+ "."
+}], "Text"],
+
+Cell[TextData[{
+ "[6] R. J. Herber, \"Chapter 6: Notes for the Amateur Radio Extra Class \
+License Manual,\" in ",
+ StyleBox["ARRL Extra Class License Manual",
+  FontSlant->"Italic"],
+ ", 10th ed., Newington, CT: The American Radio Relay League, 2012. ",
+ ButtonBox["www.arrl.org/files/file/Instructor%20 resources/Herber%20 \
+W9HE/notes2012.pdf",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://www.arrl.org/files/file/Instructor%20resources/Herber%20W9HE/\
+notes2012.pdf"], None},
+  ButtonNote->
+   "http://www.arrl.org/files/file/Instructor%20resources/Herber%20W9HE/\
+notes2012.pdf"],
+ "."
+}], "Text"],
+
+Cell[TextData[{
+ "[7] ",
+ StyleBox["ARRL Extra Class License Manual",
+  FontSlant->"Italic"],
+ ", 10th ed., Newington, CT: The American Radio Relay League, 2012."
+}], "Text"]
+}, Close]],
+
+Cell["THIS NOTEBOOK IS THE SOURCE CODE FROM", "Text",
+ CellFrame->{{0, 0}, {0, 0}},
+ CellMargins->{{48, 10}, {4, 28}},
+ CellGroupingRules->{"SectionGrouping", 25},
+ CellFrameMargins->{{48, 48}, {6, 5}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->10,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[TextData[{
+ "\[NonBreakingSpace]",
+ ButtonBox["Randolph J. Herber, W9HE",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/author.html?author=Randolph+J.+\
+Herber"], None},
+  ButtonNote->
+   "http://demonstrations.wolfram.com/author.html?author=Randolph+J.+Herber"]
+}], "Text",
+ CellMargins->{{48, Inherited}, {0, Inherited}},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.6],
+ CellID->977208615],
+
+Cell[TextData[{
+ "\"",
+ ButtonBox["Engineering-Style Smith Chart",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/EngineeringStyleSmithChart/"], 
+    None},
+  ButtonNote->"http://demonstrations.wolfram.com/EngineeringStyleSmithChart/"],
+ "\"",
+ "\[ParagraphSeparator]\[NonBreakingSpace]",
+ ButtonBox["http://demonstrations.wolfram.com/EngineeringStyleSmithChart/",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/EngineeringStyleSmithChart/"], 
+    None},
+  ButtonNote->"http://demonstrations.wolfram.com/EngineeringStyleSmithChart/"],
+ "\[ParagraphSeparator]\[NonBreakingSpace]",
+ ButtonBox["Wolfram Demonstrations Project",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/"],
+ "\[ParagraphSeparator]\[NonBreakingSpace]",
+ "Published: ",
+ "May 10, 2013"
+}], "Text",
+ CellMargins->{{48, Inherited}, {0, Inherited}},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.5]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "A full-function Wolfram ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " system is required to edit this notebook.\n",
+ StyleBox[ButtonBox["GET WOLFRAM MATHEMATICA \[RightGuillemet]",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://www.wolfram.com/products/mathematica/"], None},
+  ButtonNote->"http://www.wolfram.com/products/mathematica/"],
+  FontFamily->"Helvetica",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0.42, 0]]
+}], "Text",
+ CellFrame->True,
+ CellMargins->{{48, 68}, {8, 28}},
+ CellFrameMargins->12,
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ CellChangeTimes->{3.3750111182355957`*^9},
+ ParagraphSpacing->{1., 1.},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.411765],
+ Background->RGBColor[1, 1, 1]],
+
+Cell[TextData[{
+ "\[Copyright] ",
+ StyleBox[ButtonBox["Wolfram Demonstrations Project & Contributors",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/"],
+  FontColor->GrayLevel[0.6]],
+ "\[ThickSpace]\[ThickSpace]\[ThickSpace]|\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+ StyleBox[ButtonBox["Terms of Use",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/termsofuse.html"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/termsofuse.html"],
+  FontColor->GrayLevel[0.6]],
+ "\[ThickSpace]\[ThickSpace]\[ThickSpace]|\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+ StyleBox[ButtonBox["Make a new version of this Demonstration \
+\[RightGuillemet]",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/participate/upload.jsp?id=\
+EngineeringStyleSmithChart"], None},
+  ButtonNote->None],
+  FontColor->GrayLevel[0.6]]
+}], "Text",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellMargins->{{48, 10}, {20, 50}},
+ CellFrameMargins->{{6, 0}, {6, 6}},
+ CellFrameColor->GrayLevel[0.6],
+ FontFamily->"Verdana",
+ FontSize->9,
+ FontColor->GrayLevel[0.6]]
+}, Open  ]]
+},
+Editable->True,
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+CellInsertionPointCell->None,
+WindowSize->{780, 650},
+WindowMargins->{{Inherited, Inherited}, {Inherited, 0}},
+WindowElements->{
+ "StatusArea", "MemoryMonitor", "MagnificationPopUp", "VerticalScrollBar", 
+  "MenuBar"},
+WindowTitle->"Engineering-Style Smith Chart - Source",
+DockedCells->{},
+CellContext->Notebook,
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 7, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[632, 23, 149, 3, 70, "Section"],
+Cell[784, 28, 3749, 65, 70, "Section"],
+Cell[4536, 95, 4315, 124, 70, "Input",
+ InitializationCell->True,
+ CellID->11411590],
+Cell[8854, 221, 49825, 1137, 70, "Input",
+ CellID->48271678]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58716, 1363, 22878, 501, 70, "Output",
+ CellID->552277418],
+Cell[CellGroupData[{
+Cell[81619, 1868, 209, 6, 70, "Section"],
+Cell[81831, 1876, 586, 9, 70, "Text"]
+}, Close]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[82465, 1891, 209, 6, 70, "Section"],
+Cell[82677, 1899, 578, 15, 70, "Text"],
+Cell[83258, 1916, 358, 6, 70, "Text"],
+Cell[83619, 1924, 490, 14, 70, "Text"],
+Cell[84112, 1940, 113, 3, 70, "Text"],
+Cell[84228, 1945, 114, 3, 70, "Text"],
+Cell[84345, 1950, 1230, 19, 70, "Text"],
+Cell[85578, 1971, 709, 11, 70, "Text"],
+Cell[86290, 1984, 328, 5, 70, "Text"],
+Cell[86621, 1991, 26, 0, 70, "Text"],
+Cell[86650, 1993, 163, 5, 70, "Text"],
+Cell[86816, 2000, 293, 8, 70, "Text"],
+Cell[87112, 2010, 1078, 20, 70, "Text"],
+Cell[88193, 2032, 301, 9, 70, "Text"],
+Cell[88497, 2043, 301, 8, 70, "Text"],
+Cell[88801, 2053, 615, 16, 70, "Text"],
+Cell[89419, 2071, 174, 5, 70, "Text"]
+}, Close]],
+Cell[89607, 2079, 355, 9, 70, "Text",
+ CellGroupingRules->{"SectionGrouping", 25}],
+Cell[89965, 2090, 454, 14, 70, "Text",
+ CellID->977208615],
+Cell[90422, 2106, 1054, 29, 70, "Text"],
+Cell[CellGroupData[{
+Cell[91501, 2139, 793, 24, 70, "Text"],
+Cell[92297, 2165, 1198, 33, 70, "Text"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+(* NotebookSignature KSzYVSK1I9RcTDDCh9Dt9#bd *)

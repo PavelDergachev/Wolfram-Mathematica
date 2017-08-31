@@ -1,0 +1,181 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5597,        173]
+NotebookOptionsPosition[      5014,        148]
+NotebookOutlinePosition[      5357,        163]
+CellTagsIndexPosition[      5314,        160]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Tarea Radiadores", "Subchapter",
+ CellChangeTimes->{{3.6815059215413065`*^9, 3.681505926757263*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Campo", "=", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0", ",", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"2", "\[CurlyPhi]"}], "]"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"TransformedField", "[", 
+    RowBox[{
+     RowBox[{"\"\<Spherical\>\"", "\[Rule]", "\"\<Cartesian\>\""}], ",", 
+     "Campo", ",", " ", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"r", ",", "\[Theta]", ",", "\[CurlyPhi]"}], "}"}], "->", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y", ",", "z"}], "}"}]}]}], "]"}], "//", 
+   "FullSimplify"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Curl", "[", 
+    RowBox[{"%", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "]"}], "//", 
+   "FullSimplify"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  "\"\<Resultados que se realizan por diferentes metodos\>\"", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Resultado1", "=", 
+  RowBox[{"TransformedField", "[", 
+   RowBox[{
+    RowBox[{"\"\<Cartesian\>\"", "\[Rule]", "\"\<Spherical\>\""}], ",", "%", 
+    ",", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y", ",", "z"}], "}"}], "->", 
+     RowBox[{"{", 
+      RowBox[{"r", ",", "\[Theta]", ",", "\[CurlyPhi]"}], "}"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Resultado2", "=", 
+  RowBox[{"Curl", "[", 
+   RowBox[{"Campo", ",", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", "\[Theta]", ",", "\[CurlyPhi]"}], "}"}], ",", 
+    "\"\<Spherical\>\""}], "]"}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.6815048601927443`*^9, 3.681504934118946*^9}, {
+   3.6815049724217243`*^9, 3.6815050150474787`*^9}, {3.681505063239982*^9, 
+   3.6815050786757927`*^9}, {3.6815052879431076`*^9, 3.681505295788682*^9}, {
+   3.681505368913596*^9, 3.6815053749717155`*^9}, {3.681505531727521*^9, 
+   3.6815055579112825`*^9}, {3.681505632780521*^9, 3.681505633981243*^9}, {
+   3.681505678480172*^9, 3.6815057925963264`*^9}, {3.6815058412896585`*^9, 
+   3.6815058719809027`*^9}, 3.6815059331012015`*^9, {3.681506040642585*^9, 
+   3.6815060730932703`*^9}, {3.681515370191925*^9, 3.6815155625258946`*^9}}],
+
+Cell[BoxData["\<\"Resultados que se realizan por diferentes metodos\"\>"], \
+"Print",
+ CellChangeTimes->{{3.6815154190049334`*^9, 3.6815154660224237`*^9}, {
+  3.6815155306504517`*^9, 3.6815155636626825`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{"Cot", "[", "\[Theta]", "]"}], " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"2", " ", "\[CurlyPhi]"}], "]"}]}], "r"], ",", 
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"Sin", "[", 
+      RowBox[{"2", " ", "\[CurlyPhi]"}], "]"}], "r"]}], ",", "0"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.6815155478914747`*^9, 3.6815155637707596`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Campo2", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Sin", "[", "\[CurlyPhi]", "]"}], ",", "0", ",", 
+     RowBox[{"r", " ", 
+      RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Curl", "[", 
+   RowBox[{"Campo2", ",", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", "\[Theta]", ",", "\[CurlyPhi]"}], "}"}], ",", 
+    "\"\<Spherical\>\""}], "]"}], "//", 
+  "FullSimplify"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.681508882202057*^9, 3.6815089412781715`*^9}, {
+   3.6815089790728035`*^9, 3.6815090237439137`*^9}, 3.6815090926087103`*^9, {
+   3.681510124628301*^9, 3.6815101324848485`*^9}, 3.6815101642510624`*^9, {
+   3.681510249128973*^9, 3.681510259089666*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"2", " ", 
+    RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CurlyPhi]", "]"}], " ", 
+      RowBox[{"Csc", "[", "\[Theta]", "]"}]}], "r"], "-", 
+    RowBox[{"2", " ", 
+     RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{3.6815102598257165`*^9, 3.681515327496099*^9, 
+  3.681515482831479*^9, 3.681515566844945*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.681514010798316*^9, 3.681514010834774*^9}}]
+}, Open  ]]
+},
+WindowSize->{1366, 685},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 106, 1, 67, "Subchapter"],
+Cell[CellGroupData[{
+Cell[711, 27, 2244, 55, 164, "Input"],
+Cell[2958, 84, 208, 3, 22, "Print"],
+Cell[3169, 89, 425, 13, 47, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3631, 107, 775, 19, 69, "Input"],
+Cell[4409, 128, 482, 13, 46, "Output"]
+}, Open  ]],
+Cell[4906, 144, 92, 1, 30, InheritFromParent]
+}, Open  ]]
+}
+]
+*)
+

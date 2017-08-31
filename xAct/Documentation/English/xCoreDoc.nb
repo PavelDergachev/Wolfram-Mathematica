@@ -1,0 +1,2880 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     81859,       2870]
+NotebookOptionsPosition[     63312,       2292]
+NotebookOutlinePosition[     67539,       2407]
+CellTagsIndexPosition[     66995,       2393]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["(Under construction)", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["xAct`xCore`",
+ FontSize->18]], "Section",
+ CellTags->{"S5.18.1", "1.1"}],
+
+Cell[TextData[{
+ "This is the doc file xCoreDoc.nb of version 0.6.9 of ",
+ StyleBox["xCore",
+  FontFamily->"Courier"],
+ "`. Last update on 23 August 2015."
+}], "Text"],
+
+Cell[CellGroupData[{
+
+Cell["Author", "SubsubsectionIcon"],
+
+Cell["\[Copyright] 2007-2015, under the GNU General Public License (GPL)", \
+"Text"],
+
+Cell[TextData[{
+ "\t",
+ StyleBox["Jos\[EAcute] M. Mart\[IAcute]n-Garc\[IAcute]a",
+  FontWeight->"Bold"]
+}], "Text"],
+
+Cell["\tjose@xact.es", "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Intro", "SubsubsectionIcon"],
+
+Cell[TextData[{
+ StyleBox["xCore`",
+  FontFamily->"Courier"],
+ " contains a collection of programming tools for the ",
+ StyleBox["xAct`",
+  FontFamily->"Courier"],
+ " framework for Tensor Computer Algebra in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ". There is no mathematical knowledge in this package."
+}], "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Load the package", "SubsubsectionIcon"],
+
+Cell[TextData[{
+ "This loads the package from the default directory, for example $Home/.",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "/Applications/xAct/ for a single-user installation under Linux. The \
+external package ",
+ StyleBox["ExpressionManipulation`",
+  FontFamily->"Courier"],
+ " is automatically loaded as well:"
+}], "MathCaption",
+ CellTags->{"S5.18.1", "1.3"}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MemoryInUse", "[", "]"}]], "Input",
+ CellLabel->"In[1]:="],
+
+Cell[BoxData["27161272"], "Output",
+ CellLabel->"Out[1]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["<<xAct`xCore`", "Input",
+ CellTags->"S5.18.1",
+ CellLabel->"In[2]:="],
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ CellTags->"S5.18.1",
+ CellLabel->"During evaluation of In[2]:="],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Package xAct`xCore`  version \"\>", 
+   "\[InvisibleSpace]", "\<\"0.6.9\"\>", "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"2014", ",", "8", ",", "23"}], "}"}]}],
+  SequenceForm["Package xAct`xCore`  version ", "0.6.9", ", ", {2014, 8, 23}],
+  
+  Editable->False]], "Print",
+ CellTags->"S5.18.1",
+ CellLabel->"During evaluation of In[2]:="],
+
+Cell[BoxData["\<\"CopyRight (C) 2007-2015, Jose M. Martin-Garcia, under the \
+General Public License.\"\>"], "Print",
+ CellTags->"S5.18.1",
+ CellLabel->"During evaluation of In[2]:="],
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ CellTags->"S5.18.1",
+ CellLabel->"During evaluation of In[2]:="],
+
+Cell[BoxData["\<\"This package comes with ABSOLUTELY NO WARRANTY; for details \
+type Disclaimer[]. This is free software, and you are welcome to redistribute \
+it under certain conditions. See the General Public License for \
+details.\"\>"], "Print",
+ CellTags->"S5.18.1",
+ CellLabel->"During evaluation of In[2]:="],
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ CellTags->"S5.18.1",
+ CellLabel->"During evaluation of In[2]:="]
+}, Open  ]],
+
+Cell[TextData[{
+ "Comparing, we see that the packages take less than 10Mb  in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " 10.2:"
+}], "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MemoryInUse", "[", "]"}]], "Input",
+ CellLabel->"In[3]:="],
+
+Cell[BoxData["33735136"], "Output",
+ CellLabel->"Out[3]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Out", "[", "3", "]"}], "-", 
+  RowBox[{"Out", "[", "1", "]"}]}]], "Input",
+ CellLabel->"In[4]:="],
+
+Cell[BoxData["6573864"], "Output",
+ CellLabel->"Out[4]="]
+}, Open  ]],
+
+Cell[TextData[{
+ "The context ",
+ StyleBox["xAct`xCore`",
+  FontFamily->"Courier"],
+ " is added to the context path, containing the package\[CloseCurlyQuote]s \
+reserved words. ",
+ StyleBox["System`",
+  FontFamily->"Courier"],
+ " contains ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "'s reserved words. The current context ",
+ StyleBox["Global`",
+  FontFamily->"Courier"],
+ " will contain your definitions and right now it is empty."
+}], "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$ContextPath"], "Input",
+ CellLabel->"In[5]:="],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"xAct`xCore`\"\>", ",", "\<\"StreamingLoader`\"\>", 
+   ",", "\<\"IconizeLoader`\"\>", ",", "\<\"CloudObjectLoader`\"\>", 
+   ",", "\<\"PacletManager`\"\>", ",", "\<\"System`\"\>", 
+   ",", "\<\"Global`\"\>"}], "}"}]], "Output",
+ CellLabel->"Out[5]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Context", "[", "]"}]], "Input",
+ CellLabel->"In[6]:="],
+
+Cell[BoxData["\<\"Global`\"\>"], "Output",
+ CellLabel->"Out[6]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Global`*"}]], "Input",
+ CellLabel->"In[7]:="],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Information", "::", "nomatch"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"No symbol matching \[NoBreak]\\!\\(\\\"Global`*\\\"\\)\
+\[NoBreak] found. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Information/nomatch\\\", ButtonNote -> \
+\\\"Information::nomatch\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[7]:="]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["1. Directories", "SubsectionIcon"],
+
+Cell[TextData[{
+ "There are several possible places to install the ",
+ StyleBox["xAct`",
+  FontFamily->"Courier"],
+ " distribution. The companion notebook ",
+ StyleBox["Directories.nb",
+  FontFamily->"Courier"],
+ " explains the possibilities for the Linux, Windows and Mac environments. \
+Here we assume that the package has been loaded from one of those recommended \
+places."
+}], "Text"],
+
+Cell["The installation directory is stored in the variable", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$xActDirectory"], "Input",
+ CellLabel->"In[8]:="],
+
+Cell[BoxData["\<\"/Users/jose/Library/Mathematica/Applications/xAct/\"\>"], \
+"Output",
+ CellLabel->"Out[8]="]
+}, Open  ]],
+
+Cell["and the documentation directory is", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$xActDocDirectory"], "Input",
+ CellLabel->"In[9]:="],
+
+Cell[BoxData["\<\"/Users/jose/Library/Mathematica/Applications/xAct/\
+Documentation/English\"\>"], "Output",
+ CellLabel->"Out[9]="]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["2. Versions", "SubsectionIcon"],
+
+Cell[TextData[{
+ "Each one of the ",
+ StyleBox["xAct`",
+  FontFamily->"Courier"],
+ " packages has its own version variable."
+}], "Text"],
+
+Cell[TextData[{
+ "The current ",
+ StyleBox["xCore`",
+  FontFamily->"Courier"],
+ " version is given by the pair"
+}], "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$Version"], "Input",
+ CellLabel->"In[10]:="],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"0.6.9\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"2014", ",", "8", ",", "23"}], "}"}]}], "}"}]], "Output",
+ CellLabel->"Out[10]="]
+}, Open  ]],
+
+Cell["\<\
+The first element of the list contains the version number as a string with \
+three integers:\
+\>", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"InputForm", "[", 
+  RowBox[{"First", "[", "%", "]"}], "]"}]], "Input",
+ CellLabel->"In[11]:="],
+
+Cell["\"0.6.9\"", "Output",
+ CellLabel->"Out[11]//InputForm="]
+}, Open  ]],
+
+Cell["The second element is a date list { year, month, day } :", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"InputForm", "[", 
+  RowBox[{"Last", "[", "%%", "]"}], "]"}]], "Input",
+ CellLabel->"In[12]:="],
+
+Cell["{2014, 8, 23}", "Output",
+ CellLabel->"Out[12]//InputForm="]
+}, Open  ]],
+
+Cell["\<\
+When packages are loaded, there are some checks of the versions of the needed \
+packages. These checks are performed comparing the dates only.\
+\>", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["3. The GPL License", "SubsectionIcon"],
+
+Cell[TextData[{
+ "All ",
+ StyleBox["xAct`",
+  FontFamily->"Courier"],
+ " packages are distributed as free software under the GNU General Public \
+License (GPL) . The full document of the license is included in the ",
+ StyleBox["gpl.txt",
+  FontFamily->"Courier"],
+ " file in the distribution. A particularly important part is contained as a \
+Disclaimer in the packages."
+}], "Text"],
+
+Cell[TextData[{
+ "Each package has its own ",
+ StyleBox["Disclaimer",
+  FontFamily->"Courier"],
+ " command:"
+}], "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Disclaimer", "[", "]"}]], "Input",
+ CellLabel->"In[13]:="],
+
+Cell[BoxData["\<\"These are points 11 and 12 of the General Public \
+License:\\n\\nBECAUSE THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO \
+WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT \
+WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES \
+PROVIDE THE PROGRAM `AS IS\.b4 WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED \
+OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF \
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO \
+THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM \
+PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR \
+CORRECTION.\\n\\nIN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO \
+IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY \
+AND/OR REDISTRIBUTE THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR \
+DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES \
+ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT \
+LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED \
+BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER \
+PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE \
+POSSIBILITY OF SUCH DAMAGES.\"\>"], "Print",
+ CellLabel->"During evaluation of In[13]:="]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["4. Messages", "SubsectionIcon"],
+
+Cell[TextData[{
+ "Many commands in ",
+ StyleBox["xAct`",
+  FontFamily->"Courier"],
+ " send messages, using the built-in ",
+ StyleBox["Message",
+  FontFamily->"Courier"],
+ ", usually to report all kinds of errors. Many of those messages only affect \
+particular functions, and are hence defined with those functions. More \
+general messages, common to many of those functions, are defined in ",
+ StyleBox["xCore`",
+  FontFamily->"Courier"],
+ "."
+}], "Text"],
+
+Cell["\<\
+These are messages which could come from many different functions in the \
+system:\
+\>", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"General", "::", "versions"}]], "Input",
+ CellLabel->"In[14]:="],
+
+Cell[BoxData["\<\"Loaded `1` version `2` but expected version `3` at least.\"\
+\>"], "Output",
+ CellLabel->"Out[14]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"General", "::", "unknown"}]], "Input",
+ CellLabel->"In[15]:="],
+
+Cell[BoxData["\<\"Unknown `1` `2`.\"\>"], "Output",
+ CellLabel->"Out[15]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"General", "::", "invalid"}]], "Input",
+ CellLabel->"In[16]:="],
+
+Cell[BoxData["\<\"`1` is not a valid `2`.\"\>"], "Output",
+ CellLabel->"Out[16]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"General", "::", "noundef"}]], "Input",
+ CellLabel->"In[17]:="],
+
+Cell[BoxData["\<\"`1` `2` cannot be undefined because `3`.\"\>"], "Output",
+ CellLabel->"Out[17]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"General", "::", "nouse"}]], "Input",
+ CellLabel->"In[18]:="],
+
+Cell[BoxData["\<\"Attempting to apply `1` on `2`.\"\>"], "Output",
+ CellLabel->"Out[18]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"General", "::", "empty"}]], "Input",
+ CellLabel->"In[19]:="],
+
+Cell[BoxData["\<\"Argument number `1` cannot be an empty list of `2`.\"\>"], \
+"Output",
+ CellLabel->"Out[19]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"General", "::", "notyet"}]], "Input",
+ CellLabel->"In[20]:="],
+
+Cell[BoxData["\<\"Sorry. Cannot work with `1` yet.\"\>"], "Output",
+ CellLabel->"Out[20]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"General", "::", "missing"}]], "Input",
+ CellLabel->"In[21]:="],
+
+Cell[BoxData["\<\"There is no `1` in `2`.\"\>"], "Output",
+ CellLabel->"Out[21]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"General", "::", "undef"}]], "Input",
+ CellLabel->"In[22]:="],
+
+Cell[BoxData["\<\"Undefined `1` of `2`.\"\>"], "Output",
+ CellLabel->"Out[22]="]
+}, Open  ]],
+
+Cell["This is the generic error message:", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"General", "::", "error"}]], "Input",
+ CellLabel->"In[23]:="],
+
+Cell[BoxData["\<\"`1`\"\>"], "Output",
+ CellLabel->"Out[23]="]
+}, Open  ]],
+
+Cell["\<\
+All those error messages are activated by default. There are some other \
+messages which are not errors, but only warnings. They are handled through a \
+particular type of message.\
+\>", "Text"],
+
+Cell["The general warning message is:", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"General", "::", "warning"}]], "Input",
+ CellLabel->"In[24]:="],
+
+Cell[BoxData[
+ RowBox[{"$Off", 
+  "[", "\<\"\\!\\(\\*StyleBox[`1`,FontColor->RGBColor[0,0,1]]\\) : From \
+`2`.\"\>", "]"}]], "Output",
+ CellLabel->"Out[24]="]
+}, Open  ]],
+
+Cell["By default it is deactivated. We activate it  with", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"On", "[", 
+  RowBox[{"General", "::", "warning"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"General", "::", "warning"}]}], "Input",
+ CellLabel->"In[25]:="],
+
+Cell[BoxData["\<\"\\!\\(\\*StyleBox[`1`,FontColor->RGBColor[0,0,1]]\\) : From \
+`2`.\"\>"], "Output",
+ CellLabel->"Out[26]="]
+}, Open  ]],
+
+Cell[TextData[{
+ "Its second argument must be the global variable ",
+ StyleBox["$WarningFrom",
+  FontFamily->"Courier"],
+ ", reporting on the part of the code in which the problem has been found, \
+through ",
+ StyleBox["Block",
+  FontFamily->"Courier"],
+ " constructs. When the problem cannot be localized we get the default ",
+ StyleBox["General",
+  FontFamily->"Courier"],
+ ":"
+}], "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$WarningFrom"], "Input",
+ CellLabel->"In[27]:="],
+
+Cell[BoxData["General"], "Output",
+ CellLabel->"Out[27]="]
+}, Open  ]],
+
+Cell["For instance:", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Block", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"$WarningFrom", "=", "\"\<xCoreDoc\>\""}], "}"}], ",", 
+   RowBox[{"Message", "[", 
+    RowBox[{
+     RowBox[{"General", "::", "warning"}], ",", "\"\<Testing message\>\"", 
+     ",", "$WarningFrom"}], "]"}]}], "]"}]], "Input",
+ CellLabel->"In[28]:="],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"warning\"\>"}], 
+  RowBox[{
+  ":", " "}], "\<\"\\!\\(\\*StyleBox[\\!\\(\\\"Testing \
+message\\\"\\),FontColor->RGBColor[0,0,1]]\\) : From \
+\\!\\(\\\"xCoreDoc\\\"\\).\"\>"}]], "Message",
+ CellLabel->"From In[28]:="]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["5. Developing tools", "SubsectionIcon"],
+
+Cell["5.1. CheckOptions", "SubsubsectionIcon"],
+
+Cell[CellGroupData[{
+
+Cell["5.2. SetNumberOfArguments", "SubsubsectionIcon"],
+
+Cell[TextData[{
+ "Following ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ", we throw error messages when public functions are used with an unexpected \
+number of arguments. ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " already has named messages for this purpose, but there is no (as far as I \
+know) a simple driver to use them, and so we introduce it."
+}], "Text"],
+
+Cell["A function with two arguments:", "MathCaption"],
+
+Cell[BoxData[
+ RowBox[{"SetNumberOfArguments", "[", 
+  RowBox[{"f", ",", "2"}], "]"}]], "Input",
+ CellLabel->"In[29]:="],
+
+Cell["\<\
+Now we get error messages unless we use the function with exactly two \
+arguments. Not that there are different messages:\
+\>", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f", "[", "]"}]], "Input",
+ CellLabel->"In[30]:="],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"f", "::", "argrx"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(f\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; \[NoBreak]\\!\\(2\\)\[NoBreak] \
+arguments are expected.\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[30]:="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f", "[", "1", "]"}]], "Input",
+ CellLabel->"In[31]:="],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"f", "::", "argr"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(f\\)\[NoBreak] called with 1 argument; \
+\[NoBreak]\\!\\(2\\)\[NoBreak] arguments are expected.\"\>"}]], "Message", \
+"MSG",
+ CellLabel->"During evaluation of In[31]:="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f", "[", 
+  RowBox[{"1", ",", "2"}], "]"}]], "Input",
+ CellLabel->"In[32]:="],
+
+Cell[BoxData[
+ RowBox[{"f", "[", 
+  RowBox[{"1", ",", "2"}], "]"}]], "Output",
+ CellLabel->"Out[32]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f", "[", 
+  RowBox[{"1", ",", "2", ",", "3"}], "]"}]], "Input",
+ CellLabel->"In[33]:="],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"f", "::", "argrx"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(f\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(3\\)\[NoBreak] arguments; \[NoBreak]\\!\\(2\\)\[NoBreak] \
+arguments are expected.\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[33]:="]
+}, Open  ]],
+
+Cell["\<\
+A function can have different numbers of arguments. We have only prepared a \
+\"range\" notation:\
+\>", "MathCaption"],
+
+Cell[BoxData[
+ RowBox[{"SetNumberOfArguments", "[", 
+  RowBox[{"g", ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[34]:="],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"g", "[", "]"}]], "Input",
+ CellLabel->"In[35]:="],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"g", "::", "argt"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(g\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; \[NoBreak]\\!\\(2\\)\[NoBreak] or \
+\[NoBreak]\\!\\(3\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argt\\\", \
+ButtonNote -> \\\"Global`g::argt\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[35]:="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"g", "[", "1", "]"}]], "Input",
+ CellLabel->"In[36]:="],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"g", "::", "argr"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(g\\)\[NoBreak] called with 1 argument; \
+\[NoBreak]\\!\\({2, 3}\\)\[NoBreak] arguments are expected.\"\>"}]], "Message",\
+ "MSG",
+ CellLabel->"During evaluation of In[36]:="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"g", "[", 
+  RowBox[{"1", ",", "2"}], "]"}]], "Input",
+ CellLabel->"In[37]:="],
+
+Cell[BoxData[
+ RowBox[{"g", "[", 
+  RowBox[{"1", ",", "2"}], "]"}]], "Output",
+ CellLabel->"Out[37]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"g", "[", 
+  RowBox[{"1", ",", "2", ",", "3"}], "]"}]], "Input",
+ CellLabel->"In[38]:="],
+
+Cell[BoxData[
+ RowBox[{"g", "[", 
+  RowBox[{"1", ",", "2", ",", "3"}], "]"}]], "Output",
+ CellLabel->"Out[38]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"g", "[", 
+  RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "]"}]], "Input",
+ CellLabel->"In[39]:="],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"g", "::", "argt"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(g\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(4\\)\[NoBreak] arguments; \[NoBreak]\\!\\(2\\)\[NoBreak] or \
+\[NoBreak]\\!\\(3\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argt\\\", \
+ButtonNote -> \\\"Global`g::argt\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[39]:="]
+}, Open  ]],
+
+Cell["\<\
+Possible values are 0 and Infinity, the latter used when the function accepts \
+options.\
+\>", "MathCaption"],
+
+Cell["Clean up:", "MathCaption"],
+
+Cell[BoxData[
+ RowBox[{"Remove", "[", 
+  RowBox[{"f", ",", "g"}], "]"}]], "Input",
+ CellLabel->"In[40]:="]
+}, Closed]],
+
+Cell["5.3. Manipulation of lists", "SubsubsectionIcon"],
+
+Cell["5.4. Evaluation", "SubsubsectionIcon"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["6. String formatting", "SubsectionIcon"],
+
+Cell[CellGroupData[{
+
+Cell["6.1. Underline", "SubsubsectionIcon"],
+
+Cell[TextData[{
+ "Given a string, we want to underline it. This will be frequently used in ",
+ StyleBox["xTensor`",
+  FontFamily->"Courier"],
+ " to denote pattern indices in ",
+ StyleBox["StandardOutput",
+  FontFamily->"Courier"],
+ "."
+}], "Text"],
+
+Cell["Any string can be underlined:", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Underline", "[", "\"\<hello\>\"", "]"}]], "Input",
+ CellLabel->"In[41]:="],
+
+Cell[BoxData["\<\"\\!\\(hello\\+_\\)\"\>"], "Output",
+ CellLabel->"Out[41]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "[", "%", "]"}]], "Input",
+ CellLabel->"In[42]:="],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox["\"\<\\!\\(hello\\+_\\)\>\"",
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellLabel->"Out[42]//FullForm="]
+}, Open  ]],
+
+Cell["Any string can be underlined, even one containing blanks:", \
+"MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Underline", "[", "\"\<x y\>\"", "]"}]], "Input",
+ CellLabel->"In[43]:="],
+
+Cell[BoxData["\<\"\\!\\(x y\\+_\\)\"\>"], "Output",
+ CellLabel->"Out[43]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "[", "%", "]"}]], "Input",
+ CellLabel->"In[44]:="],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox["\"\<\\!\\(x y\\+_\\)\>\"",
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellLabel->"Out[44]//FullForm="]
+}, Open  ]],
+
+Cell["The only case not accepted is the empty string:", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Catch", "@", 
+  RowBox[{"Underline", "[", "\"\<\>\"", "]"}]}]], "Input",
+ CellLabel->"In[45]:="],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Format", "::", "blank"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Empty string cannot be \
+\[NoBreak]\\!\\(\\\"underlined\\\"\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Format\\\", ButtonNote -> \
+\\\"Format::blank\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[45]:="]
+}, Open  ]],
+
+Cell["\<\
+A second argument can be used to color the line under the symbol:\
+\>", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Underline", "[", 
+  RowBox[{"\"\<hello\>\"", ",", 
+   RowBox[{"RGBColor", "[", 
+    RowBox[{"0", ",", "0", ",", "1"}], "]"}]}], "]"}]], "Input",
+ CellLabel->"In[46]:="],
+
+Cell[BoxData["\<\"\\!\\(hello\\+\\*StyleBox[\\(_\\),FontColor->RGBColor[0, 0, \
+1]]\\)\"\>"], "Output",
+ CellLabel->"Out[46]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Underline", "[", 
+  RowBox[{"\"\<hello\>\"", ",", 
+   RowBox[{"Hue", "[", "0", "]"}]}], "]"}]], "Input",
+ CellLabel->"In[47]:="],
+
+Cell[BoxData["\<\"\\!\\(hello\\+\\*StyleBox[\\(_\\),FontColor->Hue[0]]\\)\"\>\
+"], "Output",
+ CellLabel->"Out[47]="]
+}, Open  ]],
+
+Cell[TextData[{
+ "Note that ",
+ StyleBox["Underline",
+  FontFamily->"Courier"],
+ " uses strings, and so there is no creation of symbol:"
+}], "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "hello"}]], "Input",
+ CellLabel->"In[48]:="],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Information", "::", "notfound"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(\\\"hello\\\"\\)\[NoBreak] not \
+found. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/notfound\\\", ButtonNote -> \
+\\\"Information::notfound\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[48]:="]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["6.2. TildeString", "SubsubsectionIcon"],
+
+Cell["\<\
+In other ocassions we want to add tildes above or below a string. This \
+happens often with Astekhar's notation for densities, where the number of \
+strings denotes the weight.\
+\>", "Text"],
+
+Cell["A positive number means tildes above the string:", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TildeString", "[", 
+  RowBox[{"\"\<x\>\"", ",", "3"}], "]"}]], "Input",
+ CellLabel->"In[49]:="],
+
+Cell[BoxData["\<\"\\!\\(x\\&~\\&~\\&~\\)\"\>"], "Output",
+ CellLabel->"Out[49]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "[", "%", "]"}]], "Input",
+ CellLabel->"In[50]:="],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox["\"\<\\!\\(x\\&~\\&~\\&~\\)\>\"",
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellLabel->"Out[50]//FullForm="]
+}, Open  ]],
+
+Cell["A negative number means tildes below the string:", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TildeString", "[", 
+  RowBox[{"\"\<x y\>\"", ",", 
+   RowBox[{"-", "3"}]}], "]"}]], "Input",
+ CellLabel->"In[51]:="],
+
+Cell[BoxData["\<\"\\!\\(x y\\+~\\+~\\+~\\)\"\>"], "Output",
+ CellLabel->"Out[51]="]
+}, Open  ]],
+
+Cell["Again, we can use a second argument to color the tildes:", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TildeString", "[", 
+  RowBox[{
+   RowBox[{"TildeString", "[", 
+    RowBox[{"\"\<x\>\"", ",", "1", ",", 
+     RowBox[{"Hue", "[", "0", "]"}]}], "]"}], ",", 
+   RowBox[{"-", "1"}], ",", 
+   RowBox[{"Hue", "[", "0.3", "]"}]}], "]"}]], "Input",
+ CellLabel->"In[52]:="],
+
+Cell[BoxData["\<\"\\!\\(\\!\\(x\\&\\*StyleBox[\\\"~\\\",FontColor->Hue[0]]\\)\
+\\+\\*StyleBox[\\\"~\\\",FontColor->Hue[0.3]]\\)\"\>"], "Output",
+ CellLabel->"Out[52]="]
+}, Open  ]],
+
+Cell["The empty string is an exception:", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Catch", "@", 
+  RowBox[{"TildeString", "[", 
+   RowBox[{"\"\<\>\"", ",", "2"}], "]"}]}]], "Input",
+ CellLabel->"In[53]:="],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Format", "::", "blank"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Empty string cannot be \[NoBreak]\\!\\(\\\"tilded\\\"\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Format\\\", ButtonNote -> \
+\\\"Format::blank\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[53]:="]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["6.3. ColorString", "SubsubsectionIcon"],
+
+Cell["Sometimes it is the string itself what we want to color.", "Text"],
+
+Cell["Example:", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ColorString", "[", 
+  RowBox[{"\"\<hello\>\"", ",", 
+   RowBox[{"Hue", "[", "0", "]"}]}], "]"}]], "Input",
+ CellLabel->"In[54]:="],
+
+Cell[BoxData["\<\"\\!\\(\\*StyleBox[\\\"hello\\\",FontColor->Hue[0.]]\\)\"\>"]\
+, "Output",
+ CellLabel->"Out[54]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "[", "%", "]"}]], "Input",
+ CellLabel->"In[55]:="],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox["\"\<\\!\\(\\*StyleBox[\\\"hello\\\",FontColor->Hue[0.]]\\)\>\"",
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellLabel->"Out[55]//FullForm="]
+}, Open  ]],
+
+Cell["Now the empty string is not an exception:", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ColorString", "[", 
+  RowBox[{"\"\<\>\"", ",", 
+   RowBox[{"Hue", "[", "0", "]"}]}], "]"}]], "Input",
+ CellLabel->"In[56]:="],
+
+Cell[BoxData["\<\"\\!\\(\\*StyleBox[\\\"\\\",FontColor->Hue[0.]]\\)\"\>"], \
+"Output",
+ CellLabel->"Out[56]="]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["6.4. HatString", "SubsubsectionIcon"],
+
+Cell["Or we may want to add hats.", "Text"],
+
+Cell["A positive number means hats above the string:", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HatString", "[", 
+  RowBox[{"\"\<x\>\"", ",", "3"}], "]"}]], "Input",
+ CellLabel->"In[57]:="],
+
+Cell[BoxData["\<\"\\!\\(x\\&^\\&^\\&^\\)\"\>"], "Output",
+ CellLabel->"Out[57]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "[", "%", "]"}]], "Input",
+ CellLabel->"In[58]:="],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox["\"\<\\!\\(x\\&^\\&^\\&^\\)\>\"",
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellLabel->"Out[58]//FullForm="]
+}, Open  ]],
+
+Cell["A negative number means hats below the string:", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HatString", "[", 
+  RowBox[{"\"\<x y\>\"", ",", 
+   RowBox[{"-", "3"}]}], "]"}]], "Input",
+ CellLabel->"In[59]:="],
+
+Cell[BoxData["\<\"\\!\\(x y\\+^\\+^\\+^\\)\"\>"], "Output",
+ CellLabel->"Out[59]="]
+}, Open  ]],
+
+Cell["Again, we can use a second argument to color the tildes:", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HatString", "[", 
+  RowBox[{
+   RowBox[{"HatString", "[", 
+    RowBox[{"\"\<x\>\"", ",", "1", ",", 
+     RowBox[{"Hue", "[", "0", "]"}]}], "]"}], ",", 
+   RowBox[{"-", "1"}], ",", 
+   RowBox[{"Hue", "[", "0.3", "]"}]}], "]"}]], "Input",
+ CellLabel->"In[60]:="],
+
+Cell[BoxData["\<\"\\!\\(\\!\\(x\\&\\*StyleBox[\\\"^\\\",FontColor->Hue[0]]\\)\
+\\+\\*StyleBox[\\\"^\\\",FontColor->Hue[0.3]]\\)\"\>"], "Output",
+ CellLabel->"Out[60]="]
+}, Open  ]],
+
+Cell["The empty string is an exception:", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Catch", "@", 
+  RowBox[{"HatString", "[", 
+   RowBox[{"\"\<\>\"", ",", "2"}], "]"}]}]], "Input",
+ CellLabel->"In[61]:="],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Format", "::", "blank"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Empty string cannot be \[NoBreak]\\!\\(\\\"hatted\\\"\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Format\\\", ButtonNote -> \
+\\\"Format::blank\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[61]:="]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["7. xUpValues", "SubsectionIcon"],
+
+Cell[TextData[{
+ "xCore` imitates a number of ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " functions for setting values, with the only difference that they unprotect \
+(and later protect again) protected symbols. They are denoted with the ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " name prepended with an ",
+ StyleBox["x",
+  FontFamily->"Courier"],
+ "."
+}], "Text"],
+
+Cell[TextData[{
+ "Let us protect symbol ",
+ StyleBox["x",
+  FontFamily->"Courier"],
+ ":"
+}], "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Protect", "[", "x", "]"}]], "Input",
+ CellLabel->"In[62]:="],
+
+Cell[BoxData[
+ RowBox[{"{", "\<\"x\"\>", "}"}]], "Output",
+ CellLabel->"Out[62]="]
+}, Open  ]],
+
+Cell["This does not work:", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UpSet", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "x", "]"}], ",", "1"}], "]"}]], "Input",
+ CellLabel->"In[63]:="],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"UpSet", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(x\\)\[NoBreak] in \[NoBreak]\\!\\(f[x]\
+\\)\[NoBreak] is Protected. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"UpSet::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[63]:="],
+
+Cell[BoxData["1"], "Output",
+ CellLabel->"Out[63]="]
+}, Open  ]],
+
+Cell["but this does create an upvalue:", "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"xUpSet", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "x", "]"}], ",", "1"}], "]"}]], "Input",
+ CellLabel->"In[64]:="],
+
+Cell[BoxData["1"], "Output",
+ CellLabel->"Out[64]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "x"}]], "Input",
+ CellLabel->"In[65]:="],
+
+Cell["Global`x", "Print", "PrintUsage",
+ CellTags->"Info-7c4c48b2-5b4b-4a3c-b97b-5731fa4b0f73"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     RowBox[{
+      RowBox[{"Attributes", "[", "x", "]"}], "=", 
+      RowBox[{"{", "Protected", "}"}]}]},
+    {" "},
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{"f", "[", "x", "]"}], "^=", "1"}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[$CellContext`x],
+  Editable->False]], "Print",
+ CellTags->"Info-7c4c48b2-5b4b-4a3c-b97b-5731fa4b0f73"]
+}, Open  ]],
+
+Cell[TextData[{
+ "The pair ",
+ StyleBox["TagSet",
+  FontFamily->"Courier"],
+ " and ",
+ StyleBox["TagSetDelayed",
+  FontFamily->"Courier"],
+ " has also been generalized, but with a different syntax, because ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "'s syntax is inconsistent. Let us first see what is the problem:"
+}], "Text"],
+
+Cell[TextData[{
+ "The difference between the ",
+ StyleBox["*Set",
+  FontFamily->"Courier"],
+ " and the ",
+ StyleBox["*SetDelayed",
+  FontFamily->"Courier"],
+ " functions is that the former have attribute ",
+ StyleBox["HoldFirst",
+  FontFamily->"Courier"],
+ " while the latter have attribut ",
+ StyleBox["HoldAll",
+  FontFamily->"Courier"],
+ ". This means that in the former case the RHS is evaluated before the \
+assignment and in the latter case the RHS is evaluated at evaluation. This is \
+not the case for ",
+ StyleBox["TagSet",
+  FontFamily->"Courier"],
+ ":"
+}], "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"First", "/@", 
+  RowBox[{"Attributes", "/@", 
+   RowBox[{"{", 
+    RowBox[{"Set", ",", "UpSet", ",", "TagSet"}], "}"}]}]}]], "Input",
+ CellLabel->"In[66]:="],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"HoldFirst", ",", "HoldFirst", ",", "HoldAll"}], "}"}]], "Output",
+ CellLabel->"Out[66]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"First", "/@", 
+  RowBox[{"Attributes", "/@", 
+   RowBox[{"{", 
+    RowBox[{"SetDelayed", ",", "UpSetDelayed", ",", "TagSetDelayed"}], 
+    "}"}]}]}]], "Input",
+ CellLabel->"In[67]:="],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"HoldAll", ",", "HoldAll", ",", "HoldAll"}], "}"}]], "Output",
+ CellLabel->"Out[67]="]
+}, Open  ]],
+
+Cell[TextData[{
+ "I think this is because ",
+ StyleBox["TagSet",
+  FontFamily->"Courier"],
+ " needs to hold its two first arguments, and so ",
+ StyleBox["HoldFirst",
+  FontFamily->"Courier"],
+ " wouldn't be enough. Hence, I have grouped the two first arguments in a \
+list:"
+}], "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"xTagSet", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"f", "[", "x", "]"}]}], "}"}], ",", 
+   RowBox[{"Random", "[", "]"}]}], "]"}]], "Input",
+ CellLabel->"In[68]:="],
+
+Cell[BoxData["0.8587584190561405`"], "Output",
+ CellLabel->"Out[68]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "x"}]], "Input",
+ CellLabel->"In[69]:="],
+
+Cell["Global`x", "Print", "PrintUsage",
+ CellTags->"Info-f4416c50-3023-4a0a-9206-5a332dcfc45e"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     RowBox[{
+      RowBox[{"Attributes", "[", "x", "]"}], "=", 
+      RowBox[{"{", "Protected", "}"}]}]},
+    {" "},
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{"f", "[", "x", "]"}], "^=", "0.8587584190561405`"}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[$CellContext`x],
+  Editable->False]], "Print",
+ CellTags->"Info-f4416c50-3023-4a0a-9206-5a332dcfc45e"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"xTagSetDelayed", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"f", "[", "x", "]"}]}], "}"}], ",", 
+   RowBox[{"Random", "[", "]"}]}], "]"}]], "Input",
+ CellLabel->"In[70]:="],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "x"}]], "Input",
+ CellLabel->"In[71]:="],
+
+Cell["Global`x", "Print", "PrintUsage",
+ CellTags->"Info-d22b2411-9ed8-4986-8c73-79b66e7f2763"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     RowBox[{
+      RowBox[{"Attributes", "[", "x", "]"}], "=", 
+      RowBox[{"{", "Protected", "}"}]}]},
+    {" "},
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{"f", "[", "x", "]"}], "^:=", 
+         RowBox[{"Random", "[", "]"}]}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[$CellContext`x],
+  Editable->False]], "Print",
+ CellTags->"Info-d22b2411-9ed8-4986-8c73-79b66e7f2763"]
+}, Open  ]],
+
+Cell[TextData[{
+ "We have also created the generalization of similar constructs which do not \
+exist in ",
+ StyleBox["Mathematica.",
+  FontSlant->"Italic"]
+}], "Text"],
+
+Cell[TextData[{
+ "There is ",
+ StyleBox["AppendTo",
+  FontFamily->"Courier"],
+ ", but not ",
+ StyleBox["UpAppendTo",
+  FontFamily->"Courier"],
+ ":"
+}], "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "AppendTo"}]], "Input",
+ CellLabel->"In[72]:="],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\!\(\*RowBox[{\\\"AppendTo\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"s\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"elem\\\", \\\
+\"TI\\\"]}], \\\"]\\\"}]\) appends \!\(\*StyleBox[\\\"elem\\\", \\\"TI\\\"]\) \
+to the value of \!\(\*StyleBox[\\\"s\\\", \\\"TI\\\"]\), and resets \
+\!\(\*StyleBox[\\\"s\\\", \\\"TI\\\"]\) to the result. \"\>", "MSG"], 
+  "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/AppendTo"]}]], "Print", "PrintUsage",
+ CellTags->"Info-5048ffbc-61fb-43e3-b4d8-79795317733b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "UpAppendTo"}]], "Input",
+ CellLabel->"In[73]:="],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Information", "::", "notfound"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(\\\"UpAppendTo\\\"\\)\[NoBreak] not \
+found. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/notfound\\\", ButtonNote -> \
+\\\"Information::notfound\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[73]:="]
+}, Open  ]],
+
+Cell[TextData[{
+ "We have created ",
+ StyleBox["xUpAppendTo",
+  FontFamily->"Courier"],
+ ":"
+}], "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"xUpSet", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[74]:="],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "2", ",", "3"}], "}"}]], "Output",
+ CellLabel->"Out[74]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"xUpAppendTo", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "x", "]"}], ",", "4"}], "]"}]], "Input",
+ CellLabel->"In[75]:="],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}]], "Output",
+ CellLabel->"Out[75]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "x"}]], "Input",
+ CellLabel->"In[76]:="],
+
+Cell["Global`x", "Print", "PrintUsage",
+ CellTags->"Info-83c8c631-5030-4b5c-a946-c4586f1b8bdc"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     RowBox[{
+      RowBox[{"Attributes", "[", "x", "]"}], "=", 
+      RowBox[{"{", "Protected", "}"}]}]},
+    {" "},
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{"f", "[", "x", "]"}], "^=", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}]}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[$CellContext`x],
+  Editable->False]], "Print",
+ CellTags->"Info-83c8c631-5030-4b5c-a946-c4586f1b8bdc"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Equivalently, there is ",
+ StyleBox["DeleteCases",
+  FontFamily->"Courier"],
+ ", but no ",
+ StyleBox["DeleteCasesTo",
+  FontFamily->"Courier"],
+ " or ",
+ StyleBox["UpDeleteCasesTo",
+  FontFamily->"Courier"],
+ ". We have created ",
+ StyleBox["xUpDeleteCasesTo",
+  FontFamily->"Courier"],
+ ":"
+}], "MathCaption"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"xUpDeleteCasesTo", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "x", "]"}], ",", "3"}], "]"}]], "Input",
+ CellLabel->"In[77]:="],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "2", ",", "4"}], "}"}]], "Output",
+ CellLabel->"Out[77]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "x"}]], "Input",
+ CellLabel->"In[78]:="],
+
+Cell["Global`x", "Print", "PrintUsage",
+ CellTags->"Info-e0369c9e-3026-454a-9bdf-ed4b905e4ff4"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     RowBox[{
+      RowBox[{"Attributes", "[", "x", "]"}], "=", 
+      RowBox[{"{", "Protected", "}"}]}]},
+    {" "},
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{"f", "[", "x", "]"}], "^=", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "2", ",", "4"}], "}"}]}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[$CellContext`x],
+  Editable->False]], "Print",
+ CellTags->"Info-e0369c9e-3026-454a-9bdf-ed4b905e4ff4"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["8. Rules", "SubsectionIcon"],
+
+Cell[CellGroupData[{
+
+Cell["8.1. FoldedRule", "SubsubsectionIcon"],
+
+Cell["\<\
+We prepare a way to \"compose\" a sequence of lists of rules. This will be \
+useful in the package xCoba`.\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"frule", "=", 
+  RowBox[{"FoldedRule", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"x", "\[Rule]", "a"}], ",", 
+      RowBox[{"y", "\[Rule]", 
+       RowBox[{"a", "+", "b"}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"a", "\[Rule]", "3"}], ",", 
+      RowBox[{"b", "\[Rule]", "5"}]}], "}"}]}], "]"}]}]], "Input",
+ CellLabel->"In[79]:="],
+
+Cell[BoxData[
+ RowBox[{"FoldedRule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "\[Rule]", "a"}], ",", 
+     RowBox[{"y", "\[Rule]", 
+      RowBox[{"a", "+", "b"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"a", "\[Rule]", "3"}], ",", 
+     RowBox[{"b", "\[Rule]", "5"}]}], "}"}]}], "]"}]], "Output",
+ CellLabel->"Out[79]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "FoldedRule"}]], "Input",
+ CellLabel->"In[80]:="],
+
+Cell[BoxData[
+ StyleBox["\<\"FoldedRule[rules1, rules2, ...] contains a number of lists of \
+rules which are applied sequentially (first rules1, then rules2, etc.) when \
+called by ReplaceAll and ReplaceRepeated.\"\>", "MSG"]], "Print", "PrintUsage",
+ CellTags->"Info-de3b8662-3da6-481d-91e8-6aa4f3eec4c7"]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+
+Cell["9. Names", "SubsectionIcon"],
+
+Cell[CellGroupData[{
+
+Cell["10. Final comments", "SubsectionIcon"],
+
+Cell[TextData[{
+ StyleBox["Note:", "TB"],
+ " For further information about ",
+ StyleBox["xCore`", "MR"],
+ ", and to be kept informed about new releases, you may contact the author at",
+ StyleBox[" ",
+  FontFamily->"Helvetica"],
+ " ",
+ StyleBox["jose@xact.es",
+  FontFamily->"Helvetica"],
+ ". Suggestions and comments are welcome and very much appreciated!\nThis is \
+xCoreDoc.nb, the docfile of ",
+ StyleBox["xCore`", "MR"],
+ ", currently in version 0.6.9.\t"
+}], "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "xAct`xCore`*"}]], "Input",
+ CellLabel->"In[81]:="],
+
+Cell[BoxData[
+ DynamicModuleBox[{Typeset`open$$ = True}, 
+  PaneSelectorBox[{False->
+   RowBox[{
+    OpenerBox[Dynamic[Typeset`open$$],
+     ImageSize->Small], 
+    StyleBox["xAct`xCore`", "InfoHeading"]}], True->GridBox[{
+     {
+      RowBox[{
+       OpenerBox[Dynamic[Typeset`open$$],
+        ImageSize->Small], 
+       StyleBox["xAct`xCore`", "InfoHeading"]}]},
+     {GridBox[{
+        {
+         ButtonBox["AllTests",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "AllTests", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["ReportSet",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "ReportSet", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["xUpSetDelayed",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "xUpSetDelayed", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["AppendToUnevaluated",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "AppendToUnevaluated", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["ReportSetOption",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "ReportSetOption", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$DaggerCharacter",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$DaggerCharacter", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["CheckOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "CheckOptions", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["SetNumberOfArguments",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "SetNumberOfArguments", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$EMNames",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$EMNames", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["CheckTests",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "CheckTests", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["SubHead",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "SubHead", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$HarmonicsNames",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$HarmonicsNames", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["CollapseFoldedRule",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "CollapseFoldedRule", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["SymbolJoin",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "SymbolJoin", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$InvarNames",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$InvarNames", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["ColorString",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "ColorString", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["TestCounter",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "TestCounter", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$LinkCharacter",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$LinkCharacter", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["DependentRules",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "DependentRules", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["TestResult",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "TestResult", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$SpecialOutputNames",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$SpecialOutputNames", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["Disclaimer",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "Disclaimer", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["ThreadArray",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "ThreadArray", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$SpinorsNames",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$SpinorsNames", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["FindSymbols",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "FindSymbols", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["TildeString",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "TildeString", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$SystemNames",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$SystemNames", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["FoldedRule",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "FoldedRule", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["TrueOrFalse",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "TrueOrFalse", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$Version",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$Version", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["HasDaggerCharacterQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "HasDaggerCharacterQ", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["Underline",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "Underline", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$WarningFrom",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$WarningFrom", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["HatString",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "HatString", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["UnlinkSymbol",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "UnlinkSymbol", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$xActDirectory",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$xActDirectory", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["IndependentRules",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "IndependentRules", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["ValidateSymbol",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "ValidateSymbol", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$xActDocDirectory",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$xActDocDirectory", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["JustOne",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "JustOne", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["xEvaluateAt",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "xEvaluateAt", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$xActNames",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$xActNames", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["LinkSymbols",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "LinkSymbols", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["xHold",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "xHold", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$xCobaNames",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$xCobaNames", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["MakeDaggerSymbol",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "MakeDaggerSymbol", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["xTagSet",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "xTagSet", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$xCoreNames",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$xCoreNames", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["MakexTensions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "MakexTensions", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["xTagSetDelayed",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "xTagSetDelayed", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$xPermNames",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$xPermNames", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["MapIfPlus",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "MapIfPlus", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["xTension",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "xTension", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$xPertNames",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$xPertNames", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["MapRuleL",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "MapRuleL", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["xTest",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "xTest", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$xTableauNames",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$xTableauNames", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["MapRuleR",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "MapRuleR", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["xUpAppendTo",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "xUpAppendTo", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["$xTensorNames",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "$xTensorNames", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"]},
+        {
+         ButtonBox["NoPattern",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "NoPattern", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["xUpDeleteCasesTo",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "xUpDeleteCasesTo", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], ""},
+        {
+         ButtonBox["Overline",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "Overline", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], 
+         ButtonBox["xUpSet",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info-77e33407-15de-455e-8aa8-ed3509e9018f", {
+            "xUpSet", "xAct`xCore`"}},
+          ButtonNote->"xAct`xCore`"], ""}
+       },
+       DefaultBaseStyle->"InfoGrid",
+       GridBoxItemSize->{"Columns" -> {{
+            Scaled[0.31666666666666665`]}}}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
+   Dynamic[Typeset`open$$],
+   ImageSize->Automatic]]], "Print", "InfoCell"]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+},
+ScreenStyleEnvironment->"Brackets",
+PrintingStyleEnvironment->"Printout",
+WindowSize->{1050, 701},
+WindowMargins->{{70, Automatic}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic},
+PageHeaders->{{Inherited, Inherited, 
+   Cell[
+    TextData[{
+      ValueBox["FileName"]}], "Header"]}, {
+   Cell[
+    TextData[{
+      ValueBox["FileName"]}], "Header"], Inherited, Inherited}},
+PageFooters->{{Inherited, 
+   Cell[
+    TextData[{
+     "\[Copyright]2003-2004 Jos\[EAcute] M. Mart\[IAcute]n-Garc\[IAcute]a"}], 
+    "PageFooter"], Inherited}, {Inherited, 
+   Cell[
+    TextData[{
+     "\[Copyright]2003-2004 Jos\[EAcute] M. Mart\[IAcute]n-Garc\[IAcute]a"}], 
+    "PageFooter"], Inherited}},
+PrintingOptions->{"Magnification"->1,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{597.562, 842.375},
+"PostScriptOutputFile":>FrontEnd`FileName[{"home", "jmm"}, "example.ps", 
+  CharacterEncoding -> "iso8859-1"],
+"PrintCellBrackets"->False,
+"PrintMultipleHorizontalPages"->False,
+"PrintRegistrationMarks"->True,
+"PrintingMargins"->{{54, 54}, {108, 108}}},
+ShowSelection->True,
+Magnification->1.5,
+FrontEndVersion->"10.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 6, \
+2015)",
+StyleDefinitions->"HelpBrowser.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "S5.18.1"->{
+  Cell[625, 24, 96, 2, 45, "Section",
+   CellTags->{"S5.18.1", "1.1"}],
+  Cell[1676, 72, 381, 10, 76, "MathCaption",
+   CellTags->{"S5.18.1", "1.3"}],
+  Cell[2262, 96, 75, 2, 35, "Input",
+   CellTags->"S5.18.1"],
+  Cell[2340, 100, 162, 3, 27, "Print",
+   CellTags->"S5.18.1"],
+  Cell[2505, 105, 434, 11, 27, "Print",
+   CellTags->"S5.18.1"],
+  Cell[2942, 118, 183, 3, 27, "Print",
+   CellTags->"S5.18.1"],
+  Cell[3128, 123, 162, 3, 27, "Print",
+   CellTags->"S5.18.1"],
+  Cell[3293, 128, 316, 5, 74, "Print",
+   CellTags->"S5.18.1"],
+  Cell[3612, 135, 162, 3, 27, "Print",
+   CellTags->"S5.18.1"]},
+ "1.1"->{
+  Cell[625, 24, 96, 2, 45, "Section",
+   CellTags->{"S5.18.1", "1.1"}]},
+ "1.3"->{
+  Cell[1676, 72, 381, 10, 76, "MathCaption",
+   CellTags->{"S5.18.1", "1.3"}]},
+ "Info-7c4c48b2-5b4b-4a3c-b97b-5731fa4b0f73"->{
+  Cell[33018, 1294, 95, 1, 56, "Print",
+   CellTags->"Info-7c4c48b2-5b4b-4a3c-b97b-5731fa4b0f73"],
+  Cell[33116, 1297, 879, 26, 76, "Print",
+   CellTags->"Info-7c4c48b2-5b4b-4a3c-b97b-5731fa4b0f73"]},
+ "Info-f4416c50-3023-4a0a-9206-5a332dcfc45e"->{
+  Cell[36372, 1423, 95, 1, 56, "Print",
+   CellTags->"Info-f4416c50-3023-4a0a-9206-5a332dcfc45e"],
+  Cell[36470, 1426, 897, 26, 76, "Print",
+   CellTags->"Info-f4416c50-3023-4a0a-9206-5a332dcfc45e"]},
+ "Info-d22b2411-9ed8-4986-8c73-79b66e7f2763"->{
+  Cell[37701, 1470, 95, 1, 56, "Print",
+   CellTags->"Info-d22b2411-9ed8-4986-8c73-79b66e7f2763"],
+  Cell[37799, 1473, 915, 27, 76, "Print",
+   CellTags->"Info-d22b2411-9ed8-4986-8c73-79b66e7f2763"]},
+ "Info-5048ffbc-61fb-43e3-b4d8-79795317733b"->{
+  Cell[39168, 1526, 622, 13, 58, "Print",
+   CellTags->"Info-5048ffbc-61fb-43e3-b4d8-79795317733b"]},
+ "Info-83c8c631-5030-4b5c-a946-c4586f1b8bdc"->{
+  Cell[41237, 1604, 95, 1, 56, "Print",
+   CellTags->"Info-83c8c631-5030-4b5c-a946-c4586f1b8bdc"],
+  Cell[41335, 1607, 960, 28, 76, "Print",
+   CellTags->"Info-83c8c631-5030-4b5c-a946-c4586f1b8bdc"]},
+ "Info-e0369c9e-3026-454a-9bdf-ed4b905e4ff4"->{
+  Cell[43026, 1674, 95, 1, 56, "Print",
+   CellTags->"Info-e0369c9e-3026-454a-9bdf-ed4b905e4ff4"],
+  Cell[43124, 1677, 950, 28, 76, "Print",
+   CellTags->"Info-e0369c9e-3026-454a-9bdf-ed4b905e4ff4"]},
+ "Info-de3b8662-3da6-481d-91e8-6aa4f3eec4c7"->{
+  Cell[45268, 1760, 306, 4, 84, "Print",
+   CellTags->"Info-de3b8662-3da6-481d-91e8-6aa4f3eec4c7"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"S5.18.1", 64656, 2334},
+ {"1.1", 65265, 2353},
+ {"1.3", 65348, 2356},
+ {"Info-7c4c48b2-5b4b-4a3c-b97b-5731fa4b0f73", 65476, 2359},
+ {"Info-f4416c50-3023-4a0a-9206-5a332dcfc45e", 65725, 2364},
+ {"Info-d22b2411-9ed8-4986-8c73-79b66e7f2763", 65974, 2369},
+ {"Info-5048ffbc-61fb-43e3-b4d8-79795317733b", 66223, 2374},
+ {"Info-83c8c631-5030-4b5c-a946-c4586f1b8bdc", 66373, 2377},
+ {"Info-e0369c9e-3026-454a-9bdf-ed4b905e4ff4", 66622, 2382},
+ {"Info-de3b8662-3da6-481d-91e8-6aa4f3eec4c7", 66871, 2387}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 42, 0, 52, "Subsection"],
+Cell[CellGroupData[{
+Cell[625, 24, 96, 2, 45, "Section",
+ CellTags->{"S5.18.1", "1.1"}],
+Cell[724, 28, 167, 5, 31, "Text"],
+Cell[CellGroupData[{
+Cell[916, 37, 35, 0, 31, "SubsubsectionIcon"],
+Cell[954, 39, 84, 1, 31, "Text"],
+Cell[1041, 42, 115, 4, 31, "Text"],
+Cell[1159, 48, 30, 0, 31, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1226, 53, 34, 0, 31, "SubsubsectionIcon"],
+Cell[1263, 55, 328, 10, 52, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1628, 70, 45, 0, 31, "SubsubsectionIcon"],
+Cell[1676, 72, 381, 10, 76, "MathCaption",
+ CellTags->{"S5.18.1", "1.3"}],
+Cell[CellGroupData[{
+Cell[2082, 86, 82, 2, 34, "Input"],
+Cell[2167, 90, 58, 1, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2262, 96, 75, 2, 35, "Input",
+ CellTags->"S5.18.1"],
+Cell[2340, 100, 162, 3, 27, "Print",
+ CellTags->"S5.18.1"],
+Cell[2505, 105, 434, 11, 27, "Print",
+ CellTags->"S5.18.1"],
+Cell[2942, 118, 183, 3, 27, "Print",
+ CellTags->"S5.18.1"],
+Cell[3128, 123, 162, 3, 27, "Print",
+ CellTags->"S5.18.1"],
+Cell[3293, 128, 316, 5, 74, "Print",
+ CellTags->"S5.18.1"],
+Cell[3612, 135, 162, 3, 27, "Print",
+ CellTags->"S5.18.1"]
+}, Open  ]],
+Cell[3789, 141, 158, 5, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[3972, 150, 82, 2, 34, "Input"],
+Cell[4057, 154, 58, 1, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4152, 160, 132, 4, 34, "Input"],
+Cell[4287, 166, 57, 1, 33, "Output"]
+}, Open  ]],
+Cell[4359, 170, 461, 15, 76, "MathCaption"],
+Cell[CellGroupData[{
+Cell[4845, 189, 61, 1, 34, "Input"],
+Cell[4909, 192, 294, 6, 57, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5240, 203, 78, 2, 34, "Input"],
+Cell[5321, 207, 65, 1, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5423, 213, 74, 2, 34, "Input"],
+Cell[5500, 217, 476, 10, 31, "Message"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6025, 233, 40, 0, 52, "SubsectionIcon"],
+Cell[6068, 235, 389, 10, 72, "Text"],
+Cell[6460, 247, 75, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[6560, 251, 63, 1, 34, "Input"],
+Cell[6626, 254, 110, 2, 33, "Output"]
+}, Open  ]],
+Cell[6751, 259, 57, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[6833, 263, 66, 1, 34, "Input"],
+Cell[6902, 266, 131, 2, 33, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[7082, 274, 37, 0, 33, "SubsectionIcon"],
+Cell[7122, 276, 136, 5, 31, "Text"],
+Cell[7261, 283, 130, 5, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[7416, 292, 58, 1, 34, "Input"],
+Cell[7477, 295, 172, 5, 33, "Output"]
+}, Open  ]],
+Cell[7664, 303, 123, 3, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[7812, 310, 118, 3, 34, "Input"],
+Cell[7933, 315, 62, 1, 51, "Output"]
+}, Open  ]],
+Cell[8010, 319, 79, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[8114, 323, 118, 3, 34, "Input"],
+Cell[8235, 328, 66, 1, 51, "Output"]
+}, Open  ]],
+Cell[8316, 332, 166, 3, 52, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[8519, 340, 44, 0, 33, "SubsectionIcon"],
+Cell[8566, 342, 383, 10, 72, "Text"],
+Cell[8952, 354, 127, 5, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[9104, 363, 82, 2, 34, "Input"],
+Cell[9189, 367, 1387, 18, 442, "Print"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[10625, 391, 37, 0, 33, "SubsectionIcon"],
+Cell[10665, 393, 456, 13, 72, "Text"],
+Cell[11124, 408, 113, 3, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[11262, 415, 87, 2, 34, "Input"],
+Cell[11352, 419, 118, 2, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11507, 426, 86, 2, 34, "Input"],
+Cell[11596, 430, 75, 1, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11708, 436, 86, 2, 34, "Input"],
+Cell[11797, 440, 82, 1, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11916, 446, 86, 2, 34, "Input"],
+Cell[12005, 450, 99, 1, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12141, 456, 84, 2, 34, "Input"],
+Cell[12228, 460, 90, 1, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12355, 466, 84, 2, 34, "Input"],
+Cell[12442, 470, 112, 2, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12591, 477, 85, 2, 34, "Input"],
+Cell[12679, 481, 91, 1, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12807, 487, 86, 2, 34, "Input"],
+Cell[12896, 491, 82, 1, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13015, 497, 84, 2, 34, "Input"],
+Cell[13102, 501, 80, 1, 33, "Output"]
+}, Open  ]],
+Cell[13197, 505, 57, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[13279, 509, 84, 2, 34, "Input"],
+Cell[13366, 513, 62, 1, 33, "Output"]
+}, Open  ]],
+Cell[13443, 517, 204, 4, 52, "Text"],
+Cell[13650, 523, 54, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[13729, 527, 86, 2, 34, "Input"],
+Cell[13818, 531, 158, 4, 33, "Output"]
+}, Open  ]],
+Cell[13991, 538, 73, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[14089, 542, 180, 4, 58, "Input"],
+Cell[14272, 548, 125, 2, 33, "Output"]
+}, Open  ]],
+Cell[14412, 553, 398, 12, 76, "MathCaption"],
+Cell[CellGroupData[{
+Cell[14835, 569, 62, 1, 34, "Input"],
+Cell[14900, 572, 58, 1, 33, "Output"]
+}, Open  ]],
+Cell[14973, 576, 36, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[15034, 580, 328, 9, 58, "Input"],
+Cell[15365, 591, 271, 7, 25, "Message"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[15685, 604, 45, 0, 33, "SubsectionIcon"],
+Cell[15733, 606, 46, 0, 31, "SubsubsectionIcon"],
+Cell[CellGroupData[{
+Cell[15804, 610, 54, 0, 23, "SubsubsectionIcon"],
+Cell[15861, 612, 383, 10, 72, "Text"],
+Cell[16247, 624, 53, 0, 55, "MathCaption"],
+Cell[16303, 626, 120, 3, 34, "Input"],
+Cell[16426, 631, 152, 3, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[16603, 638, 73, 2, 34, "Input"],
+Cell[16679, 642, 331, 8, 31, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17047, 655, 78, 2, 34, "Input"],
+Cell[17128, 659, 300, 8, 31, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17465, 672, 101, 3, 34, "Input"],
+Cell[17569, 677, 102, 3, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17708, 685, 111, 3, 34, "Input"],
+Cell[17822, 690, 331, 8, 31, "Message"]
+}, Open  ]],
+Cell[18168, 701, 128, 3, 55, "MathCaption"],
+Cell[18299, 706, 169, 5, 34, "Input"],
+Cell[CellGroupData[{
+Cell[18493, 715, 73, 2, 34, "Input"],
+Cell[18569, 719, 555, 11, 31, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19161, 735, 78, 2, 34, "Input"],
+Cell[19242, 739, 305, 8, 31, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19584, 752, 101, 3, 34, "Input"],
+Cell[19688, 757, 102, 3, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19827, 765, 111, 3, 34, "Input"],
+Cell[19941, 770, 112, 3, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20090, 778, 121, 3, 34, "Input"],
+Cell[20214, 783, 555, 11, 31, "Message"]
+}, Open  ]],
+Cell[20784, 797, 119, 3, 55, "MathCaption"],
+Cell[20906, 802, 32, 0, 55, "MathCaption"],
+Cell[20941, 804, 106, 3, 34, "Input"]
+}, Closed]],
+Cell[21062, 810, 55, 0, 23, "SubsubsectionIcon"],
+Cell[21120, 812, 44, 0, 23, "SubsubsectionIcon"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[21201, 817, 46, 0, 33, "SubsectionIcon"],
+Cell[CellGroupData[{
+Cell[21272, 821, 43, 0, 31, "SubsubsectionIcon"],
+Cell[21318, 823, 247, 8, 52, "Text"],
+Cell[21568, 833, 52, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[21645, 837, 98, 2, 34, "Input"],
+Cell[21746, 841, 77, 1, 36, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21860, 847, 85, 2, 34, "Input"],
+Cell[21948, 851, 208, 7, 53, "Output"]
+}, Open  ]],
+Cell[22171, 861, 82, 1, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[22278, 866, 96, 2, 34, "Input"],
+Cell[22377, 870, 75, 1, 39, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22489, 876, 85, 2, 34, "Input"],
+Cell[22577, 880, 206, 7, 53, "Output"]
+}, Open  ]],
+Cell[22798, 890, 70, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[22893, 894, 120, 3, 34, "Input"],
+Cell[23016, 899, 442, 10, 31, "Message"]
+}, Open  ]],
+Cell[23473, 912, 96, 2, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[23594, 918, 192, 5, 34, "Input"],
+Cell[23789, 925, 127, 2, 37, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23953, 932, 152, 4, 34, "Input"],
+Cell[24108, 938, 116, 2, 37, "Output"]
+}, Open  ]],
+Cell[24239, 943, 155, 5, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[24419, 952, 72, 2, 34, "Input"],
+Cell[24494, 956, 465, 10, 31, "Message"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[25008, 972, 45, 0, 23, "SubsubsectionIcon"],
+Cell[25056, 974, 200, 4, 52, "Text"],
+Cell[25259, 980, 71, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[25355, 984, 119, 3, 34, "Input"],
+Cell[25477, 989, 81, 1, 46, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25595, 995, 85, 2, 34, "Input"],
+Cell[25683, 999, 212, 7, 50, "Output"]
+}, Open  ]],
+Cell[25910, 1009, 71, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[26006, 1013, 140, 4, 34, "Input"],
+Cell[26149, 1019, 83, 1, 52, "Output"]
+}, Open  ]],
+Cell[26247, 1023, 79, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[26351, 1027, 288, 8, 34, "Input"],
+Cell[26642, 1037, 168, 2, 37, "Output"]
+}, Open  ]],
+Cell[26825, 1042, 56, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[26906, 1046, 146, 4, 34, "Input"],
+Cell[27055, 1052, 438, 10, 31, "Message"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[27542, 1068, 45, 0, 23, "SubsubsectionIcon"],
+Cell[27590, 1070, 72, 0, 31, "Text"],
+Cell[27665, 1072, 31, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[27721, 1076, 154, 4, 34, "Input"],
+Cell[27878, 1082, 115, 2, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28030, 1089, 85, 2, 34, "Input"],
+Cell[28118, 1093, 244, 7, 50, "Output"]
+}, Open  ]],
+Cell[28377, 1103, 64, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[28466, 1107, 149, 4, 34, "Input"],
+Cell[28618, 1113, 110, 2, 33, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[28777, 1121, 43, 0, 23, "SubsubsectionIcon"],
+Cell[28823, 1123, 43, 0, 31, "Text"],
+Cell[28869, 1125, 69, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[28963, 1129, 117, 3, 34, "Input"],
+Cell[29083, 1134, 81, 1, 51, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29201, 1140, 85, 2, 34, "Input"],
+Cell[29289, 1144, 212, 7, 50, "Output"]
+}, Open  ]],
+Cell[29516, 1154, 69, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[29610, 1158, 138, 4, 34, "Input"],
+Cell[29751, 1164, 83, 1, 57, "Output"]
+}, Open  ]],
+Cell[29849, 1168, 79, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[29953, 1172, 284, 8, 34, "Input"],
+Cell[30240, 1182, 168, 2, 41, "Output"]
+}, Open  ]],
+Cell[30423, 1187, 56, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[30504, 1191, 144, 4, 34, "Input"],
+Cell[30651, 1197, 438, 10, 31, "Message"]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[31150, 1214, 38, 0, 33, "SubsectionIcon"],
+Cell[31191, 1216, 387, 12, 52, "Text"],
+Cell[31581, 1230, 107, 5, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[31713, 1239, 84, 2, 34, "Input"],
+Cell[31800, 1243, 82, 2, 33, "Output"]
+}, Open  ]],
+Cell[31897, 1248, 42, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[31964, 1252, 134, 4, 34, "Input"],
+Cell[32101, 1258, 469, 10, 31, "Message"],
+Cell[32573, 1270, 52, 1, 33, "Output"]
+}, Open  ]],
+Cell[32640, 1274, 55, 0, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[32720, 1278, 135, 4, 34, "Input"],
+Cell[32858, 1284, 52, 1, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32947, 1290, 68, 2, 34, "Input"],
+Cell[33018, 1294, 95, 1, 56, "Print",
+ CellTags->"Info-7c4c48b2-5b4b-4a3c-b97b-5731fa4b0f73"],
+Cell[33116, 1297, 879, 26, 76, "Print",
+ CellTags->"Info-7c4c48b2-5b4b-4a3c-b97b-5731fa4b0f73"]
+}, Open  ]],
+Cell[34010, 1326, 337, 11, 52, "Text"],
+Cell[34350, 1339, 582, 19, 96, "MathCaption"],
+Cell[CellGroupData[{
+Cell[34957, 1362, 181, 5, 34, "Input"],
+Cell[35141, 1369, 129, 3, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35307, 1377, 207, 6, 34, "Input"],
+Cell[35517, 1385, 125, 3, 33, "Output"]
+}, Open  ]],
+Cell[35657, 1391, 293, 9, 76, "MathCaption"],
+Cell[CellGroupData[{
+Cell[35975, 1404, 216, 7, 34, "Input"],
+Cell[36194, 1413, 70, 1, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36301, 1419, 68, 2, 34, "Input"],
+Cell[36372, 1423, 95, 1, 56, "Print",
+ CellTags->"Info-f4416c50-3023-4a0a-9206-5a332dcfc45e"],
+Cell[36470, 1426, 897, 26, 76, "Print",
+ CellTags->"Info-f4416c50-3023-4a0a-9206-5a332dcfc45e"]
+}, Open  ]],
+Cell[37382, 1455, 223, 7, 34, "Input"],
+Cell[CellGroupData[{
+Cell[37630, 1466, 68, 2, 34, "Input"],
+Cell[37701, 1470, 95, 1, 56, "Print",
+ CellTags->"Info-d22b2411-9ed8-4986-8c73-79b66e7f2763"],
+Cell[37799, 1473, 915, 27, 76, "Print",
+ CellTags->"Info-d22b2411-9ed8-4986-8c73-79b66e7f2763"]
+}, Open  ]],
+Cell[38729, 1503, 167, 5, 31, "Text"],
+Cell[38899, 1510, 166, 8, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[39090, 1522, 75, 2, 34, "Input"],
+Cell[39168, 1526, 622, 13, 58, "Print",
+ CellTags->"Info-5048ffbc-61fb-43e3-b4d8-79795317733b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39827, 1544, 77, 2, 34, "Input"],
+Cell[39907, 1548, 470, 10, 31, "Message"]
+}, Open  ]],
+Cell[40392, 1561, 111, 5, 55, "MathCaption"],
+Cell[CellGroupData[{
+Cell[40528, 1570, 194, 6, 34, "Input"],
+Cell[40725, 1578, 107, 3, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40869, 1586, 140, 4, 34, "Input"],
+Cell[41012, 1592, 117, 3, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41166, 1600, 68, 2, 34, "Input"],
+Cell[41237, 1604, 95, 1, 56, "Print",
+ CellTags->"Info-83c8c631-5030-4b5c-a946-c4586f1b8bdc"],
+Cell[41335, 1607, 960, 28, 76, "Print",
+ CellTags->"Info-83c8c631-5030-4b5c-a946-c4586f1b8bdc"]
+}, Open  ]],
+Cell[42310, 1638, 328, 14, 76, "MathCaption"],
+Cell[CellGroupData[{
+Cell[42663, 1656, 145, 4, 34, "Input"],
+Cell[42811, 1662, 107, 3, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42955, 1670, 68, 2, 34, "Input"],
+Cell[43026, 1674, 95, 1, 56, "Print",
+ CellTags->"Info-e0369c9e-3026-454a-9bdf-ed4b905e4ff4"],
+Cell[43124, 1677, 950, 28, 76, "Print",
+ CellTags->"Info-e0369c9e-3026-454a-9bdf-ed4b905e4ff4"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[44123, 1711, 34, 0, 33, "SubsectionIcon"],
+Cell[CellGroupData[{
+Cell[44182, 1715, 44, 0, 31, "SubsubsectionIcon"],
+Cell[44229, 1717, 130, 3, 31, "Text"],
+Cell[CellGroupData[{
+Cell[44384, 1724, 400, 13, 34, "Input"],
+Cell[44787, 1739, 364, 12, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45188, 1756, 77, 2, 34, "Input"],
+Cell[45268, 1760, 306, 4, 84, "Print",
+ CellTags->"Info-de3b8662-3da6-481d-91e8-6aa4f3eec4c7"]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[45613, 1769, 34, 0, 33, "SubsectionIcon"],
+Cell[CellGroupData[{
+Cell[45672, 1773, 44, 0, 33, "SubsectionIcon"],
+Cell[45719, 1775, 471, 14, 80, "Text"],
+Cell[CellGroupData[{
+Cell[46215, 1793, 79, 2, 34, "Input"],
+Cell[46297, 1797, 16975, 490, 742, "Print"]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

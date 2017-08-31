@@ -1,0 +1,1494 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     60224,       1485]
+NotebookOptionsPosition[     55944,       1353]
+NotebookOutlinePosition[     57548,       1403]
+CellTagsIndexPosition[     57220,       1391]
+WindowFrame->Normal
+ContainsDynamic->True *)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Calabi-Yau Space", "DemoTitle",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.405540851765625*^9, 3.4055408584375*^9}, {
+   3.40554289459375*^9, 3.405542895171875*^9}}],
+
+Cell["", "InitializationSection"],
+
+Cell[CellGroupData[{
+
+Cell["", "ManipulateSection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"calabi", "[", 
+      RowBox[{"0", ",", "0", ",", "0", ",", "alpha", ",", "0", ",", "clr"}], 
+      "]"}], ",", 
+     RowBox[{"ViewPoint", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "1.4"}], ",", "0", ",", "1.4"}], "}"}]}], ",", 
+     RowBox[{"Lighting", "\[Rule]", 
+      RowBox[{"If", "[", 
+       RowBox[{"clr", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"\"\<Ambient\>\"", ",", 
+            RowBox[{"GrayLevel", "[", ".5", "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Directional\>\"", ",", "White", ",", 
+            RowBox[{"ImageScaled", "@", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0", ",", "2"}], "}"}]}]}], "}"}]}], "}"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"\"\<Ambient\>\"", ",", 
+            RowBox[{"GrayLevel", "[", ".25", "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Directional\>\"", ",", 
+            RowBox[{"RGBColor", "[", 
+             RowBox[{"0.5", ",", " ", ".5", ",", " ", "1"}], "]"}], ",", 
+            RowBox[{"ImageScaled", "@", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "1", ",", "0"}], "}"}]}]}], "}"}], ",", " ", 
+          "\n", "     ", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Directional\>\"", ",", 
+            RowBox[{"RGBColor", "[", 
+             RowBox[{"1", ",", " ", "0.5", ",", " ", "0.5"}], "]"}], ",", 
+            RowBox[{"ImageScaled", "@", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", 
+               RowBox[{"-", "1"}], ",", "0"}], "}"}]}]}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Directional\>\"", ",", 
+            RowBox[{"RGBColor", "[", 
+             RowBox[{"0.5", ",", " ", "1", ",", " ", ".5"}], "]"}], ",", 
+            RowBox[{"ImageScaled", "@", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "1"}], ",", 
+               RowBox[{"-", "1"}], ",", "0"}], "}"}]}]}], "}"}]}], "}"}]}], 
+       "]"}]}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "1.2"}], ",", 
+     RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+     RowBox[{"Axes", "\[Rule]", "False"}], ",", 
+     RowBox[{"SphericalRegion", "\[Rule]", "True"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"450", ",", "450"}], "}"}]}], ",", 
+     RowBox[{"ViewAngle", "\[Rule]", 
+      RowBox[{"\[Pi]", "/", "4.5"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"alpha", ",", 
+       RowBox[{"\[Pi]", "/", "4"}], ",", "\"\<projection angle\>\""}], "}"}], 
+     ",", "0", ",", 
+     RowBox[{"2", " ", "Pi"}]}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"clr", ",", "False", ",", "\"\<color code surface\>\""}], "}"}],
+      ",", 
+     RowBox[{"{", 
+      RowBox[{"True", ",", "False"}], "}"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Initialization", "\[RuleDelayed]", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"u1", "[", 
+        RowBox[{"a_", ",", "b_"}], "]"}], ":=", 
+       RowBox[{".5", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"E", "^", 
+           RowBox[{"(", 
+            RowBox[{"a", "+", 
+             RowBox[{"I", "*", "b"}]}], ")"}]}], "+", 
+          RowBox[{"E", "^", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "a"}], "-", 
+             RowBox[{"I", "*", "b"}]}], ")"}]}]}], ")"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"u2", "[", 
+        RowBox[{"a_", ",", "b_"}], "]"}], ":=", 
+       RowBox[{".5", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"E", "^", 
+           RowBox[{"(", 
+            RowBox[{"a", "+", 
+             RowBox[{"I", "*", "b"}]}], ")"}]}], "-", 
+          RowBox[{"E", "^", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "a"}], "-", 
+             RowBox[{"I", "*", "b"}]}], ")"}]}]}], ")"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"z1k", "[", 
+        RowBox[{"a_", ",", "b_", ",", "n_", ",", "k_"}], "]"}], ":=", 
+       RowBox[{
+        RowBox[{"E", "^", 
+         RowBox[{"(", 
+          RowBox[{"k", "*", "2", "*", "Pi", "*", 
+           RowBox[{"I", "/", "n"}]}], ")"}]}], "*", 
+        RowBox[{
+         RowBox[{"u1", "[", 
+          RowBox[{"a", ",", "b"}], "]"}], "^", 
+         RowBox[{"(", 
+          RowBox[{"2.0", "/", "n"}], ")"}]}]}]}], ";", "\[IndentingNewLine]", 
+      
+      RowBox[{
+       RowBox[{"z2k", "[", 
+        RowBox[{"a_", ",", "b_", ",", "n_", ",", "k_"}], "]"}], ":=", 
+       RowBox[{
+        RowBox[{"E", "^", 
+         RowBox[{"(", 
+          RowBox[{"k", "*", "2", "*", "Pi", "*", 
+           RowBox[{"I", "/", "n"}]}], ")"}]}], "*", 
+        RowBox[{
+         RowBox[{"u2", "[", 
+          RowBox[{"a", ",", "b"}], "]"}], "^", 
+         RowBox[{"(", 
+          RowBox[{"2.0", "/", "n"}], ")"}]}]}]}], ";", "\[IndentingNewLine]", 
+      
+      RowBox[{"n", "=", "5"}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"calabi", "[", 
+        RowBox[{
+        "x_", ",", "y_", ",", "z_", ",", "\[Alpha]_", ",", "t_", ",", "c_"}], 
+        "]"}], ":=", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"With", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"alpha", "=", 
+             RowBox[{"\[Alpha]", "-", "t"}]}], "}"}], ",", 
+           RowBox[{"ParametricPlot3D", "[", 
+            RowBox[{
+             RowBox[{"Evaluate", "@", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Re", "[", 
+                  RowBox[{"z1k", "[", 
+                   RowBox[{"a", ",", "b", ",", "n", ",", "k1"}], "]"}], "]"}],
+                  "+", "x"}], ",", 
+                RowBox[{
+                 RowBox[{"Re", "[", 
+                  RowBox[{"z2k", "[", 
+                   RowBox[{"a", ",", "b", ",", "n", ",", "k2"}], "]"}], "]"}],
+                  "+", "y"}], ",", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Cos", "[", "alpha", "]"}], "*", 
+                  RowBox[{"Im", "[", 
+                   RowBox[{"z1k", "[", 
+                    RowBox[{"a", ",", "b", ",", "n", ",", "k1"}], "]"}], 
+                   "]"}]}], "+", 
+                 RowBox[{
+                  RowBox[{"Sin", "[", "alpha", "]"}], "*", 
+                  RowBox[{"Im", "[", 
+                   RowBox[{"z2k", "[", 
+                    RowBox[{"a", ",", "b", ",", "n", ",", "k2"}], "]"}], 
+                   "]"}]}], "+", "z"}]}], "}"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{"a", ",", 
+               RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"b", ",", "0", ",", 
+               RowBox[{"\[Pi]", "/", "2"}]}], "}"}], ",", 
+             RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+             RowBox[{"Axes", "\[Rule]", "False"}], ",", 
+             RowBox[{"PlotPoints", "\[Rule]", "15"}], ",", 
+             RowBox[{"PlotStyle", "\[Rule]", 
+              RowBox[{"If", "[", 
+               RowBox[{"c", ",", 
+                RowBox[{"RGBColor", "@", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"k1", "\[Equal]", "0"}], "&&", 
+                    RowBox[{"k2", "\[Equal]", "0"}]}], ",", "0", ",", 
+                    RowBox[{"Rescale", "[", 
+                    RowBox[{"k1", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"n", "-", "1"}]}], "}"}]}], "]"}]}], "]"}], ",", 
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"k1", "\[Equal]", "0"}], "&&", 
+                    RowBox[{"k2", "\[Equal]", "0"}]}], ",", "0", ",", 
+                    RowBox[{"Rescale", "[", 
+                    RowBox[{"k2", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"n", "-", "1"}]}], "}"}]}], "]"}]}], "]"}], ",", 
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"k1", "\[Equal]", "0"}], "&&", 
+                    RowBox[{"k2", "\[Equal]", "0"}]}], ",", "1", ",", "0"}], 
+                    "]"}]}], "}"}]}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"RGBColor", "[", 
+                   RowBox[{".5", ",", ".5", ",", "1"}], "]"}], ",", 
+                  RowBox[{"Specularity", "[", 
+                   RowBox[{"White", ",", "128"}], "]"}]}], "}"}]}], "]"}]}], 
+             ",", 
+             RowBox[{"MaxRecursion", "\[Rule]", "0"}], ",", 
+             RowBox[{"PerformanceGoal", "\[Rule]", "\"\<Speed\>\""}], ",", 
+             RowBox[{"Mesh", "\[Rule]", "None"}]}], "]"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"k1", ",", "0", ",", 
+           RowBox[{"n", "-", "1"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"k2", ",", "0", ",", 
+           RowBox[{"n", "-", "1"}]}], "}"}]}], "]"}]}], ";"}], 
+     "\[IndentingNewLine]", "}"}]}], ",", 
+   RowBox[{"SynchronousInitialization", "\[Rule]", "False"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{
+  3.35696210375764*^9, 3.40554084690625*^9, {3.40554097528125*^9, 
+   3.40554103059375*^9}, {3.405541071640625*^9, 3.405541109171875*^9}, {
+   3.405541177015625*^9, 3.4055411789375*^9}, {3.40554128765625*^9, 
+   3.405541371578125*^9}, {3.40554141109375*^9, 3.40554141640625*^9}, {
+   3.4055415933125*^9, 3.40554159340625*^9}, {3.405541663140625*^9, 
+   3.40554183296875*^9}, {3.405541927296875*^9, 3.40554199365625*^9}, {
+   3.4055420398125*^9, 3.405542154453125*^9}, {3.405542231015625*^9, 
+   3.40554224490625*^9}, {3.40554230940625*^9, 3.405542312953125*^9}, {
+   3.405542347421875*^9, 3.405542406125*^9}, {3.405542436265625*^9, 
+   3.4055424893125*^9}, {3.40554276440625*^9, 3.40554278721875*^9}, {
+   3.405601193078125*^9, 3.40560145403125*^9}, {3.4056014920625*^9, 
+   3.40560149259375*^9}, {3.405601594875*^9, 3.40560177921875*^9}, {
+   3.405601838140625*^9, 3.40560184959375*^9}, {3.40560188646875*^9, 
+   3.405601905875*^9}, {3.405601942875*^9, 3.40560195090625*^9}, {
+   3.405602000625*^9, 3.405602054109375*^9}, {3.405602093921875*^9, 
+   3.405602094109375*^9}, {3.405602649421875*^9, 3.405602670671875*^9}, {
+   3.40560288059375*^9, 3.40560289059375*^9}, {3.405620068875*^9, 
+   3.405620069015625*^9}, {3.4058763872790384`*^9, 3.4058763908415384`*^9}, {
+   3.4084766914109907`*^9, 3.408476693270365*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`alpha$$ = Rational[1, 4] 
+    Pi, $CellContext`clr$$ = False, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`alpha$$], Rational[1, 4] Pi, "projection angle"}, 0, 
+      2 Pi}, {{
+       Hold[$CellContext`clr$$], False, "color code surface"}, {
+      True, False}}}, Typeset`size$$ = {450., {223., 227.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`alpha$71670$$ = 0, $CellContext`clr$71671$$ = False}, 
+    
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`alpha$$ = 
+        Rational[1, 4] Pi, $CellContext`clr$$ = False}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`alpha$$, $CellContext`alpha$71670$$, 0], 
+        Hold[$CellContext`clr$$, $CellContext`clr$71671$$, False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        $CellContext`calabi[
+        0, 0, 0, $CellContext`alpha$$, 0, $CellContext`clr$$], 
+        ViewPoint -> {-1.4, 0, 1.4}, Lighting -> 
+        If[$CellContext`clr$$, {{"Ambient", 
+            GrayLevel[0.5]}, {"Directional", White, 
+            ImageScaled[{0, 0, 2}]}}, {{"Ambient", 
+            GrayLevel[0.25]}, {"Directional", 
+            RGBColor[0.5, 0.5, 1], 
+            ImageScaled[{0, 1, 0}]}, {"Directional", 
+            RGBColor[1, 0.5, 0.5], 
+            ImageScaled[{1, -1, 0}]}, {"Directional", 
+            RGBColor[0.5, 1, 0.5], 
+            ImageScaled[{-1, -1, 0}]}}], PlotRange -> 1.2, Boxed -> False, 
+        Axes -> False, SphericalRegion -> True, ImageSize -> {450, 450}, 
+        ViewAngle -> Pi/4.5], 
+      "Specifications" :> {{{$CellContext`alpha$$, Rational[1, 4] Pi, 
+          "projection angle"}, 0, 2 
+         Pi}, {{$CellContext`clr$$, False, "color code surface"}, {
+         True, False}}}, "Options" :> {SynchronousInitialization -> False}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{496., {275., 280.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`u1[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]]] := 
+        0.5 (E^($CellContext`a + I $CellContext`b) + 
+          E^(-$CellContext`a - I $CellContext`b)); $CellContext`u2[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]]] := 
+        0.5 (E^($CellContext`a + I $CellContext`b) - 
+          E^(-$CellContext`a - I $CellContext`b)); $CellContext`z1k[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]], 
+          Pattern[$CellContext`n, 
+           Blank[]], 
+          Pattern[$CellContext`k, 
+           Blank[]]] := 
+        E^((($CellContext`k 2) Pi) (
+            I/$CellContext`n)) $CellContext`u1[$CellContext`a, \
+$CellContext`b]^(2./$CellContext`n); $CellContext`z2k[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]], 
+          Pattern[$CellContext`n, 
+           Blank[]], 
+          Pattern[$CellContext`k, 
+           Blank[]]] := 
+        E^((($CellContext`k 2) Pi) (
+            I/$CellContext`n)) $CellContext`u2[$CellContext`a, \
+$CellContext`b]^(2./$CellContext`n); $CellContext`n = 5; $CellContext`calabi[
+          Pattern[$CellContext`x, 
+           Blank[]], 
+          Pattern[$CellContext`y, 
+           Blank[]], 
+          Pattern[$CellContext`z, 
+           Blank[]], 
+          Pattern[$CellContext`\[Alpha], 
+           Blank[]], 
+          Pattern[$CellContext`t, 
+           Blank[]], 
+          Pattern[$CellContext`c, 
+           Blank[]]] := Table[
+          
+          With[{$CellContext`alpha = $CellContext`\[Alpha] - $CellContext`t}, 
+           
+           ParametricPlot3D[
+            Evaluate[{Re[
+                $CellContext`z1k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k1]] + $CellContext`x, Re[
+                $CellContext`z2k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k2]] + $CellContext`y, 
+              Cos[$CellContext`alpha] Im[
+                 $CellContext`z1k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k1]] + Sin[$CellContext`alpha] Im[
+                 $CellContext`z2k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k2]] + $CellContext`z}], {$CellContext`a, -1, 
+             1}, {$CellContext`b, 0, Pi/2}, Boxed -> False, Axes -> False, 
+            PlotPoints -> 15, PlotStyle -> If[$CellContext`c, 
+              RGBColor[{
+                If[
+                 And[$CellContext`k1 == 0, $CellContext`k2 == 0], 0, 
+                 Rescale[$CellContext`k1, {0, $CellContext`n - 1}]], 
+                If[
+                 And[$CellContext`k1 == 0, $CellContext`k2 == 0], 0, 
+                 Rescale[$CellContext`k2, {0, $CellContext`n - 1}]], 
+                If[
+                 And[$CellContext`k1 == 0, $CellContext`k2 == 0], 1, 0]}], {
+               RGBColor[0.5, 0.5, 1], 
+               Specularity[White, 128]}], MaxRecursion -> 0, PerformanceGoal -> 
+            "Speed", Mesh -> None]], {$CellContext`k1, 0, $CellContext`n - 
+           1}, {$CellContext`k2, 0, $CellContext`n - 1}]; Null}; 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->False,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.35696210375764*^9, 3.408476904989115*^9, 
+  3.408723572227932*^9},
+ CellID->1107252]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "ManipulateCaptionSection"],
+
+Cell[TextData[{
+ "String theory is a prime candidate for unifying quantum mechanics with \
+Einstein's general theory of relativity (a \"Theory of Everything\"). In \
+string theory, the fundamental physical objects are vibrating strings that \
+sweep out world sheets in spacetime, with elementary particles represented \
+not as points but as different modes of vibration of these strings on the \
+scale of the Planck length, of the order of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["10", 
+    RowBox[{"-", "35"}]], TraditionalForm]], "InlineMath",
+  CellChangeTimes->{
+   3.35696210375764*^9, {3.4055425915625*^9, 3.40554260190625*^9}, {
+    3.405543103421875*^9, 3.405543104265625*^9}, {3.405597732984375*^9, 
+    3.40559775103125*^9}, {3.40559781121875*^9, 3.40559785275*^9}, {
+    3.4056026884375*^9, 3.4056027061875*^9}, 3.405602749046875*^9, {
+    3.405611161780239*^9, 3.4056112547960043`*^9}, 3.405619988125*^9, {
+    3.4058765342321634`*^9, 3.4058765665915384`*^9}, {3.4066248803125*^9, 
+    3.40662488975*^9}}],
+ " m. "
+}], "ManipulateCaption",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.4055425915625*^9, 3.40554260190625*^9}, {
+   3.405543103421875*^9, 3.405543104265625*^9}, {3.405597732984375*^9, 
+   3.40559775103125*^9}, {3.40559781121875*^9, 3.40559785275*^9}, {
+   3.4056026884375*^9, 3.4056027061875*^9}, 3.405602749046875*^9, {
+   3.405611161780239*^9, 3.4056112547960043`*^9}, 3.405619988125*^9, {
+   3.4058765342321634`*^9, 3.4058765665915384`*^9}, {3.4066248803125*^9, 
+   3.40662489371875*^9}, {3.4087083549498606`*^9, 3.4087083588873606`*^9}, {
+   3.408723589134615*^9, 3.4087236088226185`*^9}, {3.4087236470110965`*^9, 
+   3.408723700793723*^9}, 3.408812618642195*^9}],
+
+Cell["\<\
+In one version of a consistent string theory, the strings must live in a \
+10-dimensional spacetime. Since human physical experience appears to be that \
+of four-dimensional spacetime (three space dimensions plus time), it is \
+presumed that if 10-dimensional string theory is correct, there must be six \
+additional dimensions that are curled up into complicated undetectably small \
+shapes at the Planck scale known as Calabi-Yau spaces. Every point in \
+spacetime would therefore possess six additional dimensions whose topology is \
+described by a Calabi-Yau space, of which there are a large number of \
+possibilities. \
+\>", "ManipulateCaption",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.4055425915625*^9, 3.40554260190625*^9}, {
+   3.405543103421875*^9, 3.405543104265625*^9}, {3.405597732984375*^9, 
+   3.40559775103125*^9}, {3.40559781121875*^9, 3.40559785275*^9}, {
+   3.4056026884375*^9, 3.4056027061875*^9}, 3.405602749046875*^9, {
+   3.405611161780239*^9, 3.4056112547960043`*^9}, 3.405619988125*^9, {
+   3.4058765342321634`*^9, 3.4058765665915384`*^9}, {3.4066248803125*^9, 
+   3.40662489371875*^9}, {3.4087083549498606`*^9, 3.4087083588873606`*^9}, {
+   3.408723589134615*^9, 3.4087236088226185`*^9}, {3.4087236470110965`*^9, 
+   3.408723719028565*^9}, {3.4088126342828207`*^9, 3.408812640798445*^9}, {
+   3.4089074502145605`*^9, 3.4089074579958105`*^9}},
+ CellID->246931408],
+
+Cell["\<\
+This Demonstration depicts what many believe is the simplest and most elegant \
+of these possibilities, a quintic (fifth degree) polynomial in \
+four-dimensional complex projective space. When two of the four complex \
+variables are fixed, the surface that remains can be displayed using ordinary \
+graphics projected from 4D into 3D; in this Demonstration you can \
+interactively alter the 4D viewpoint to see a variety of different aspects of \
+this fundamental shape. The fact that the surface is derived from a quintic \
+polynomial can be perceived directly by noting the five-fold pie-slice \
+arrangements that occur in the color-coded variant of the image of this \
+Calabi-Yau shape.\
+\>", "ManipulateCaption",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.4055425915625*^9, 3.40554260190625*^9}, {
+   3.405543103421875*^9, 3.405543104265625*^9}, {3.405597732984375*^9, 
+   3.40559775103125*^9}, {3.40559781121875*^9, 3.40559785275*^9}, {
+   3.4056026884375*^9, 3.4056027061875*^9}, 3.405602749046875*^9, {
+   3.405611161780239*^9, 3.4056112547960043`*^9}, 3.405619988125*^9, {
+   3.4058765342321634`*^9, 3.4058765665915384`*^9}, {3.4066248803125*^9, 
+   3.40662489371875*^9}, {3.4087083549498606`*^9, 3.4087083588873606`*^9}, {
+   3.408723589134615*^9, 3.4087236088226185`*^9}, {3.4087236470110965`*^9, 
+   3.40872377254556*^9}, {3.408723848172496*^9, 3.408723858094625*^9}, 
+   3.4088126732203207`*^9},
+ CellID->149690211]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "ThumbnailSection"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`alpha$$ = 
+    3.141592653589793, $CellContext`clr$$ = False, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`alpha$$], 3.141592653589793, "projection angle"}, 0, 
+      2 Pi}, {{
+       Hold[$CellContext`clr$$], False, "color code surface"}, {
+      True, False}}}, Typeset`size$$ = {450., {223., 227.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`alpha$9303$$ = 0, $CellContext`clr$9304$$ = False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`alpha$$ = 
+        3.141592653589793, $CellContext`clr$$ = False}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`alpha$$, $CellContext`alpha$9303$$, 0], 
+        Hold[$CellContext`clr$$, $CellContext`clr$9304$$, False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        $CellContext`calabi[
+        0, 0, 0, $CellContext`alpha$$, 0, $CellContext`clr$$], 
+        ViewPoint -> {-1.4, 0, 1.4}, Lighting -> 
+        If[$CellContext`clr$$, {{"Ambient", 
+            GrayLevel[0.5]}, {"Directional", White, 
+            ImageScaled[{0, 0, 2}]}}, {{"Ambient", 
+            GrayLevel[0.25]}, {"Directional", 
+            RGBColor[0.5, 0.5, 1], 
+            ImageScaled[{0, 1, 0}]}, {"Directional", 
+            RGBColor[1, 0.5, 0.5], 
+            ImageScaled[{1, -1, 0}]}, {"Directional", 
+            RGBColor[0.5, 1, 0.5], 
+            ImageScaled[{-1, -1, 0}]}}], PlotRange -> 1.2, Boxed -> False, 
+        Axes -> False, SphericalRegion -> True, ImageSize -> {450, 450}, 
+        ViewAngle -> Pi/4.5], 
+      "Specifications" :> {{{$CellContext`alpha$$, 3.141592653589793, 
+          "projection angle"}, 0, 2 
+         Pi}, {{$CellContext`clr$$, False, "color code surface"}, {
+         True, False}}}, "Options" :> {SynchronousInitialization -> False}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{496., {276., 281.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`u1[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]]] := 
+        0.5 (E^($CellContext`a + I $CellContext`b) + 
+          E^(-$CellContext`a - I $CellContext`b)); $CellContext`u2[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]]] := 
+        0.5 (E^($CellContext`a + I $CellContext`b) - 
+          E^(-$CellContext`a - I $CellContext`b)); $CellContext`z1k[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]], 
+          Pattern[$CellContext`n, 
+           Blank[]], 
+          Pattern[$CellContext`k, 
+           Blank[]]] := 
+        E^((($CellContext`k 2) Pi) (
+            I/$CellContext`n)) $CellContext`u1[$CellContext`a, \
+$CellContext`b]^(2./$CellContext`n); $CellContext`z2k[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]], 
+          Pattern[$CellContext`n, 
+           Blank[]], 
+          Pattern[$CellContext`k, 
+           Blank[]]] := 
+        E^((($CellContext`k 2) Pi) (
+            I/$CellContext`n)) $CellContext`u2[$CellContext`a, \
+$CellContext`b]^(2./$CellContext`n); $CellContext`n = 5; $CellContext`calabi[
+          Pattern[$CellContext`x, 
+           Blank[]], 
+          Pattern[$CellContext`y, 
+           Blank[]], 
+          Pattern[$CellContext`z, 
+           Blank[]], 
+          Pattern[$CellContext`\[Alpha], 
+           Blank[]], 
+          Pattern[$CellContext`t, 
+           Blank[]], 
+          Pattern[$CellContext`c, 
+           Blank[]]] := Table[
+          
+          With[{$CellContext`alpha = $CellContext`\[Alpha] - $CellContext`t}, 
+           
+           ParametricPlot3D[
+            Evaluate[{Re[
+                $CellContext`z1k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k1]] + $CellContext`x, Re[
+                $CellContext`z2k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k2]] + $CellContext`y, 
+              Cos[$CellContext`alpha] Im[
+                 $CellContext`z1k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k1]] + Sin[$CellContext`alpha] Im[
+                 $CellContext`z2k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k2]] + $CellContext`z}], {$CellContext`a, -1, 
+             1}, {$CellContext`b, 0, Pi/2}, Boxed -> False, Axes -> False, 
+            PlotPoints -> 15, PlotStyle -> If[$CellContext`c, 
+              RGBColor[{
+                If[
+                 And[$CellContext`k1 == 0, $CellContext`k2 == 0], 0, 
+                 Rescale[$CellContext`k1, {0, $CellContext`n - 1}]], 
+                If[
+                 And[$CellContext`k1 == 0, $CellContext`k2 == 0], 0, 
+                 Rescale[$CellContext`k2, {0, $CellContext`n - 1}]], 
+                If[
+                 And[$CellContext`k1 == 0, $CellContext`k2 == 0], 1, 0]}], {
+               RGBColor[0.5, 0.5, 1], 
+               Specularity[White, 128]}], MaxRecursion -> 0, PerformanceGoal -> 
+            "Speed", Mesh -> None]], {$CellContext`k1, 0, $CellContext`n - 
+           1}, {$CellContext`k2, 0, $CellContext`n - 1}]; Null}; 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->False,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->350299226]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SnapshotsSection"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`alpha$$ = Rational[1, 4] 
+    Pi, $CellContext`clr$$ = False, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`alpha$$], Rational[1, 4] Pi, "projection angle"}, 0, 
+      2 Pi}, {{
+       Hold[$CellContext`clr$$], False, "color code surface"}, {
+      True, False}}}, Typeset`size$$ = {450., {223., 227.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`alpha$9358$$ = 0, $CellContext`clr$9359$$ = False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`alpha$$ = 
+        Rational[1, 4] Pi, $CellContext`clr$$ = False}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`alpha$$, $CellContext`alpha$9358$$, 0], 
+        Hold[$CellContext`clr$$, $CellContext`clr$9359$$, False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        $CellContext`calabi[
+        0, 0, 0, $CellContext`alpha$$, 0, $CellContext`clr$$], 
+        ViewPoint -> {-1.4, 0, 1.4}, Lighting -> 
+        If[$CellContext`clr$$, {{"Ambient", 
+            GrayLevel[0.5]}, {"Directional", White, 
+            ImageScaled[{0, 0, 2}]}}, {{"Ambient", 
+            GrayLevel[0.25]}, {"Directional", 
+            RGBColor[0.5, 0.5, 1], 
+            ImageScaled[{0, 1, 0}]}, {"Directional", 
+            RGBColor[1, 0.5, 0.5], 
+            ImageScaled[{1, -1, 0}]}, {"Directional", 
+            RGBColor[0.5, 1, 0.5], 
+            ImageScaled[{-1, -1, 0}]}}], PlotRange -> 1.2, Boxed -> False, 
+        Axes -> False, SphericalRegion -> True, ImageSize -> {450, 450}, 
+        ViewAngle -> Pi/4.5], 
+      "Specifications" :> {{{$CellContext`alpha$$, Rational[1, 4] Pi, 
+          "projection angle"}, 0, 2 
+         Pi}, {{$CellContext`clr$$, False, "color code surface"}, {
+         True, False}}}, "Options" :> {SynchronousInitialization -> False}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{496., {275., 280.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`u1[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]]] := 
+        0.5 (E^($CellContext`a + I $CellContext`b) + 
+          E^(-$CellContext`a - I $CellContext`b)); $CellContext`u2[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]]] := 
+        0.5 (E^($CellContext`a + I $CellContext`b) - 
+          E^(-$CellContext`a - I $CellContext`b)); $CellContext`z1k[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]], 
+          Pattern[$CellContext`n, 
+           Blank[]], 
+          Pattern[$CellContext`k, 
+           Blank[]]] := 
+        E^((($CellContext`k 2) Pi) (
+            I/$CellContext`n)) $CellContext`u1[$CellContext`a, \
+$CellContext`b]^(2./$CellContext`n); $CellContext`z2k[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]], 
+          Pattern[$CellContext`n, 
+           Blank[]], 
+          Pattern[$CellContext`k, 
+           Blank[]]] := 
+        E^((($CellContext`k 2) Pi) (
+            I/$CellContext`n)) $CellContext`u2[$CellContext`a, \
+$CellContext`b]^(2./$CellContext`n); $CellContext`n = 5; $CellContext`calabi[
+          Pattern[$CellContext`x, 
+           Blank[]], 
+          Pattern[$CellContext`y, 
+           Blank[]], 
+          Pattern[$CellContext`z, 
+           Blank[]], 
+          Pattern[$CellContext`\[Alpha], 
+           Blank[]], 
+          Pattern[$CellContext`t, 
+           Blank[]], 
+          Pattern[$CellContext`c, 
+           Blank[]]] := Table[
+          
+          With[{$CellContext`alpha = $CellContext`\[Alpha] - $CellContext`t}, 
+           
+           ParametricPlot3D[
+            Evaluate[{Re[
+                $CellContext`z1k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k1]] + $CellContext`x, Re[
+                $CellContext`z2k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k2]] + $CellContext`y, 
+              Cos[$CellContext`alpha] Im[
+                 $CellContext`z1k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k1]] + Sin[$CellContext`alpha] Im[
+                 $CellContext`z2k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k2]] + $CellContext`z}], {$CellContext`a, -1, 
+             1}, {$CellContext`b, 0, Pi/2}, Boxed -> False, Axes -> False, 
+            PlotPoints -> 15, PlotStyle -> If[$CellContext`c, 
+              RGBColor[{
+                If[
+                 And[$CellContext`k1 == 0, $CellContext`k2 == 0], 0, 
+                 Rescale[$CellContext`k1, {0, $CellContext`n - 1}]], 
+                If[
+                 And[$CellContext`k1 == 0, $CellContext`k2 == 0], 0, 
+                 Rescale[$CellContext`k2, {0, $CellContext`n - 1}]], 
+                If[
+                 And[$CellContext`k1 == 0, $CellContext`k2 == 0], 1, 0]}], {
+               RGBColor[0.5, 0.5, 1], 
+               Specularity[White, 128]}], MaxRecursion -> 0, PerformanceGoal -> 
+            "Speed", Mesh -> None]], {$CellContext`k1, 0, $CellContext`n - 
+           1}, {$CellContext`k2, 0, $CellContext`n - 1}]; Null}; 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->False,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->252809735],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`alpha$$ = 
+    1.9729201864543902`, $CellContext`clr$$ = False, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`alpha$$], 1.9729201864543902`, "projection angle"}, 
+      0, 2 Pi}, {{
+       Hold[$CellContext`clr$$], False, "color code surface"}, {
+      True, False}}}, Typeset`size$$ = {450., {223., 227.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`alpha$9413$$ = 0, $CellContext`clr$9414$$ = False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`alpha$$ = 
+        1.9729201864543902`, $CellContext`clr$$ = False}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`alpha$$, $CellContext`alpha$9413$$, 0], 
+        Hold[$CellContext`clr$$, $CellContext`clr$9414$$, False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        $CellContext`calabi[
+        0, 0, 0, $CellContext`alpha$$, 0, $CellContext`clr$$], 
+        ViewPoint -> {-1.4, 0, 1.4}, Lighting -> 
+        If[$CellContext`clr$$, {{"Ambient", 
+            GrayLevel[0.5]}, {"Directional", White, 
+            ImageScaled[{0, 0, 2}]}}, {{"Ambient", 
+            GrayLevel[0.25]}, {"Directional", 
+            RGBColor[0.5, 0.5, 1], 
+            ImageScaled[{0, 1, 0}]}, {"Directional", 
+            RGBColor[1, 0.5, 0.5], 
+            ImageScaled[{1, -1, 0}]}, {"Directional", 
+            RGBColor[0.5, 1, 0.5], 
+            ImageScaled[{-1, -1, 0}]}}], PlotRange -> 1.2, Boxed -> False, 
+        Axes -> False, SphericalRegion -> True, ImageSize -> {450, 450}, 
+        ViewAngle -> Pi/4.5], 
+      "Specifications" :> {{{$CellContext`alpha$$, 1.9729201864543902`, 
+          "projection angle"}, 0, 2 
+         Pi}, {{$CellContext`clr$$, False, "color code surface"}, {
+         True, False}}}, "Options" :> {SynchronousInitialization -> False}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{496., {275., 280.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`u1[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]]] := 
+        0.5 (E^($CellContext`a + I $CellContext`b) + 
+          E^(-$CellContext`a - I $CellContext`b)); $CellContext`u2[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]]] := 
+        0.5 (E^($CellContext`a + I $CellContext`b) - 
+          E^(-$CellContext`a - I $CellContext`b)); $CellContext`z1k[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]], 
+          Pattern[$CellContext`n, 
+           Blank[]], 
+          Pattern[$CellContext`k, 
+           Blank[]]] := 
+        E^((($CellContext`k 2) Pi) (
+            I/$CellContext`n)) $CellContext`u1[$CellContext`a, \
+$CellContext`b]^(2./$CellContext`n); $CellContext`z2k[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]], 
+          Pattern[$CellContext`n, 
+           Blank[]], 
+          Pattern[$CellContext`k, 
+           Blank[]]] := 
+        E^((($CellContext`k 2) Pi) (
+            I/$CellContext`n)) $CellContext`u2[$CellContext`a, \
+$CellContext`b]^(2./$CellContext`n); $CellContext`n = 5; $CellContext`calabi[
+          Pattern[$CellContext`x, 
+           Blank[]], 
+          Pattern[$CellContext`y, 
+           Blank[]], 
+          Pattern[$CellContext`z, 
+           Blank[]], 
+          Pattern[$CellContext`\[Alpha], 
+           Blank[]], 
+          Pattern[$CellContext`t, 
+           Blank[]], 
+          Pattern[$CellContext`c, 
+           Blank[]]] := Table[
+          
+          With[{$CellContext`alpha = $CellContext`\[Alpha] - $CellContext`t}, 
+           
+           ParametricPlot3D[
+            Evaluate[{Re[
+                $CellContext`z1k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k1]] + $CellContext`x, Re[
+                $CellContext`z2k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k2]] + $CellContext`y, 
+              Cos[$CellContext`alpha] Im[
+                 $CellContext`z1k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k1]] + Sin[$CellContext`alpha] Im[
+                 $CellContext`z2k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k2]] + $CellContext`z}], {$CellContext`a, -1, 
+             1}, {$CellContext`b, 0, Pi/2}, Boxed -> False, Axes -> False, 
+            PlotPoints -> 15, PlotStyle -> If[$CellContext`c, 
+              RGBColor[{
+                If[
+                 And[$CellContext`k1 == 0, $CellContext`k2 == 0], 0, 
+                 Rescale[$CellContext`k1, {0, $CellContext`n - 1}]], 
+                If[
+                 And[$CellContext`k1 == 0, $CellContext`k2 == 0], 0, 
+                 Rescale[$CellContext`k2, {0, $CellContext`n - 1}]], 
+                If[
+                 And[$CellContext`k1 == 0, $CellContext`k2 == 0], 1, 0]}], {
+               RGBColor[0.5, 0.5, 1], 
+               Specularity[White, 128]}], MaxRecursion -> 0, PerformanceGoal -> 
+            "Speed", Mesh -> None]], {$CellContext`k1, 0, $CellContext`n - 
+           1}, {$CellContext`k2, 0, $CellContext`n - 1}]; Null}; 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->False,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->132573077],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`alpha$$ = 
+    3.0033625768318424`, $CellContext`clr$$ = True, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`alpha$$], 3.0033625768318424`, "projection angle"}, 
+      0, 2 Pi}, {{
+       Hold[$CellContext`clr$$], True, "color code surface"}, {True, False}}},
+     Typeset`size$$ = {450., {223., 227.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`alpha$9468$$ = 0, $CellContext`clr$9469$$ = False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`alpha$$ = 
+        3.0033625768318424`, $CellContext`clr$$ = True}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`alpha$$, $CellContext`alpha$9468$$, 0], 
+        Hold[$CellContext`clr$$, $CellContext`clr$9469$$, False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        $CellContext`calabi[
+        0, 0, 0, $CellContext`alpha$$, 0, $CellContext`clr$$], 
+        ViewPoint -> {-1.4, 0, 1.4}, Lighting -> 
+        If[$CellContext`clr$$, {{"Ambient", 
+            GrayLevel[0.5]}, {"Directional", White, 
+            ImageScaled[{0, 0, 2}]}}, {{"Ambient", 
+            GrayLevel[0.25]}, {"Directional", 
+            RGBColor[0.5, 0.5, 1], 
+            ImageScaled[{0, 1, 0}]}, {"Directional", 
+            RGBColor[1, 0.5, 0.5], 
+            ImageScaled[{1, -1, 0}]}, {"Directional", 
+            RGBColor[0.5, 1, 0.5], 
+            ImageScaled[{-1, -1, 0}]}}], PlotRange -> 1.2, Boxed -> False, 
+        Axes -> False, SphericalRegion -> True, ImageSize -> {450, 450}, 
+        ViewAngle -> Pi/4.5], 
+      "Specifications" :> {{{$CellContext`alpha$$, 3.0033625768318424`, 
+          "projection angle"}, 0, 2 
+         Pi}, {{$CellContext`clr$$, True, "color code surface"}, {
+         True, False}}}, "Options" :> {SynchronousInitialization -> False}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{496., {275., 280.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`u1[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]]] := 
+        0.5 (E^($CellContext`a + I $CellContext`b) + 
+          E^(-$CellContext`a - I $CellContext`b)); $CellContext`u2[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]]] := 
+        0.5 (E^($CellContext`a + I $CellContext`b) - 
+          E^(-$CellContext`a - I $CellContext`b)); $CellContext`z1k[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]], 
+          Pattern[$CellContext`n, 
+           Blank[]], 
+          Pattern[$CellContext`k, 
+           Blank[]]] := 
+        E^((($CellContext`k 2) Pi) (
+            I/$CellContext`n)) $CellContext`u1[$CellContext`a, \
+$CellContext`b]^(2./$CellContext`n); $CellContext`z2k[
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]], 
+          Pattern[$CellContext`n, 
+           Blank[]], 
+          Pattern[$CellContext`k, 
+           Blank[]]] := 
+        E^((($CellContext`k 2) Pi) (
+            I/$CellContext`n)) $CellContext`u2[$CellContext`a, \
+$CellContext`b]^(2./$CellContext`n); $CellContext`n = 5; $CellContext`calabi[
+          Pattern[$CellContext`x, 
+           Blank[]], 
+          Pattern[$CellContext`y, 
+           Blank[]], 
+          Pattern[$CellContext`z, 
+           Blank[]], 
+          Pattern[$CellContext`\[Alpha], 
+           Blank[]], 
+          Pattern[$CellContext`t, 
+           Blank[]], 
+          Pattern[$CellContext`c, 
+           Blank[]]] := Table[
+          
+          With[{$CellContext`alpha = $CellContext`\[Alpha] - $CellContext`t}, 
+           
+           ParametricPlot3D[
+            Evaluate[{Re[
+                $CellContext`z1k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k1]] + $CellContext`x, Re[
+                $CellContext`z2k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k2]] + $CellContext`y, 
+              Cos[$CellContext`alpha] Im[
+                 $CellContext`z1k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k1]] + Sin[$CellContext`alpha] Im[
+                 $CellContext`z2k[$CellContext`a, $CellContext`b, \
+$CellContext`n, $CellContext`k2]] + $CellContext`z}], {$CellContext`a, -1, 
+             1}, {$CellContext`b, 0, Pi/2}, Boxed -> False, Axes -> False, 
+            PlotPoints -> 15, PlotStyle -> If[$CellContext`c, 
+              RGBColor[{
+                If[
+                 And[$CellContext`k1 == 0, $CellContext`k2 == 0], 0, 
+                 Rescale[$CellContext`k1, {0, $CellContext`n - 1}]], 
+                If[
+                 And[$CellContext`k1 == 0, $CellContext`k2 == 0], 0, 
+                 Rescale[$CellContext`k2, {0, $CellContext`n - 1}]], 
+                If[
+                 And[$CellContext`k1 == 0, $CellContext`k2 == 0], 1, 0]}], {
+               RGBColor[0.5, 0.5, 1], 
+               Specularity[White, 128]}], MaxRecursion -> 0, PerformanceGoal -> 
+            "Speed", Mesh -> None]], {$CellContext`k1, 0, $CellContext`n - 
+           1}, {$CellContext`k2, 0, $CellContext`n - 1}]; Null}; 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->False,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->198603332]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "DetailsSection"],
+
+Cell[TextData[{
+ "For details on the surface, the color coding, and the mathematics involved, \
+see ",
+ ButtonBox["A. J. Hanson's page",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://www.cs.indiana.edu/~hanson/"], None}],
+ "."
+}], "DetailNotes",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.40560294734375*^9, 3.40560302284375*^9}, {
+   3.40560334028125*^9, 3.4056033641875*^9}, {3.405619862609375*^9, 
+   3.405619921828125*^9}, {3.405637567453125*^9, 3.405637584890625*^9}},
+ CellID->63949475],
+
+Cell[TextData[{
+ "A. J. Hanson, \"A Construction for Computer Visualization of Certain \
+Complex Curves,\" in \"Computers and Mathematics\" column, K. Devlin, ed., ",
+ StyleBox["Notices of the American Mathematical Society",
+  FontSlant->"Italic"],
+ ", ",
+ StyleBox["41",
+  FontWeight->"Bold"],
+ "(9), 1994 pp. 1156\[Dash]1163."
+}], "DetailNotes",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.4055426348125*^9, 3.4055426674375*^9}, {
+   3.4088126942203207`*^9, 3.408812737673445*^9}},
+ CellID->366985711]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "ControlSuggestionsSection"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[True], Cell[" Resize Images"]}],
+  "\"Click inside an image to reveal its orange resize frame.\\nDrag any of \
+the orange resize handles to resize the image.\"",
+  ActionDelay->0.35]], "ControlSuggestions",
+ CellChangeTimes->{3.35696210375764*^9, 3.40554092375*^9},
+ FontFamily->"Verdana",
+ CellTags->"ResizeImages"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[True], Cell[" Rotate and Zoom in 3D"]}],
+  RowBox[{
+   "\"Drag a 3D graphic to rotate it. Starting the drag near the center \
+tumbles\\nthe graphic; starting near a corner turns it parallel to the plane \
+of the screen.\\nHold down \"", 
+    FrameBox[
+    "Ctrl", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" (or \"", 
+    FrameBox[
+    "Cmd", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" on Mac) and drag up and down to zoom.\""}],
+  ActionDelay->0.35]], "ControlSuggestions",
+ CellChangeTimes->{3.35696210375764*^9, 3.405540925359375*^9},
+ FontFamily->"Verdana",
+ CellTags->"RotateAndZoomIn3D"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Drag Locators"]}],
+  RowBox[{"\"Drag any locator (\"", 
+    GraphicsBox[
+     LocatorBox[
+      Scaled[{0.5, 0.5}]], ImageSize -> 20], 
+    "\", etc.) to move it around.\""}],
+  ActionDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"DragLocators"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Create and Delete Locators"]}],
+  RowBox[{"\"Insert a new locator in the graphic by holding down the \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], 
+    "\" key\\nand clicking where you want it to be. Delete a locator by \
+clicking it\\nwhile holding down the \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" key.\""}],
+  ActionDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"CreateAndDeleteLocators"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Slider Zoom"]}],
+  RowBox[{"\"Hold down the \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], 
+    "\" key while moving a slider to make fine adjustments in the slider \
+value.\\nHold \"", 
+    FrameBox[
+    "Ctrl", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" and/or \"", 
+    FrameBox[
+    "Shift", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" at the same time as \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" to make ever finer adjustments.\""}],
+  ActionDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"SliderZoom"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Gamepad Controls"]}],
+  "\"Control this Demonstration with a gamepad or other\\nhuman interface \
+device connected to your computer.\"",
+  ActionDelay->0.35]], "ControlSuggestions",
+ CellChangeTimes->{3.35696210375764*^9, 3.3895522232313623`*^9},
+ FontFamily->"Verdana",
+ CellTags->"GamepadControls"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[True], Cell[" Automatic Animation"]}],
+  RowBox[{"\"Animate a slider in this Demonstration by clicking the\"", 
+    AdjustmentBox[
+     Cell[
+      GraphicsData[
+      "CompressedBitmap", 
+       "eJzzTSzJSM1NLMlMTlRwL0osyMhMLlZwyy8CCjEzMjAwcIKwAgOI/R/IhBKc\n\
+/4EAyGAG0f+nTZsGwgysIJIRKsWKLAXGIHFmEpUgLADxWUAkI24jZs+eTaEt\n\
+IG+wQKRmzJgBlYf5lhEA30OqWA=="], "Graphics", ImageSize -> {9, 9}, ImageMargins -> 
+      0], BoxBaselineShift -> 0.1839080459770115, 
+     BoxMargins -> {{0., 0.}, {-0.1839080459770115, 0.1839080459770115}}], 
+    "\"button\\nnext to the slider, and then clicking the play button that \
+appears.\\nAnimate all controls by selecting \"", 
+    StyleBox["Autorun", FontWeight -> "Bold"], "\" from the\"", 
+    AdjustmentBox[
+     Cell[
+      GraphicsData[
+      "CompressedBitmap", 
+       "eJyNULENwyAQfEySIlMwTVJlCGRFsosokeNtqBmDBagoaZjAI1C8/8GUUUC6\n\
+57h7cQ8PvU7Pl17nUav7oj/TPH7V7b2QJAUAXBkKmCPRowxICy64bRvGGNF7\n\
+X8CctGoDSN4xhIDGGDhzFXwUh3/ClBKrDQPmnGXtI6u0OOd+tZBVUqy1xSaH\n\
+UqiK6pPe4XdEdAz6563tx/gejuORGMxJaz8mdpJn7hc="], "Graphics", 
+      ImageSize -> {10, 10}, ImageMargins -> 0], BoxBaselineShift -> 
+     0.1839080459770115, 
+     BoxMargins -> {{0., 0.}, {-0.1839080459770115, 0.1839080459770115}}], 
+    "\"menu.\""}],
+  ActionDelay->0.35]], "ControlSuggestions",
+ CellChangeTimes->{3.35696210375764*^9, 3.405542720609375*^9},
+ FontFamily->"Verdana",
+ CellTags->"AutomaticAnimation"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Bookmark Animation"]}],
+  RowBox[{
+   "\"See a prepared animation of this Demonstration by selecting\\n\"", 
+    StyleBox["Animate Bookmarks", FontWeight -> "Bold"], "\" from the\"", 
+    AdjustmentBox[
+     Cell[
+      GraphicsData[
+      "CompressedBitmap", 
+       "eJyNULENwyAQfEySIlMwTVJlCGRFsosokeNtqBmDBagoaZjAI1C8/8GUUUC6\n\
+57h7cQ8PvU7Pl17nUav7oj/TPH7V7b2QJAUAXBkKmCPRowxICy64bRvGGNF7\n\
+X8CctGoDSN4xhIDGGDhzFXwUh3/ClBKrDQPmnGXtI6u0OOd+tZBVUqy1xSaH\n\
+UqiK6pPe4XdEdAz6563tx/gejuORGMxJaz8mdpJn7hc="], "Graphics", 
+      ImageSize -> {10, 10}, ImageMargins -> 0], BoxBaselineShift -> 
+     0.1839080459770115, 
+     BoxMargins -> {{0., 0.}, {-0.1839080459770115, 0.1839080459770115}}], 
+    "\"menu.\""}],
+  ActionDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"BookmarkAnimation"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SearchTermsSection"],
+
+Cell["cosmology", "SearchTerms",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.405543067765625*^9, 3.40554306934375*^9}},
+ CellID->103679410],
+
+Cell["manifold", "SearchTerms",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.40554307575*^9, 3.405543077015625*^9}},
+ CellID->61740177],
+
+Cell["multiple dimensions", "SearchTerms",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.405543062140625*^9, 3.405543065953125*^9}},
+ CellID->73743326],
+
+Cell["string theory", "SearchTerms",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.405543055265625*^9, 3.4055430570625*^9}},
+ CellID->16563286]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "RelatedLinksSection"],
+
+Cell[TextData[ButtonBox["Calabi-Yau Space",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["http://mathworld.wolfram.com/Calabi-YauSpace.html"], 
+   None}]], "RelatedLinks",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.405542902296875*^9, 3.4055429118125*^9}},
+ CellID->306074388],
+
+Cell[TextData[ButtonBox["Space and its contents",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["http://www.wolframscience.com/nksonline/page-1028a-text"], 
+   None}]], "RelatedLinks",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.4055428455625*^9, 3.405542862578125*^9}},
+ CellID->2231589]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "AuthorSection"],
+
+Cell[TextData[{
+ "Contributed by: ",
+ ButtonBox["Andrew J. Hanson",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/author.html?author=Andrew+J.+\
+Hanson"], None},
+  ButtonNote->
+   "http://demonstrations.wolfram.com/author.html?author=Andrew+J.+Hanson"]
+}], "Author",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.40561994909375*^9, 3.40561996103125*^9}, {
+   3.41605175882998*^9, 3.4160517667051816`*^9}, {3.416054054544999*^9, 
+   3.4160540576700788`*^9}},
+ CellID->17744573],
+
+Cell[TextData[{
+ "Additional contributions by: ",
+ ButtonBox["Jeff Bryant",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/author.html?author=Jeff+Bryant"], 
+    None},
+  ButtonNote->
+   "http://demonstrations.wolfram.com/author.html?author=Jeff+Bryant"]
+}], "Author",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.416051769111493*^9, 3.416051787221332*^9}},
+ CellID->1684387]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{749, 792},
+WindowMargins->{{121, Automatic}, {Automatic, 44}},
+FrontEndVersion->"6.0 for Microsoft Windows (32-bit) (February 11, 2008)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Demonstration.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ResizeImages"->{
+  Cell[47954, 1117, 369, 9, 22, "ControlSuggestions",
+   CellTags->"ResizeImages"]},
+ "RotateAndZoomIn3D"->{
+  Cell[48326, 1128, 739, 17, 22, "ControlSuggestions",
+   CellTags->"RotateAndZoomIn3D"]},
+ "DragLocators"->{
+  Cell[49068, 1147, 339, 11, 22, "ControlSuggestions",
+   CellTags->"DragLocators"]},
+ "CreateAndDeleteLocators"->{
+  Cell[49410, 1160, 636, 15, 22, "ControlSuggestions",
+   CellTags->"CreateAndDeleteLocators"]},
+ "SliderZoom"->{
+  Cell[50049, 1177, 843, 21, 22, "ControlSuggestions",
+   CellTags->"SliderZoom"]},
+ "GamepadControls"->{
+  Cell[50895, 1200, 368, 9, 22, "ControlSuggestions",
+   CellTags->"GamepadControls"]},
+ "AutomaticAnimation"->{
+  Cell[51266, 1211, 1473, 32, 22, "ControlSuggestions",
+   CellTags->"AutomaticAnimation"]},
+ "BookmarkAnimation"->{
+  Cell[52742, 1245, 881, 21, 22, "ControlSuggestions",
+   CellTags->"BookmarkAnimation"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ResizeImages", 56321, 1364},
+ {"RotateAndZoomIn3D", 56430, 1367},
+ {"DragLocators", 56540, 1370},
+ {"CreateAndDeleteLocators", 56656, 1373},
+ {"SliderZoom", 56770, 1376},
+ {"GamepadControls", 56876, 1379},
+ {"AutomaticAnimation", 56989, 1382},
+ {"BookmarkAnimation", 57106, 1385}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[590, 23, 174, 3, 74, "DemoTitle"],
+Cell[767, 28, 33, 0, 156, "InitializationSection"],
+Cell[CellGroupData[{
+Cell[825, 32, 29, 0, 188, "ManipulateSection"],
+Cell[CellGroupData[{
+Cell[879, 36, 10896, 264, 548, "Input"],
+Cell[11778, 302, 6122, 136, 567, "Output",
+ CellID->1107252]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17946, 444, 36, 0, 136, "ManipulateCaptionSection"],
+Cell[17985, 446, 1701, 30, 83, "ManipulateCaption"],
+Cell[19689, 478, 1404, 22, 112, "ManipulateCaption",
+ CellID->246931408],
+Cell[21096, 502, 1440, 23, 127, "ManipulateCaption",
+ CellID->149690211]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22573, 530, 28, 0, 168, "ThumbnailSection"],
+Cell[22604, 532, 6027, 133, 569, "Output",
+ CellID->350299226]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28668, 670, 28, 0, 138, "SnapshotsSection"],
+Cell[28699, 672, 6027, 133, 567, "Output",
+ CellID->252809735],
+Cell[34729, 807, 6035, 133, 567, "Output",
+ CellID->132573077],
+Cell[40767, 942, 6029, 133, 567, "Output",
+ CellID->198603332]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46833, 1080, 26, 0, 232, "DetailsSection"],
+Cell[46862, 1082, 507, 13, 37, "DetailNotes",
+ CellID->63949475],
+Cell[47372, 1097, 505, 13, 52, "DetailNotes",
+ CellID->366985711]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47914, 1115, 37, 0, 120, "ControlSuggestionsSection"],
+Cell[47954, 1117, 369, 9, 22, "ControlSuggestions",
+ CellTags->"ResizeImages"],
+Cell[48326, 1128, 739, 17, 22, "ControlSuggestions",
+ CellTags->"RotateAndZoomIn3D"],
+Cell[49068, 1147, 339, 11, 22, "ControlSuggestions",
+ CellTags->"DragLocators"],
+Cell[49410, 1160, 636, 15, 22, "ControlSuggestions",
+ CellTags->"CreateAndDeleteLocators"],
+Cell[50049, 1177, 843, 21, 22, "ControlSuggestions",
+ CellTags->"SliderZoom"],
+Cell[50895, 1200, 368, 9, 22, "ControlSuggestions",
+ CellTags->"GamepadControls"],
+Cell[51266, 1211, 1473, 32, 22, "ControlSuggestions",
+ CellTags->"AutomaticAnimation"],
+Cell[52742, 1245, 881, 21, 22, "ControlSuggestions",
+ CellTags->"BookmarkAnimation"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[53660, 1271, 30, 0, 152, "SearchTermsSection"],
+Cell[53693, 1273, 141, 3, 22, "SearchTerms",
+ CellID->103679410],
+Cell[53837, 1278, 136, 3, 22, "SearchTerms",
+ CellID->61740177],
+Cell[53976, 1283, 151, 3, 22, "SearchTerms",
+ CellID->73743326],
+Cell[54130, 1288, 143, 3, 22, "SearchTerms",
+ CellID->16563286]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[54310, 1296, 31, 0, 138, "RelatedLinksSection"],
+Cell[54344, 1298, 281, 7, 22, "RelatedLinks",
+ CellID->306074388],
+Cell[54628, 1307, 291, 7, 22, "RelatedLinks",
+ CellID->2231589]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[54956, 1319, 25, 0, 136, "AuthorSection"],
+Cell[54984, 1321, 515, 14, 22, "Author",
+ CellID->17744573],
+Cell[55502, 1337, 414, 12, 22, "Author",
+ CellID->1684387]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

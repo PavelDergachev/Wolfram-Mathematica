@@ -1,0 +1,265 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9503,        257]
+NotebookOptionsPosition[      8862,        230]
+NotebookOutlinePosition[      9233,        246]
+CellTagsIndexPosition[      9190,        243]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["Ecuaciones de Maxwell", "Title"]], "Subsection",
+ CellChangeTimes->{{3.6803675276681533`*^9, 3.6803675332709002`*^9}}],
+
+Cell["\<\
+Los fenomenos electromagneticos clasicos (no cuanticos) se pueden describir a \
+partir de las ecuaciones de Maxwell.\
+\>", "Text",
+ CellChangeTimes->{{3.680367862656106*^9, 3.680367900903458*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Inactivate", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"gaussE", "=", 
+       RowBox[{
+        RowBox[{"Div", "[", 
+         RowBox[{
+          RowBox[{"\[ScriptCapitalD]", "[", 
+           RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "]"}], "\[Equal]", 
+        RowBox[{"\[Rho]", "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}]}], ",", 
+      RowBox[{"gaussB", "=", 
+       RowBox[{
+        RowBox[{"Div", "[", 
+         RowBox[{
+          RowBox[{"\[ScriptCapitalB]", "[", 
+           RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "]"}], "\[Equal]", 
+        "0"}]}], ",", 
+      RowBox[{"faraday", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Curl", "[", 
+          RowBox[{
+           RowBox[{"\[ScriptCapitalE]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "]"}], "+", 
+         RowBox[{"D", "[", 
+          RowBox[{
+           RowBox[{"\[ScriptCapitalB]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], ",", "t"}], 
+          "]"}]}], "\[Equal]", "0"}]}], ",", 
+      RowBox[{"ampere", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Curl", "[", 
+          RowBox[{
+           RowBox[{"\[ScriptCapitalH]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "]"}], "-", 
+         RowBox[{"D", "[", 
+          RowBox[{
+           RowBox[{"\[ScriptCapitalD]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], ",", "t"}], 
+          "]"}]}], "\[Equal]", 
+        RowBox[{"j", "[", 
+         RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}]}]}]}], "}"}], ",", 
+    RowBox[{"Div", "|", "Curl", "|", "D"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Grid", "[", 
+   RowBox[{
+    RowBox[{"Transpose", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<Gauss's Law for Electricity\>\"", ",", 
+         "\"\<Gauss's Law for Magnetism\>\"", ",", "\"\<Faraday's Law\>\"", 
+         ",", "\"\<Ampere's Law\>\""}], "}"}], ",", "%"}], "}"}], "]"}], ",", 
+    RowBox[{"Alignment", "\[Rule]", "Left"}], ",", 
+    RowBox[{"Dividers", "\[Rule]", "All"}], ",", 
+    RowBox[{"Spacings", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"4", ",", "2"}], "}"}]}]}], "]"}], "//", 
+  "TraditionalForm"}]}], "Input",
+ CellChangeTimes->{{3.6803680375559025`*^9, 3.6803680631337514`*^9}, {
+   3.680959072924615*^9, 3.680959206425959*^9}, {3.6809595047102704`*^9, 
+   3.6809595324293327`*^9}, 3.6809596184770885`*^9, {3.6809599926870556`*^9, 
+   3.6809601154539666`*^9}, {3.6809601805942383`*^9, 3.68096018504738*^9}, {
+   3.680960552656081*^9, 3.680960554088095*^9}, {3.6809606192235837`*^9, 
+   3.6809606205204716`*^9}, {3.680960712492585*^9, 3.6809607141175995`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[GridBox[{
+     {"\<\"Gauss's Law for Electricity\"\>", 
+      RowBox[{
+       TemplateBox[{RowBox[{"\[ScriptCapitalD]", "(", 
+           RowBox[{"x", ",", "y", ",", "z", ",", "t"}], ")"}],RowBox[{"{", 
+           RowBox[{"x", ",", "y", ",", "z"}], "}"}],"InactiveTraditional"},
+        "InactiveDiv"], "\[LongEqual]", 
+       RowBox[{"\[Rho]", "(", 
+        RowBox[{"x", ",", "y", ",", "z", ",", "t"}], ")"}]}]},
+     {"\<\"Gauss's Law for Magnetism\"\>", 
+      RowBox[{
+       TemplateBox[{RowBox[{"\[ScriptCapitalB]", "(", 
+           RowBox[{"x", ",", "y", ",", "z", ",", "t"}], ")"}],RowBox[{"{", 
+           RowBox[{"x", ",", "y", ",", "z"}], "}"}],"InactiveTraditional"},
+        "InactiveDiv"], "\[LongEqual]", "0"}]},
+     {"\<\"Faraday's Law\"\>", 
+      RowBox[{
+       RowBox[{
+        TemplateBox[{RowBox[{"\[ScriptCapitalE]", "(", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], ")"}],RowBox[{"{", 
+            RowBox[{"x", ",", "y", ",", "z"}], "}"}],"InactiveTraditional"},
+         "InactiveCurl"], "+", 
+        TagBox[
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+           RowBox[{"\[ScriptCapitalB]", "(", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], ")"}]}], 
+          RowBox[{"\[PartialD]", "t"}],
+          MultilineFunction->None],
+         "InactiveDTraditional"]}], "\[LongEqual]", "0"}]},
+     {"\<\"Ampere's Law\"\>", 
+      RowBox[{
+       RowBox[{
+        TemplateBox[{RowBox[{"\[ScriptCapitalH]", "(", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], ")"}],RowBox[{"{", 
+            RowBox[{"x", ",", "y", ",", "z"}], "}"}],"InactiveTraditional"},
+         "InactiveCurl"], "-", 
+        TagBox[
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+           RowBox[{"\[ScriptCapitalD]", "(", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], ")"}]}], 
+          RowBox[{"\[PartialD]", "t"}],
+          MultilineFunction->None],
+         "InactiveDTraditional"]}], "\[LongEqual]", 
+       RowBox[{"j", "(", 
+        RowBox[{"x", ",", "y", ",", "z", ",", "t"}], ")"}]}]}
+    },
+    AutoDelete->False,
+    GridBoxAlignment->{"Columns" -> {{Left}}},
+    GridBoxDividers->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+    GridBoxSpacings->{"Columns" -> {{4}}, "Rows" -> {{2}}}],
+   "Grid"], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.68036804976396*^9, 3.6809591900195246`*^9, 3.680959535226202*^9, {
+   3.680959995890213*^9, 3.680960010171609*^9}, 3.6809600475782423`*^9, {
+   3.6809600909380627`*^9, 3.6809601178914638`*^9}, 3.6809601855473585`*^9, 
+   3.680960628020521*^9, 3.6809607160395155`*^9, 3.680960748992959*^9, 
+   3.680963348009055*^9, 3.6809639294525023`*^9}]
+}, Open  ]],
+
+Cell["\<\
+\[Rho](x,y,z,t) que es la densidad de carga electrica y j(x,y,z,t) que es la \
+densidad de corriente son las fuentes de los campos en las ecuaciones de \
+Maxwell\
+\>", "Text",
+ CellChangeTimes->{{3.6809608331345005`*^9, 3.6809609596670537`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Inactive", "[", "Div", "]"}], "[", 
+    RowBox[{"#", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "]"}], "&"}], "/@", 
+  "ampere"}]], "Input",
+ CellChangeTimes->{{3.680961491552538*^9, 3.6809614928806195`*^9}, {
+  3.680961659882362*^9, 3.6809617195705023`*^9}, {3.6809626095014825`*^9, 
+  3.6809626277829466`*^9}, {3.6809626622676325`*^9, 3.6809626891585226`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  TemplateBox[{RowBox[{"(", 
+      RowBox[{
+        TemplateBox[{
+          RowBox[{"\[ScriptCapitalH]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], 
+          RowBox[{"{", 
+            RowBox[{"x", ",", "y", ",", "z"}], "}"}], "Inactive"}, 
+         "InactiveCurl", SyntaxForm -> Cross], "-", 
+        TemplateBox[{"Inactive", 
+          RowBox[{"\[ScriptCapitalD]", "[", 
+            RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "t"}, 
+         "InactiveD"]}], ")"}],RowBox[{"{", 
+      RowBox[{"x", ",", "y", ",", "z"}], "}"}],"Inactive"},
+   "InactiveDiv"], "\[Equal]", 
+  TemplateBox[{RowBox[{"j", "[", 
+      RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}],RowBox[{"{", 
+      RowBox[{"x", ",", "y", ",", "z"}], "}"}],"Inactive"},
+   "InactiveDiv"]}]], "Output",
+ CellChangeTimes->{{3.6809616958045774`*^9, 3.680961719898575*^9}, 
+   3.680962573813609*^9, {3.680962615954646*^9, 3.680962628579776*^9}, {
+   3.680962664705147*^9, 3.680962689564777*^9}, 3.6809633527122087`*^9, {
+   3.6809639251243334`*^9, 3.680963934249427*^9}}]
+}, Open  ]],
+
+Cell[BoxData["Solve"], "Input",
+ CellChangeTimes->{{3.6809633812750025`*^9, 3.680963382603159*^9}}]
+}, Open  ]]
+},
+WindowSize->{1350, 669},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>1.4 Inherited,
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 142, 1, 113, "Subsection"],
+Cell[725, 25, 206, 4, 42, "Text"],
+Cell[CellGroupData[{
+Cell[956, 33, 3151, 79, 156, "Input"],
+Cell[4110, 114, 2776, 61, 284, "Output"]
+}, Open  ]],
+Cell[6901, 178, 255, 5, 70, "Text"],
+Cell[CellGroupData[{
+Cell[7181, 187, 454, 11, 43, "Input"],
+Cell[7638, 200, 1094, 23, 79, "Output"]
+}, Open  ]],
+Cell[8747, 226, 99, 1, 43, "Input"]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,12015 @@
+(* Content-type: application/vnd.wolfram.cdf.text *)
+
+(*** Wolfram CDF File ***)
+(* http://www.wolfram.com/cdf *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*************************************************************************)
+(*                                                                       *)
+(*  The Mathematica License under which this file was created prohibits  *)
+(*  restricting third parties in receipt of this file from republishing  *)
+(*  or redistributing it by any means, including but not limited to      *)
+(*  rights management or terms of use, without the express consent of    *)
+(*  Wolfram Research, Inc. For additional information concerning CDF     *)
+(*  licensing and redistribution see:                                    *)
+(*                                                                       *)
+(*        www.wolfram.com/cdf/adopting-cdf/licensing-options.html        *)
+(*                                                                       *)
+(*************************************************************************)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[      1064,         20]
+NotebookDataLength[    466474,      11991]
+NotebookOptionsPosition[    451976,      11537]
+NotebookOutlinePosition[    454927,      11615]
+CellTagsIndexPosition[    454846,      11610]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell["GR Calculations in Specific Bases Using Mathematica", "Title",
+ TextAlignment->Center,
+ FontSize->36],
+
+Cell["\<\
+George E. Hrabovsky
+MAST\
+\>", "Subtitle",
+ TextAlignment->Center,
+ FontSize->18],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1:eJzsvWmTbUeZ70e0uy/33h5ogRAaQNTR0ZGEBiSBZqEWLQmEEKBGCDE0aEAN
+SIIWoAFJNAJJDO0OD+FwXIffOHwdfmGHX9jhL2OHP4Ed19ft629Qrl+yf0v/
+ypNrqNq7zq46JzMiz961z95r5Vor83n++X+mU9/7yeM/+KP3ve99r/zLvX8e
+f/b1v3755Wff/Nof7/3xwJuvfv97/9Hem5v2/v/Wvc6HvfXWW2+99dZbb731
+1ltvvfXWW2+99dZbb7311ltvvfXWW2+99dZbb7311ltvvfXWW2+99dZbb731
+1tv22suv/mz3OPef/Oyl3Z+/8druqz9/ZfenL/9k97XXX9195bWXd7d933rr
+rbfeeuutt6Npv/ndu7sv/Oj53Z+98tPJvm2MMtfBKy/99O8LfgHL8PfzL/5w
+9x//6ffl/+eub9vPobfeeuutt956O7uho9HpcBO8//FLPyq6/vU3f17wC6/w
+F1Od3x/nzjXAxdC5zhd//ELBMlzrj/7+xdnf+xtwENf7q7ff2v3+D/5u941f
+vN7xTW+99dZbb70dYUPvosfR1+hd3sND8Dn6GayCTkdHw0vwOe/R3/IWJ7mD
+ycQiXD/Y5R/e+kW5RvDIHI/D7/nuL3755u7f/+THpb/1618WzAcu4v85Dsfl
+b+4zx//n//DvO8bprbfeeuutt4UNzIEOhTf43e9/W/Qtepi/0bX6h4Bj0Ofg
+lzf/4Y3yG17Rw+h7dPAPn/9B+f1J52GSi9H2xWdcs1htqvN98AvXynuwEPdF
+LMTfYEJevSech9/kfa/tUh3j9NZbb731dqE2dTP6FP0sbwIuAZ+IS9Cd8Ab8
+P7r2l7/6h6Jv/+77z+2+85u3y2/R5fxG/Y7e5Xfq7Tl/k+PcuQbvB9ep3YzP
+fD/VOQZ4jnsCZuEecpy33/11uYe85z7zHHjlnjz3/e+Ve6tdjvPwnu9wDDkx
+Xrc9j3rrrbfeeuvtKJsYQ8zC3/AA2kPQtbz3e+pm8Q2f6w+i30viD7APuhk9
+ix6GP/j1O78qryedh0mfF65NPKEtaO733BtxiN8X73kP9SPyuHAw3nPwj3iT
+YyXm1O8Izgzcw2fdj7i33nrrrbeT3NBx7NfVjerP3OtrE9JepP7jlc/0ZeH3
+6Fx9OvRn1b9DHQw/ow7WN2bb+GMTneuVA+FvcJkYhPs6xzNpO9KniPvOvZNL
+0d+Iz/k+3+U33EPxD/dUvxzei2V8toyJ+y/e4rjJrW17PvbWW2+99dbbWMPW
+A47QtxYdljjkJHexUM3d8Mr1ca1+L/1JxGPb7oxRDkuswmfahMQmdHGmeEbM
+4nt9Zvy+f/ua3xNfcSzmh7YwxrDt+dpbb7311tuF3fT1ZE+PX4W6HB1ovEzq
+x5Pa1cepp8fysoht/O1xsFXxPOBI5K/yc64DXkxe5alnvrv78COf373lUzfv
+Xvnxj+1e/OEP7Z45c+Xu7bfdtPvww/fvPvnNrxebnbYpY7adC61e41njorBR
+dbtTb7311ltv56KZX0TbhPtzbUL6UGhf0Fd02zp83V7jkOQdMtbHXLr53ePA
+xWj7EWfAv2gzAkuQK+azD9xf8Mr7/uh9k/39/+pPCqZ59NEHCwbxHiS+Syxn
+NwZKX2Tz9YF1+fwHP/z+4M+97XneW2+99dbb+dHAIdgAzMmivaTmJ9zjqyP1
+uz1fbEnqZq+/xjBcJz2/d1wwjDllGIs5/+TMvvPU3+7edPONux+8+KJ9OIX+
+x+//o334pf774ztX7n7pK4+WY5u7Rl8kju394D1zwloJ+vXwXfMoEyOlj5O+
+U3x/2/O/t9566623k9WMmdXX07hb9sz87R5ef9znX/jhvhgXdTi/WxI3c9x7
+citpI9HPNesVGNvDd8V3x2H86berz+6T3/j67kcuvWT3X//ZvxzlXcAt4Jma
+i8m/7/nM3bvfffo75fiZx4Zze394zzyB99FPOO8t42F+8X2wcokB3/u+sVc9
+p3BvvfXWW2+thg5h/6sfJz4O7ImT89cOYZyRe25e0Tf83r29e2t8MM4HDJPc
+S/Iv8k/G9qiT6+8ch/Hr18vfjPfrTz6xe8XlFzdtRTVGmcI3cjO3fuqWYpPS
+tyZrUYlX5GfkX/Sl4m99Y4wd15/K+8d7fYLFiNteN7311ltvvW2vgTHkEjI3
+yLu/fae81zZkrjn9XPTnNI4WXW3MbuYi4fubwDCbqJm4ThfbaTdqxe5Yu0i+
+Qw5iUzUf1+nGimV+uuuvPz1qIxrDK1P/D5dz5913DL7dxiR5bsahPSkxnngE
+W5J+VmBo7Um8Mvc4LjloxEIek+9sex311ltvvfV2bpo2IDp6V53Le3P1aysy
+Rlg8knyM/+erfETq+0359G4bA6RPC/cFvuHpZ58q/dnnnin9m9/+RvEt0QdI
+rHMcxi8e0I7z2fvv2v2zD/zpgXHKHBcDf/O5zz80zIfkfbQJeV/0//b+yK/A
+v+gv43fkdNIuJUYSP8ojbnt99dZbb731ttm2bR26RMei89yf1/oqc7Loh5Ld
+vb5xU+o1daXH8PfiNnGW+lB9KY8kj+AYsXd8/guf273mujO7l1z64X1+JOjv
+v/zgB3Y/fMnFuzfedMPuV7/2N/tqDZlf+LGvfqXELj/+xFcHf1iw0De+9WSJ
+W9b31vFsIjZbLOn1tGxINY7ZOfXxEqv0tSceL2Pl7w9c9OfD/yfeyfcfuviD
+5frALVn74SgxrPyfvI72p22vu95666233g7XsBMZ03rcMQy2DWO1tVVlnLK1
+lTPeJ/GMfJL8B8ewxqF+oeIijyUu0T6Ur8mj8IrvCLhEP5GlfMVll1+6+5m/
+urfEDYN/OI7+JuCdPA68CP61cDz63eRYN9G5B9/7u2cLzpgaN7lhGHPmqAMH
+fetvv7l7w43Xj8Zce38++rErSt2BzNV7lBhGnCZXyN/4Bf/jP/1+wIKtNdJr
+VvbWW2+9Ha+m/JaH0DfjOHc4AmsptXgYsYoYxJ5+o3T+Xz7G/TjHrrkMvyve
+yVx9YipjsbC7wLmM4Ra4iTksA2/z6Je/WGxO6S/b8p21joDYbUld6rku38Qr
+/JD80RiXAj8khrRmErWnuNfkwLv5lk/u84OprwHOBk7J+Oijnj/6nothzAVg
+bW7uKb44/P+212dvvfXWW2/7G3t3eBfzuONTYH3nk5InF30n7lLv8p74FeJ2
+iQP+4qOP7N7/2b/aveOu23c/ddutQ+f/n/ne0+W7XL++o2KdzIGfeVzS51b7
+g+dnLOCXxBnp+3HQDtYhD0uLx/G4nAv+I8e2ifw6cinoejDM1DWASbB3ef/y
+92ABczJf/tHL9o3/L/7yz8r1YXsydvtccHh0/bK4V2JPY+LAXhkfxpisA7rt
+ddtbb731diE3Yjn055BPYA8KfsF/M+sLH+eujjFOGxyC7QU+4N57Pl1y3mNn
+wd4ypn/R/9gw4Ai+8jdfHmLDUwd7L+qaAdqv0seZ8x7El3Xuu63XunONcDWO
+S928CR3PK9f17e98a3KsXMtd99w5PA+fjXjE9/gFgXf4PjwTf4Ntaltf1jY4
+yvkjF+P5taNmzXPsinzPWqFe39j66ram3nrrrbfNNuva6PuZ+EXZLddwHHLE
+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
+UrReUeYFwk/cnMo8V/MqTuFX8wWWnAEVhsv5rT3QeGhshi38xtzgczgYudfM
+7zuGX8q5974D5nE8mZPYfDN8tm251ltvvZ3fzTz35p8zbyyyDPuRNVb0KVQ+
+zmEYcQz6Cj2jzOX9C88/U2oBzmGV1L8tv1fii5C/aQPJmj9+rt0n9dsrP3tt
+d+fKU2fVP8xzgLOsRaTva8ZZpV/xXG68MfzCdXGd6LBTp3dK/BW55/AjAYPw
+XDK/itfnNel/KsZK/2aeXfps1DwMn+Ezw/7eYy+1JTE+xlvftzr2ibhj79vA
+j22IhxHDFB5iDyvD7/k80k9KHpE5DO7KWlRn1UpY/Y0NJjktx0+dqHou1vOS
+/HXmNAK7gCPMIWQeQz7T/sJ3wKXpg93KZ4gdijxBLR4qbbfOB3PXWBMTPAnH
+BG4RD4OlrJVlTrusLz7Wzc0IjuH71sqUm/G+8Xm3L/XWW2+bbsgb8+q691IH
+6u+h7T1tDRlbMtXBLvAv+h1aM5DP4GHMWzHWW3E+LZ1x1VVXFC7BGk1yR8YL
+mb896+qU/Cevvbl75x13D3nxW/tfcAVyXz1o/lJ9brQ1cFy+N+XzwnswEXqK
+a8cHGD1CrBJ7dWsViVXqOoRiJ/e6+bzUiS3+ifto7r0WhtHXwvw0Nc80hmEy
+lnyMh+H/1d/u8zfl08tcyrkFfmFeed+M49cvSr8ma1pNYVc6Me7m/eMZ4F/C
+7/l8jHfxFTtnxvbI3zEvXU+Jt+WMiLWfO761Llq2NMcLXrv11utLDgPzIumj
+XNfUMk+BOXrNETSHYeRnnXveX+UJ77ln+f+ce9tyr7feejv5bV39sYne8qlN
+f0PkHbm+lvgvmMNfn4vEYuZBy/rV6nhwx2WXXtTUGZ4HPZCxTQMGWu2jlffo
+hKmcLlwH+eoKT/DK/rpR8v+1LUc7hnrIa1LPGH+kD1PaArxu8NFNN56ZxIvG
+e6U/Z9bslC+Ax0A/wgXswyoNGxUdGxh8RMYnD7zJzPzQz1heJfknbUPu86lz
+df31p0tef+r+mEdPLK2eT75mzueI+Sn20FeV+zCX+zfrN0xdn/8vpjEnM7nm
+wOVja4P5Skw32I06nFwP78UK3B9j5Fwb4E0xjD76R72+nTfiJXMQgWu2Lf96
+6623k9mMq5iTr+eiu99s6RL0BJgEGQinP5WfVh2MzimyfYUtsn6fe139A6xB
+gK1mTr/jg5DxxukrIqbRb7j2tah1EPtzMIAYSPwhx+VxBr5ihSH8Pvoazinr
+E7qnT73o38bB1769rY7/LfoXv+C63rjcD/Yj/JzP4ltGMAz3AxtG4sbBT2pm
+fiRvk/gTzgD+kNw2PJusDcE84HyDbXTF++kzk/4z+MhO3Q8wnT4wzh2e39gc
+pMN3cf/EPnPXKI51TepTCzfH8eABqa1EfS94Ffp9n7m9zAH5p/QF4j5Zs7Qe
+G7FQrCUwJTjiqNe3c1l7tHiNNed1blse9tZbbyenyeWO5QU71x19OaY/iNVA
+71rfMXHMlB8Cdn5kpD6FmTMmc9Tp68mxyW07tScnPxrYIX0YMu7WMXK8uk50
+3fHLxb/SOHX5fGR6+htlrn/rdaNPqTOFDxD7dHxY4Fi006gzM35KLoaxtnIT
+t3xB0O3aufD9QCeCXXhe5v0t/iALMAwxORnPVnDVygYyNz9yjoqB9FMmDw7P
+peXHYp4/n/1wvj19T+dv+Auw2NRzZ845dv1j52p6gqMT005dn/MmfZusYy4W
+KTUnXvxhwWzMA74v/i71GlbXQz1x8wrASY2tD9YQ9swvfPHhI1/f2na9H7xn
+njsfzdu3bbnYW2+9bb/93//PvxuVBWIWc+QvycF5Lnqdoz47PpFwKtZuRgay
+Lybf1xQfQzeXr3rQPbE6AyzgPpD/5zxT9gH0Nfy+ekw/3uRCPBa4q+Zicny8
+Zl2ejOXg+TA2fSrBTeiBX7/zq6K/wBR1nSf26HffdWvBRXxffaGftjYmuZgx
+u1mrwylM4cU5/EI/dXpn4J3EVeY1mZsf4k31urgRH+6puGbuPzhHn9IhJxy4
+dQ/LYEeigzem4sG434zD+8h1ZB3weo7wapzcUgyTNcXk4zynvrLONW1rXpd8
+EtfifGZe1TH+Ys78G/voUa9vbUeMyz2FefqMcbRWd4/D7q233uqGHEEnGsdp
+/s302dtmJz/GFG6A8xZzaXdJ/5hav+bn2BhSj1sryT2gnAyf8T107ZQ+Nzdw
+2qfM16rdis+QyeZSm4qnxi8TfcNvkO8tP0/3rezBiR1q4be8B9gY+C7Heec3
+b7/nf7J3bOPN4JzEMQfNMVg/HzAL/tD6RLe+Z2y615bxLkt0YNrwxCJgTrDb
+1PiI7eL+ehzjf7kHrgfrD4w9IzCf3Jhx2bX9Kf146cS7Z07FOYyWcf/i4Mwt
+yfrV78n/s5aj8X7FV371fxnrPvYs4QKX1H1ft3u/65zadO6lsdnmApd73Lbc
+7K233rbf5ByQEejot9/9dZEhxh4cB1sSumhKZ1qn2v04+gSZPuYfk8fi/6kz
+Y9yVfhXqUWWpMpZjzu3tM1dv1hvg/mb9Sc6ZPhpjYwQ3sdcnx4v2KfkyPqPz
+/1N+Gx7PPCz6T+qDm/FJ+u7gV4zv60Fxy1m4kfwvf/HBUqd6Ckukj07e+yUY
+Jv2b9UkpnNT9d52FIxLHmoMY3xjwnHZDjgc25nlPXTe2THnLjKs6K59fxsdd
+farwP97vJRhGX+V99cFXOC9zKZr737jsgndWNR9/9dZ7tcM+vnPlvvG11gl5
+b87F+je3IOMCp/AZz0+7qfurnA/cZ57XtuVnb731tp0mP6BMM9+U3DrvzXOy
+bQzDnnWKq8CnV9u/vATj5z28CPamKR2MXjceQ746YzfSD4FzWT9pjHcAc8nj
+Zz4w7VSJF7746COz+2GPi38CfIX5dvE74RXcNPbbOm8OHAzyH50hV581ss2D
+5/9jG/P+HbbrA6z/aOtZYtdLjiHz9Mz1rE1lzJX3H/+cqeflfeOegu3Ag/gP
+EU+FPWjqusQ/+peYNwX9iz/Q2DPlGcovHBSnZd6hzD/kfUhuR77C/EtgAj5v
+2dhqDINvsOf1eIftSzCMMXKuObklrgEbKXsq/89rzdjCbcvT3nrr7dw1ZZNy
+V85crsFcaPK2xxXDuJ/Gn1S9pT0iMVrWvxnDQuyn4deN8XHfO+xlQ7/qxzLm
+A4KO0MZvrtW61oGynWPWeXsP22djgG88M/ieZk4Z9Ye5P373+9+WV/ODoNPh
+Dg4zJnQjOI3rNVfhWM5+9Zm2uMQmU93xi7czLw7v8Tueujd1vBB81lx9C/qH
+Lv7gUOMp7VnMwRr/JE4l7kf+S1/tuevjdfATWnGO4nZ1uXqdz6xhWu7Dq+/V
+J+LzukZ5PUbWCLFc3sujxjD69LouMs5Obob4KOPj5aCy3gXf2bZc7a233o62
+oZPkF/ShWypnttnZS9exJcpcdA3xpZnrJOu4IOuQ3eCcOZ1PTlaOlfhCGanN
+DTk7FcNNJxYc+9YSfyKODW+TsS8HsdksxTXkRIFDSvtW5pyZ6nwHnxGwILl8
+pzgx3192+aWF2zJ3MRgZ/1DwGvYzcALfoeNbSowQesiY9joGfJ0Ot3jq9M5i
+rLf0vsLB5BpSp/LKHBibI/gr8T3zHmaNg/R7cQ4mPsn4dXm+uesXu/B9+KU5
+fHbzJ68bOBD8aPSxNXZInkQ/L86hXdJ74fjSHzdtXlnjIWVQ8kvOvbn149o0
+P9+25WxvvfW2+Ya9X3mJTGFf415w2xhliQ5C143FeZBnQ39c5Wb66JInjs/R
+wdaaaR2HV3Qre1DltPI1Y5LBOWN+LHR0Mr4EuVec6nyP/bz5VBzPmC/PVI7f
+1t/UqLaeojon7RFz48v6Reg2bC7Y6MAz3Af29VwznWsAu2CDApNk7n11oTlw
+jYsCo7q/lptQ17XqIh+0cyw4tnxmrfvYqlEx1okZ4xr1P3G8YuesJ9HKveh6
+lOsreGGVJ9rj8aptzPmc38s5Oafn1e/4HU35aDNWYteKPfYXf6j5nTkWxU+u
+LXMqgtmZY+Bxnrsx0jxr/Fa8prRdpuyp/ccc95LrSz8a8e+25W1vvfW2uaaN
+4N3fvjPUYdT3cCoP55CvdMsYBlmof0GrW6NXWSiPrvz7xRu/3H3j53vX/OJL
+Z9WPbOEE7CZy6UPdnpC9cBJT9Q9KTv777xowzJL7aD0CdJ/5/g/Cs7T0MjYL
+jgcHUu7Dqv5BxpMv5TnEE3ICzBvGy7zCtwOdzHmcT9rQ+L45cxI7eS/d26MH
+xQM5vk3MH8aBjoMHmopnn8I3+zDqzmVlfshJeE+Yd9oPwdVTxwJTce3a68Q/
+8h35XLKuhPdHXmYJRnacYMW5HJDk6jV3sXmSM8eiHAucHnNLO6iYm7mrPY6Y
+dL5DjJv8r9yTde/rZ5xYRow9t360qYmR+Yw5uW2521tvva3XyKWOzEDnKmuN
+qZ3TE1nvZNsYhjHWGCb1AvnbtJ0bJ60OQE4+891nd++47c6hbmNdI3KMS0FP
+ZX6Y3I+aH3Ws4xOZudPm7mXaBbB71XEj6sIlPAE+uPhjYDeQ388c/HVcy5Je
++4DrLype5BVuD3ysXvE8fi99RtKO5Xc9z5CjJfDWOt3zcC+4tzybw9iT0NPY
+5DgGxzP2yXFmHSo+x19mbM7yfME5XC9rlOOJ45w33g9es+Z6YpolOE+fY2xf
+c9eILxe/eeuXr5aaUuTEy2uEe+I42HYzzmvqfnIfyJv4yBf+esAtiV+cE2lD
+Sk5mbv2Yi4nfMlZjK80TsW053FtvvR28Ie/kV9Et6HZtLcbtGLM4hV+OA4ZB
+frZ0enLfGfNTsNqe/EKH45dAXO9Qr7HKsdbKIZN6xtwz6BZ9BPSxqW0E+Tc+
+B8aozN3Puq6PWBPb15S/rz7N2MfY98IfEf8Dp2++EPVPzdMfxN8k6xqoS+UN
+5FjMrZZ1g+yJUerze73uu5NbWKqj57q1j+AVeI5wRnADYJk5LGsnz8yDD9w7
+7AfymSWflXWo7r3n05PPjmflnBLLaYsyBsd7rw0ncz6nH/NcJ5fvWHyWcx/b
+4JAf542flprxxGObE28pR1jnysvPr712p8R+cU3GGtVYpsYxc+sna0Um30OO
+a+Obti2Pe+utt+XN+Bft4MgM9ia5Z5avrnVEq+7stjEMY8SO35KX6CBsBOpI
+OG50Pzw2sUZFdq5yrOUruUrm9uLIYbh187ooW91r13aJel9KfhVjW6fuqTly
+9U00r692GLAofgaPPvpg8W0hvoh6OLwnVhp9zJ5eDkpcpH+sx6p9RVvPf+z+
+j/EwyR3kuTO3sGOoMUnGAGurS322KV9z6wShl/HxgFsgZwr8nfcUPAN/xXxi
+3mBzBMPyjLnHT3z9a0MtxNrPNO+pNhK+g42zle8464ATj5XPIfkruY+a9xIX
+Lq21xO+ncl3bwfzlHKu8vt4r8PRc7fixfcDYugIP6vckJvT5J5ZpYZh6/bhu
+rBcv92iuBG2V25bLvfXW23QTl+i/p14n1wdySF88ZYcycQq/HAcMw3UQCzQm
+D6npAl7AzxQfkFau+5qHSS5mKo88r/i2EN/Nfc2Yp3vvu2dyH0+tnvSHGbuv
+NQ/T4tMTQ/gcM5bD7+lnqS7MGKvkQvy/Jfakln5J7r8+V8bVFt27pw/BDNYh
+cuylls/ePa3tTmKupT7HSzBM4WBWdYPIuc/fcAzpzwJ3BxbEVoTfcvrd+r3k
+Svxdq56494V4q3pO1fPN2lhcO3sNbVFiIvkF48WzJpS2u6kOB1P7gdUdDo/r
+55jcJ/HeN7/xWBlf5gTMOX8Q3FJ/BieDXFJuOc/qGK259eMzgG+2Bgf3xfoj
+3kv3b9uW07311tvZzf0Za1obhnYEeQTzLuTeWB+444xh6hwvdWe/nDlq5+r1
+JJ5pydiWXKbWkPKQMXFf0XdgprHfYH8ocaUz99V9u/qqlaus7nl/Mlda7eci
+H5L1nPUdWpp/pYWp/Lv2a01epfZnAEuoH9U97sMTV+X5NhGXxPnMVQt2gZOh
+i63ESemHnFjNv9O3O2Ods/4mf4vLOCY6uqW/68+wPeJrAz+B761cn/WxqK8E
+H0Q97Mw1JJ6a6vi4zOELOBifmxgPWxJjWoJRlvaM/eIV/ouYJn2CDoNhsuaC
+HKA1MrUxO/d9ztuW17311tt7bck+1Pp5S/1LM/YBPtkYBWv7qgPQD0eNdRgD
+MnwKlwz9AL6a5OnABwCOBzvCVN1CZC/fYyzKW2Qm/jZjeom/S4z1iAxe2jdx
+/zLO25ra1iZPH9vMQZJ5DmsbUM4P49CzzrB4r8Zk9THUVdlbGLbFxzhmfVYT
+a9T5S9bp6z4/7EXaNec68w6/FbAxHWyOL/olH7602D/xfTIOz2uVX2KNal/i
+uvWJuvqqayZxOv62PgvtZRwfv/Yl9To9HusJLLZ0DXq8m264ecAcPsMBd2xo
+/msDTCyzbbndW28Xekte4DAyOPcxrf197suQkfwmYy7BMeeCrzG3yz4ZHDK1
++LbMyNfEFchm8Aj+EFmrWX/Fqbz9+BXoa4KfI3aHsXwzxGOUnL1bxjCZC8b3
+7OPh3lPv+3/w8PJ28vAtjiRzI/ObjDWxjl8dJ5YYprZL1V3/3uR7kvMxFlkc
+lfHaYrYlPMVRYxj8wvEnkYOYiocf0/UDd7iqZ46PlPUgxDDsNby3rmnmX803
+1ufHn0weVz9w1huYZA6/gFmoM8q64FzwObziZ1RzOGP8KD73xDo5F63FXp77
+q/Pyba6nX7mYHDvTP/7T78v5ti3He+vtQmz6qS3xF5jSi6xn8/f6t7LEHFXa
+AeRy4N/l5pPfOUoMg89L1qAZ42GmOGz2tcSCyNXn/t08aGn3T9mb/rrmzmds
++Ezkb9hD4z9AHUl8HIruPQY8jPW4janSBwFbh3pDP0hzrspjtPxtPaZ+GmLB
+xBLaLWuepe7p41P7A3ksOQJ9ffg/jg92ct+unjIv7SZimjaBYcxznLHNUzkM
+z8IZgWH8jBghMRprUB4maw/wip9L8pM1jsCWk3U/uY9g+8FGOrK+GCN+8/ih
+MYc8Rvod8xzIT8l6yFrqw1jiuNbyLvd7ZeMuc28DGEY/a+cn4zJXufkWty3P
+e+vtQmpyxem3O9VrvqTmXNhzZx6r9LksOUFXcQql7kqFXzz2UeEXdSZxIZlv
+YwmGQVbyG+rl8HuvlVf35/ouyDff85m7R7kcsQp8DXtXYje5j+RiQU6Dgaw/
+mXWht41hfK4ZEywHkrUpxXXOh+Q7jPuocYb3VD/x9N+RI6x5lZpvqeNSfOb+
+ZswfSF8R8Y7PNP2aN1GzdN3nJ06GO6njk5fYXVp2UjAGNqWCF1ZrUh9gnydz
+Xrw/huuZx94750j6no3tDbC9ci3aG3nl+rLegPOk1A9vxGXX6xZMZG5n5tSm
+eBhtVPqQMx44LMbMGtb/d9tyvbfezvfGemTfQB1X9ynYAw6CYVo2I/VT6qjU
+OezxxC2lr7ANv11iy9oEhmEfO2ZLGtsngivIUydvwD2Do5ZfcK+Y+d/4P/wX
+allf6xyOjY0AHkabnryEe9KlueCPumcuEXP2aufRv1c+wzwk5gdLm1GrG/8t
+9hG/4acpT9i6B4lH5H5qjNTyn2nFbfEM05eYcRQ/rhVe3XYXHzo+7I/yHLP4
+ZW++aSut/4/4eu4za5P9hDWD5BetO+lvay6GfMPwJN5Lfsd8zpqQU9wm+wNq
+S1gTC7nktaadUTyCT1vmqKltwIyL7xhXVHI4b8iWJBeTc8ecyPls+M625Xxv
+vZ2PTcyCjEKfIy+QN/qXTvUav9R7Xd+nXsj/z1wjdazMJva5SzAM56l9ZpWB
+vBaufU8GXnPdmWIrGq49bOvyC3VeEnWjPq7c17HccuQnxZdGbMR+Tt3rfaq5
+gm3rUOcIeNfnZc4+rsFa1nIa+lNyv5KHr+1Hdvay4kPOgW3hf/8//rchfqbG
+J7XPyxQPk36/LVuW/8dzEKdyXVyTtcG2ff/lALSb8RnjxCYJXoDTaNVU2ofX
+K76G35AnCPtL2aOsbEjmgGJ+Dv43I77u5BXKWCrzyNTnnsNZ1EolrwF4ymvM
+eGlzaoJnMh9ByxefdZd1ueGA173/2t21mfsstK06RuaM5962vO+tt/OpKWPS
+r0FZ8bvf/3aRDM39tLpA/YDe4Vhw0+yDkK3sFbGLs66RTbn2sybfWF3ZTdtC
+GGuduz1jpIltwJcQma78rHnt1HmpC70/1sHkc/anV111xR9il85cWY5Nng25
+C30Rki9Iva5u1ka3Tp/zJ5nr4F332+kH7jOlJh//Tz4/9BE+z+hWuH38KeCl
+8NvElwj8hq8P9gbsEMwX/iYHH7HmvPIMwIHcc+6Z2BucwT0G8/DK3+g2vsv5
+scPhW8295vjYHzgf50e3Mj+d/1nz0Nh05ivX4v97/9e9f+s+P+dJ1tzKZ8v9
++tznHyq1tcdqgjMPscUQR4dfDRgFrox8MmIYx8rzNV5ODFMflxqq4Dsxj1iX
+OVDbe6Y4osyXDe+jzVZMlHmceWU+YNv12LWfD9gsY//JUbPu/ScmwTUOLvf4
+zh3t8swdxgkG7zimt9420+RmlVHqIN8v4WFqe0Dmv2DNop/ghMmDVWIRVrKJ
+/RJxB8gc/FOtE1nL4Cn8sgkMo70BGd/aoxI7in5zz5/xB/X+vR531uTxdxln
+yl4VvZx8k/dQ/chn/s49n+fYRI62dXUw96TlqzxnL1saIzvsq0On+VnLN9qe
+56n7mM6c06fpIwb2Pg4YRn/nrOUon5XcjJiP2B4wDX7sX3vi8bL2wIrgO/3R
++b41Jp2bxt+ggzOWu5XPkWPrxyIPAd6o6xEs4WHquQB+Ao/WPKfrgmsrz7+B
+Yejsm/Qn2wQPY15msQwy07FkXgDOm7xizyPTW2/rNWv6zq3RzBPaypeqDk9Z
+yt/ULSQ/3BJdhWzC31VZm/vfWubr+wt+MZ/ZOp3zIV/GatYxNmS7uE5Znhjj
+KLv3P/1jzcGS+AjOQbtN+i44Ru02+nPUGCjrjWe8qH4HHDOfZcaCXMgdfYnP
+hnrRe41NVr4gda3xxYmBzRvpM8lcd3zmXMs5Z73QTWGoKUylzZexwpfVOKSu
+N8n1WK+I60Cvsw84y6YV+AJ8c+llH2li0/qew+fBpbVi3ov/7OrYxFXX42Mt
+K1eQHznHOU7GwRlzn/yqPtT6Qx3ET751/7etB3rr7aQ1/ST1tVi6T/fv2u9F
+fsE8Hqx77EXImYPkhOO78PrI/pTndcxIiSdd5cHblC2JsZO7f0xHsUf1XnjN
+58qnNjkdsZ14CpuJuq7O3+U+1XtJF/con8Uqymb37i1eZWketQuxJ1eUOtnY
+MePT9Otk7Wm/dW+uHYu1iX7UTmZct/7drgN9RTeBYcZ4IdaXPC2v2NPEGc6P
+mueABzEnv3OM98RJT2EYfgfOgbdt4Ze61iN/U2+KPI/G/TFm7l+pCTJS9yP9
+dMp+aBU3JXfiMxpil1Z/67ubsXdLan3M4RjrYm9bL/TW20lo5gaz9lqpM7OA
+p3C/2Io70j9TLpv90dJ6vS28gF8edSS13dTYyVwy8jHrYgSvBwwzhrnMxeJ4
+NmUHWNLTf1G5Wvvk6KOYnJjj1KZX9p0rXaofqPvrQR/F9U/lF5mzHV1ovc5z
+2Lov3E90uzXd8VMBy/Cs9FdNbJwxVTxL/CngyeQI6npk62Dksfmsr754C9+k
+Vvye94AcS8ZDp38Or3UeyeH3Kzudfux8F/+k2nemlhMeCx8XOFy4MPdSUxiG
+GpximBITGRjG8/sswEeMP+t0KDN8RofNW5C2WPmkbeuH3no7zs21+eMfPVd0
+v/lwl+r5VkyHutW/4V9a/guT8r+KzeT37MWMNch88eYHF8dsCsNwb8AwYzpZ
+3trYomEft8AWt27Punx5PvQfr9bP1baAftRWoV1JThxsSOxTS/eO6eaOU6Z7
+jf1avcaD/O19NR+amETfEV71EeXZmy9NTABfuYm4tCkOpqy1lV8LY8q504pd
+xkc6eVl1PteADaqVS1ccwvVwjdo6wST4yu3zvWlwMb4Ht7BOsRXhezeW14m6
+UFlrQByfeRxYO+QCxu+e1xyXXKWyb938Sxk31319e+ut3d797Ttlr/fO228M
+Ne+tVXcY/KK80/cUPwxkUMq4lr9EC9e0ZA11W+CtOYd2keH9Kl+FXMy6MrzY
+pfbkx733fHpUF+Ero81cPFByfr0+ziVvqpsDUB+gcs2rnDr4ESa2Mg5MX0zG
+izyvbR35HMa4l8l43APYCC+kXuOZ1j2c8ylmbZnf0Hhd49r0BdUnapMY5izd
+upp/+rhxTmy9Qz7rat2y9on/Mg4g/cfKHmEVL9TCMJddelGxlck9idc5FrFI
+1D9ozsMKn3C/GQfzeAzD4Ken/QYZqD3HOCqwCjiIMXlMZEPJlbPipNw7lGtc
+E8OA1cx95L5j2/qit96OU1OflXWyp/PUgd//u+8sii3MOCP507q+DDKOWISD
+6rdWXn//7xM3XDfglowj3jSGEcex3xobJ3lh+E7m1yq+J41al5vuPCuuk2fF
+K5gG2cuzLJ/tjQX5r98LegQ/AeR4keUjz2NK307FDnVe5miwT+vept3WmDhx
+jb5nR4Fhcv5pt5KPwTfs4c89UupE5polh4v+Ihwj/Un4m1j25v5l7zPwArhB
+HirzQvKeWCh+Txyjv8vcfC373VhuSv2KxDBpu5MLqWsx8Ts+w6eH35qzsfgK
+LVnDE/f/N797d+BNjWvqOKa33v7Q3KeRwwOdp95TH1rHbQmG0aYjftGWa5wF
+8QgtjOIrvExLp07l82fPRJyBvqrmB980D8MrMnRMx8ALZX1j70ldZ+EoOs+I
+V+TtC88/U17h08Cg/B/3PnPm1XaLs+53A5fA5df6dEkMcudjxntdB+sg92sM
+J5prT+5zEz5ZUxxM4f1WnA88K68lp/7r/7D7nW8/tfulL35594rLPlq4PvL3
+ZG5K7ZpiBP7/rLm5Wu9gE9afOCl9jY1v4trhLMjTMFXDbIihb3wHH5uMNS8y
+ZOWzayzZZ++/q8lX0qnBjU8wMmnIR7EmhjEuEn5H3Ab+Yyzb1h+99bbNpowb
+/Mb21hLYpdgfVjqRPf5hMAyfI5/gV1lz2H1qGa0cxk4NB/3lx75UfGOxi8P3
+TtVW9LfwCeSC4Fz684phDuLPM9XlUtifjekU/TGTj5LPOmoMw3l4Zr9667Xh
+FZ8m9q7I/il/jDm8UX9W65g5PNP7+L1c5z4ueVbyk+vO/1bP+VfyqKzytJX1
+gk/xSy/v/uKNX5b+/A/+4J+sDuZ72rmyNib8EbGK+64p45Ieum84l7pdvJb+
+zpz78ce+tvuxj368mZsmj11jGLgi9yGFT331xwMHw+fk3pzjGfl/cM7gZ7Ym
+htEHGtyiX5ScEO+3rUd6620bzX3Fklz9c+stc02y3uFRwSLk4iS3J3sjawDV
+cuTU6Z3db377G2UvJX/DuoQbvvuuW8+SNa2cn+TnlO/RdiU2q2OkDtM9Hv6u
+Y/ILf1856Drme+74db2U/Nu9ZuZ00X8T7sx8L8UXe0++wQct0Zm9X1hdjjC5
+QmODnIO8so7hELTZ+HntLy6Pou/HOl0fX+b0zZ+87ixOytdTp3cKFhLDuF/S
+flry0a32DOy/nn7qyfdkyIK1YA3KIs/2juVe6Mcv/iEf+TPffXaffWws/x44
+n+MoB/SR81r1wTeX9pDHPPzYGL/XM3f/eg6Z3i60RgymssrYlXUwjJyw74k9
+gjtW32PHSN1qJz8GeUBd4+a0UDbB4SAL6vgGe8YpYQs3ptTj6Ae3roxVfoMX
+0qYCzwF2kWtyn5n5rpZgxMQqYqbktsQvGUOd1wj/Dd9Sx2dsW2/2fry6HFqu
+26xXwRrmb2RCxmiLMer8jWKidddXxi0++MC9ZYytvQKfkYOXcepjO+QafukH
+g18YuAMbKhiAz/FRadmx7a4VYoysC1f2Eis+Gi7p+8/9cPfmm26ZxS909lRw
+w65V64Dqg62M0l9G/7n0nTuILdxns2290ltvR93MJ4kMcD+wxF4+h2E4DnVT
+wCLkhxiriVvrVbCN+jtrGxsHoAy947Y7JzEMHf1trWPjjM3nsK6MVV5jj6dm
+EtiLenfkXzem0twwyKiU+UvO797YGK7Mv5q1+qynZL7cIf6j4c/SMUzv9rFY
+4yF+eFUzhHmnT0nm23ONuzatpZm1z9bpYnWOhT9wXW+gvhZwDDwtMsecAeaz
+Mj5PTFP+XuXszHqPdee+4FtnHEIZ2woTgWH+6jP3T/rlZUf+Iduwc586vVP2
+V+zF8KUX08gRZz2zkiNvdQ3K2iW1Djgm+ytrpm5bz/TW21G0zFkCD5NcwboY
+xlgX7EVLYlLUsfA1cgwDLxz1lLSrYE+n9l9LDmfHlp18kPlD15Wx7j2RE8Qm
+gWX0ffGepi9QcvRLel0/cJ89fnU8/uY+cY/htOS18n63/F46lum91et5Id7X
+d5R1Ix+jXVMbp/xNztV1OucwdxH2WPKzzI3/lk/dXGQOY7a+p34i6RdH5zrc
+E7B2U5bYOacxPykrecW3Br/ksZx4S+poldiqyy8tMor6Z2Iva9orQ8qeKXz6
+lsRUiEXdR/acvr2db411mRyp8sg89OtiGI5JbeU5OZkdfWt9VnFQ2lJ8NV8+
+eyR5h7HzYOchftt6JfLM68pYjwf/IS5yH+rf6cuTtYSWYChxl1gl8SXHgO/B
+x/kgMcs9vrl3+5i/8Nj6VJfre+v+3jnOOrD+1iZ4GNYK+te9DPE2abOtu+PG
+1476A9RcSL8dcBifcRw5mOQzuS7y/MKpcixqcePrhnzMeox8n1iEnStPDdiF
+GpFT93rJngG/ZdZ0+uXW61570tKak9oCzYfec+H1dr60gWdd+cEhd1jTxiJt
+wpZEx3fuIDG1/D+2H/091NeJY5SZrlE42bk6guh69znIosytedie/inICf0G
+/H85H/emiceWYESejXtbc2TxjIjRxEYPJ536yHubumnMD7L33rNnPPdcvj1t
+zsxR9hH6p4JpxAVL6tbPddd55udDxy+5HsaM7ekjl15S1gl5mug7pz5eOA+5
+IuMN5Dw4D/gEPof4A3kcuRBlBzbjMftRax221mTr/pbYpT15Ju+cdReG/due
+rF2SYzTrWjJ+eHbzIG9b//TW2zpN/sV8rOpKPkMmmat/XQxjnAx26oPIU2zE
+WZOg3leY/1P7O76zrXzkdUcuiQc2GZdkPSG79zPz+WXPvdVU9xnoZ43sNVfX
+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
+zfHJeSlfmxzMDZ+4affpZ58a9ms5VuSRXPC6nTFzP+Relsj2zs/0flL6Esyy
+xLdWPe1eR351CsvIAZt/n/fGSRZcs9prKcdq7kLskzWgjY9CNmQNkzF/XmxV
+GYut/SlrtGY+ipRP1CoYu2f+fer0zr7fZP6pTeyxzN2Xddn0M9q2Huvtwmz6
+fS2ZwyUv3aoGq2vQ/QJrxTobzG30MLYffGXdf9X1WrMjm4i1wcdOfCHWSD9f
+uCJ8Q5b4s5IPQu458zYkZnG9K0PIh0Xsgcdk3yTGqnP01bn6xETJCafPjDJP
+WelejnOTt5TxjtXq7r333v/Qs7YB+xx97VlLrHVzKqlvl9h5x9Z2dm1WiRHg
+JIh7vvGmG4bxjeW4Zh/HnhBum9fil/Pmz/bFCljDRf7aa8CXP49V3wc78QmZ
+p8K9aPENCH6pzh24CX++HnPd27luidGX2EvlYtX9colicfPEkscAjFGvL+wx
+YxjGNUnHL4W6sJkrwhzavGJ/BcfM7dfgXcntUuedSZ9A8YRY43e//22x98KD
+wBth07GWwhyGgecu+7WVP27m8HPvYp0Yczgga8kZDH6B/+k2ot57H++Zy8m1
+4n7H/QHyIfW4OVvWxTD6mfzq7bfKedjXsG+DG3ZMY3735KR57nvfLngC+xXY
+QrtW1i4wzlo8xntkan281r6NfJzmyMsaA4lhMlY0faE34S/D+Fu5fP/f/++f
+O7bpbSPtn//Dvx/mEvra/FBygkv3KplbV3su6xs7TJ2/P+XNFA/TWo/wrsij
+zEPOOkHv49+GvWguvzn59sFD5uoz73D6x3Bt7nfETVyPdqLBp2YCv4hdyt5n
+xQ/rlyfXImfM95CD4Bj2Vx239N77fK/xwcDvrtYP+p84vly3yRWvi2FYx9ZF
+0jcEmTc2XseFLCPvOFgCzAKeAMOAZdw/pS+vsolXbFRzsUieh5w0mbNGe4/n
+nKont4mYhKz9u00919v538D36FAxv7kWluBsdLs1Q8z9zfHkOqc69ean8EvW
+a1VW3fOZu4dc5OIPY6fBN/jX1Gu5zh+DDLEurrYe92zmeqhrK/K3fIq/m6v3
+ZF5vxmYOivw/ZSl2I8aD7azFV3VM03vvy3riGt/rO4d8sy7tHA+zBMe4l3J/
+gt3msssvLeccy1kFFwyXW/Z7+BSuYj3Nt5XyJnNoMn7kG/xNHn/Ml4jv8X1z
+g7onzRwx6S88cOvhO7wuhtEvpvv59naUjTX97m/fGepQiw+WcIkZw6hdh5hn
+7DpjMmafr94C/qUlo8AxxkCj+91fsF7JrV3jgMwn5XtsNeTzfvvdX+/L48vx
+jLWmWzcArIbck3ctcmYCvxQZuPd77qsxBllnQVsbuYSxldW+jd0vt/fe5zvr
+xPU+VUsRvoS1aK7uOu7oMBiG45h7E5kBBzOW18bOd5RZ+gMXe9IKa4gt5Ius
+D4Vdmvw0Y9eXnT0a3898nnIuWQc347ey9spSX4K57rHT9r9tfdfb+dX0f1Mn
+M7/R6Vm3bKqzhrM2EHIh8csm+YOUT9iDsCslR5p5uIl7+sBFfz57vM/ef9e+
+nDT60en/59o3zsj9ir4rU/jFPY/4LvEMY8TPBvxy1dWnNnaPeu/9QupTmKUl
+e/CdgZtQny7x+5jCMMZxa6/h2OSDacWM0+GmxS9lDOSWiZgm+RdrybrP4b05
+PediuJAn2MqRVxmbkfFV8i9yMsq1tDttolaK3LP4zPyD29Z7vZ0fzVgZ+Qxt
+G/y9tLapewR+D0fx8MP3Dzm6x3gE1hv2XPYU7EngQ6iFRh4WYn6W5j0hnvrL
+j31pwBt1zUVkSeYLb3Ecl116URmzv0+bkr7JKeusF7W03oj1jPQ75v1/9p//
+p8WmLedcc0adf+m99+W99oVp/X9Lppj/uo7HOQiOyZiAkhN0VZeIXFTssxJP
+yY3I8bpHqmOlMiZcvogacY59qj4SvofktJJz8hiJU8QqWbNEWaUNXV/c+v4s
+vV+pH/BR0NbmfrPzMb2t28Abrh/9xcQC+uQu4WFYG6wVfosNiRpCrtnWGuNz
+sAt+9cQsI0fMq8Lx8KEH11iraExe2ckng9yQT8p8u9h+yBE+5lviK1gIfIGN
+3H2CY3Idy0FrH8oxj3XXq9do7AJx2Uvipec4rO4j03vv7T7FVaS/zEH0cgvD
+ZB6tzF+l343rnDxz2K1Tfgx58lZyxr1g1kvg1Tx5OfbWdSHH8LPJfOjGP9a8
+sNiIWgl0ZPeT3/z67rf+9pslNiLz0ayDYTxn+hPKQ3G929aDvZ3cZgz1ulyh
+a5B1Yl35MTkCJ2Kugqwxm3FAHhMuNPceY+uWPcnnHrpvsPu6p9E2xjrNPA3Z
+99Vau+2mYU3qH7yES007VuapTJsT2IXPsX0h0xhz51p67/34dOMR9T9xfyaH
+kfwIvivmKZ/T8ehr9mTUB/H38iPKD+1F/K3cMZ6K39X5O+suz/TwI58fbOG+
+GvvoNXHsrz/5xFAnNjkd3tOxwVMbiuOxp2S82pjcH+o/KA/ldaT/yxKMs209
+2NvJbOr7TdXzYb4y17WN1B28wdpgPcKNyL2mz03mgTOGh/0BuVxa+RUSH1FH
+oOZhM58ldpua18mcEsQxsX8x/tL7s+T6jY3iurKukVwur/BEyDHsZNuW1b33
+3vvZHXkiN639F3ngvig5BdY6PoPgmDkMg16Xb5bblpPIGkOZnwqZgQyjhknm
++Z0aO359YgrwiphFjpox1346c934hzvuur1wSOZB1s4lnhGrpL9w5jee6oxv
+2/qwt5PVsq7hEn+XpTgGzF7P/3wPz2FcctZ5TTutvmsZE4Q8kd+Zsk+BoeRf
+kkPRlwXbVWIsj0V9A+KYkns1P8OSPJXIIXJCGFcupnMP535nDH/13nvv2+8Z
+E8jeQ+5BvSweyTW+RDZmbGPWaUNeGBdgLThzsvBd/GnG7On1uOGhleXW8HYf
+B0agFhO+OOvcH7APfovIO2Vq1retP8val3N7wO4b09vSlnYW36+LX8zbD/eY
+cz51Nlyo+WrT9pT6PnPkaVt2vwIfc+aaq5vr1/fEIWVuS2OMcl9Cvie5EH7L
+voQ9knLG2GrGqc127vqRNxw7fXd5z3HZv3SbUe+9H/9exxHBhWgTVqYgE/hc
+W8oSrjbjGtXtydGYi8W8FsgTfFLEHHN5x+/7zO3DubLWtbk7yUGR8ZmH2UvV
+MU/4A+S9UXYnD561F6a6OI7329aPvR3vJr4Xr6vf18UwHIe8+Gmbqfudd95c
+fEJYU+YCFj+5xsXzaY8R1zNueNWpc+Dbq2zxGGIljqsNGr6IeAH2FOZ/ksNt
++ebMdTkl7elwthz7w5dcXMY7Vs+u9957336v6wvl+1I74IUfDpgAWcF+Ct//
+xCVz8jH9R7RNGc8p92I8JDLphhuvb441xwbmIh+m8s0auI7LfN9jv5/6rHWP
+Evtg3yIugT2bHJV2+KzTsiRHnjmUOQZ6Ydt6srfj2VgXzA85DvNib4KHYZ5i
+i5my8/D/rlF/Q25KclRmrdjkY/I96xFZAjbIdZXnYU2nLSrxkXGM5ulknwPH
+6j5CG6+2cPcTS316zVGMzXhu/9QxTe+9H7/OvobXmqfgb2sJsM7JBWrMUebF
+GuvpN5J1X92nKZPBA1N1RurPsK8TP4T8JMeM/o3iCfaNY9d6EBk0Vk+S2ITH
+n/jqkMcicYvXuoSnMi+8djr6tvVlb8evZSwfupk1iQ/HJnx6mbv46o7ZTMAW
+xBgxV5nr4gnr25f19/of6g7xWdqaHS/ygrkNRpjKXwVWS2whR5l7FdYc1+7Y
+zf+iPEr+c8k+y/yZ2KWwU/UaAb33frJ6a83Wn8EXIMOMdxSLzMkH5a7yRK5X
+zsRjwN8ShzmWGyvHY/1bxmStSDED5zhMjlGveSm+YZz46xCPzTVoR69z5y3h
+YcyDwe/g67etL3s7Xi39xdIXZekcW8JDaJ9pzXX0Ov607hMK17iHVeRgfC+O
+kacRz4M7rEHJuGveN/+GX8k9Tm1LMldu1lIwJkD/IP3hzPUwd/18L7nfqfV/
+lqxcUFeh9957Pzd9bu1aMzpjEJbs8ZS12vFrv1eOhwxdEjN06vROsWeh61/5
+2WvDPhAuGzlJvk7HuwSLnL76qsL9EP9JZy+GjYp8Nkvu2U03nim5ZTImXV5m
+SWx15shh/OYw37be7O14NOfQVK7suTnmOs26YOmvwmdg8Xq/kPHQxC3ra8bv
+ya9QbEcrLmZqPP5OvlX/tNb+hPPo92OOqCVrSNxkLFHmOuBYtd2Na8e3Bz4X
+7HaS/Xan6oYv6dse/0nv/f6frM5aB8tkjLF/i2/c/yTPPSZ/zcPw7HPPFJ++
+5hxZyThyQMBXqOuVx+aNw7ZEDq4l2OXKj32k4J3nvvftwuOwjzTvMMdkPPi8
+jNXHVuZxrmuvu2aolVfXZKp7K8+xOeH16eFa4Ge2rT97224zpmcTGCbnpvsH
+MY3+MFPr5ZEv/PW+vAHM2Reef2b3V2+9tqjus1gd32H2DWPrHL7H3H1Lc0jK
+e5qf2D2EuMV1lfVjkRm5hrctV9fpXYf2+9/78u66xx6tnEHfIif0mUGuFJ5k
+QncnhpEPtlZuvQ+kX3XVFYNfoXJUW5W2KHJQzckj81yAXdhDwt/I44Bl0heX
+Y2K/J/+Ev29xReAmvqdvjLKyhWNaNTP5HX7SynrkMLIeObttPdrb9poxQOti
+GPmJjJXLuqbod2yzU+vm5k9eV3B95nBMP5ipsSRPwhqnTkFrnbI2qZ2knWxp
+3W197jxX+uKYy8Z6H/pCt+qvnNTedWi//71P93q9+958nXIH6GFjjPS9m8Mx
+yijt3NQ6AmPU9W3hmMFKWUMx95bo/Kkco477wQfuLVgFLpw9ZB1XwVjM98Ir
+HBFjmsttgT1KPsU4rpatrb5+8+S4b7QGuLJ323q0t+005oqxe3P7gCU6Xp2e
+9TOMAeI9GNx8kmP4At4yY57BBcz5OTtPznHswHV9xDwHeaEck3VSl/BM1qM2
+R0Nt89bOS26E8602Y9eh/f73vqxnnhW6ufnRtWAYedrMmzKnw90rqcORN9iE
+7r3n00W+cE5yX9XxlsZZ2sljNzV2jnX3XbeW377z9ht/8APe68SHatP/xZvv
+cffKevUI/gLalVp2fO7Dk9/4+r6cGUuuX/zH9egXbG4u987b1qe9ndsGVmcO
+ZP7qdTBM1v4a+w5rrs5FMMjo1TyHC5WLWXJMsVLWRptap/CZ1oxdmuc6cZp7
+Gtara8n6AYwhazQeJF/3ce9dh/b73/vMM1qwbyk1RV54T/4YQ9DktisMkzEI
+7qfYr8G9wJvwGz5HHlmPN/Pxov/ZX01dw62fumXIvykPA3YBt+gLwyvnynoI
++gWiUz73+YeGmr6t+4N/YO5xW/6ILVuSnJLn9X4QZypPvm292tu5aeanNWdQ
+YoTDYhjzziXmr3O4sJ5Yb2O5ouz4rIF34FznsIsdWUBtEuTDVK1nMFL6H2dM
+4xx+SX96cRvXjFxiXeGz5jWdD9xL7733fvDekmnuZ5AL+oAYv4TeH5M7NYbR
+jp2y1f2e8jf3ZxnbRE7wKblkPWttUWIY40G1J4lh0n6vfwvnB1Pcfudto/eF
+MZjnRk5qCYZxXNar0i+RY8nV8/m29WtvR9+c1+RhUv9PzR/X0FR3XbIe5fzk
+OHxvXQ7qArXWUK6vW2+9vqy5xPtTXb9/89uN1Z7HVmWsQB53CYYxppquz4s5
+OsfwS8cyvfd+/vdWvdm6J7ZxP6QP3VIe2NwRWSdbvxfzytR2HuUvuf+nfHnv
+ve+ewuvwffAC+AUcU/xfXn6x+MKIZzL+1HwT2vQ579eeePysa85uXRe/vwTD
+aBdzv8w54ZzcVyL/+d629WtvR9vSzxaMYF3odTEM2BufLmyd+O6CVVx3ri1z
+H2SN6Xp9Z74CctlyzBbvUneuAX/7KTnDXgg7lfn+9S1bIj+GnHur62H9Fd5n
+7zpb/GzHLr33fmH1sTXfsjHxmrkYluyjsnZi5u8yd21yL3I17u94xcYzZt9m
+PMRryuUULLSS/dqRhtxcL7+4Lwdf8j6Oo/AhE/cKPZE+QXMYxvq8mSdd3aU8
+Ft/wftt6trejafrAaNfRD9Y5l7HGxZ66yi3H3LUuu/4zzCdwC7l3rz5zeqhR
+5Hrl/9wTmD9OOy2+8dp7xvLp+je+auRTevrZp4ZaRuIhx8T+gvxxrVjDPC51
+WxPz5/qTm035kDm/3WuYU4bvgIfqGpbnc5/KfTz3m02d+1z/dp1zHdV5D3Pc
+w47lKK7hpOcZ2ERvYRlzdIoPDsITL7H1U0tuajzwych2Xou/3x52sdbLnG+B
+OEqswWfWzW3FV5BTxtiNlk/iQXwZtCUQx44+QMcxnm3r294225hbYIesvQ6P
+mVxj5hJQ15sTxe/pK0YOAuwnYzabrz/5xL68k3IxrlHWU117ZCpnJOuAnC/w
+neSqZM/w+S98rviHtfzH6o4fDPFIXqP7FOWFfu7613O/ch8jv8r6Nt/NFR+9
+fN/4R2X2eexTea710UHqt2wLuxxFn51jI2un/nyuxsVhcOpxuD8nuSPbjBdW
+5ri3avHkh+nIMHDD1BiMt3R/pw2pzm0xhimMldbHkPwWY+fC5s9vsMk3ee8D
++mOKY7hOc/L0WKXzqzm/wPpykJkrMvNJijW0O7oPwHf1e3/3bIktatUMSB4E
+nGGsjn7u+r6aEwHflFYOuKkasdnNx9DiX+r3YCavNf3ivG5969NXLnPX8X/Y
+3vAzxn4k/zKZd/w8igup73FL143p0AvRrnaU13w+3dMLDdvkc0u7jrVo2SPJ
+hxuzpO/MOp3jpa29vu/UDCg1c/dkmzELmdtuDlOIs4x9YD9IXacPX3LxWefj
+PT6/2qJasRsHjS0xpyg8DOf33m1b7/a2mSbXYCwfz9v61PrGZ50xbZv5Hn2O
+vxd2nbkYQj5jvYh/xEDOWecYxySnwRI/uMPGi3JsMH/WMElffW2y2rtcg2nv
+NXbAumMf/dgVZ8mgs8Z9Hse2ztVYOYq9/FR974N8Z9PXfJTnXNrF8etwT1PX
+tslrqfcdF0pv7bNa91m5nH656+IXO5hi7L4j08gNipxTLg65WfZwzByWyFhn
+ZSsyF76e85JXL89NLWv3ilmDdw7DzOU4NU5dm1bnYk5+U2+bk8BnLddiTJwc
+oPNAviT9ZOBfxnLHuQaVpfjtmnNOLGA9V7AAeNmxPPbVr4zWgrT/yR+9fxTH
+TPnSgV88j3ZX11n6A/teu5k5KMV5ZV3t3csbb7ph8pzlvBdIfo6sSTWGZefu
+1UG6um8ONxyVPcQudp06/lHkBpq7j9QHZt1R05S1hgxn7rK3JmcS+4+s0dfC
+EkfF8Uzp7t7336OsV63f4rr4BdkFN17n37PjzwjWyLy+YJfMbTeHI7IWC7IW
+OW8OLfa/nF/++jtP/W3RAVxbq2buFIYZ88fJXHtiI+xKPVbp5LaMOQbfM59c
+D8g45hbzzPxB4lZtQEP96L1j4N+i3+6SznowJ2WZV+QUePnFYT05Nv268Ms9
+dXpndG3P5e+qZSSYCHnOdXrNNZZJTOdaQ3ZwrzLm3JzWxEnV5zorvuo8zjGW
+diQ4Yp6vdkllmHMJ+QQ23aQ+pEYE+th4Sp4jz41nwysyq5Ub6Kh0JfOLcxKf
+Jt5lruvvDn6e46wO0+u8p/ilsUdJfzWxel3ji3lN3Ktz2WO0xsh65zqm8jQt
+7e6Z9PFgjVl7cNvzeht9rg5JyYX34g9Hc/EfBsPAiRB/MXbOnVMfL+cd+OdV
+DNKbb/x0FkNkHRZekZ2sBWOijSNi7ZLLF70j/73Ep3cOx9RxKvxt7Il+E9vW
+x70dvDFvmEvId3Moikv0/XB+OZ+cD8o9vkv8zRK/WdYkuo38L+gv53ax0+xh
+GPINJK9hrSJjnPE3Qe7LyeyzEyzMQcoYkM/YssAvXLvxRekHk3hGWc/6KjWa
+9sbFveI7yG9e7/nM3cv0y3mMYfJ5wA17r9IWrp3SXFdL5s3Sjs7DD51jIwN9
+dvoF8pxTNx8Fn+A9QO/DvWftYWP2mTPMO2LpNoVfWteC/meeu4YyV3XGsojN
+xZzcOz5nX9yqN5xjdl+zbnfNmW9/8Lk8BvP6XPWlftl+r+aN1+3MEXD31PjA
+F85jazyW2gIzGCbz7yXXry+hcVeZM8x+WAyT47COlDnUzS0mp95tSieviUnl
+QeRX+ExZp5+L+7PkAbUvsb+DU6llW3b9zOGwxfDia2O35SVLnsdVnJLYye/5
+OTlhyGXAvmDKH6bmYYhbIlYJzCU34NqSm831lTyQ9jO/x/jf+c3bZd3fdOOZ
+s2RQ03/gPM71XvudEA9W81nOtYxtOHV6ZyPn59k6n8FGcoWcR94MfAMncS78
+cbDbyAG5vtwX6OvFuuJ7R/E8sAmQ1yDltnNXP/rMQaZPPd8z9hT+CJ1FfN3Y
+veI3c/XKlnTlQfIKZW+84ed0XHvKgJYPV+seIG/0X1z3/suPsrecmt/YerDz
+lHyeK1/eJbYkZaw+l1krRr0iR+ka4XesWffO62AY/Rm1GyQusrZdz+F7chrP
+jflqLhNfxS3q8Oyp5+X/kF/oC2uRjsVhghv0I8l9g/ximaM/e233Ry/8/e6L
+z+/puJdeHmz1yja5n4zBBovQP3v/Xbs7O5ftnjlzZanvTi2CKy6/ePeySy8q
++IL/B3ebs9s9n2Nyb5Djco2J51xX2p14/5vfvTubN+9C7Y984a+HPFjIOuUc
+r2/98r1nSTx7SzYr15u9IeOJKzNmImvmZexbHXtxlB2fROesnIL2pKzDhQ02
+r7m1fs76fAEGRhdZB8dzy7E612v/t4zRzdwcrJtTp3eaY0mODXlgjqhhj7uq
+ZVxyqb70g6HGcfEFjdwEfB9+it8rZ/hs2/P4uPax/DFigrH8MWO6PmsziqvH
+5h/7APaRPvvXXnmPL6/nUD7Lqc4YnBfFp2Cvmz8Pft4cwIPPQZUXOPedcr/m
+8GrZulrXr/1h2/q5t/km5jWvCV27Te6TnReZR1fZpMxjn1b7geXegRg55FLm
+FsjO+cBBX/ril3fvvOPu3Z0rTxVbER2eBW6TnI1ZD8MYcLGHXA7nwTcMXZZY
+R5yU+epqDCO2EZfzyjk4Z3JTxiDBwWTevN73d3Rz0Z2rvZoxmLwiU+TYiMWv
+/VvnuLWWPDdnor4emYvUOczfU3m8NtVZD8m9uA+QR0y9T632j1wynoeg1edw
+Hb712mPc43refXElK5ktNuf/scfJvyobHG8rnwe4Q98G19C+fCUrbhU9lPqp
+8K6vvef7pv6zto7yZtvz+CT0On9M7Vu0D1eM6PDcp33x0Ufa8y7mGH4zyH5x
+sbbbzCHWkvdTPFzGjKQ+kpMRC6Wfr/vMzDXqXJRXBDvPYRjvG+fatn7ubbrJ
+YSu39HvUFp21OdIemXurxDLkkqvnd77HfiR3IX7gPOB4bFDmgRuTx65R8ALH
+YtyOP2OanPOOX+489wSZbzf3olnvIGu+cg59hMQx/P1f/df/puiJjl/anfsi
+pgCvuF/yfdmTr7hrXrXF1fdzKtYsv49uzTh/n23WzVAXg3GPOj/u7bfdVGQ6
+57ROjToi15N/wxPyuzlb5PB/E/eEY8A5en5tvontxE/WdTUnFGOFuxdP8Fsw
+inrEWmM5VvdCrknxyKBDVxjW+oC8L7WOw5agXnKfoV4q+TuOwXw+Tn1p/hj1
+cSt/zJjNxTnKHhD5NjfX8Y9HhpMb1fmSfGNy2HMYxj1p2hF9tW6j53CfnXm7
+5FHkD13v5TgrTmeqWwNBDLRtPd1bu/H8mQvJucuPJB5Q1uUczNjinHvY3Kfm
+Or7unMO5yRoD5+O/sE9mT/iEKM/JUUAuSfG52CRjXxLD68eY3H1iF2W5ayH/
+L/fu+qDKv7C+qeG6bXl2XDvPVR0FF2w9CmtTIDPkB7ivY3NoKYZhTtTYJZ95
+PkveH0Vcc44HX13XjeOqbTaOh3WI72/+fvY8E/cEPJf8T9aP0YYMt4nPtef8
+xA3XlXWqPy3xpolH+C1zvmXv8jrrHEpyve+8/UbBL2DXgl1WedEYm7Ync16n
+T55xJOdLrr5Nza2D5I9JTDDnT5J7VJ43z2XMplSPgXpw4HBqtWBDVa5mboql
+PEzGo/o75b37FGW0c037pWvLvbm+CMUPZoHfjPjLujfb1te9nd2c3+AYc7EY
+lyNudY7IzyV+qTEMf8/Fx2I7RWY++NADRb7We80l+c9zHcHT49OQY611VeqL
+uoZBC78kv6S/bu4NmM/cr//23/43gyyfkikXer/k0g8PsfhgGO1ImZvcuaS/
+RVM2L7AlgUfkfLIur5y2zzm5kNTfm752fLKUgSmDE8fknlUuCkxfH2s0r9HI
+PeF64EXTZ9e8GN5vOKK8d3ku1pVx38gKxoqt79TpncVjq9cs+MW4FZ99qbOz
+siNPcU9HncfnfOut/DHya3M4Rs7QenmsGXzVsOkvvf/E2uOPiD3SObc0Zorv
+5v6TcVgnGFzEPgVdg/2Kz+BTtYtqM7JmXdq0Br+4GQzjeJmT5hjZtr7ubX/T
+XmTNH/gQ8lqBoYk3RTezH1b2Jo6ufQDFNcjKv3n8sUEWjsm1zD22qZyo7BvF
+2mlHSP/jxPLZxS65d6fr18ya0L9GPtYcUOq/LmPHO3Y/bW/Yj2pfvIJnwucC
+2TlWG3NMV/v/YOT02fD5Ji6VIxZDmIfwKDrrQdtp+qLU9q06NijjQebm1RSu
+w45U+wf4nnk9N1+RB4wfWxR6Q1+3Vs2P/HzsuAWzrTgYOX3xZm0r6utpeT9I
+/pipuKWah3C+Wv8NnWBtxiVjwLcLHy+Pn3vGOQwjrsU2BW5h70seDs6ReYLA
+VXBE8PLoLf35xUHO+7RJjdnQ7MbpujZds9vW27291/S7w95NLA/+svWcJBcE
+9k0wbvIY6U+V+1o+I87u1OmdybjhJf0sOT0SS+iagdMBpztH5SGTD1VPqNMS
+u+Taoeu3oPwX03C/8H+BR8p965Ic9hdqlyczLiXr2qLPij0hnhuyA93fOtaS
++Bu5lxp71zh18D/ZG99RPDPkt5y4PiZZTyN59domy97CXDljfMTYPcn7Iq/u
+/beGhnvxseNnbmEwKPqj9tWfyneN3a/1f0Uv7D1v+BjwLByM+yljp/saWtaP
+Mn+MMp1no6+hNkHWi3WN5s7PnEG/JBe05PzMT3ALvsJLrrO+L2AZZIh5uzKm
+NOX9GIbRH4sxg6HwGegY5vg0ZTvPEIxsLHRrXVgHIOOIcw46J7Uz8j3yu20a
+w9S9hR/gzd1j17ahmmtJLr/2idGWLycJpuf/3/3tO+WV/Sj2kdY967akszuy
+KDlc42vRX7wvcQIrvaqc4f6P2hUn4pEybjqfrfJXrs49Gt9nb3kUOvPuu24d
++DvzCZl7InntjBtJOX7rp25ZNK6pHEiZq0XMZu4E/tZ/ONfR0j6F2x1HvR5c
+j8wDfGMydrroiMYz3fb8Pe79MPlj5rgQ1h/7NexA4t20hxJnCCeyZO58+zvf
+GubfknPTiUslJnUd/QHOAm/JP6UNecyGlv5AxhnwO+wU5nrctv6+0FtyaczJ
+1h40bTy8wh3CxWi3T1krhkmbI+tkXQzT8i+Zk2fYH+DOl/iMpb972hpyD1Jz
+M//df/9vy/0a41J7b3d9uEsszCq2dshfuOJk1PHJIaevxpRd0vfm0Cd2xrla
+ZFTUqqhreeqvuEQWz+mPuhvTn77x6mt9DcQUOdfE2fieLBrDhD8MexSvN+Od
+zcnIus5cxYe5zqkx1Z+37AXKD163PVfP197KH+O6YF2yX7PWS8aijtl5WK9w
+7kviGfhexuSJJ4y/sDaFtQZuvfX6je6B2aMTw6pfQNY6UQ+UWL3Vfsr8Min7
+675tPX4hN3Pkl7i7PRmbNd2m5j+yUF+TjGtwLmTect6Txy7zxp9VJ2iBTMTO
+yfzD74Q5SG6ZqRgSYvuQ+8kVztlba/tCfu6a4/P/8t/8F8XOynXMxbEs4ZEu
+lM5zFpsUjLvCLsbYFnnx8osD/nV+8Uq9o4OcC36sthXW/Hj6nDiudeJdxuw8
+V111xT7d7Pv0rQSjef6M+U7OH3+U2TFMyPCM28v6fLxnj22M9Zxf80FtpQfF
+ML5ue75eCB35hY0IzCJPZ43ff/pP/uPFeVyMZSWOjvqg8B71PKFnPQJrUfje
+3NWck7xfV37sI7P17uh/+v4/b8Yp+lntr4WvDDYtOV73rvX61N7d0hcdw2y/
+secyNxxzl9iaKVmVn4EhtI0ac6be1382fTLleObqq9QdX3ZyxICB5DTdK3Bu
+cMTY75m3rKclGKa2NdUxSuo4zv8//k//Q/F/OXV6Z5Hc7hjmvQ5GzvvNPscc
+Z2CXEpOyqu0pZyJnw/xs1Uoee/bIZPNfZJ7G9Dupn7ec2xIsv6Q7VvxyxGXp
+/64tiZqljJlYD/P7uUd17vG9Mb+gsXlXzz9qPCizxZGJHawbwneyvt+6trWx
+tdAxzLntY/lj6OZacb9WsMzevrbE8Y3UCKi57LSB4jfCfhNuBrmPPxi50bHV
+WqPMGMGUvcw9bFPkVj/UXFs4V5nf2tI8f+4ptDePYbjEMGC+bevzC62Z2yrz
+FpYchAvmAOuA2rXWrMZew/6O5wiu4VhZGzLrWYDBl+wlraeLzDZHjbVlmFv4
+63IO1tjUceAtl+KX1tz0/5zTxE9zDeD4g+QZ27bsOi4df9C8r/Iw+HPy3jxn
+tZ+tvzHf3ZzsOnV6Z18tAf2z0r83eZGMreZvxrmpa4Z/dPy5Llx7YCtiTvku
+fE3WTcpcdO5Z65jnubmX/jC8ug9QVptvxfpmOTZ8cCbrrB8iZ01+nnsE32ec
+wLbn6/nS5/LH+Dm43zyGylzm4FStI59driPxgP8nz8K+WWwuVq1z7CGzD4Jf
+6njWOh6qnqPWBKajt+p4D/kXXls5AFs4hmuifti29fqF1LADZp0rfQ2xv7Tk
+T85//Eyw0ZgrADlHbBtyn/1k7h+NQ7OmMxiHOQF/AncOV4j9FNlN7gxsnw8/
+fH+J8c+66o5PvyrmP2sL/DQlT1kPr77880U4JuVo8jKux//lf/2fi58wMU+T
+MuEQPskXSieuLesymKOXV7r5QtIHqciTV/4gU60fNNeRTf7W/BZyDvqetHy4
+jZ20Tuk63TkC/2hu0ozrFz9hw8l5xN/6q4gn9N3hOPD0U3N+bv5hg814cmU1
+e2P0l7yVfjt8P39/GDtbxzAno5ecPSu8bL3O4jM2U7ORzhwyZxa/0UfBmGT5
+Pfe0mV/UPFD8nX5vY2PMuYjOIpcG85c9Lftr1kjWSx3DNMRiINMZj/uljJma
+4mFy3vb8vee2cc953swba4y7x8NmM8RRNnwCiY2DG7E2UV1fhj0nMpvjK6uZ
+w8hG/Srp2q6Mhyg5afbmH/Kbz50/yXWbE109wBqZynl90V98cPeZ7z5b6kUu
+xS+1X4yfw7/gA3Tq9M6kDF/iU3Yhd2KSsjaVcUlgFF6/+tVH/oBnXn91334O
+nsY5Orf3Vw77XMvxY19Ix7cmn3M+e87DODehD3hljWXuc32q5O3v+8zt+353
+7z2f3vfd5I1YN3P1EJb4xGOzcn1xjuR85K7ENYyFNZ2+mof16e0Y5nj0Vu6W
+/Nt54TyYqvnsOtLWruzOfOgZC6jvSeb+9RiPPvrggfIA8R1wCHsbYxDhEsUj
+xNBOrpVVTQR4fffGyb3XNWmmMIyczbb1+4XQvO9yJenXh8y69757Clap5Q7Y
+BlmGnbPUJNibK4l169xicDXmJAVjZ47UrE+UfgFgf3PI5f44sa4yFqw9lRfv
+zOlrSp3r119781AYRnlqjvX0DxjNBdMxzGTPHJ1lv7PiYcwNg03lue99e8A4
+Yg+4GefIlD2JDk9o3L/ncG/FcUv+gDNXDvxe/eyZW+CETVwv68B5lD6Dngvc
+js9X6hGwgjGsyka5TdYSv+O4o3J5Ii4pz8G53RN7bOe9ewTXKWOB20p/toPg
+mLH1MIVhWrHVvR++z/FnOQ+z9kaR2xM5+NMGk/gkc6DXNibXd+IY5rx2noPk
+Oee7+CewZomtcw1zTLAJvptjOf+SK/Va5GLqOjRT3X149+89+pbPF7kl/nRe
+iTMef+xru7fe/Ondq6+6Zvfmm24pPqzGZepPK6c9JsuQd8yNwomHvWCY/1FD
+3Xo55jjjc2vn8H/67zBesDo6aMo2jz86da7hYH7xxi8PjGHEdowdXEe86Vx8
+99LYvgu5J24oWHHFv5Rn/NIPyj2Gi9GO4nNxXiBf5mpLU29r2EOuahgoO/nc
++kvO9ZS1Pnd+u44fa52jyD0e68Y9KhgC+dr6PVxn2ubNCa+tS57oMLYkOz4H
+2pTTx5mu35k+aJyT7+ILlrmQFt+PhRhGfdcxzGZ73vNWTFnGWvt/+7jAGQyT
+z7Cu6eJxMh+LHEdie/InzXEmrTgn36OjtF/Jn8j5Zp5re14ze3HWY/rSi7OW
+xGXphy/vtG09f762jLswFinlFHw9PpWl7v0KW/D6wvPPDPiD7/Cc4OKX5EWB
+r2BfjF+K8ttnnjbIIqP3jv3WL18d8oWIYejIenhBuJCpGG3nM/tMYpLA5cXO
+OrMGk7NPLEd9u036d17InZgEsbP+uhmDY1wceFGsw7NLXm4u9plnnz7ZaYvU
+b9X8J/qF5/f3xSZd8oED+X60uPnM46X/rOuN19r/zGN4D8QX7g1dP8jqg9QV
+HcMQ8Dly/ebncJ+iX4R5c/keuTvgX/FjO8izn4utlocTQ/b8MOe21z4mfiaf
+mX652jVrPt/n2Orp36vOybzZtU9Yq8O/PvKFvz4by8S8Nt+8vvKuG15v+dTN
+k9dPbZ3M24ouZF9V9tQzGCb5UuXItvX9+di015lLi/foB/1ks+4azw9MoWzh
+WdLBPnB2+o23bJct+w62Kfwk5aczllWfQs5tDVtsB+YMoROj15p7Y5wI+1j3
+kmXNLNhHyJ+L77hHS3Jb976sX3vtzln5WjLHM754zh/rm8iJJB5BjhrHU88/
+PlcPp31C3JBxbNbQ9TzKLmU0XN861wtPmXtNzuO1cHzyX0zl6oPzyDw53jf9
+WGo/mqk+xslwHupSc2z0CBhF/xjOw9/ar1ij6gjuY9r0xtbhoA87hjkR3eeV
+9YcyX1bKSvVGcmljcjbjI3LNyX+yFqY4mA998F/tPv3Uk0U/1PM+c8Sw3wRj
+p1+X+wjiTcZqbdPxXc9rNd9D5rgb68oc526pPdbbRptyyZyl3HewCP6Gcn/l
+ea/wA/glbTrWMuF3+AOqQw7SmTfE9JBrOutfi+OLz1fUzkk/iaeffeos7nDs
+HGAluUrwmvhsCr/og29t1H/8p98X/mguf13vyzuyp65lqK7Sb9Tnyp5IvW0s
+g/KSYyCPWvMAWegzz5h45Rk+HTlPPEfiDGXeQTBCax6CCbw+uXR5JOYY2GHq
+GORy8ZrdS8qT0/E3O0hss/m+Wv/Pusz69LU/Y/o18BlyBB6r5ZvUigHpGObk
+9aznyXMXzzoH2Ou14o7HZG3mp7bOhrjornvuHB0H5//cQ/cVTPGrt14r64rc
+FvX8dr4hR5K3zVyWcPn1HLXDfab/pTpQvTfVzffrNXKfiGPZtt4/n5p2dDAq
+r+AQcsfB7+NfkHkz5Fx4dpmvI3282IdRWyXxesqsqc+sW4HtwFxKWUdU/ift
+SWCYVt6xGtOAO8xJk34Oc3Zca6pbByNzAB9F7ZwLsTPPUg+75sWyGWPG3BTn
+auPIes98v2W70S7pd92Hec6s6cL53BO2MMyc302rO1dOnd7Zx707bsbAXEPG
+Tfkl+B7/efevKSP1HyQnwaJxLfDJIjevPr7WjvL+8wo2NI8q6x+dxmdZm2B0
+b9ExzLHvLZ+Y3MMZQ5rzmXngWpvCMZmXuvaR5f/A0GfNmdVcQhaYCxOdwDjw
+M0tbao4ZroVYa+utuZdh7rJ/Hrt+rlV54X7a/fschpG3z/oJ3Z60uZZ1UYxx
+Rn6nvCEvC9y6OVzkYAYf3D25pf9MxqDhp4JPeL33WpInD96PucZxrONrjgD8
+YvTLgcsDe2fOjvr4+NSDO4zNVu8p7+dyG6i/uLYbb7ph6/LkfOzk9vZ+izPT
+D87chz5b42Yy51TyGjUHADeYnLVz1HxxJe4xvo9sVBa7T0usvrQ+UWtO4jec
+cXTmXHF/OJZ/psZl2KP0oeF35qOzztNB6y9MjZtX4kLkj1wX6XepzklsA59r
+bYJRP6WOYU5EV3a3csZZu5lnZJ5d/A2zjugYjkl7k2tSf1nWee4t6k7+Mf0x
+6cqLOm9Rjtc9kLjLfepY7Vg73OJgv12dr1VroO6cQyzHeZQn4Pxt6//zoelD
+4L4KLJqchpwh8gv+HNmdsah08++a29P8djw33iNrlWP1evB9fu57YhzgCY3p
+139Qee9+nXMaT1J3jgGvw94240/dfycPM8UFsi45Tl1bo/fNyEbr3LofS46C
+985Du/ak2q9VeVjrb/7OmAK/rz7M7zs3ff7Jv6i3kUWHmQOso8yV4fU5Lo6b
+cayte+V7/NfTRyd1gbbSqWMt7TX/gy+Odiz5Wdei/ovG7cFbjsVXdX+Yk9Fb
+Mo/3Nc+OfNZOUmLrVnmdx+Rq7Q+Tz9f9JVzjWHwIYyDO0BzehaNf4Xn01Jhf
+O7/DbiweYS7rY5d5euvOnlo5sC+GdgbD5LVl/QTW57b1/0lvae/Hx6NlS6Sn
+/sC+RPyycjdjLeWZmcPm+tcexPPH93tqjoz1mz95XfFlUPfw7MsaWPkx8Iqc
+JF4buX7q9E7BTfhFZPwb45Tjzhj/uTnIfZnLf9r74TsxPuLS9OtTtrH/qeUn
+e7N8hvWzRH4615i/+qonR53x0rnX81xydn4veRjet+p7zXVs+xl7lb7rJY9X
++OQsOR68ueNzjyeu4LOct+v0+v5/7vMPDXxm7ivUPWlzQgbgvzN2zI5hjn9v
+xSb5edYpyxykYto5+eqeMuOr3ZewjqfiDMnZrk0n+VXOnz50OW5e8VkA56jH
+rIszlauRtemaNa/Hkrgk91lypF4fuohzbxsHnOSWfD34GRv/VExmPlNicojv
+QTekf2RyidY7TVsguDnzqSzt6CNz0esvpo7R3xDMxJymM/eznp/x2to0He+S
+XNHExHTccnQdvw3XtXpKmUZn39+ag9ovlXcZp8Or/iDmOlGe+D3nRMYj5fG1
+ZWZ89bAP23s9aN05a7qr97WDFR+S1Z5159THFx1nuHdXnyr3i7XmXE6fxU3l
+46vPy326467b9+XCzLjrjJOng0NbxyycV8cwJ6KP4Zh6jrjvI/dE5oKZkrGZ
+bzp90+eeMziEYxhzkbws87BeT3kN+ExYo4bfks8Xv5cx/zPiX4c6s1HHbQ7D
+GN/LmHjv2tfOtm0ccFKbNpXM1YbP69jzHpuv7K/I7yJuSVu5esK4bd+jM+75
+zN0HymFhBztxPmWndjB9ZZTj1l5yDU11xgouEo9pj3WOLa2H3PvhZOKdd948
+6N16L8Yre/7W76l9kfHRygzjfOHu+B5YW9mYcZ/Ol3q/Zgdv+xvH5LzgM/L+
+H+R6WV+Zk0I8lXNU/5tcP3PzN2PFnbtplzt1emcyZq9ly3V/Pfdd4qd8BuKX
+2jfJeLExX7KOYc6Pro8v8t24Nee3axK5nDkR5vLc8h1tSa35CK7IvUn6uPM5
+PGXN/Xsc7Kzm4OW3tR9ajdnYZ7im9MV0Xq7TOxdz8JZ5CrH7IM/RB/Vc9Dny
+/Oo44vr5wpFbB8m6R87VzD/qPpn/g/fR9/IgeVbwcWG+Wdcg99T6vMjR6Gcw
+1bPWAccwTw2YOXF570fTqeOZNhv1lM9nrO4VHESdV8J4fD7DTxjbpzI1a1TI
+HTIXx2qlM6f1U0wfYO1W5NQ60HXuyds694W4pcYwGeMx1537ym6PxytzGd+h
+uTmc2CW/O1Y3Iz9jDWvfzXx7xv85zjFf5Y5hzq9uDCByn7VnvgD2icxH/c+T
+E53CMFN5RNlD597EuMMSO7TicbTPtuYu+IjfYEeqa3TkfIfPsRZskQUrDLPE
+p3dJ57jbxgUnqRlfBM/M/UPf8wxrHmbKDtn6GxsjWEhOJJ+Re2pt5eAD/Q6Z
+Y63cni1OL2XsqdM7xedFHsVjy/eBzaZqoycOztgOc+KA33sOu6PvxaYdOEQ+
+Qd2c8bn13JA7k48wTsb9Hr5bWVsp81qZW2ZMv4Nt3C86h3M+T8Vi1h3fGbnK
+jAXMPBhigKwfk1huiodxDuf4zGfE+Vp+ka31lX2qXkd9z8il4HWlfS/tStjm
+msfqGObE98S6zhv2x/h8IOvRL84P+Tr+byxuKXU7OmVsjeL/aKw0a9n9J7/T
+N4dz4HPXxOB78465yz5pKt+XfgxDPMDKp3dJjru5LpbbNi44KU0dzXMl9k1b
+EvOJZ858qXXGZC3mBp45c83VBVtkDeIhT17wi5kvkblH3NNBMIO+8dTSyNgO
+8zpnbMvcHOIVm72YPutV9n603RidjHXTX5Tn0poTfkatE3W//uPpT6NO9Vj+
+7XemuBRkWurNzEnD56X2ycJrxLe25CUIO7h8pGsifXEdp3hgrmcOOseWmH6q
+hnuup7y39edz3dzBxif6POXGWOPN83YMc6J7M/dy7DGsU2T9LbtzfA7DWJdx
+bC6evvqqIXdl5nvC35Z4Jc6FPbnOcUPuXubdWM3Hem4nP6w/75K4pCV7aPc2
+28YHJ6G5x8UOo41S7k0ZiC7HXwU93sqrOSV7kpPG/k1dIvk9c8fIxWdsrLqB
+749x+3XP88Nnk+sua+0ujTvy2n/zu3eHfb1zvfMwR9vBoGKM9EV1TtR5W+rO
+XFG3+Vt5NGN7Exfo362NHlvT1PETX4m3s0bAkthl4yeytp3yWb4ifR/d62mT
+neNh9Anjt6wxfX3EP4wfH7I5vqX22YcfzTwLrdxO6oDyLK66Yh/fyv11fO5b
+mvenY5gT31scBnOF+YBcNbeK+TaYo+yZl2AY5pLzcAxPM1eZE4Nf4x6+AGeQ
+i7X43+6dz/ogztep3NTZySejHcn5rT/vJjBM8rzbxgfHvXGfzMMBJjYnVj6b
+jAND7uETUMvpsRpx9fxiXtPxmwJf6IcjVgIjM8dy/2juIfI+ExNb+9OWv+Pc
+YGn/D78K9QG8kutlCQ/DHllcN7VWej98b93TU6d3ds0TnTyM2BLdP3c8bZfi
+18y/IJeRtkL5iTF8lOPk/OmfYo4Z8fGSXLjirLRLibOyzkBtF1rCv9CRz+bI
+5R6Yp5duzUa+l3kTxuY3mJK1x2+xBYzlI67Xv3oh8Wfm7+MaOw9z/vZ6PiVe
+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
+0Y99JHHR6uY09/EXLbrsuqh+ekWmF2yr3F7wSxs/ilgl8lruv+9tSX29DQaq
+5vxWuamPPfFo4q1QO5a6sqypUfac/2MvR/UhquPDiMHwxfBbYKYux1afVuQs
+w0MZdb2M6hk1rc7ct2rnuBJLEmd6Hil3vUVeEuM6Df4qOloPO/zQwYc+/MHB
+//zPnw3X6he++HTiS83aZ7Vo0aK7a+LzFem9RCxBrRVjSqPwSx0Ht8pracoL
+jjlHxqFi/0KPCR4qtXub1hq51+KiNvVt+F17SIN9zCXuclw5J+vg8jtgMzi2
+HG+tba/BMDPxXzrou7ljx4XD+bFHtjncbXCqx1Ls62TqnG/dtiXlr7Fu8Od9
+89t/u8ca/dSTn9zjc7mPv2jRZVfuWX/0x58pGGYJxD22HBVrpjVhmFH5Rm0w
+jPyXmB/M75KXTa4M+//t2w9rvd7gyca6cU0YRr+PfifrxXQ9rsbG5D+Ti153
+/ON6d0+rs2IYrmF4+eJLe1HF+nnjNI1n3XEVGzt+3jYwHzEicuyJGf3D979X
+uza//MyXEn4vY1q0aLdKHfivf+P5gmGWQLCv+AnkbDTFkUb5XmJcqU19NmKN
+2EjqodArmZq75BEb+6/W+61bZ75OvrDc2VTjpkVuOPwX+wrxWtf9q8FJ1g5G
+4cLoU2pjc0ZhC3pqwm+GF0GvqdjT21wjv4NxNPcojlmb3z/s0AMTp80aMdbT
+A8u07Tcwbs6KvjAezOVRx2xPufHkwcOj/o3f+vjgH3/w/bFrkpjops0HTjy3
+RYsWHV/zAQzzwx/9W8EwSyByULBL2PRfeahdTlLsEWhMqK5eGt+N/QavUAcP
+nwl4hbomrBPscHX9TOKX2Lpty7DfgDXu2sQ5YjwL/NJ1LMl6KsZeGAewWpt6
+HgnDVc7/51704sH++x44ePWppw9rvFBTkHO/6+43pb+xf9SAIdeM14nF0ePh
+yquvSP+nViB/X3zRuenxstf+96Q8p7byueeclpTnvMa42CNBf4zcqaYxTjV3
+enCfyq1NuILcL2odMtb4rptwi/LZz/3ZEL9Uv79weosWbda668TXuN91aQ+K
+zE+wr+znzE+67963ttpjy1uxH7PxBvw5115/Taqtxr0ZvALnVr9Bm/vrKOxS
+5VaQ7wIukp8rFmk6dvsk8Qif1xyirmoy8p3G5qxbY34S40I9Oq+XUT6ScX4Y
+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
+ku5ayPmsw+GLUHwu8MCPP+G4NL70gGdtUEfj2ee+NtOelprEYE1wED314Gld
+e/01CR/hSzt8y2HJP9PXHPyi/VVi6lwz1tudd4+QIssnk/hhtFkxP2mYk1Tj
+S8Afwdqr5gVNg2HwpxBP8LurvwmvOGIYj7NtHKmrWBLPj9y+bex1OU2vy90+
+P2Ifv2XL5uSPOvec05KPn30LvAa5zdFPFfsieOw5MYy4jFo2xCrG3auWLY4U
+5YkPPZ78as7jIuwANSPxuRCXBGN84YtPJ/8JfpSuczn4PjDNt7/zrfQ7v/7x
+X0t1oMAz5GZFLnBdXLjo+mp1DVAHFfuC74X7Qck7KlInk3BetdeRb8F+C6xc
+Z3+3btuScMc43mhbHMN3sHfcbc2H34TTG/0K1TjJIjCMuA5+wcjrdIae3ZPe
+D+DVHHbogQnXwBei3g7+GnLQqzWB2tS4mxeGAb/Af2Et4RdY5b0WuIG4X6xF
+3aV/wtx7fB/4QOi/il+EHG+wIb6tRdkCfucfvv+9wWc/92cJy7DuqIEAf4ba
+3PgrsVPFP1M0KvcC9r/4l1mz9h4rUqROJsmtjrbLvTzcjIMP2m8P22uOJhgm
+1nSdFsPwe/rhxeuxZyTrva4/tMe+qFgS/iK4jhwP/hD8Q5s37b1bzbtcah4y
+3EtytLEl8IXb+mGi38axjRhm2r30wYcclL4HHim80a7XeB/ly898KV07o2rd
+jKsfIz+A5z6q4FY4KVwDxIj0WeXmEnEc2CIwDbxgsCrrB38hfUY47j7kmBed
+n7aZEzjmcOHwF7JWcq7ZIsshk2AYYxHkV2q32Vuxzx+1Zut6MlqTP2Kbai8m
+35ts60YdPGIldb8BVsLHAGfmwQfeOXjfg+8aPPDedwzec//bd1Ps8v33vW3w
+znfcM3j4/bvycHid93eFYaKfwn5CYBqODz7PpZeel8YLXJNz/8lv49cnz0cO
+TZs6vXF+ZvXDMG/wM8ibhxea284uWrDr8EjwlZMLhMJpYkyx8fBkWTuoday5
+dqjfR5yGz/HI3/g5fvf3n0ycAbBL37EgvEyxDOcL5mePQl1u+Otbt21J8S/i
+T8nP2wKXjLqextVILFinH2ptSvx0rOVV48IVmZ9MwoeJec7m9PK/HTsuHHkP
+OfbYbUNOjDnA3Iex79bj5fvARdyj5W9wzxY38V7iotVYevyNiI3S404MI55B
+scn8zev33bsL6/CIaq+nHb/Yl1rOrOcafULVuixgBzgKjB/cXPwjVc7APO4V
+8e/X3Xbr8HinwTCpLsuUx8L+mxpVcF0X3Y+xSD8EHAeegZ/z9W88nzAZuIbc
+bWJg1KIhJgaeGVdXr01957proWCY/MocUDuROmLwwkvsqMgkMgmGMZ4U+xFh
+p7nXEN8fdT8gHzjaPPOAY98kcA7fRe1fawH7Pzgc1tbYozbMzkd4FB6nn425
+xvhexCpiG/wvPv+Vh7rNS6rWY7FmLniG3+H4wC8eo5/hNcaSGAOYDZ8qfgpi
+LfOoJ8bY4QPxuNr2fJwVw+B/Yb8NXi37rSJVgQ8FroVHg2+K+wAxT+4j1BfA
+3sGbh/NDHhv3HvDNOL/mOB9NwTF5FXxK/gH4pe/+wyL9k0liSfpfov3StpGv
+6T6per+Ao0WdUmrFgFFQbDZxKOwYNp3vYE/O74Bn+G58MdQ1I75fl7/Ac/iz
+cnRifbdYv81jjf4ZMA04BnzDYxcYJuKmaPf1ycReCLEvQKzl4mfMjeY14gvE
+orjO2ZfCZaHeE3k8bfuK1N2n+Sx5QJNweifFMHW/Cw+HvXaJdxcZJ3CCiS9i
+11gr+mo+//RTaf088tgH0rVBbT5qC4P1I1c6KnsAe1ZV+UZF8yhzAJ+L+SMu
+usz5hkXyyaR+GO2X9tcacthbcEzVfnmv4JFcBGIXfga7TgyJz8Jlsb4Jf/Mb
+rG32WqNsIusfn4X5QB6n8afo54h5Q/ZENBbG+7rAMBFH8dzjsDd3xChyZvys
+cSePh2P0s9axA/MxTvpw+Bv/K7Vs2Z+S56HPps09Gp4BY+yxzQPDRI18vbLf
+KjKLsH7w4Rl7eviR9yd/LeuZ+wx5LXC9uKb4P+9jn8+1CWeItVhwTF6lXpG5
+iCV+VGRamSS3OsZM9BPYn4j7B/6TsXnFGzVnub9Q3xe/DJ/D18Keiu/TZww3
+pHqPqe7p8SfDBeT93K94jl+BOAx2/fIdlyW/Bfc1bCcYi8cLLzg72X+xV1d5
+SXU+GLGfcTH9MPJmYvxJbMJnOa7Ip+F9+Kn0zYBv0MgD4jk4EJzI+HKu5rCC
+barjRy4IPOMhLm2ZW11dC033KuaRPTC/ZT3YrtdxkfWUmO/EugLb+Djuc9T0
+I15VcMzilfsQGNLaL2U/U2QWmcQPI6fDz8T4CLYSjAB/o1Wvw436JWBx69pW
+Y9pNnDveLweW97bl6PE+elXi0xAPdIFhqnGhKge26n+Jfpvov4k9p3k0Dkbc
+zX7cMdddP0/8XTEm/4NjQxwKbOM+FX7R5oM2DXPfJ8EwVQ5Q0zyDR4klcr/q
+ev0WKdIk42IUYJ+CYxar+M+peUj+0brlIhbpXibpNYA9Na8ae2pNXP5/wP6b
+Jqrf1qXGOjF1PQ/qFB+QOVHGoaYdv0n6GYzTmJs9LxUfMX/ykcRFbTi9vBd/
+kNxsXq9yEOK4k3sE1sV/X+LdRfoo9LXIbdfXReHwUXex+F+KdCVtMYy+APf/
+4hrjF0cecVQ2DDMK14y7lohf6UfoKpa0DBimimX04bTBMPrh8N3I9yF+iB+s
+mvcKrsHXA18HLmbX67ZIka6EOjX4g3Pb91VV9zTEs/HVP/7Bx0o8uUhnMimG
+iXZfDBP78RrTqa7hulqjXeY0jqvVX1fjCi6ZnJKuYkmzYph5q/MW87d287U1
+YBj8KXB28MXxnHHDJ0NMMI4vudPUK6NOeNfrtUiRrgV7yprNbetXWbkHg1/I
+lS/4pUiXMgmGiZwPbSH2G15JNX9o3Fpu89osGOYlL/6FsdwY7lfUOJdXIq93
+2vFbFgxT5el4zG3zkqw5yCNYBhzD3DPWxpPAM9TvIHbU9VotUmQegk0tnJju
+MYvPuTeQx0HuGPUMc893kdWSWTCMz7Fn8MwnwS2TvLfp/tKWQxy/Dz8MsRFs
+8Lr4YSJeifPeFsOYA47fzRgUfBpi3IwrdYAY0xI7KrJM8s1v/+3IujJFZ8Mw
+3Gvxv8DfpZd57rkusnoySW51tIPaNB6xZ/OoIztPpWac/hdiI+uAYWK9v2q9
+Gh6bMIz54T5n3smJ537F/NPHsOv1WaTIvIWaeaVWb/cKRw5OP/6XUv+lyLxk
+GgxTp9QioTYM9WO3btuScqypJ0/eNHEm/DQ8wvPk//yN3aNWOH/zOV5j3bMn
+Iu8Xjs2+++2TsDx1ZXhOHIjabPJIiV3YE1o+jv+ry9P2kTo01o7Ttk87fsuK
+YaoxpSYMYz0anuO/oqcNfhi4L+xlu16bRYosQsAwue39qin3WWonc4+gDk/u
+OS6yutIFhsE2ggWsd2eMhnwlathpL7GB1pqVm8Fr1tLndW0leUPUMwFrEKui
+dy/PeR/K/6l5Qr8f+ibyPz9z0y03JqWGL//n/TfdfGPqoc0j9d9iLwJt+LTj
+tywYRvxS5cX4WhOGwV8V69MwL/xNTfiu12WRIosSasSUvKTusAuPjCe9Ygr/
+pci8ZRIMU33vMCd3o+9AtOXWmcXGGaupfk/UuvpwEV/YM8D8KPsN8T95ptX3
+VuvmgpHo1WQcxM/1pT7MMmjk0Pha12uySJFFCnWLqPGd2/4vk47LK8Un/+jj
+j5TYcpGFSFexpFXQacevYJgiRZZb6OFlTLrodJiGR3pQs2ctvP4ii5KCYQqG
+KRimyLoLtXrpiVG4veNxyqgcUf53yqknJx7AV5/9SrknFFmYFAxTMEzBMEXW
+WeBzkft72umnFgwzJbahrgIx+q9/4/lyPyiyUCkYpmCYgmGKrLOAYeinTq/7
+3Hhg2RT8Qg9Zci7+8st/Ue4FRRYuBcMUDFMwTJF1Fji98E/JacyNCfquVT/V
+1m1bUn7is899reQnFskiBcMUDFMwTJF1lx/9+N/Tmp5XL5RVU8bk6GOOSvUs
+Pvu5Pys96Ytkk4JhCoYpGKZIkb32op9ytTZmwTD1Cv+Z/vXEjwp+KZJTCoYp
+GKatcp7W4UGp0Uttna7XZJEiOeR3PvmJVBu/9H/cXasYjvp1xN3wv/zHT35c
+rv8iWQU7VDBMwTBtlLwD+j3y+NgTj6Y4OLXESxy8yCoIvdbh9dLjJDduyI1V
+Io6Lr9MThhrof/Dp3xsQf8s9Z0WK/MrDDw17H667TjN+64RhOFf6t+F7oWeE
+50xNzq7XZZEii5ZnvvpXybe4rjnWozCMSpzt2uuvGfzhZz49+Ncf/ku55otk
+F3oOU5MIzW0f+6DTjOE6YRh7NNj30R4N3Pe7XptFiixa6Fv6G7/18eSLWUcM
+M0732W/vhO0++rGPFPxSpDdC/yD6M5ZYUsEwbdR+njzaDwt+DNim67VZpMii
+BW7HF774dOJ6iGHWDcuM4gKdfuarUw+B0oO6SJ+ENYkdWgf7WzDM7Ap+oWcm
+54zvhb60cGKKH6bIqgg9rLmeiZvkxhM5tA6zgWtuv+MNA/xUhftWpE9Cbhx2
+yZjAuus0Y7hOGAafC747zhksIx+88GGKrIqQJ0w86ahjtq+dD6ZOyUE65zVn
+D8jZyj03RYpUhZwSuDDYptz2sQ86zRiuE4bhPOGAg3tdM/jxyFXqem0WKZJL
+Pv/0U4MLL7pgsP8B+430Tayycr6eM9wgenr/4w++X67xIr0T4gCFCzM7hmEc
+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
+11K3ZFXisGA9YkecG7FGcLH+F2M6i4g3VDno+mI4Dnzn+GLA849/8LGVGPdc
+wtw6ztjtVYhDzKrgALALtrDvNUeIe9mPMl6jucdwVm3CMO5zvCe4x4r3i9xz
+U6RBNnwA2GPmTN8a113T+mC+4RJgA9YlLwm+LfXarrz6ilTvtSsMw3cxfvBH
+cp9jF0IvLfhCrC3wsblurK1FcXqNIVX9L3HvRR4Y+JH+natUk2fRIpfOXPbC
+6X3BD2NOXO45GifmU2vXu+y7mlPbYJi4p/Kc/dv5yz0/RUYLecKRG8P86Q9u
+Wh++h7rtfD7xYlZc6LFDXjVj1SWGOXzLYYNrrrs6+Xhyn2MXQowRbLtl6+G1
+scnoG5mX2geb59VaNN6r4ICxfo859ugBXO3c47aMEuvWwSOItmDd1Rqh3Ctz
+z9M48RjFW6vgg+lC3Wvlnp8io+W2218/jCeRp8ScPfjAO3dh1nvfOnj4/fen
+x/fc//bBO99xz+Ch9717iNETl32nfTpw0wHp89iB3Oczb8EPA+cLjio5LV3V
+t2PsqL0G1yb3Oc4q9PQmRsPYULPPWlmRx7uIe2SbWDg+g7POOTPhrdLvbTqR
++yKXwBzddddYh3oZaqbJB7FWSsGh9w7rqJXavf0U5kg7vH37YQmPsG/4lYde
+uP//8i/dMfjAwzvX9IPvSliG/5mDR40UcnO048mns+KCH4b9Ctwfcoa7wjBw
+RrChq1Cjl1gbY7N5096Jyxvv5aw5+zvO/f7TgGHscQC3l3gSvaqo/ZN7/JZJ
+GEd7goNdzM0tfJh7h9hlWTgV8mHMz1mFGnezqtyYvvOZ1lGMg7D/xBfDPQj/
+Qupv8o57El65/763JfzC3yj4hXnFhvN+4h/a4L7Vn5yXwJkwrzr2WZhV4fOS
+v/DXzz+39OPIeuKczjzj5NQfhnu5MfYu+zk22pAWsXDrxcDdAY+uCqd6UZL2
+PA8/NMxhZ3/DmI6rzbAuyjiQZ7hMNV/FXAW/7H6f0CeVe36K7BLqe2F/uWdj
+O/Uhys8mXmQ86YH3vuMF/LIT15hbcsLxu2qj8B1wQ3Kf06KEPgBwKA4+5KBO
++ySRlw7PZtlrxlIThjgb9aCvvf6aIc+T69/adovKSWrTK8UeG8S8mE/4x6tU
+Y3CeYk169+7UE2Fe7RGU2/bkVu6V9NbIPU+TiJh0FfKqu1Ix3brUoe+7JL/m
+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
+YfD+P/uN/6mLu2A78QH82j/4+913+D3vk1/Kd4hj8T7+DbbDe3wHfgu2BWaA
+Y5/vsF2+D9biO+ZHiyumev+w//l6LL96E3NHjJfsZdhPaOl+28cp//Jf/W9d
+7jV1SmBgcTR4BmxDn+sbb7xh6z2337J1xx23946PffyjHd4B9z7wmfu75/d/
++r7u+VGPe++/p/tfcph4Td/Vd73zpq0rr7hoHeu95967TwQuNQdV3IJNTq4F
+a8jMt6+c3hfqHoyHE4f3/FQezOGJ+R7mG7iOyTzJObb+rA5xzdLXcb+yifb9
+tAt4svV7zR30hjuL14z8VniVsQPgGbAcNdj6ANN3mIP3iC/yPeKJxkkZxj55
+9LmvjT/yyOv8De85iInqV/QzXjP4vb8jXmRs037UYCt8L2D5pc/vlHScHE88
+tvWNrz+x9dNfeXTrqa9+ufT/TLtoHaW++8Ivhyv438HXxjfFiczZzJcpDDM8
+5PJf+lqWnAz5zve+va84EqPm2UteQr4rdh9fHj4/Yobk9xFjIodGLANmAD/A
++YjPRkzD++RFiU3EO+AMfD3kxPN98AnfBdeASYh98n3xC8953+2CYzJOmt/j
+O3xGzIg1Ir7Jk4JFyds1Xgt+ef65Z7rHZ56umpApu8j9ih21dssY59LX9LSJ
+uWbYYnPh9M1MXa+l59DSI2sweb30tSzZfOk4rfbhg2EUH9awwO9I/JJYJz4b
+njOIRxG/5D0++83f+o113JQYDu8zwBV8l/gmn/OauB2PfI9B3JPf+Vt6GZFz
+xeN//dd+ucNU+Fbg7WOb5Oj6fQbbXvo87UWwv9gBcHfXl+WbL+CYZ5/5me5x
+af279JiyidrR5P1c+pqeRuFcJ+8xPhnid/pmxq7Z0nNo6cF5Io/U3MLC2CVT
+wrzpy7OeMzofTknJMQj5LPi3zNMlH/Xpr31lHUfi+dL6d+kxZQ+xoeZUaleX
+vq6nVay/4Txb8z/EH1MY5sVBrFO+Ks6fNZRLX8+SzZVuLbYPDEOMgrX+0vtf
+cvoF3QZ+If9IXqWujv2Jx3b4YpbWv0uPKVsIZrFfCudx6et62oX5CtYGuxBj
+HuudXhjmhYGvFexCrT+vue+rj3rJmDBP9hNHAsNQQ7b0/pecbsHmso7F5/fQ
+ww92XAXWGGVOb/lhpu0g59KemEtf17Mg8qqCXeAQHMMwNV4YnY/1S1/cxbsl
+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
+/53vfXuHj6xqqEuOS9AP9j43L2bpe2RsyHND7Ct7vppHR1+kIb3RjW279L73
+v7f7/aNffKTrEdnWP2Kv4KaS204+uk3IuRO3oSMr1ny48k9+/R+vsUpfjVLO
+E3K/l97f0ya5fjevwlpK+3gch37hER2jfyRtM74XMAtDDAPmSJzhmufOT3xs
+cD2FH5jayaypPAl+GNeMbayb+D3vy6W69FwqOVtinFkdsvR9Mucesv7A/DHq
+eq6+5tzoGhrd8Za33bjm3uX3YIAP/Pj7d3DJUM8ER5V5K9ZubQJ/jj4Y+5Kb
+p8gxLT2PToN0PHYNdumLO+Kn+71/86/rnB+CgMfNx7OGSMzCPJev7jjWENnD
+hNf6Y+wVufa5RP+RzMVVf/KYeb0thuE5PZSMkxmz2nQMI68758J8I/N37S+8
+9HwqOZuSvsFNuFfGbLhxZPUNawA4MfvwSz7H7nz+Cw+t82itZeJ48etSi/Sa
+a6/Zuue+u3fFqzaFg8q1jjmA+r7tJ1G5vwcX+hAM1Vvn+3DaL72vJ1mSa9+e
+qd7X1udyX2Ir4R04jvvPe968XHvN8djVE65yYMQyyeeddQYM7se2P3piGHy9
+3tPqo03HMNZUel44R163im+XLC34Mjbpfukb3ivpHxnjk8oaE74HVuPe4z6k
+xtx+Kuqce+69u7ePyab0leX4WeuwPwz1rrElY/iu65aeUydRyNFt/TF9g96h
+5YvZmzBfuc/AJMRyrRmy3wmf27eM5+Tuex8eRm30nKFfgVgQNdD4ZPlvcI3c
+3eqC7Evi/el77Pf1N7x2EMO88U1v2NU3adMxDDrG2JFxNta+5X8p2QQRX2/S
+PdM33C/uH3wmXa3rQG6ua2e4ydCd1F+BY8Qk1jbqZ2n1kf6Yw+oZd9AhZ7e8
+NTzXB+P6Uf8S6yOOl2Ndem6dRCE/5nWvv35Xr9CcW//n7/1undsZYhzWOIT9
+jekfJg+SMRzmrXWH5lkwjw8jltvqt3ZwX93/6fu6/O4LLjp/7b8lh859YzuZ
+65/xIx4zx+XWd75jp184MAzxa86DfuGTgGHk5eE8GTsCc9Z6qWRTZOjeXvre
+SRtuLwB0heucXblzoTeotYYXU98n2/Ee9H6Uw85+1XzHzzl+ny99/B63GAw9
+aQ2H+THWN2or1JGlZ/Yuf/CHP+j6TyR2yT6RnN+l93GTxTyXVp9Yf6w/I3Pm
+U98YJz2sfJgpDIOeoJ9533qIWml6S6Y/qO3XZn6LNdP0k03dlBiGOQVG814+
+CbEkdZC+X6/b0vOspCSFOarO8F7Ulh/1/ZH+DnVBy9fAvnEP0ROgL08hB3qC
+/mv4ref0rfWYW12auqmNe2dM/KjPz5QOnhrimcoBni/gmF/483+uN1ccP+DS
++7dpwlpB/WH+BHb/OHJyh+7NvH9dA5nvgi1GP4zV1jvor8X3tN/qRjGINYz+
+D7VHQxiG7cMFzu/koFoaw8i7Z4zdfo2Zr+Rr+d6Xnm8lJX2irTZnFp/vccWj
+xSzqGJ/7OffPR+/8iTW/y1AODLqDOiTWTub/Tv13y2W3rnlc3dfGwjMGlXpm
+0zGMx4TuQW8b3156vm26wB+DPWo5fPHRLL1vmyD6Mxncb8al0RnEheRwOi7d
+wfO2XzX71O4D3yF2ZF3iUDw6dQoDjqn7Hrh3neurH1fcxvv6dOV76GrzGwxD
+jEq+iG5/FsYw+qL1sxiXxgZwHeWzsyZp6XlXUjImmbNFfcBx8aO4ZuK5OCFr
++MgBMQdmrO8RdUafffAnd8Tg5/y//h71nznExnCM3SfGSf/MJg/xizVMrhef
+/85z1ZdtQugRib1LDqJHHv3CmT5n3FfMG+xb5plZH61fVd/HUc/v5O13rZH3
+cMahvY/RC/ApwF04lcedg5oj6iG16/Y+YB9YG2Dn+Y8dNZMNXzjxKX3c2VN2
+KQyTPVvkFeQR/UBuM1x22ILCLyUnRZIv4bj8DNpW9UL2pUdf4FuZqkMC2xCL
+dpv5OOc+boe4Rr24lB/moIP1lDrT/nnYHtfRxukqD7hf6EtA7TU1Scyzbi6e
+MdEnKhZg3c68ynuFecRnYBy+f1z8LsZxcv1hnZ6+IWIg9KVnn9wv9Ap9Yq++
+5lyvPhl6Dz1DfRH+OHPQ1AVsm31633tv6/XDmC/sumgTMIw+FvPrXE/aGxjf
+Ld9beg6WlOxFOn7KVXz0qO8ha4LFB/p+ec69dccHPrTLn983bn7H29c8MtZh
+d3GgiZ6M8nDaE0VOTjitfvorj+7ok91XV7k0Rpka1jNxLtBHvuY4tEPoYb4L
+RxfPyW9Yeg5ukoBj4IaB45mcLPJllt6noxaxin0VtWu8Zn7YswR+hrw3km+l
+89EcsGfq1Py2p2rW57nm4DPWNcSBuHbwKNhnRb5L7glw6ZB/t8UgDvo7vv2W
+m9brAc8R4yMfed/g76l90ie6Cb0G2l666AT1Bde2aqhLTqrohz0uDJPrKPmu
+qBm4+MJLd+mBFtPQiwQff1/8aEpHwh0ujxWPzz6zvZZ89me7wfP0wWSc6yTg
+F4a+bmskwYVyeOlzMw7OWiztAs8r3vSi/OZv/cbWP/xH//2pPR/e78SJjCtb
+78z7zBvmA9+Te1GuEH0efNcc0OPAMA59x85huF7e+IZr1/4zBvEja6bYb3vJ
+YqvFOrtwzEr3vPRPn9erg/jNxz9557oXLYMYjHVtfb1n0WvrWqaFMYx1ZDxy
+fdEXxI/0zSw9J0tKDiLqg6McGUtSF4Fh8Am86c9cv+7d2LcWYtDHBv0j1rAX
+gT3bJnWkPWhX/WnxvewYq7h6+qzd502ovZ4angdjddgbsaJDnlTtkpjHXMWM
+p1W/ptMj8si75s76Z+eB9yQcdXK3uMawTprvasONBzN/jgPDuPbxfiRu9IH3
+v2vr8svOX2ON7IlFnxF+J/938kY98Jn7uzgROkWMou7J/mutDqLWgN9ZS8C5
+vPSS83oxDAM/zZpze2EMwz5wDogbee0Z5MAsPT9LSg5DjgPDJL8/ugjd8p7b
+b9mhA4Z8MXDZpa9B/8G6TnxGLInHLz/+8NZ9997Z/S/rt1e/+spu8Pymt72x
+i3FTF0nvAmsON6Gv9dQwlyFrrNsadntJet60U7w2piiHjt9lHct5WHp+HqcQ
+UzrpcST5nuWQA9MaM9CP6dxIjO7awPecE8ZErMkx/mwu7VFjGP6T/2bfwS83
+3njDaG4Lebzcw9YR2XOaewM/BHMbboY1j2ajf4bWUvpkqJ/k2NEbQxjmtlvf
++mIO8gbww1hrZf35WbuvS06/WGeA/Up+p+wvlPxw6gXz3MfuHesf9V0z8ANb
+M+A6qM8Xc+7qq3bc5306MPPujZVrp3mfvD7i4ay9dvVri3i246KLL9y68S1v
+7mLr+ijU6WKATeq3dBz6D7tnTsLSc7Vkpyw9P+ZgktZee4/q2+G9zNsVM7ne
+Ma/4Z77yxNZ73v3e3b6TZnC/63Nk2/pw7A+P//VLP/Vgt3bZwfUyUYdtrIge
+bPhlhvAOuTTu/1HrCPmReY4fzRzkzB0ShxpfXnrOlpQchWijtVcZo7CmUE4V
+P5uKtYhbvJ+41+DkoFYge08bi06dQJz7Jz72kUkMk7y7xuyHahL4z1ZPDa2/
+qLNET8EZkZy/Hrd9spe2IUc9jEOZCyHOtQcOa/yl5+5ZEeM75KmSg3xc/E5j
+YwrDrPtDr3hWktdAXJx+CblZyH8j9nPv/fd0jwzyTKgBuOTiy0YxDPcudUX4
+XcRK8uh3uTKrXDh8s/C56JOZGm390tD3WC+ZU3TUGIZjErskDnT9ZZ6253vp
+OVxSctRiHr75K9wbDGMPfG4/tzkYJrns0E3wJ7QY4kd/5KW7MAQ1AXJnjmGY
+dV+SlW8EXUdPk8uvuGxQ/wxhmL7vWKtC/k7Wc7peXNqGHPXIXCEwqLyfzAfn
+hrE+ez8tPYePW+gpeRTbNWfJ/EvznJLnaen5MYVhsv8hQz3inDH2xWfkm9D7
++apzr+r8tC1OYF1z/ssu6PwwY74Yvnvd9deu5y1z0n3oclyfesEX882feyF2
+Bjbqq13atd6ZeJ34hlpvdeBRXwPOn7Ff+5KAbdSJ5T8tOWtibwLX2ekLFuNz
+j8zBMD4ywAI7+qVFLAed5HvUIRH7buM1fRhGPcV9+6m7Ptnlz2TMaMo/7P9O
+6Sp6NMFDr/3OHJLTPLzOucbTLnHO5dNjnqBHqQPJepfkpMg59sM/+ePSqytx
+jexj5nLApy0fi/eS/cA2IZY5hWGMO5uT4vGJjcklvuvuT2299rXndsV6vfd6
+66JH/DDiCPCQazExtrFgfDDGouX8FD9N6YM5/poPf+RD6xqpozz/8rwYp+f8
+2k+A+696kJScVeHextdiLBp7ZX6oXJjmioxhGHNTsP/EiVud0HJ1o8fuvueu
+NTZpdUCrM7lPwRT2ux7z8e5XH/mcODh5v7mePO3DOKB8IDya/ymuQf/zXWt0
+xbnG3rBT1sHov7LOk+8tPdePS8y55lx87/vfXdeFWWdnDq71y+bd2vdZzrXk
+/Fl6TGEY/R/GoDk25wZ+F3J0yUHbsa5ZjTn35VhOLlwt+FiS6zf9E8a5nePs
+L2unN7/lTbvWWnvVIfBZHQeGYR7on+M+0+/EfVo8UCVnXbI2kXs/6xT2ktNL
+/L6Pm6FvwOPtPTmUN7uj7milC/GT7BWzTOGdvt9fe91ruhg9+3EWYklybeiD
+Ebeaj6mfBRurjTb+LpYB9xqzR7+aK6CPx7V5xhnk6mN7rDOXvhemRP5ac9jF
+aOaAaM+1LxxXd/888djWN77+RJefwXNyNXgNDwDcRryWo5EaO2Ig+BCMhSw9
+P+b4YfLacj44bvJd4HOZc6+O3cPpx+2rayRGhP5xThpPEl+bB+iaif3kGs3x
+yYztF3riOGqPXF+s1xNxny19T5SUbIK0Pd/0Xba5LkP2jzX6O9992yRWAE9c
+8YrLO91m3uyYDlBnooOyV8GYjuE/WPMRK+c36ClqkK6/4bVdHmD72z6MIxc5
+OGbq+E/D8PyLO9Tzvm+9g9yoyVMjBpZfT54t/QjGQ4xbul722ouTzZ3ws+x9
+NWf/mVPGENDxzGu2Y93KQQb7nr0HxfceA/eKcUf9WB5Ll7+wjVMY4JJvffOF
+WlxqZp5/7pk1hxHviWvALeAdXvPZ0vNjCsNkDLr7/vY1QJ9wDw3hgP36Yfo+
+py/1xz7+0fW8TB+haxDmIq+5ltZn8h1qE4lND611xvYRn/NxxPusKfWe6OJi
+jxX3S0lJCnbHPiSuYeR/nLIf8NMll+bQvc930BlZGz0nrx9Oq+S4GtIp5AiC
+pcj5VadmfSfHRy0TfSWn/DN8Tm7PcfAcLz3MI0A36hvXFqtDO56Q4B9Ur8qx
+o+3wO/pf3J72LXvh+DzPsbhFHnl/PzaSc9n4jPZs6rdzhtje47COTx5b40Vp
+x/PewbeC/wXMAo7htfgErMJrBp/xPt91dL6bhefHHAxjXwBec26I1ewFD7zs
+5T/WrT3Ik4Nvbsxf0/cZdQTWaDt/zMeR70+cnTEmPycu1K5xpvafmDhxqePI
+WZL3pS/vrKSk5AUB24tljA+gi9HTmTOTvGrcw1m3OKYDqEMyP0Ifj+ukzBtY
+685t3cL6ek6M6rLLL+36XatP0uevXbV+Gn4s8nGyl3GLaXjNEA/pi1jbpcB4
+6sK+HgaZI5uYLfVecqm2+nBOP4Sp/5f3R9479tu1qHY+f5f9xg/DD3UYOOIk
+D2NGDDAAcaPOvxIxJl7zPTkbeY3PpsMyR2QX5/bbmBNL8p5jtLkmO3wq8T6Y
+AX4o8s/gY1A3oG+4l29/z7u79UbinDE988EP37Gey/rypmLBqS/QCfhsp3RN
+Drgh+L3/57ayt+yc65DrBtdcGdt3u9yvS9uJkpJNFvMy5apmba6v3DWpPep5
+bwhfsEZJPUNcHOyg3kjb7tpZrKTuRy/ArTvXz0uNNHpMPnXjVa6ZzWdQX+B/
+nuKNQKdlz7yM/Wd/Fd9v8Ury6frdqd7ZuZ2D4gZ1X8aIxCb6QBJXJR46rFyg
+pTHE0kNfiz0xwC3mwPCeuMU+X2Icnh9lLKlv7u0Hw+h/Y1twLXEfTvk4ifXC
+78IaSL9ccuHp1yHPhXiw9UxrzqkejATGYc3hfakOmXMexPf8Lxy/mYM8NqyL
+8v7yfCS2mzy/Kz8ROspaNbdHDpo1SdyzS9uHkpKTIG3cwD4scJujH6yd4J4i
+jjTVkxq9g26TX7K9vzMngs+1r/C1EOue0iPt/5JzA08wGCy51YlNsH30Av+B
+3mAdxXqwb59dK6JH098ihsn1Vtr/PL4+HNLauHXvuFWfk9YfMmcdN4YXzGFx
+X9CT5groV8r9dX/2spasMTKin1f2x3CAU/DR6K+x/3rXr3QGV/9eRzs/pr4/
+hWHs8cq8ISYzFaclTw2/izlVOc+11dZoG6skRtzmr/XpG3xA5l55bFM9D+Rb
+kUfBGkvyZKZ0D9/JbeXaJF+PDfaX+npzwey3if5Fh6G32L+l7UJJyUkTfS2s
+A7i/eW0NrbaWz+n5is93CMOQVyLfqHZfXJF+3+wLxCM+lTF9NbXWo+aA/Bfi
+UZl3af4yeoL/6stH9v/YDv1TEp+47nT92GKX1GPt+kx8lr6OXLelz8a8oSkd
+2Pp0WrvEucdfD440Fui62VwU8VOrf+fYuBrTmMFzzmvzgf3Me4l5mtz8B/HD
+HeaY02vA2kTyWcbuWXLr4YZznWSNm+ene1zF28B+Hb5bxULhtRzLBeZeJSdO
+boS2n9EYjvF+4xqYT8O1yFy8vsF6Kf0+3r/qslmxuujFin7lHrWWr2qnS0oO
+Jvor7Hkrp4w1GN6D93/6vm4NBl9D6jDu8eyj7No+ezyyDbloEtNY17AXDNNy
+aPH6hhuu6bBMxpvVUegr/Ezy2uzCMi/5U13vbY8hMUfy+OZaUqySOm3OSB/U
+XvJRWgyTcSue42tSD195xUVb1177qq4vJn53jt01a/pdEncddc+/0z7My5Lf
+LnPaOf933HH71rveeVPXY5B+yOLG5NI+zNHOu0kbO3E9rWHOedbes+aXkXOS
+8Uvveeer+MXYGgOcgw8YHTHFD8V/Xn3NuXVcusuHm5GTzECveW+b4877Y75g
+6hRYEyVPjHpt7vlVb2S/BPXB0vq/pOQ0CP4K9AcxGNYp9iXgPTGBuhGfjLEZ
+YsrUIeUaxd64+p/VNebbqnfQIeTpjsWpwCdD+qyPDxSuLfZPvlTrsPhfc/n6
+6jmpkyBu71otY0qtjsr32a41nK0/Q7wiXjO247bTtz7HLunzUSdmjMv+4Rkj
+S52Pvzpra9rtFoY52JAzksG5Zm1PHhl4v42P8L7XInPej2IcJobBh5Brjj5s
+QZ6MefBidfsbdXMv6rHkygHDJPcu92/fvd1iJ3yrxrem5qQ1i9bK6xO2rwa8
+l2P+XrjDvU7+Pmvyps6v9z3nQq5mxtJ6v6TkNIl8IeaXtT4T1x1gEtZa8Nih
+R+THVncZv3DtlfEPba65fH26KvUV2ycfB/906q+hmgh/Ry9bdKH6Rp9x639J
+Tgpyc9T5GTsSO2R8KGMGcpbanxesxkgflhwmxv/dL8/PHHuUGCb92Zxr1vdD
+/qzLLzt/y/5ZuS2302fDCsPsbcjbK+8d+SBDfkXwv7UozpvD3Jecr8ldexAM
+w2Ce93F056D3ovlZ6ox1HCnyms2Blvcvv8t8Jh94TC/oH4G/d8yPmOfEdYT1
+hs5//nMMm3lcGRf2d2KoqfOrf86YWfVtLCk5GnGdon1ODimHtpBHc4GzT0z2
+oEafi4PMTdE3Qcy89cG0NQnEQtTJ1AfA4zuV85f6jtgXuXvsIzmG9rzu4wXl
+88zBTR2Xdl9sx3qbuPwH3v+uLpZ17tzlHV4gXo9fh9dgi5tvflN3HHL4i+Ey
+j2YvtimxILoYfDJUy8Ggh412JGsiEjsVhjnYcN67zm57orbzEl+nvHqH4YfJ
+eZT1enLbHBTDsE0wmmuOIU47Y0jJzaLvFbxi3jN5zWAY/88cX/ebPkV9a5R8
+zr5QC8l9ODUvXZ+xxtBPrL+V/0x+zb6BHjEu5n2bHDVz7l31Ia+X1vMlJadd
+1Cfcbz7a25jn9qtbx/8ndIg9WbW76G2wRfpEXvqnz9vRexpdj37KdQ44oOOw
+e/Xu2s7ennLb2yHeRRzpjg98aOd/xOC38FXk/rZ4zjUXeOTd77x965KLL9vR
+53JssB/E3PFd8T8cF9vE5yXOc61oDWibv2KOBedPnc/1IE9piOeUgX6ewioH
+taEnHQMddP/lheGRa0NN8RjGhhclY0lT58W4LN/P3CZ9fdyDrCeYm2yba06e
+GgO/D4/kmVBjQx49/NRsE/yb3C/mkLl+yV4h/GaNYXp6G8HFxLwWKzuP08YP
+HWeHb6Lnhf+V/5H3mef15Rect/WJT3xonS/NOknM4D0z53qjU8buX87fQw8/
+uMYi1tPrW8p8t1yfJBdX9Q0oKTlecU2EndXHqx03d8b6wDm+XPWaPvQWw7Q2
+GC4Ifqvddj2FXkJff+iD/2Xn6xjCDO1757/sgl06Mf8THeX6KvGC8TXyZcAg
+fXp8DobxuetH7Fxy73N+OEbOqTmEGYtLTg1zgtk/YmR9+yIORD8XhjkeDNNx
+xGxvjxjHWF4q9cH6JOdcFzn05VXO+njiutQFkmcjp+OcHmLUFxGr5V4yXpx5
+XmInMRN+0x0+0J4e06xr2lyfOf6+dX3Rau3E/O98pgN9INN/iw9U3nF5ITKX
+uC9W2/6/mHNogAOzT8c6P9Ccnm3sx3kEs4gFeeQ9/c9L6/OSkrMo6AP54NVr
+3JP2EFG/TdkldZl6jUf8EWP9UsAwmfufaxx98HDqURfNd1mTzekr14dh0JfE
+kjJn1jgSz1nfXn3Nud7t4dtp8cqQrz1fE8+/7V23dn4UsYm2Cp+V/u6s95YT
+v9OfX3tynTswhKfAS+lfGrIjS2OAk45h1uvxVW4H9wxr96G5SO4r31nX7kyc
+E9cA9qriNT5JeLHBInMwizij/S73Dflj9jizrirjLfyfuGJs3aF/0XVKd24b
+X0ivH2Z1v4lDOLbWDzO2VgCLWTuVfbjMy5u63tzfU3WR6Aexi37QNSfQ6jx5
+X7o24T5mH5bW4yUlZ13ALNYoJf8LvpghX3jqDPFA9gfAVsuV2aef0Cn4alIf
+asuzVy36AywD9yZ1Tn24oQ8r5SCPxboksYE1VXDpoefHsNEc+9GHZbAJYCPy
+atSNYhnjdeawmGed5xVdDxYa0vHUxWQdRGGYo9l/bJk9q/UltP2c89obuxSb
+zzkfzM2uF+A2TmCQ5z6U296HXabmIzV9+COMLxnXEUfjU+iN165ivzxnHmf8
+M7kJxs43c10/B/dcXyxp7D7ju+gKYz38R9YZTP0/+iP7HPQN6uMzJz+3K4eD
+9U/y9/3H//TDwi8lJRsiYhHu1ee/89zOtdaEDs5cWX2x3O/Jk9mnf/GR8/vs
+6SS3gryba96s7UdqnahjGuNCT534oz/y0u4RH7zcmWvf0vb22NZQ7dSYzejr
+tT22DbAGdVTWgVvH1PJRZH0ng/VjHlO7bXKg+2qfNg1DnPixjV3oG9Dx9a78
+jPC1jc0LYnza+6lrYZwF+0hMh5zxOXNwDOP0/Y41ALnzYufEv2CbUSy/vT1w
+VfJD9vUH65uD2n7PBzm0ue4YyjnLY0CXcP9nzGeIh7qd/y1/VF/vRzik4LDR
+n5wcd7zHes54Oe8tra9LSkp2i/pZfl/z26ZsYa7HXGvxeqiPgc/xUaCXWH/K
+95L8v3KZJ1ayDxTbHur11NZBsWbWj60PBkxhr+62FmqvnMJ9WKZPT7KW5Hj4
+f3ws1rkn717WzmJv1PN9/4ePPbluhnT54hjghA9iSGCYrofAyocBH9zYXCDv
+tq1tH9o+8wEMcdfdn9q6/IrLdsynvczFOX3JmIfgL2vZ3Iexmme3wW+zp/wU
+P43H7ZyWp2qsx9nQ8XKv4r/Jnmx534xhGDBbrnv6/gOM01en2Pqqine3pGTz
+BT+MdpZ7dkrH533ua/Q88Zu+XkapT4n5q5fcRuonc3PMP9THC94xxoR+GvOz
+o/u6HINV/yX8/HKqJ8Ya2ga5D9Q+URPKtshxod8kdorj6/Pl5Htul/U1+8D+
+g2XS95J60zzgtCl9a264uayLGMIxNQ4+iCXZB0mcD9/QmA+POWN+15z/wP+S
+draPyzDfF9/05cBMzWe+T654a6+7/PEJzMScRy8kx9Qc/SAPZvZ/3Osg516+
+beM7czAM+5o8d33HSL28OUzm44m9rBtbWi+XlJTMl6z3nKOjxBzycervSH62
+oQEO0R/DtsQtck+kXc+1kus6BliInk/ttql5Ruda48x/UDcytuZzkM9DLav7
+IwdFYikwCXUq6Eh88a09aX0z+OM9t31115mv2PZ9aNeluV+FY45umNNLLMm8
+a65Pxnxa/ICdTr/i2L3DNvt6LfbNT+YkfkX8iPhEwFJgcvAHXG5Tc9r/gOcI
+DGyOLvOZflxT+cP8Dgyf3I9z5hz/Q3xtCL+MYa5cZ+Crylq+Ofk4fK/l0fSR
+4+W8Jd5M7MLrih2VlJxM0QdjrptcpfJLaHvzvu/jaJviFmeQG0P9szH69Mm0
+9ceZQ5y6jN+j27Et6in0ZvJ4ksM7pJ+TNx6dRw6kxzY25JvBJtCncuxYyc1h
+Ldr6X6xLMWcUOzGmzzmn5tWYP5S1EzzK92MOQ+Ys+r+zeF5XdSy59m71ffbQ
+zr6YrU8++zEYl/F/3Lc218K5kDkKuQb3+rY9w80zye9ZW5x19nxmLbRcr4mZ
+9cN0fYBWMUneH4u9MJg/HpP/J3+zc5f/oH56qnc82IXYIfVDHqN21/5hPOc/
+W67IoXlE3Apfqb3OhnKV24GPCZ+k/5v3QnIIJ36hvlDM1xdzZZ8zH2co5ww9
+QW6Kfpg5+TDy3OX/8pzjN2+Je49h7Dr5s5bWwyUlJfuT//BH/767f7NHL74P
+dXByKai/tB/JlT/EMdXqFOLkrCfBPer35Mww91fdpY1y/7Sz6HH+k/iP/Lza
+S/zRY9iAgW4jd0U7NoVh8O2AJ/gua+LEMX15QOQnmjOUvMeeUx7xTY2tyanb
+BmPKlwHmgd+M9bx9IuBQZ91qPyXrovyfvfRCyPwHn6PvxbLWk1nXlp95DZ0n
+8qz5vawnH8qxyD5Uif/ELukTEDfIJ5L4zd/YO8K5wzU0z5X32S9sZYeLnnx8
+jWH8LY/4/sZsPVg1sVf6LPhf65D6sFD6JYgxkf8lNwv7KI4yTzz9gy3X0dDg
+c+YZ84hts0/4FKd8OXxODJXj4161xjn7pjuP8de87vXXr3PPhvRAx4k90mM6
+sU6uX+b4YdBZ9ORMPMh9wr45d+SmkhuQ3yytf0tKSg5P5N9Vj5qj1/phtBGd
+32PVM4Xn2NRWfw7pqquvOdfpGPQ2PSfJe2H9SS4Kdpp8Sl6js613cL1uXRM6
+id+lH2BOzQf7Zf6M/U/m+Clc02MP8PFTzz2E2bBZ2K6Mu2vLxQLp++5bu7IO
+5tywLmVd3NWqDvDWoLPhCGG/5AISz8zJZ/C6ytOnvRRXpu8ncZLP9eM4h5g3
+8n2Iwdr4QFujlTVcLTdg65dJ3xa1JtavmFOV+EecYk+kjIWu63aeeGzNc5c2
+mpyoMXuPvbWOpu0DIbaaynunJhjfIvvNsbhvyYmY9TLMI+v2b7v1rZM+FdYN
+4hfPeeYVD+2Xc5J7lXgrWJl4MDw0zDP6d8NPN4ZJ/Ix4s7zUY/lzDO5f7usx
+/N1iGLAK+8bv6flOzIxj5hwZ7/NeYB8Kv5SUnE5RF6cfJHmmtCtgF3S+fVOs
+J04fyBzuC3Rc1g6p87DXYCLXUdpD13767DP2wX6ia6d0OjUbrI/3YuPNJ9AO
+YEPQ4VdecVHHNcx6nf8mZoCfBr1pP2xrvfVVaNflZB0a5N/wnbmce4xLLzmv
+64GNPm+xwtiQi4Pn7Ocao67scvJniAEy5iRuyF7crqM97oxF9uGn9NP4e7+v
+vyf7RvEafwR4FKyBXw6fA74pnrPux3dFrQlzk/3lmjhXMhdCPwz2MONSLS9c
+O7g+csvl+eA82D90yGfnsJdPcmAnjssYH/OO7TK/qHnjv7HZY/OI/5Tr2fsZ
+fDyXVy+30+Kb7F82VLPHObJej2Npexu1NXlsBwwip/icnF7uZ44RDhjPY1ff
+uKoNVJ/JbbW0ni0pKTlaYe2qHz7zbjv9Gr3fsi7AdRZcW+qjPt/BrtcrHdbq
+SNZrrGFdx+tb146pqzq7+7UXuIfPXX3VqB4mhxacoR9hbr++zA2yZgI7go4k
+lmWugv1wzEOWQ11bqR0mT3OOPz/1+tzvcs7pU2nvhTkYzRo18zgztzlzr3kt
+X6JrW2Mz9rDQ19H218pcmDY3OfezxTr+L+fY2Br45B233NjhR/wYfTXK+gFY
+12M38XVY45X70OFS8mBWPQyzHzX/m7wjfecdX1nbK9H4hX1Kh35Pfgg4yTll
+/E18bl/CPI+uMcTUnIupnl8cv3FfsSZ8KXNwyxSW8R7u6yXAsYsr5FbAn9Ny
+Vrb/IdfeED9NHz+Say3Oof0B0GP2auX9pfVqSUnJ8Yn+BrHD2j+/wjA50B/p
+d6AuaIo3MznqhvQmfnDW2Po/tIPYVPMXupqSp57d+qlHH9vRN6DPf4/vX99y
+xlymbHxybWn7zFOw55RYR34Y40hZd6X9BJv1HfNcf0vq/+x3o73ENr7vvbet
+67ynBnEt8B2/g5OHfB5qOYhjEdvDznKe5PlhnYyfDF8RWJP/pZ6FAa7AbhEP
+MDd8KH7kuc34UPI3ZyyOa0YMg5jZGFfbmD1mPnHusWuZ3yN+YT65D/pppnJg
+8XulPyt9B9m/uc+PwTlu8VxiLH2h5sPYy0csz/+BGV/5iqtGuXDhvjPHxt93
+ftPtczk2x+ae1+wf78D/gm8k+x7Z29JzMbTP4E3zyObkwxALfP65Z9Z+Vf2K
+8htU3m5JydmV5ORu+dnFEJnnID4gtnL1Ned26e2Wv7PPl5yvsTusyzKPsOM3
+f+Zn1j3bnnry6a1HHv7iZN8A9gk7zHredd4cfg+PyXwL7QC5galr1Z3m12bN
+SnJ1DNnFodrbHfkKDX972+/JQYyBNe8cDEO8Y8hfgF8H+0l8CtsCvhmqQ2tj
+CORZek4yFpUxpMx70H7r93d9zXkGK0zh4inc5wCnEWcSY4KHsYPyw2TdlDyE
+Q+O1rz23A3+YG8TzjJv0YRjiXpknnznmGcdL/K7/K+cmfdj77qX8b3x/+rs4
+n9/53rc7nEmuSns99xxnarAIvi96urre0G/EfdP1aZ/AMGDV9ElNYRj7RKTf
+1Hm1tP4sKSlZXtZ5Cdt4waH+sHe9+tQaHnMC0OPJ25m6a2ztmDofe0zsX10O
+dpIbvuP1+Nmn1hhmaHus3fH7Gysfq3vYpTNXdsl8Stbx/B5fdWIV9W7Gj9pa
+H74Hp80c++tzcoawM/Tu1nc1dP7S/hDXm1OXNOTXkAcFLETehv2x+mzy0DFg
+48E/1oFrW5LvvfVBeM7AL+S8kDua+GUoB3Uv2AY7Cz7BL6AN7DDxKm7ovoDb
+xv6H3G6OjzlvHry+yzZvu90X6uueffob62PPOZN+qnUNeOQpJYftZx747M6+
+7j1xNTgHkqvIY+zyy697XXdt9+uPyXkIPuSasU7oriW4cJX3z3FwzsdiScx1
+Y5rZI3UMwySWAZ+hg/i/pfVmSUnJZomxJdeK6GvX1+ZUoD+sXRUroOOJbaQN
+nMuzbk4DuQXyRrjele8DvdaXe9DmGbIf/vZLP/Xg1jd/7qudfp3jq9jvaGuB
+yfmdc8zaR/z92AQwHLEhYjv4k1pe1z5bnb0JPVdiOPeNa4n9yz7gLT4Cc/Xx
+Ek9hCLeBjaRmrM357Wzy9vn/6a88uvWNrz/R4VLmjvkhxLCIS2bcsbXRe/UZ
+5AAXvf1tN3f+CHuImYMixmXO9PnH8hw9/PkHuv3v/DlPvZC3jS298PyLBvEm
+2yAfOeeI3DWuBzKH2ddy8Hgu2V/2caxfEK/JA/Oezbx4Y1LkqGet3V6xITFE
+6gmzV4B4jGv6889/q/MFwVPZzrW8lqx39KU4F1peKu4Dr5OcS9aeoX+W1pMl
+JSWbLfYBEqu4VhLTqE/Q49alWLfNmh7/gDU3Qzacmh++RwwBbGRvJ/tvsz05
+W9Bt5LCO2tPtz7Dn7It5MGCY9EEfFYbJupMhLp3WbuB7Iq/EfIKMr7Ad4hBT
+eSFsjzhcYhhzi9wnrhHxqCH8shd7NpTryfbBItha7bDnxfUz9v/Ljz/cHZ/2
+jjq3DuvGdtyvsVrz9r0xHhVwDJgQHGPcw+tmL8O+Ovo8T+BzcFj6DJjrl1x8
+2ai95tpkrDZrk7TLmX/V8vXpt+Eajvn2GGAY/YT+Vh+k/8mxsk/cd/plzI3u
+87uR/0RPDzhnwNnsv/dp8vPxHzwyZ70WQ35EOGTM43fec9zc6/p3WcuwTfZX
+TsLK2S0pKdmLuAaUl471j3F6/TJgHf0Pcp6ri3mN7wRMg60mfs5aEL5PajHx
+O/BbfNLmn5hXwX+p332ODh3z7fAZsaTk6mLdf9Q9E8UKriXtgzCGAeA8IycA
+nf3t7z6/XotyfjkXYEU+G9uW28N3r300pyfrusAKYz6YPWGWAQyj74Rrm7Va
+mU/bYZgVdwfHRgwyYw6Z/936YeA7IYZBnhF5sjxSozaUP9PaY+y1PdbNCTWW
+wT7aT2MoLwlfGcfBtREj4Cvow4a53/I5JwdxcvUYfzE3Wp6irJGzXnqoL4KD
+PJTkc1zHZXvy1dke8wK/Crnb+Ebwn5ALRUyR/eYz1gTyAnX30/a9KM93ciSz
+TXDiDl9ec044t8aRMufHeibuA+//jEN6fpbWhyUlJSdTrCtm7ayPxPpbdBpr
+RHBI8r0mh6zYJvlA2nWpvHvq9TaXhfexGdRfDOlw6zyTA17+sOPww7gW7Vsv
+Z+5u+k7YN86ftku/v+eJfIoprlawgOc9+ZfdL+IZU/iljR2ZJ4PNSS6zMV8F
+r8EX2UPKHCt8GF2d2WpOgCfcZta9tL4h/FD4F8DC9mVw3mALwcdzexDiT+D7
+xpGcpzz/wPvfNYph4OUhNpn+Bwa2P2NgWQPNtsBaflds3eYLJWZxDjAv9Hfw
+Hjk9+ETG5j4YX6zi/beO5wVGzvzbxEwZy5Lz1u3kPE/MxffkbRrMZ4pryrXi
+t/rD3B/+J2vQPUdse2n9V1JScvKl45Na9Yw2z1UeC3CMOCU5VPQHoK/kgc/8
+2uQMUc+6LpUD1fwc84eH+gw4yA0l5uS2kr/vKDGMxzLFC8Nn5IFaBwv2087w
+e8+tPgyOZco+06838wnEMtoffCNz/S/E/8BE4AbsJgP8wNq85X5NO6/tBvPg
+X9Nudzbb+vhVbjj+gpb/r61hsy5ZXhpjL2IOX3dYZntegtOyH3Tadp9zHvHl
+eH6SQwa/4Bg+u/CC/6LLifE/jaFQez52bslh4Rymr9I5o/02Ryb5HTO/ivfI
+1x3LC8JHYy+0NiblXMh+DYmVncctfu5bB2TMi+8zT9rarCFsjJ8HnGIfAH1G
+7ptzX39v1UuXlJQctmBTxC65VpIjTZ3U8bus8mT0OyeHfdZoJI982l/Xg7lu
+xX8xZtNZqxKzYtvEudJ3f9QYhufk447hDXQ6voDk8M/+hGA2ey/wHezfFIYB
+X2TuRMYR2D4+hjn4BRsDtwrreXM1tKn4PPis5ZHv2y59Mz0vne1b1ZaJG5Jr
+eVcN28oHhF1Mfn+PTeygbTbeyCOxD3o2DNlTB3Y3c495Th5PG5dqj43zqO9E
+f0rW4PT9L9eO/Ch7r4pJElcnNvOaeY+I+8FzY3PAXupZJycuyZyY9MOIS4wV
+JT9y9i7QH+Q1ACsxh/Gl9eHavkHcD/yS97i5Lv6f8aryvZSUlBy1qM/UwdYS
+qS/lufX9jA0lj33L9yWnXPa7SX87a2547Mb05atffWWXFyNGcE15kDEnlsT/
+4RMZ2zd45qxBNv82bU+unRlgh6m8XnIkE/vlteGRnjtTuS9dHG4bo3i9xJSc
+f+0d+03PhaF4S2Iq/QDdcT35+Prag4+yDj+3QUyG18RfsJPmR4mBE/MmrpVb
+mF5E8CW2PpgWY7B9a13cL7YztF8eG9zIWRPN/4LX+nBqiw3tgep50dcitrA/
+hfeGOUXsG3yD+q36cJnXTh9m4o2cn9Zsi5ey/k+8yCN+N/xS+BTZb87tuofS
+Nh4DX7Z+tBZn535efc25bnvUhakvxKLus3phab1WUlJydiTj6PrXk9cscUob
+O1Kv5roz19ltTmPmeNh7cixmQ24iPhu3ddQYRhvU2sG+/Wr5SbUp1lJ5vAzs
+xpAtduB/yFiL++T1kat1ah0PXpLrPzEWz61pxYbl/rR2ns+Ir2T/I/ttsZ2+
+mq2MIeFH2cV3GHY/fV5em8yVxea2/Xpae4+9xSZnjy62kVwvHlvuG7XFnIfs
+kcl/6vsZ88fgrwG/2c9JbJ7ciNYZe745Z+xnYva+eBL+I/CGvavzHkyMkOcw
+70fz9olbcm+JTzhPxMKIU8nVPDWP2sH9YM139qbntfOd/+fYl9ZnJSUlZ1Nc
+/9t3D/1kT0T1lvbCeIK1lHLNTMVr9D2r98jPHNKb2g5ya4lbiC/61r68tnbc
+Gk71fdZNzMEw2Kgpne562byI9P1nPbT2B3/SUK89n7NuTpyV3Cec37ZnYGtr
+sVX4+TlHnp/MQ03+Pr6zI17T44ch7pHYk1xebTUxhV1cLPF78E+bjzonlidX
+P9/HZo71dvA6tDEX8VXLz2aMC9tOfbbnx/wWjneqNp1jpl+lvpDsXeFxGuvx
+mMnxEb+0OeG5XfDRFM7OeWxtGL/hOdgF3xT58lPHMeQH6nufbconk/gp88cq
+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
+/ujfd/pPf3TadGwrsXuwiLbBfk3WPWgr5WjXprgut+eQeZ7UcmCDwTT4aa6+
+5lzHBU9uLHkG1FmTe4q/XH8G23r2mZ95wXY2+SZsP3lh+vALgzrwdd+gr355
+/Vv30fiJdpTXQ7U12jhsKRirb80tdpiqa4IrMI9zaOR6Hfs/tk1iEclxo0+I
+6yiWHIqRcUzkxooTXed/+fGHt77x9Se2nn/uma1v/txXXziH28M4lfVBXufB
+Pturc/fxT96547gyHtXXVzTzXO15ZV558p+s44Tb1xrsAG6l3zVz5B233Lj1
+qlde2su1ks+peyZPBT/POkZ2xBjGGBN4nHWF95n8Lpn7w7mmbwDfX1p/lJSU
+lGySgDewA9Rho1vln8s6ZPSpuAV9qx8hOVb00fBd8YYxJ/3+DHV39mRK26be
+xlaam5r9uLV52qEhPwzrcbfRjdXxiGVy3asdnIqHXHnFRWt8l/ks2fd6Cm+A
+4eZgmKx9meJeIX9C/h9/I66a0yeCnAzX/dbmg1/EBOAZ8SDbljMN/wD5LBzT
+2P5Z/5TYJbkGyWeZ2kd8dNZQZV2dmKbjJn7y8e7xW998qvMp6osiRkisCRxF
+f1LwCs95z1yTxPHyBB4lhrF3ttwF7Cev7cuYvsLyu5SUlJRMi3Ysa5E6n8jq
+Pey3PQmz701yr+q7EY+oq+2f7Vo/Of9zbbquNyYP55kX634SfySnSJ8v5vyX
+XdCtxYmHYNe6HNXICfV/0sfDPuGzGLOj9BAwB0PcI4bRp4OPacye2+94jh/G
+azCFi8QweR71U5A7iv9rKlZDfin4lePoMCvxt5VvwxzurIWRow7+3bF9EyN5
+zcW/mYtEnVZby9zXN9JYYPpf3B+utflb7LtYR4yadV/yvzkf7dVubLDD8EeM
+YeSnzv4O7Nu3v/t8lyNU/C4lJSUl+xOxCD4X/evodfzZ2C3e11fjujprhPu4
+TsxfIL/FPNjsre1Y2+BVHKn1z8Ab3xe3SH/MlZe/Yr0mN5cj/UW5b9p61uND
+9a6OLsdmdRxt30xeg2+yt1HvNt7y5vVxz8EwnINJ/9ArrljH+rwe4j2Oi3xr
+ccEQTiC/6LZ33bruqZX7mPuqHw0fBv4w6n7H4jScU77rufL8OafYFja7j38/
+B/kt9mcwp4b9sQ+5+Tpc847jZpXTlflBnk8wGcPfZ456+tWOcuAncg6ZL2/d
+39L3f0lJSclpEPV/+rbBMVlXk3EBY/ldLGllU8y1NC/FfAVyLKwxMW/UdX/3
+3ZX90X6ax0It8GDuhfm8b3rr+v/0w7RcuGIrscIUrwvjXe+8aX2s7k/mY3Je
+Wg6zdtg3aE5O714xTOYY2zcLW00e8px6MY6fnGRiO/y+y61e1QPxuutpsX2M
++Gyy/8HQ4D/FbPq6Emdlnyk4lce2xTWHJ7r1n1nDbKyLOYX/rs3b8rzwXxkL
+Ba9lv0xzUY4aw4DDGPYuK166kpKSkqORtNPyy+inb/lWeK+r1V3lgIpNWB9j
+W7Ax5CuQYwGe0fbwuWtocIy5xmIlYxnkNuBXwN9h398dfQO3Hz9650+sa2rc
+Xq6tM39VfwW1KFPcdORRJB9M1syyXXxEU1iBvOE5GGYvsSTOAzijrwcUNpLH
+2259ay/26+s1iE+E88t55ryQd81zcrPBS3N7ZoG94NkTW5kHlPunj24qJsV5
+BTuBP/TfGAfqsMzqOq/jSeG/S38f37fWTVyuH8Rrkrk7+x3JVdg35GgqbpeS
+kpKS45Os5cmhXdLuZi0u2MTcFHALn5EzCqax9tmRfhjrvfM/cj1tL2D41bCv
+cIRhX8nX1Jbxv/x/9ig2fqTtYr+x02MYhu1SG2OuqL/XR8V7bY/FvsG+tvGZ
+vpF+KPhRxraZvZT9Hb4E4yRsj0fqhtdcLCP13304Zy/vM6hThrvXc23djdgj
+66h4Dk9NbhMcRb0V2Ansgi+J+mpjLhmH6fJkGgyc+eJtLCz9b4mVrbUyTnWU
+GGbp+7ikpKTkLAtrVWqZzEfQtqijs+eO8SLrhHwEx4hpwDPEl/zeXPvgehv7
+gx0nZ6KvrqTdhpxl1o1P+ToY+BRaH0nayaz5bm28z+HPmZMPI75i36ZiSXC8
+ghE4psSSxkjECWCAm28e5jfeD9fyEO8K+NKePpmrnXOkqz9bcdOAD6m1B7NQ
+641fSU4U85jy2rfna685tVNDHCNmNr4kduI5eFb/l+fZGr48Xl9XrktJSUnJ
+5ok1oRkjwP9hHAmOER7BK4lh9Mfoi/HzzocyYWOSZ087Y11sZ7tn9CzUN4C9
+ncIw2GXiWGnDso6ZoS9hbIBz5vhhzPXguKb2DZ8Fx259jb6lxFnaWXJK4M5J
+DDI3NjSEXfI5PiPOp9ciMV5iGGM21udkL0h9feKX3MZxYRiGuef6jDr+3FWN
+lvFEa/ayXo/feC/w3aXvz5KSkpKSabGOGhtmjSv2BP8K+S9gF56LY8Qs+GD4
+LlhGPrW5vnrjLllr1MUDJmyaHDY84p8gl5V83L4ewoxLL7uks7eZm2q+s/Zq
+iiOPR/j85mAYtqkfw3rt3E5iiew/rf00Hylrya3HwRa/7723dXk0uY8e+376
+JfI7clqog0r/VNao5TXLPFtxrzXbYp/2HB0nhvFcmrdi/q/8QMYz5bLmO8mj
+y1j6fiwpKSkp2Z/Ijy4nvbbeftrZu8n1rv6DjB0MjbSLfXZuyqZpf/y9+0bt
+OIOYD/0dybMhL4NH+f+IIZhXwbH4n9jwqZwa4iRz+GGyTmaqNxTblT9QTGdd
+Vsf9tsIF5mV7nuDXJU61Vz9MjuTnZ3+pu5eTpY//x+fae2M05rX4vT7eoLFz
+dtgYRkyVPpUcYhq+i2+L58yLpe+7kpKSkpLDFXQ+mEZOUutKrXfK2iZreveC
+YdK+iS2mbJo2yjrk5Hwxx8f9M56AnbIvX/Ldg23wP5DPgU9kyJdB3gp8bsnB
+O+YHMF7Rh2ESd9ATyZxef5t1Wfi50t+ROIH3wTJwvcCFByaZ8sPIzw9fDnks
+62NZcfF0PZUGro/n3us+VJufv21jUC2/z1FgGK4RuVXWrYlXsz5PX83S91dJ
+SUlJyfGI8QLzCrQHrN/1h7Q1RH2jrTXR7hjHmLJpyTfb5pr6vjwkrT3FluE/
+ypwTezAQl8L2PfTwgx23G34XMAJxJmqfwBpzeg24Xc4F3L7y74kvspcQddBg
+ozym5PfTJ2Oer9uXp1+/ENeBvGVqp+BrIYbFo72teJ+aL76D74H/IdeJ3KfM
+dep6Ezy1MwdG7CH+MAc2e06ICfR9tOO4MYz9Fq1dIo7Ea54vfR+VlJSUlCwn
+2Hv53rs8g23bnjZ4ysa0vDTGTXb0SJrI6U1eYeuQjWdkPqm+AfslGCuxftnv
+6bPhM2tqtLnmuJp3O6cuyWMjlxjcQN8AnsNDw/milhvsQh/KDrdFX8yuT8Mq
+J0afjPkx2XdbbKbfyWN3Pz0mcUXX13r7s46XZdVPicF5Jz8bPMNjYhjPdeub
+0fcirnKfsq9BW5M8dL6OKqeXcy0Gq/zckpKSkpI+ESdY3zQHw6x7FKy4YLRf
+5hJPxZLEJG1OsDEc7Xnm6IBbjMvwHKyinfc37pfxpsz/FC9MYRj3yd7inhs/
+c9/cJ/N/xQrWd8kfKMZLTj7PgX6G5KHzuFusJy5J7h3zsq09MwcnfWTZsyj7
+UngccrVYk7R0Tq/9B5a+L0pKSkpKTpaYh5L9+vR/ZA9Ieeazx0+u37Mm1t+5
+XT63VlZ8YV5p1pYsNVr/w3GPpY9fjCr/iq/Np+I74juuGd/juTzS+pX6uIuM
+YzFnnFPyNlacqKSkpKTksCT7GWhvsFnm1co/JibRNrn2N0+U2Au8+9gqY0Dp
+k+HRGiO5bQvDLDfEGWu/z1Mv9gDg+pF/ZGzLPPDEsPa45vv6yJwfvianR7y8
+9DwvKSkpKTn9Iv9Ixj/ENGIWaqP1rVDvCn7RT2OMxJgQeZrGTLRxh8E1Xxjm
+YEO8gk/FGJZ+N66tMUfyVVp/ivhF3kOxjrE5trv0PC4pKSkpOdtCDRA2zvwT
+7FvmhFoL7Vrb3BXX5+IVfgPWAfvwXvaHrLHM0PdiXTtY81vPfXOdn2NNG/4Y
+Y0rgFX1wXEOwK78xv2bp+VpSUlJSUjIk2ePQNbhYxf5Oxh7S/5I1RMaTlrbh
+Z33IfWutmriEunVzY8Ccxo7ErnIp892l52NJSUlJScl+BRtHzEg+F3CMvGWs
+3+2Nba2OfSCXtt81nlhjTHs72PtankSu7S/8+T+3xjmVi1tSUlJSctpFvMIg
+t4YYErbROJR9IJfOR+njuDnOsfTxg02IAxEPMjZozwqu0dLzqKSkpKSkZBPE
+mhXiEGCa5CcpDLPMsNdW+VdKSkpKSkr2JvLEWO+EXQXngHF4BPcQl7K+KTny
+5tRmz/FDLDnEcfLzyLMCzkte3aFhjZA9hniP33vO5G+xrsxtLn3dS0pKSkpK
+Tqv88E/+eF23m/bdvFL9B1MYpa8fUNsbaMkBfjM/iNfgEbHbnP3jO+Adeyxw
+rqgje/47zxVOKSkpKSkp2UAhh2NOXrA9AYbGuo/CQgPMQi6Kr90n67qmjm/p
+61BSUlJSUlJyNGJe8aYO/CjUossVaBxt6fNWUlJSUlJSUlJSUlJSUlJSUlJS
+UlJSUlJSUlJSUlJSUlJSUlJSUnKY8v8DT33otw==
+    "], {{0, 557}, {561, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  AspectRatio->0.6033333333333358,
+  BaseStyle->"ImageGraphics",
+  ImageSize->{199.99999999999918`, 120.66666666666667`},
+  ImageSizeRaw->{561, 557},
+  PlotRange->{{-51.52982230957866, 859.8054630780931}, {0., 557.}},
+  PlotRangePadding->None]], "Input",
+ TextAlignment->Center],
+
+Cell["\<\
+Midwest Relativity Meeting, 2015
+CIERA, Norwestern University\
+\>", "Text",
+ TextAlignment->Center]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[CellGroupData[{
+
+Cell["What I Will Cover", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["Introduction", "Item",
+ FontSize->16],
+
+Cell["How to Establish a Manifold", "Item",
+ FontSize->16],
+
+Cell["How to Establish a Coordinate Chart", "Item",
+ FontSize->16],
+
+Cell["How to Define a Metric", "Item",
+ FontSize->16],
+
+Cell["How to Define a Tensor", "Item",
+ FontSize->16],
+
+Cell["Computing the Christoffel Symbols", "Item",
+ FontSize->16],
+
+Cell["\<\
+The Riemann Tensor, The Ricci Tensor, The Ricci Scalar, and The Einstein \
+Tensor\
+\>", "Item",
+ FontSize->16],
+
+Cell["The Stress-Energy Tensor", "Item",
+ FontSize->16],
+
+Cell["Einstein\[CloseCurlyQuote]s Field Equations", "Item",
+ FontSize->16]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[CellGroupData[{
+
+Cell["Introduction", "Section"],
+
+Cell[TextData[{
+ "This is the third of an apparently endless series of talks on how to use ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " in general relativity."
+}], "Text"],
+
+Cell["\<\
+Two years ago I talked about the built-in capabilities for handling tensors.\
+\>", "Text"],
+
+Cell["\<\
+Last year I talked about the xAct package in general and how to apply it to \
+perturbative general relativity, deriving the scalar and tensor field \
+equations for a gravitational perturbation given a Lagrangian.\
+\>", "Text"],
+
+Cell["\<\
+This year I am talking about performing calculations in specific coordinate \
+bases.\
+\>", "Text"],
+
+Cell["Past talks can be found at the website:", "Text"],
+
+Cell[TextData[StyleBox["http : // www.madscitech.org/tensors.html",
+ FontSize->24]], "Text",
+ FontWeight->"Bold"],
+
+Cell["This talk will appear there also.", "Text"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[CellGroupData[{
+
+Cell["Establishing Your Manifold", "Section"],
+
+Cell["The first thing too do is activate xAct.", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"<<", "xAct`xTensor`"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ FontSize->9],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Package xAct`xPerm`  version \"\>", 
+   "\[InvisibleSpace]", "\<\"1.2.2\"\>", "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"2014", ",", "9", ",", "28"}], "}"}]}],
+  SequenceForm["Package xAct`xPerm`  version ", "1.2.2", ", ", {2014, 9, 28}],
+  Editable->False]], "Print",
+ FontSize->9],
+
+Cell[BoxData["\<\"CopyRight (C) 2003-2014, Jose M. Martin-Garcia, under the \
+General Public License.\"\>"], "Print",
+ FontSize->9],
+
+Cell[BoxData["\<\"Connecting to external MinGW executable...\"\>"], "Print",
+ FontSize->9],
+
+Cell[BoxData["\<\"Connection established.\"\>"], "Print",
+ FontSize->9],
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ FontSize->9],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Package xAct`xTensor`  version \"\>", 
+   "\[InvisibleSpace]", "\<\"1.1.1\"\>", "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"2014", ",", "9", ",", "28"}], "}"}]}],
+  SequenceForm[
+  "Package xAct`xTensor`  version ", "1.1.1", ", ", {2014, 9, 28}],
+  Editable->False]], "Print",
+ FontSize->9],
+
+Cell[BoxData["\<\"CopyRight (C) 2002-2014, Jose M. Martin-Garcia, under the \
+General Public License.\"\>"], "Print",
+ FontSize->9],
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ FontSize->9],
+
+Cell[BoxData["\<\"These packages come with ABSOLUTELY NO WARRANTY; for \
+details type Disclaimer[]. This is free software, and you are welcome to \
+redistribute it under certain conditions. See the General Public License for \
+details.\"\>"], "Print",
+ FontSize->9],
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ FontSize->9]
+}, Open  ]]
+}, Open  ]],
+
+Cell["Then you define your manifold.", "Text"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DefManifold", "[", 
+  RowBox[{"M4", ",", " ", "4", ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "\[Alpha]", ",", "\[Beta]", ",", "\[Gamma]", ",", "\[Mu]", ",", "\[Nu]", 
+     ",", "\[Lambda]", ",", "\[Sigma]", ",", "\[Eta]"}], "}"}]}], 
+  "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefManifold", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"manifold \"\>", "\[InvisibleSpace]", "M4", 
+   "\[InvisibleSpace]", "\<\". \"\>", "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefManifold, ": Defining ", 
+   "manifold ", $CellContext`M4, ". ", ""],
+  Editable->False]], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefVBundle", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"vbundle \"\>", "\[InvisibleSpace]", "TangentM4", 
+   "\[InvisibleSpace]", "\<\". \"\>", "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefVBundle, ": Defining ", 
+   "vbundle ", $CellContext`TangentM4, ". ", ""],
+  Editable->False]], "Print"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[""], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DefMetric", "[", 
+  RowBox[{
+   RowBox[{"-", "1"}], ",", " ", 
+   RowBox[{"metric", "[", 
+    RowBox[{
+     RowBox[{"-", "\[Alpha]"}], ",", 
+     RowBox[{"-", "\[Beta]"}]}], "]"}], ",", " ", "CD", ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<;\>\"", ",", "\"\<\[Del]\>\""}], "}"}], ",", " ", 
+   RowBox[{"PrintAs", "\[Rule]", "\"\<g\>\""}]}], "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"symmetric metric tensor \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"metric", "[", 
+    RowBox[{
+     RowBox[{"-", "\[Alpha]"}], ",", 
+     RowBox[{"-", "\[Beta]"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", "symmetric metric tensor ", 
+   $CellContext`metric[-$CellContext`\[Alpha], -$CellContext`\[Beta]], ". ", 
+   ""],
+  Editable->False]], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"antisymmetric tensor \"\>", "\[InvisibleSpace]", 
+   RowBox[{"epsilonmetric", "[", 
+    RowBox[{
+     RowBox[{"-", "\[Alpha]"}], ",", 
+     RowBox[{"-", "\[Beta]"}], ",", 
+     RowBox[{"-", "\[Gamma]"}], ",", 
+     RowBox[{"-", "\[Eta]"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", "antisymmetric tensor ", 
+   $CellContext`epsilonmetric[-$CellContext`\[Alpha], -$CellContext`\[Beta], \
+-$CellContext`\[Gamma], -$CellContext`\[Eta]], ". ", ""],
+  Editable->False]], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"tetrametric \"\>", "\[InvisibleSpace]", 
+   RowBox[{"Tetrametric", "[", 
+    RowBox[{
+     RowBox[{"-", "\[Alpha]"}], ",", 
+     RowBox[{"-", "\[Beta]"}], ",", 
+     RowBox[{"-", "\[Gamma]"}], ",", 
+     RowBox[{"-", "\[Eta]"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm["** ", xAct`xTensor`DefTensor, ": Defining ", "tetrametric ", 
+   $CellContext`Tetrametric[-$CellContext`\[Alpha], -$CellContext`\[Beta], \
+-$CellContext`\[Gamma], -$CellContext`\[Eta]], ". ", ""],
+  Editable->False]], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"tetrametric \"\>", "\[InvisibleSpace]", 
+   RowBox[{"Tetrametric\[Dagger]", "[", 
+    RowBox[{
+     RowBox[{"-", "\[Alpha]"}], ",", 
+     RowBox[{"-", "\[Beta]"}], ",", 
+     RowBox[{"-", "\[Gamma]"}], ",", 
+     RowBox[{"-", "\[Eta]"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm["** ", xAct`xTensor`DefTensor, ": Defining ", "tetrametric ", 
+   $CellContext`Tetrametric\[Dagger][-$CellContext`\[Alpha], -$CellContext`\
+\[Beta], -$CellContext`\[Gamma], -$CellContext`\[Eta]], ". ", ""],
+  Editable->False]], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefCovD", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"covariant derivative \"\>", "\[InvisibleSpace]", 
+   RowBox[{"CD", "[", 
+    RowBox[{"-", "\[Alpha]"}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefCovD, ": Defining ", "covariant derivative ", 
+   $CellContext`CD[-$CellContext`\[Alpha]], ". ", ""],
+  Editable->False]], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"vanishing torsion tensor \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"TorsionCD", "[", 
+    RowBox[{"\[Alpha]", ",", 
+     RowBox[{"-", "\[Beta]"}], ",", 
+     RowBox[{"-", "\[Gamma]"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", "vanishing torsion tensor ", 
+   $CellContext`TorsionCD[$CellContext`\[Alpha], -$CellContext`\[Beta], \
+-$CellContext`\[Gamma]], ". ", ""],
+  Editable->False]], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"symmetric Christoffel tensor \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"ChristoffelCD", "[", 
+    RowBox[{"\[Alpha]", ",", 
+     RowBox[{"-", "\[Beta]"}], ",", 
+     RowBox[{"-", "\[Gamma]"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", 
+   "symmetric Christoffel tensor ", 
+   $CellContext`ChristoffelCD[$CellContext`\[Alpha], -$CellContext`\[Beta], \
+-$CellContext`\[Gamma]], ". ", ""],
+  Editable->False]], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"Riemann tensor \"\>", "\[InvisibleSpace]", 
+   RowBox[{"RiemannCD", "[", 
+    RowBox[{
+     RowBox[{"-", "\[Alpha]"}], ",", 
+     RowBox[{"-", "\[Beta]"}], ",", 
+     RowBox[{"-", "\[Gamma]"}], ",", 
+     RowBox[{"-", "\[Eta]"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", "Riemann tensor ", 
+   $CellContext`RiemannCD[-$CellContext`\[Alpha], -$CellContext`\[Beta], \
+-$CellContext`\[Gamma], -$CellContext`\[Eta]], ". ", ""],
+  Editable->False]], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"symmetric Ricci tensor \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"RicciCD", "[", 
+    RowBox[{
+     RowBox[{"-", "\[Alpha]"}], ",", 
+     RowBox[{"-", "\[Beta]"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", "symmetric Ricci tensor ", 
+   $CellContext`RicciCD[-$CellContext`\[Alpha], -$CellContext`\[Beta]], ". ", 
+   ""],
+  Editable->False]], "Print"],
+
+Cell[BoxData["\<\"** DefCovD:  Contractions of Riemann automatically replaced \
+by Ricci.\"\>"], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"Ricci scalar \"\>", "\[InvisibleSpace]", 
+   RowBox[{"RicciScalarCD", "[", "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm["** ", xAct`xTensor`DefTensor, ": Defining ", "Ricci scalar ", 
+   $CellContext`RicciScalarCD[], ". ", ""],
+  Editable->False]], "Print"],
+
+Cell[BoxData["\<\"** DefCovD:  Contractions of Ricci automatically replaced \
+by RicciScalar.\"\>"], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"symmetric Einstein tensor \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"EinsteinCD", "[", 
+    RowBox[{
+     RowBox[{"-", "\[Alpha]"}], ",", 
+     RowBox[{"-", "\[Beta]"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", "symmetric Einstein tensor ", 
+   $CellContext`EinsteinCD[-$CellContext`\[Alpha], -$CellContext`\[Beta]], 
+   ". ", ""],
+  Editable->False]], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"Weyl tensor \"\>", "\[InvisibleSpace]", 
+   RowBox[{"WeylCD", "[", 
+    RowBox[{
+     RowBox[{"-", "\[Alpha]"}], ",", 
+     RowBox[{"-", "\[Beta]"}], ",", 
+     RowBox[{"-", "\[Gamma]"}], ",", 
+     RowBox[{"-", "\[Eta]"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm["** ", xAct`xTensor`DefTensor, ": Defining ", "Weyl tensor ", 
+   $CellContext`WeylCD[-$CellContext`\[Alpha], -$CellContext`\[Beta], \
+-$CellContext`\[Gamma], -$CellContext`\[Eta]], ". ", ""],
+  Editable->False]], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"symmetric TFRicci tensor \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"TFRicciCD", "[", 
+    RowBox[{
+     RowBox[{"-", "\[Alpha]"}], ",", 
+     RowBox[{"-", "\[Beta]"}]}], "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", "symmetric TFRicci tensor ", 
+   $CellContext`TFRicciCD[-$CellContext`\[Alpha], -$CellContext`\[Beta]], 
+   ". ", ""],
+  Editable->False]], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"Kretschmann scalar \"\>", "\[InvisibleSpace]", 
+   RowBox[{"KretschmannCD", "[", "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", "Kretschmann scalar ", 
+   $CellContext`KretschmannCD[], ". ", ""],
+  Editable->False]], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** DefCovD:  Computing RiemannToWeylRules for dim \"\>", 
+   "\[InvisibleSpace]", "4"}],
+  SequenceForm["** DefCovD:  Computing RiemannToWeylRules for dim ", 4],
+  Editable->False]], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** DefCovD:  Computing RicciToTFRicci for dim \"\>", 
+   "\[InvisibleSpace]", "4"}],
+  SequenceForm["** DefCovD:  Computing RicciToTFRicci for dim ", 4],
+  Editable->False]], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** DefCovD:  Computing RicciToEinsteinRules for dim \"\>", 
+   "\[InvisibleSpace]", "4"}],
+  SequenceForm["** DefCovD:  Computing RicciToEinsteinRules for dim ", 4],
+  Editable->False]], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"** \"\>", "\[InvisibleSpace]", "DefTensor", 
+   "\[InvisibleSpace]", "\<\": Defining \"\>", 
+   "\[InvisibleSpace]", "\<\"weight +2 density \"\>", "\[InvisibleSpace]", 
+   RowBox[{"Detmetric", "[", "]"}], "\[InvisibleSpace]", "\<\". \"\>", 
+   "\[InvisibleSpace]", "\<\"Determinant.\"\>"}],
+  SequenceForm[
+  "** ", xAct`xTensor`DefTensor, ": Defining ", "weight +2 density ", 
+   $CellContext`Detmetric[], ". ", "Determinant."],
+  Editable->False]], "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[CellGroupData[{
+
+Cell["Establishing Your Chart", "Section"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"<<", "xAct`xCoba`"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Package xAct`xCoba`  version \"\>", 
+   "\[InvisibleSpace]", "\<\"0.8.2\"\>", "\[InvisibleSpace]", "\<\", \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"2014", ",", "9", ",", "28"}], "}"}]}],
+  SequenceForm["Package xAct`xCoba`  version ", "0.8.2", ", ", {2014, 9, 28}],
+  Editable->False]], "Print"],
+
+Cell[BoxData["\<\"CopyRight (C) 2005-2014, David Yllanes and Jose M. \
+Martin-Garcia, under the General Public License.\"\>"], "Print"],
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print"],
+
+Cell[BoxData["\<\"These packages come with ABSOLUTELY NO WARRANTY; for \
+details type Disclaimer[]. This is free software, and you are welcome to \
+redistribute it under certain conditions. See the General Public License for \
+details.\"\>"], "Print"],
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"$DefInfoQ", "=", "False"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"$PrePrint", "=", "ScreenDollarIndices"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$CVSimplify", "=", "Simplify"}], ";"}]}], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[BoxData[
+ RowBox[{"DefChart", "[", 
+  RowBox[{"cb", ",", "M4", ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1", ",", "2", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"t", "[", "]"}], ",", 
+     RowBox[{"r", "[", "]"}], ",", 
+     RowBox[{"\[Theta]", "[", "]"}], ",", 
+     RowBox[{"\[Phi]", "[", "]"}]}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"cb", "/:", 
+   RowBox[{"CIndexForm", "[", 
+    RowBox[{"0", ",", "cb"}], "]"}], ":=", "\"\<t\>\""}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"cb", "/:", 
+   RowBox[{"CIndexForm", "[", 
+    RowBox[{"1", ",", "cb"}], "]"}], ":=", "\"\<r\>\""}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"cb", "/:", 
+   RowBox[{"CIndexForm", "[", 
+    RowBox[{"2", ",", "cb"}], "]"}], ":=", "\"\<\[Theta]\>\""}], 
+  ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"cb", "/:", 
+   RowBox[{"CIndexForm", "[", 
+    RowBox[{"3", ",", "cb"}], "]"}], ":=", "\"\<\[Phi]\>\""}], ";"}]], "Input"],
+
+Cell["\<\
+You should then define any scalar functions and constants you will need for \
+your metric.\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{"DefConstantSymbol", "[", "M", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"DefConstantSymbol", "[", "G", "]"}]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[CellGroupData[{
+
+Cell["Two Ways to Define Your Metric", "Section"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatrixForm", "[", 
+  RowBox[{"met", "=", 
+   RowBox[{"DiagonalMatrix", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"1", "-", 
+       FractionBox[
+        RowBox[{"2", " ", "M"}], 
+        RowBox[{"r", "[", "]"}]]}], ",", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         FractionBox[
+          RowBox[{"2", " ", "M"}], 
+          RowBox[{"r", "[", "]"}]]}], ")"}], 
+       RowBox[{"-", "1"}]], ",", 
+      RowBox[{"-", 
+       SuperscriptBox[
+        RowBox[{"r", "[", "]"}], "2"]}], ",", 
+      RowBox[{"2", " ", 
+       RowBox[{"r", "[", "]"}], " ", 
+       SuperscriptBox[
+        RowBox[{"Sin", "[", 
+         RowBox[{"\[Theta]", "[", "]"}], "]"}], "2"]}]}], "}"}], "]"}]}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{"1", "-", 
+       FractionBox[
+        RowBox[{"2", " ", 
+         InterpretationBox[
+          StyleBox["M",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`M,
+          Editable->False]}], 
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False]]}], "0", "0", "0"},
+     {"0", 
+      FractionBox["1", 
+       RowBox[{"1", "-", 
+        FractionBox[
+         RowBox[{"2", " ", 
+          InterpretationBox[
+           StyleBox["M",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`M,
+           Editable->False]}], 
+         InterpretationBox[
+          StyleBox["r",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`r[],
+          Editable->False]]}]], "0", "0"},
+     {"0", "0", 
+      RowBox[{"-", 
+       SuperscriptBox[
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False], "2"]}], "0"},
+     {"0", "0", "0", 
+      RowBox[{"2", " ", 
+       InterpretationBox[
+        StyleBox["r",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`r[],
+        Editable->False], " ", 
+       SuperscriptBox[
+        RowBox[{
+         InterpretationBox[
+          StyleBox["Sin",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          Sin,
+          Editable->False], "[", 
+         InterpretationBox[
+          StyleBox["\[Theta]",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`\[Theta][],
+          Editable->False], "]"}], "2"]}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MetricInBasis", "[", 
+   RowBox[{"metric", ",", 
+    RowBox[{"-", "cb"}], ",", "met"}], "]"}], "//", "TableForm"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Added independent rule \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["t",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["t",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{0, -$CellContext`cb}, {0, -$CellContext`cb}],
+     Editable->False], "\[Rule]", 
+    RowBox[{"1", "-", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       InterpretationBox[
+        StyleBox["M",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`M,
+        Editable->False]}], 
+      InterpretationBox[
+       StyleBox["r",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`r[],
+       Editable->False]]}]}], "\[InvisibleSpace]", "\<\" for tensor \"\>", 
+   "\[InvisibleSpace]", "metric"}],
+  SequenceForm[
+  "Added independent rule ", $CellContext`metric[{0, -$CellContext`cb}, {
+     0, -$CellContext`cb}] -> 1 - 2 ($CellContext`M/$CellContext`r[]), 
+   " for tensor ", $CellContext`metric],
+  Editable->False]], "Print",
+ FontSize->12],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Added independent rule \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["t",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["r",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{0, -$CellContext`cb}, {1, -$CellContext`cb}],
+     Editable->False], "\[Rule]", "0"}], 
+   "\[InvisibleSpace]", "\<\" for tensor \"\>", "\[InvisibleSpace]", 
+   "metric"}],
+  SequenceForm[
+  "Added independent rule ", $CellContext`metric[{0, -$CellContext`cb}, {
+     1, -$CellContext`cb}] -> 0, " for tensor ", $CellContext`metric],
+  Editable->False]], "Print",
+ FontSize->12],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Added independent rule \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["t",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["\[Theta]",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{0, -$CellContext`cb}, {2, -$CellContext`cb}],
+     Editable->False], "\[Rule]", "0"}], 
+   "\[InvisibleSpace]", "\<\" for tensor \"\>", "\[InvisibleSpace]", 
+   "metric"}],
+  SequenceForm[
+  "Added independent rule ", $CellContext`metric[{0, -$CellContext`cb}, {
+     2, -$CellContext`cb}] -> 0, " for tensor ", $CellContext`metric],
+  Editable->False]], "Print",
+ FontSize->12],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Added independent rule \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["t",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["\[Phi]",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{0, -$CellContext`cb}, {3, -$CellContext`cb}],
+     Editable->False], "\[Rule]", "0"}], 
+   "\[InvisibleSpace]", "\<\" for tensor \"\>", "\[InvisibleSpace]", 
+   "metric"}],
+  SequenceForm[
+  "Added independent rule ", $CellContext`metric[{0, -$CellContext`cb}, {
+     3, -$CellContext`cb}] -> 0, " for tensor ", $CellContext`metric],
+  Editable->False]], "Print",
+ FontSize->12],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Added dependent rule \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["r",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["t",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{1, -$CellContext`cb}, {0, -$CellContext`cb}],
+     Editable->False], "\[Rule]", 
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["t",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["r",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{0, -$CellContext`cb}, {1, -$CellContext`cb}],
+     Editable->False]}], "\[InvisibleSpace]", "\<\" for tensor \"\>", 
+   "\[InvisibleSpace]", "metric"}],
+  SequenceForm[
+  "Added dependent rule ", $CellContext`metric[{1, -$CellContext`cb}, {
+     0, -$CellContext`cb}] -> $CellContext`metric[{0, -$CellContext`cb}, {
+     1, -$CellContext`cb}], " for tensor ", $CellContext`metric],
+  Editable->False]], "Print",
+ FontSize->12],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Added independent rule \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["r",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["r",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{1, -$CellContext`cb}, {1, -$CellContext`cb}],
+     Editable->False], "\[Rule]", 
+    FractionBox["1", 
+     RowBox[{"1", "-", 
+      FractionBox[
+       RowBox[{"2", " ", 
+        InterpretationBox[
+         StyleBox["M",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`M,
+         Editable->False]}], 
+       InterpretationBox[
+        StyleBox["r",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`r[],
+        Editable->False]]}]]}], "\[InvisibleSpace]", "\<\" for tensor \"\>", 
+   "\[InvisibleSpace]", "metric"}],
+  SequenceForm[
+  "Added independent rule ", $CellContext`metric[{1, -$CellContext`cb}, {
+     1, -$CellContext`cb}] -> (1 - 2 ($CellContext`M/$CellContext`r[]))^(-1), 
+   " for tensor ", $CellContext`metric],
+  Editable->False]], "Print",
+ FontSize->12],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Added independent rule \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["r",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["\[Theta]",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{1, -$CellContext`cb}, {2, -$CellContext`cb}],
+     Editable->False], "\[Rule]", "0"}], 
+   "\[InvisibleSpace]", "\<\" for tensor \"\>", "\[InvisibleSpace]", 
+   "metric"}],
+  SequenceForm[
+  "Added independent rule ", $CellContext`metric[{1, -$CellContext`cb}, {
+     2, -$CellContext`cb}] -> 0, " for tensor ", $CellContext`metric],
+  Editable->False]], "Print",
+ FontSize->12],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Added independent rule \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["r",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["\[Phi]",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{1, -$CellContext`cb}, {3, -$CellContext`cb}],
+     Editable->False], "\[Rule]", "0"}], 
+   "\[InvisibleSpace]", "\<\" for tensor \"\>", "\[InvisibleSpace]", 
+   "metric"}],
+  SequenceForm[
+  "Added independent rule ", $CellContext`metric[{1, -$CellContext`cb}, {
+     3, -$CellContext`cb}] -> 0, " for tensor ", $CellContext`metric],
+  Editable->False]], "Print",
+ FontSize->12],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Added dependent rule \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["\[Theta]",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["t",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{2, -$CellContext`cb}, {0, -$CellContext`cb}],
+     Editable->False], "\[Rule]", 
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["t",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["\[Theta]",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{0, -$CellContext`cb}, {2, -$CellContext`cb}],
+     Editable->False]}], "\[InvisibleSpace]", "\<\" for tensor \"\>", 
+   "\[InvisibleSpace]", "metric"}],
+  SequenceForm[
+  "Added dependent rule ", $CellContext`metric[{2, -$CellContext`cb}, {
+     0, -$CellContext`cb}] -> $CellContext`metric[{0, -$CellContext`cb}, {
+     2, -$CellContext`cb}], " for tensor ", $CellContext`metric],
+  Editable->False]], "Print",
+ FontSize->12],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Added dependent rule \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["\[Theta]",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["r",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{2, -$CellContext`cb}, {1, -$CellContext`cb}],
+     Editable->False], "\[Rule]", 
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["r",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["\[Theta]",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{1, -$CellContext`cb}, {2, -$CellContext`cb}],
+     Editable->False]}], "\[InvisibleSpace]", "\<\" for tensor \"\>", 
+   "\[InvisibleSpace]", "metric"}],
+  SequenceForm[
+  "Added dependent rule ", $CellContext`metric[{2, -$CellContext`cb}, {
+     1, -$CellContext`cb}] -> $CellContext`metric[{1, -$CellContext`cb}, {
+     2, -$CellContext`cb}], " for tensor ", $CellContext`metric],
+  Editable->False]], "Print",
+ FontSize->12],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Added independent rule \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["\[Theta]",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["\[Theta]",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{2, -$CellContext`cb}, {2, -$CellContext`cb}],
+     Editable->False], "\[Rule]", 
+    RowBox[{"-", 
+     SuperscriptBox[
+      InterpretationBox[
+       StyleBox["r",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`r[],
+       Editable->False], "2"]}]}], 
+   "\[InvisibleSpace]", "\<\" for tensor \"\>", "\[InvisibleSpace]", 
+   "metric"}],
+  SequenceForm[
+  "Added independent rule ", $CellContext`metric[{2, -$CellContext`cb}, {
+     2, -$CellContext`cb}] -> -$CellContext`r[]^2, 
+   " for tensor ", $CellContext`metric],
+  Editable->False]], "Print",
+ FontSize->12],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Added independent rule \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["\[Theta]",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["\[Phi]",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{2, -$CellContext`cb}, {3, -$CellContext`cb}],
+     Editable->False], "\[Rule]", "0"}], 
+   "\[InvisibleSpace]", "\<\" for tensor \"\>", "\[InvisibleSpace]", 
+   "metric"}],
+  SequenceForm[
+  "Added independent rule ", $CellContext`metric[{2, -$CellContext`cb}, {
+     3, -$CellContext`cb}] -> 0, " for tensor ", $CellContext`metric],
+  Editable->False]], "Print",
+ FontSize->12],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Added dependent rule \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["\[Phi]",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["t",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{3, -$CellContext`cb}, {0, -$CellContext`cb}],
+     Editable->False], "\[Rule]", 
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["t",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["\[Phi]",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{0, -$CellContext`cb}, {3, -$CellContext`cb}],
+     Editable->False]}], "\[InvisibleSpace]", "\<\" for tensor \"\>", 
+   "\[InvisibleSpace]", "metric"}],
+  SequenceForm[
+  "Added dependent rule ", $CellContext`metric[{3, -$CellContext`cb}, {
+     0, -$CellContext`cb}] -> $CellContext`metric[{0, -$CellContext`cb}, {
+     3, -$CellContext`cb}], " for tensor ", $CellContext`metric],
+  Editable->False]], "Print",
+ FontSize->12],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Added dependent rule \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["\[Phi]",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["r",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{3, -$CellContext`cb}, {1, -$CellContext`cb}],
+     Editable->False], "\[Rule]", 
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["r",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["\[Phi]",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{1, -$CellContext`cb}, {3, -$CellContext`cb}],
+     Editable->False]}], "\[InvisibleSpace]", "\<\" for tensor \"\>", 
+   "\[InvisibleSpace]", "metric"}],
+  SequenceForm[
+  "Added dependent rule ", $CellContext`metric[{3, -$CellContext`cb}, {
+     1, -$CellContext`cb}] -> $CellContext`metric[{1, -$CellContext`cb}, {
+     3, -$CellContext`cb}], " for tensor ", $CellContext`metric],
+  Editable->False]], "Print",
+ FontSize->12],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Added dependent rule \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["\[Phi]",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["\[Theta]",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{3, -$CellContext`cb}, {2, -$CellContext`cb}],
+     Editable->False], "\[Rule]", 
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["\[Theta]",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["\[Phi]",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{2, -$CellContext`cb}, {3, -$CellContext`cb}],
+     Editable->False]}], "\[InvisibleSpace]", "\<\" for tensor \"\>", 
+   "\[InvisibleSpace]", "metric"}],
+  SequenceForm[
+  "Added dependent rule ", $CellContext`metric[{3, -$CellContext`cb}, {
+     2, -$CellContext`cb}] -> $CellContext`metric[{2, -$CellContext`cb}, {
+     3, -$CellContext`cb}], " for tensor ", $CellContext`metric],
+  Editable->False]], "Print",
+ FontSize->12],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Added independent rule \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    InterpretationBox[
+     StyleBox[GridBox[{
+        {"g", 
+         StyleBox[GridBox[{
+            {" ", " "},
+            {
+             StyleBox["\[Phi]",
+              FontColor->RGBColor[1., 0., 0.]], 
+             StyleBox["\[Phi]",
+              FontColor->RGBColor[1., 0., 0.]]}
+           },
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.], {
+                Offset[0.034999999999999996`]}, 
+               Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                Offset[0.]}}, "RowsIndexed" -> {}}],
+          FontSize->15]}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}},
+          "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.034999999999999996`]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`metric[{3, -$CellContext`cb}, {3, -$CellContext`cb}],
+     Editable->False], "\[Rule]", 
+    RowBox[{"2", " ", 
+     InterpretationBox[
+      StyleBox["r",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`r[],
+      Editable->False], " ", 
+     SuperscriptBox[
+      RowBox[{
+       InterpretationBox[
+        StyleBox["Sin",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        Sin,
+        Editable->False], "[", 
+       InterpretationBox[
+        StyleBox["\[Theta]",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`\[Theta][],
+        Editable->False], "]"}], "2"]}]}], 
+   "\[InvisibleSpace]", "\<\" for tensor \"\>", "\[InvisibleSpace]", 
+   "metric"}],
+  SequenceForm[
+  "Added independent rule ", $CellContext`metric[{3, -$CellContext`cb}, {
+     3, -$CellContext`cb}] -> (2 $CellContext`r[]) Sin[
+       $CellContext`\[Theta][]]^2, " for tensor ", $CellContext`metric],
+  Editable->False]], "Print",
+ FontSize->12]
+}, Open  ]],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{0, -$CellContext`cb}, {0, -$CellContext`cb}],
+       Editable->False], "\[Rule]", 
+      RowBox[{"1", "-", 
+       FractionBox[
+        RowBox[{"2", " ", 
+         InterpretationBox[
+          StyleBox["M",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`M,
+          Editable->False]}], 
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False]]}]}], 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{0, -$CellContext`cb}, {1, -$CellContext`cb}],
+       Editable->False], "\[Rule]", "0"}], 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{0, -$CellContext`cb}, {2, -$CellContext`cb}],
+       Editable->False], "\[Rule]", "0"}], 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{0, -$CellContext`cb}, {3, -$CellContext`cb}],
+       Editable->False], "\[Rule]", "0"}]},
+    {
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{1, -$CellContext`cb}, {0, -$CellContext`cb}],
+       Editable->False], "\[Rule]", "0"}], 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{1, -$CellContext`cb}, {1, -$CellContext`cb}],
+       Editable->False], "\[Rule]", 
+      FractionBox["1", 
+       RowBox[{"1", "-", 
+        FractionBox[
+         RowBox[{"2", " ", 
+          InterpretationBox[
+           StyleBox["M",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`M,
+           Editable->False]}], 
+         InterpretationBox[
+          StyleBox["r",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`r[],
+          Editable->False]]}]]}], 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{1, -$CellContext`cb}, {2, -$CellContext`cb}],
+       Editable->False], "\[Rule]", "0"}], 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{1, -$CellContext`cb}, {3, -$CellContext`cb}],
+       Editable->False], "\[Rule]", "0"}]},
+    {
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{2, -$CellContext`cb}, {0, -$CellContext`cb}],
+       Editable->False], "\[Rule]", "0"}], 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{2, -$CellContext`cb}, {1, -$CellContext`cb}],
+       Editable->False], "\[Rule]", "0"}], 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{2, -$CellContext`cb}, {2, -$CellContext`cb}],
+       Editable->False], "\[Rule]", 
+      RowBox[{"-", 
+       SuperscriptBox[
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False], "2"]}]}], 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{2, -$CellContext`cb}, {3, -$CellContext`cb}],
+       Editable->False], "\[Rule]", "0"}]},
+    {
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{3, -$CellContext`cb}, {0, -$CellContext`cb}],
+       Editable->False], "\[Rule]", "0"}], 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> 
+           {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{3, -$CellContext`cb}, {1, -$CellContext`cb}],
+       Editable->False], "\[Rule]", "0"}], 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{3, -$CellContext`cb}, {2, -$CellContext`cb}],
+       Editable->False], "\[Rule]", "0"}], 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{3, -$CellContext`cb}, {3, -$CellContext`cb}],
+       Editable->False], "\[Rule]", 
+      RowBox[{"2", " ", 
+       InterpretationBox[
+        StyleBox["r",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`r[],
+        Editable->False], " ", 
+       SuperscriptBox[
+        RowBox[{
+         InterpretationBox[
+          StyleBox["Sin",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          Sin,
+          Editable->False], "[", 
+         InterpretationBox[
+          StyleBox["\[Theta]",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`\[Theta][],
+          Editable->False], "]"}], "2"]}]}]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TensorValues", "@", "metric"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"FoldedRule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{1, -$CellContext`cb}, {0, -$CellContext`cb}],
+       Editable->False], "\[Rule]", 
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{0, -$CellContext`cb}, {1, -$CellContext`cb}],
+       Editable->False]}], ",", 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{2, -$CellContext`cb}, {0, -$CellContext`cb}],
+       Editable->False], "\[Rule]", 
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{0, -$CellContext`cb}, {2, -$CellContext`cb}],
+       Editable->False]}], ",", 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{2, -$CellContext`cb}, {1, -$CellContext`cb}],
+       Editable->False], "\[Rule]", 
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{1, -$CellContext`cb}, {2, -$CellContext`cb}],
+       Editable->False]}], ",", 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{3, -$CellContext`cb}, {0, -$CellContext`cb}],
+       Editable->False], "\[Rule]", 
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{0, -$CellContext`cb}, {3, -$CellContext`cb}],
+       Editable->False]}], ",", 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{3, -$CellContext`cb}, {1, -$CellContext`cb}],
+       Editable->False], "\[Rule]", 
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{1, -$CellContext`cb}, {3, -$CellContext`cb}],
+       Editable->False]}], ",", 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{3, -$CellContext`cb}, {2, -$CellContext`cb}],
+       Editable->False], "\[Rule]", 
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{2, -$CellContext`cb}, {3, -$CellContext`cb}],
+       Editable->False]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{0, -$CellContext`cb}, {0, -$CellContext`cb}],
+       Editable->False], "\[Rule]", 
+      RowBox[{"1", "-", 
+       FractionBox[
+        RowBox[{"2", " ", 
+         InterpretationBox[
+          StyleBox["M",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`M,
+          Editable->False]}], 
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False]]}]}], ",", 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{0, -$CellContext`cb}, {1, -$CellContext`cb}],
+       Editable->False], "\[Rule]", "0"}], ",", 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{0, -$CellContext`cb}, {2, -$CellContext`cb}],
+       Editable->False], "\[Rule]", "0"}], ",", 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["t",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{0, -$CellContext`cb}, {3, -$CellContext`cb}],
+       Editable->False], "\[Rule]", "0"}], ",", 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{1, -$CellContext`cb}, {1, -$CellContext`cb}],
+       Editable->False], "\[Rule]", 
+      FractionBox["1", 
+       RowBox[{"1", "-", 
+        FractionBox[
+         RowBox[{"2", " ", 
+          InterpretationBox[
+           StyleBox["M",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`M,
+           Editable->False]}], 
+         InterpretationBox[
+          StyleBox["r",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`r[],
+          Editable->False]]}]]}], ",", 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{1, -$CellContext`cb}, {2, -$CellContext`cb}],
+       Editable->False], "\[Rule]", "0"}], ",", 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["r",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{1, -$CellContext`cb}, {3, -$CellContext`cb}],
+       Editable->False], "\[Rule]", "0"}], ",", 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{2, -$CellContext`cb}, {2, -$CellContext`cb}],
+       Editable->False], "\[Rule]", 
+      RowBox[{"-", 
+       SuperscriptBox[
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False], "2"]}]}], ",", 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["\[Theta]",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{2, -$CellContext`cb}, {3, -$CellContext`cb}],
+       Editable->False], "\[Rule]", "0"}], ",", 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[GridBox[{
+          {"g", 
+           StyleBox[GridBox[{
+              {" ", " "},
+              {
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]], 
+               StyleBox["\[Phi]",
+                FontColor->RGBColor[1., 0., 0.]]}
+             },
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.], {
+                  Offset[0.034999999999999996`]}, 
+                 Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                  Offset[0.]}}, "RowsIndexed" -> {}}],
+            FontSize->15]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.034999999999999996`]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`metric[{3, -$CellContext`cb}, {3, -$CellContext`cb}],
+       Editable->False], "\[Rule]", 
+      RowBox[{"2", " ", 
+       InterpretationBox[
+        StyleBox["r",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`r[],
+        Editable->False], " ", 
+       SuperscriptBox[
+        RowBox[{
+         InterpretationBox[
+          StyleBox["Sin",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          Sin,
+          Editable->False], "[", 
+         InterpretationBox[
+          StyleBox["\[Theta]",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`\[Theta][],
+          Editable->False], "]"}], "2"]}]}]}], "}"}]}], "]"}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"MetricCompute", "[", 
+  RowBox[{"metric", ",", "cb", ",", 
+   RowBox[{"\"\<Weyl\>\"", "[", 
+    RowBox[{
+     RowBox[{"-", "1"}], ",", 
+     RowBox[{"-", "1"}], ",", 
+     RowBox[{"-", "1"}], ",", 
+     RowBox[{"-", "1"}]}], "]"}]}], "]"}]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell["Now we can explore the second method of defining the metric.", "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"g", "=", 
+   RowBox[{"CTensor", "[", 
+    RowBox[{"met", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "cb"}], ",", 
+       RowBox[{"-", "cb"}]}], "}"}]}], "]"}]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetCMetric", "[", 
+   RowBox[{"g", ",", 
+    RowBox[{"-", "cb"}]}], "]"}], ";"}]], "Input"],
+
+Cell[TextData[{
+ "Here was can specify the ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", "tt"], TraditionalForm]]],
+ " component,"
+}], "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"g", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{"-", "cb"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{"-", "cb"}]}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"1", "-", 
+  FractionBox[
+   RowBox[{"2", " ", 
+    InterpretationBox[
+     StyleBox["M",
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`M,
+     Editable->False]}], 
+   InterpretationBox[
+    StyleBox["r",
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`r[],
+    Editable->False]]}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MetricCompute", "[", 
+   RowBox[{"g", ",", "cb", ",", 
+    RowBox[{"\"\<Weyl\>\"", "[", 
+     RowBox[{
+      RowBox[{"-", "1"}], ",", 
+      RowBox[{"-", "1"}], ",", 
+      RowBox[{"-", "1"}], ",", 
+      RowBox[{"-", "1"}]}], "]"}]}], "]"}], ";"}]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell["Here we define the covariant derivative,", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"cd", "=", 
+  RowBox[{"CovDOfMetric", "[", "g", "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"CCovD", "[", 
+  RowBox[{"PDcb", ",", 
+   RowBox[{"CTensor", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", 
+           RowBox[{"-", 
+            FractionBox[
+             InterpretationBox[
+              StyleBox["M",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`M,
+              Editable->False], 
+             RowBox[{
+              RowBox[{"2", " ", 
+               InterpretationBox[
+                StyleBox["M",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`M,
+                Editable->False], " ", 
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False]}], "-", 
+              SuperscriptBox[
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False], "2"]}]]}], ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", 
+            FractionBox[
+             InterpretationBox[
+              StyleBox["M",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`M,
+              Editable->False], 
+             RowBox[{
+              RowBox[{"2", " ", 
+               InterpretationBox[
+                StyleBox["M",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`M,
+                Editable->False], " ", 
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False]}], "-", 
+              SuperscriptBox[
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False], "2"]}]]}], ",", "0", ",", "0", ",", "0"}], 
+          "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           FractionBox[
+            RowBox[{
+             InterpretationBox[
+              StyleBox["M",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`M,
+              Editable->False], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"2", " ", 
+                InterpretationBox[
+                 StyleBox["M",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`M,
+                 Editable->False]}], "-", 
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False]}], ")"}]}], 
+            SuperscriptBox[
+             InterpretationBox[
+              StyleBox["r",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`r[],
+              Editable->False], "3"]], ",", "0", ",", "0", ",", "0"}], "}"}], 
+         ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", 
+           FractionBox[
+            InterpretationBox[
+             StyleBox["M",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`M,
+             Editable->False], 
+            RowBox[{
+             RowBox[{"2", " ", 
+              InterpretationBox[
+               StyleBox["M",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`M,
+               Editable->False], " ", 
+              InterpretationBox[
+               StyleBox["r",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`r[],
+               Editable->False]}], "-", 
+             SuperscriptBox[
+              InterpretationBox[
+               StyleBox["r",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`r[],
+               Editable->False], "2"]}]], ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "2"}], " ", 
+             InterpretationBox[
+              StyleBox["M",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`M,
+              Editable->False]}], "+", 
+            InterpretationBox[
+             StyleBox["r",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`r[],
+             Editable->False]}], ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", 
+           FractionBox[
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"2", " ", 
+                InterpretationBox[
+                 StyleBox["M",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`M,
+                 Editable->False]}], "-", 
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False]}], ")"}], " ", 
+             SuperscriptBox[
+              RowBox[{
+               InterpretationBox[
+                StyleBox["Sin",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                Sin,
+                Editable->False], "[", 
+               InterpretationBox[
+                StyleBox["\[Theta]",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`\[Theta][],
+                Editable->False], "]"}], "2"]}], 
+            InterpretationBox[
+             StyleBox["r",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`r[],
+             Editable->False]]}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", 
+           FractionBox["1", 
+            InterpretationBox[
+             StyleBox["r",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`r[],
+             Editable->False]], ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", 
+           FractionBox["1", 
+            InterpretationBox[
+             StyleBox["r",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`r[],
+             Editable->False]], ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", 
+           FractionBox[
+            RowBox[{
+             InterpretationBox[
+              StyleBox["Sin",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              Sin,
+              Editable->False], "[", 
+             RowBox[{"2", " ", 
+              InterpretationBox[
+               StyleBox["\[Theta]",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`\[Theta][],
+               Editable->False]}], "]"}], 
+            InterpretationBox[
+             StyleBox["r",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`r[],
+             Editable->False]]}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", 
+           FractionBox["1", 
+            RowBox[{"2", " ", 
+             InterpretationBox[
+              StyleBox["r",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`r[],
+              Editable->False]}]]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", 
+           RowBox[{
+            InterpretationBox[
+             StyleBox["Cot",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             Cot,
+             Editable->False], "[", 
+            InterpretationBox[
+             StyleBox["\[Theta]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`\[Theta][],
+             Editable->False], "]"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", 
+           FractionBox["1", 
+            RowBox[{"2", " ", 
+             InterpretationBox[
+              StyleBox["r",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`r[],
+              Editable->False]}]], ",", 
+           RowBox[{
+            InterpretationBox[
+             StyleBox["Cot",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             Cot,
+             Editable->False], "[", 
+            InterpretationBox[
+             StyleBox["\[Theta]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`\[Theta][],
+             Editable->False], "]"}], ",", "0"}], "}"}]}], "}"}]}], "}"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"cb", ",", 
+       RowBox[{"-", "cb"}], ",", 
+       RowBox[{"-", "cb"}]}], "}"}], ",", "0"}], "]"}], ",", 
+   RowBox[{"CTensor", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"1", "-", 
+          FractionBox[
+           RowBox[{"2", " ", 
+            InterpretationBox[
+             StyleBox["M",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`M,
+             Editable->False]}], 
+           InterpretationBox[
+            StyleBox["r",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`r[],
+            Editable->False]]}], ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         FractionBox["1", 
+          RowBox[{"1", "-", 
+           FractionBox[
+            RowBox[{"2", " ", 
+             InterpretationBox[
+              StyleBox["M",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`M,
+              Editable->False]}], 
+            InterpretationBox[
+             StyleBox["r",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`r[],
+             Editable->False]]}]], ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         RowBox[{"-", 
+          SuperscriptBox[
+           InterpretationBox[
+            StyleBox["r",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`r[],
+            Editable->False], "2"]}], ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", 
+         RowBox[{"2", " ", 
+          InterpretationBox[
+           StyleBox["r",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`r[],
+           Editable->False], " ", 
+          SuperscriptBox[
+           RowBox[{
+            InterpretationBox[
+             StyleBox["Sin",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             Sin,
+             Editable->False], "[", 
+            InterpretationBox[
+             StyleBox["\[Theta]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`\[Theta][],
+             Editable->False], "]"}], "2"]}]}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "cb"}], ",", 
+       RowBox[{"-", "cb"}]}], "}"}], ",", "0"}], "]"}]}], "]"}]], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[CellGroupData[{
+
+Cell["Christoffel Symbols in a Coordinate Basis", "Section"],
+
+Cell["In general we can write the Christoffel symbols", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Christoffel", "[", 
+   RowBox[{"CD", ",", "PDcb"}], "]"}], "[", 
+  RowBox[{"\[Alpha]", ",", 
+   RowBox[{"-", "\[Beta]"}], ",", 
+   RowBox[{"-", "\[Gamma]"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[GridBox[{
+     {
+      RowBox[{"\[CapitalGamma]", "[", 
+       RowBox[{"\[Del]", ",", 
+        StyleBox["\[ScriptCapitalD]",
+         FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+      StyleBox[GridBox[{
+         {"\[Alpha]", " ", " "},
+         {" ", "\[Beta]", "\[Gamma]"}
+        },
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.], {
+             Offset[0.034999999999999996`]}, 
+            Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.]}}, "RowsIndexed" -> {}}],
+       FontSize->15]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.034999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   ShowAutoStyles->False,
+   AutoSpacing->False],
+  $CellContext`ChristoffelCDPDcb[$CellContext`\[Alpha], \
+-$CellContext`\[Beta], -$CellContext`\[Gamma]],
+  Editable->False]], "Output"]
+}, Open  ]],
+
+Cell["We can make a table of these in our coordinate basis.", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Part", "[", 
+   RowBox[{
+    RowBox[{"TensorValues", "@", "ChristoffelCDPDcb"}], ",", "2"}], "]"}], "//",
+   "TableForm"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{0, $CellContext`cb}, {
+         0, -$CellContext`cb}, {0, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{0, $CellContext`cb}, {
+         0, -$CellContext`cb}, {1, -$CellContext`cb}],
+        Editable->False], "\[Rule]", 
+       RowBox[{"-", 
+        FractionBox[
+         InterpretationBox[
+          StyleBox["M",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`M,
+          Editable->False], 
+         RowBox[{
+          RowBox[{"2", " ", 
+           InterpretationBox[
+            StyleBox["M",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`M,
+            Editable->False], " ", 
+           InterpretationBox[
+            StyleBox["r",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`r[],
+            Editable->False]}], "-", 
+          SuperscriptBox[
+           InterpretationBox[
+            StyleBox["r",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`r[],
+            Editable->False], "2"]}]]}]}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{0, $CellContext`cb}, {
+         0, -$CellContext`cb}, {2, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{0, $CellContext`cb}, {
+         0, -$CellContext`cb}, {3, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{0, $CellContext`cb}, {
+         1, -$CellContext`cb}, {1, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{0, $CellContext`cb}, {
+         1, -$CellContext`cb}, {2, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{0, $CellContext`cb}, {
+         1, -$CellContext`cb}, {3, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{0, $CellContext`cb}, {
+         2, -$CellContext`cb}, {2, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{0, $CellContext`cb}, {
+         2, -$CellContext`cb}, {3, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{0, $CellContext`cb}, {
+         3, -$CellContext`cb}, {3, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{1, $CellContext`cb}, {
+         0, -$CellContext`cb}, {0, -$CellContext`cb}],
+        Editable->False], "\[Rule]", 
+       FractionBox[
+        RowBox[{
+         InterpretationBox[
+          StyleBox["M",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`M,
+          Editable->False], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", 
+            InterpretationBox[
+             StyleBox["M",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`M,
+             Editable->False]}], "-", 
+           InterpretationBox[
+            StyleBox["r",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`r[],
+            Editable->False]}], ")"}]}], 
+        SuperscriptBox[
+         InterpretationBox[
+          StyleBox["r",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`r[],
+          Editable->False], "3"]]}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{1, $CellContext`cb}, {
+         0, -$CellContext`cb}, {1, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{1, $CellContext`cb}, {
+         0, -$CellContext`cb}, {2, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{1, $CellContext`cb}, {
+         0, -$CellContext`cb}, {3, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{1, $CellContext`cb}, {
+         1, -$CellContext`cb}, {1, -$CellContext`cb}],
+        Editable->False], "\[Rule]", 
+       FractionBox[
+        InterpretationBox[
+         StyleBox["M",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`M,
+         Editable->False], 
+        RowBox[{
+         RowBox[{"2", " ", 
+          InterpretationBox[
+           StyleBox["M",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`M,
+           Editable->False], " ", 
+          InterpretationBox[
+           StyleBox["r",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`r[],
+           Editable->False]}], "-", 
+         SuperscriptBox[
+          InterpretationBox[
+           StyleBox["r",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`r[],
+           Editable->False], "2"]}]]}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{1, $CellContext`cb}, {
+         1, -$CellContext`cb}, {2, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{1, $CellContext`cb}, {
+         1, -$CellContext`cb}, {3, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{1, $CellContext`cb}, {
+         2, -$CellContext`cb}, {2, -$CellContext`cb}],
+        Editable->False], "\[Rule]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "2"}], " ", 
+         InterpretationBox[
+          StyleBox["M",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`M,
+          Editable->False]}], "+", 
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False]}]}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{1, $CellContext`cb}, {
+         2, -$CellContext`cb}, {3, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{1, $CellContext`cb}, {
+         3, -$CellContext`cb}, {3, -$CellContext`cb}],
+        Editable->False], "\[Rule]", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", 
+            InterpretationBox[
+             StyleBox["M",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`M,
+             Editable->False]}], "-", 
+           InterpretationBox[
+            StyleBox["r",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`r[],
+            Editable->False]}], ")"}], " ", 
+         SuperscriptBox[
+          RowBox[{
+           InterpretationBox[
+            StyleBox["Sin",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            Sin,
+            Editable->False], "[", 
+           InterpretationBox[
+            StyleBox["\[Theta]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`\[Theta][],
+            Editable->False], "]"}], "2"]}], 
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False]]}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{2, $CellContext`cb}, {
+         0, -$CellContext`cb}, {0, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{2, $CellContext`cb}, {
+         0, -$CellContext`cb}, {1, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{2, $CellContext`cb}, {
+         0, -$CellContext`cb}, {2, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{2, $CellContext`cb}, {
+         0, -$CellContext`cb}, {3, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{2, $CellContext`cb}, {
+         1, -$CellContext`cb}, {1, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{2, $CellContext`cb}, {
+         1, -$CellContext`cb}, {2, -$CellContext`cb}],
+        Editable->False], "\[Rule]", 
+       FractionBox["1", 
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False]]}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{2, $CellContext`cb}, {
+         1, -$CellContext`cb}, {3, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{2, $CellContext`cb}, {
+         2, -$CellContext`cb}, {2, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{2, $CellContext`cb}, {
+         2, -$CellContext`cb}, {3, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{2, $CellContext`cb}, {
+         3, -$CellContext`cb}, {3, -$CellContext`cb}],
+        Editable->False], "\[Rule]", 
+       FractionBox[
+        RowBox[{
+         InterpretationBox[
+          StyleBox["Sin",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          Sin,
+          Editable->False], "[", 
+         RowBox[{"2", " ", 
+          InterpretationBox[
+           StyleBox["\[Theta]",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`\[Theta][],
+           Editable->False]}], "]"}], 
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False]]}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{3, $CellContext`cb}, {
+         0, -$CellContext`cb}, {0, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{3, $CellContext`cb}, {
+         0, -$CellContext`cb}, {1, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{3, $CellContext`cb}, {
+         0, -$CellContext`cb}, {2, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["t",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{3, $CellContext`cb}, {
+         0, -$CellContext`cb}, {3, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{3, $CellContext`cb}, {
+         1, -$CellContext`cb}, {1, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{3, $CellContext`cb}, {
+         1, -$CellContext`cb}, {2, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["r",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{3, $CellContext`cb}, {
+         1, -$CellContext`cb}, {3, -$CellContext`cb}],
+        Editable->False], "\[Rule]", 
+       FractionBox["1", 
+        RowBox[{"2", " ", 
+         InterpretationBox[
+          StyleBox["r",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`r[],
+          Editable->False]}]]}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{3, $CellContext`cb}, {
+         2, -$CellContext`cb}, {2, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["\[Theta]",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{3, $CellContext`cb}, {
+         2, -$CellContext`cb}, {3, -$CellContext`cb}],
+        Editable->False], "\[Rule]", 
+       RowBox[{
+        InterpretationBox[
+         StyleBox["Cot",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         Cot,
+         Editable->False], "[", 
+        InterpretationBox[
+         StyleBox["\[Theta]",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`\[Theta][],
+         Editable->False], "]"}]}]},
+     {
+      RowBox[{
+       InterpretationBox[
+        StyleBox[GridBox[{
+           {
+            RowBox[{"\[CapitalGamma]", "[", 
+             RowBox[{"\[Del]", ",", 
+              StyleBox["\[ScriptCapitalD]",
+               FontColor->RGBColor[1., 0., 0.]]}], "]"}], 
+            StyleBox[GridBox[{
+               {
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]], " ", " "},
+               {" ", 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]], 
+                StyleBox["\[Phi]",
+                 FontColor->RGBColor[1., 0., 0.]]}
+              },
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.], {
+                   Offset[0.034999999999999996`]}, 
+                  Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+                   Offset[0.]}}, "RowsIndexed" -> {}}],
+             FontSize->15]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Center}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.034999999999999996`]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`ChristoffelCDPDcb[{3, $CellContext`cb}, {
+         3, -$CellContext`cb}, {3, -$CellContext`cb}],
+        Editable->False], "\[Rule]", "0"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[CellGroupData[{
+
+Cell["The Riemann Tensor", "Section"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"riemann", "=", 
+  RowBox[{"Riemann", "[", "cd", "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"CTensor", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", 
+           FractionBox[
+            RowBox[{"2", " ", 
+             InterpretationBox[
+              StyleBox["M",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`M,
+              Editable->False], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "2"}], " ", 
+                InterpretationBox[
+                 StyleBox["M",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`M,
+                 Editable->False]}], "+", 
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False]}], ")"}]}], 
+            SuperscriptBox[
+             InterpretationBox[
+              StyleBox["r",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`r[],
+              Editable->False], "4"]], ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           FractionBox[
+            RowBox[{"2", " ", 
+             InterpretationBox[
+              StyleBox["M",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`M,
+              Editable->False]}], 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"2", " ", 
+                InterpretationBox[
+                 StyleBox["M",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`M,
+                 Editable->False]}], "-", 
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False]}], ")"}], " ", 
+             SuperscriptBox[
+              InterpretationBox[
+               StyleBox["r",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`r[],
+               Editable->False], "2"]}]], ",", "0", ",", "0", ",", "0"}], 
+          "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", 
+           FractionBox[
+            RowBox[{
+             InterpretationBox[
+              StyleBox["M",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`M,
+              Editable->False], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"2", " ", 
+                InterpretationBox[
+                 StyleBox["M",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`M,
+                 Editable->False]}], "-", 
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False]}], ")"}]}], 
+            SuperscriptBox[
+             InterpretationBox[
+              StyleBox["r",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`r[],
+              Editable->False], "4"]], ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", 
+            FractionBox[
+             InterpretationBox[
+              StyleBox["M",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`M,
+              Editable->False], 
+             InterpretationBox[
+              StyleBox["r",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`r[],
+              Editable->False]]}], ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", 
+           FractionBox[
+            RowBox[{
+             InterpretationBox[
+              StyleBox["M",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`M,
+              Editable->False], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"2", " ", 
+                InterpretationBox[
+                 StyleBox["M",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`M,
+                 Editable->False]}], "-", 
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False]}], ")"}]}], 
+            RowBox[{"2", " ", 
+             SuperscriptBox[
+              InterpretationBox[
+               StyleBox["r",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`r[],
+               Editable->False], "4"]}]]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           FractionBox[
+            RowBox[{
+             InterpretationBox[
+              StyleBox["M",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`M,
+              Editable->False], " ", 
+             SuperscriptBox[
+              RowBox[{
+               InterpretationBox[
+                StyleBox["Sin",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                Sin,
+                Editable->False], "[", 
+               InterpretationBox[
+                StyleBox["\[Theta]",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`\[Theta][],
+                Editable->False], "]"}], "2"]}], 
+            SuperscriptBox[
+             InterpretationBox[
+              StyleBox["r",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`r[],
+              Editable->False], "2"]], ",", "0", ",", "0", ",", "0"}], 
+          "}"}]}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", 
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{"2", " ", 
+              InterpretationBox[
+               StyleBox["M",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`M,
+               Editable->False], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "2"}], " ", 
+                 InterpretationBox[
+                  StyleBox["M",
+                   ShowAutoStyles->False,
+                   AutoSpacing->False],
+                  $CellContext`M,
+                  Editable->False]}], "+", 
+                InterpretationBox[
+                 StyleBox["r",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`r[],
+                 Editable->False]}], ")"}]}], 
+             SuperscriptBox[
+              InterpretationBox[
+               StyleBox["r",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`r[],
+               Editable->False], "4"]]}], ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{"2", " ", 
+              InterpretationBox[
+               StyleBox["M",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`M,
+               Editable->False]}], 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"2", " ", 
+                 InterpretationBox[
+                  StyleBox["M",
+                   ShowAutoStyles->False,
+                   AutoSpacing->False],
+                  $CellContext`M,
+                  Editable->False]}], "-", 
+                InterpretationBox[
+                 StyleBox["r",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`r[],
+                 Editable->False]}], ")"}], " ", 
+              SuperscriptBox[
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False], "2"]}]]}], ",", "0", ",", "0", ",", "0"}], 
+          "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", 
+           FractionBox[
+            InterpretationBox[
+             StyleBox["M",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`M,
+             Editable->False], 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"2", " ", 
+                InterpretationBox[
+                 StyleBox["M",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`M,
+                 Editable->False]}], "-", 
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False]}], ")"}], " ", 
+             SuperscriptBox[
+              InterpretationBox[
+               StyleBox["r",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`r[],
+               Editable->False], "2"]}]], ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", 
+           RowBox[{"-", 
+            FractionBox[
+             InterpretationBox[
+              StyleBox["M",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`M,
+              Editable->False], 
+             InterpretationBox[
+              StyleBox["r",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`r[],
+              Editable->False]]}], ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", 
+           FractionBox[
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "4"}], " ", 
+              InterpretationBox[
+               StyleBox["M",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`M,
+               Editable->False]}], "+", 
+             InterpretationBox[
+              StyleBox["r",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`r[],
+              Editable->False]}], 
+            RowBox[{"4", " ", 
+             SuperscriptBox[
+              InterpretationBox[
+               StyleBox["r",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`r[],
+               Editable->False], "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "2"}], " ", 
+                InterpretationBox[
+                 StyleBox["M",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`M,
+                 Editable->False]}], "+", 
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False]}], ")"}]}]]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", 
+           FractionBox[
+            RowBox[{
+             InterpretationBox[
+              StyleBox["Cot",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              Cot,
+              Editable->False], "[", 
+             InterpretationBox[
+              StyleBox["\[Theta]",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`\[Theta][],
+              Editable->False], "]"}], 
+            RowBox[{"2", " ", 
+             InterpretationBox[
+              StyleBox["r",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`r[],
+              Editable->False]}]]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", 
+           FractionBox[
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"4", " ", 
+                InterpretationBox[
+                 StyleBox["M",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`M,
+                 Editable->False]}], "-", 
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False]}], ")"}], " ", 
+             SuperscriptBox[
+              RowBox[{
+               InterpretationBox[
+                StyleBox["Sin",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                Sin,
+                Editable->False], "[", 
+               InterpretationBox[
+                StyleBox["\[Theta]",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`\[Theta][],
+                Editable->False], "]"}], "2"]}], 
+            RowBox[{"2", " ", 
+             SuperscriptBox[
+              InterpretationBox[
+               StyleBox["r",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`r[],
+               Editable->False], "2"]}]], ",", 
+           FractionBox[
+            RowBox[{
+             RowBox[{
+              InterpretationBox[
+               StyleBox["Cos",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               Cos,
+               Editable->False], "[", 
+              InterpretationBox[
+               StyleBox["\[Theta]",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`\[Theta][],
+               Editable->False], "]"}], " ", 
+             RowBox[{
+              InterpretationBox[
+               StyleBox["Sin",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               Sin,
+               Editable->False], "[", 
+              InterpretationBox[
+               StyleBox["\[Theta]",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`\[Theta][],
+               Editable->False], "]"}]}], 
+            SuperscriptBox[
+             InterpretationBox[
+              StyleBox["r",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`r[],
+              Editable->False], "2"]], ",", "0"}], "}"}]}], "}"}]}], "}"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", 
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{
+              InterpretationBox[
+               StyleBox["M",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`M,
+               Editable->False], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"2", " ", 
+                 InterpretationBox[
+                  StyleBox["M",
+                   ShowAutoStyles->False,
+                   AutoSpacing->False],
+                  $CellContext`M,
+                  Editable->False]}], "-", 
+                InterpretationBox[
+                 StyleBox["r",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`r[],
+                 Editable->False]}], ")"}]}], 
+             SuperscriptBox[
+              InterpretationBox[
+               StyleBox["r",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`r[],
+               Editable->False], "4"]]}], ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           FractionBox[
+            InterpretationBox[
+             StyleBox["M",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`M,
+             Editable->False], 
+            InterpretationBox[
+             StyleBox["r",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`r[],
+             Editable->False]], ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", 
+           RowBox[{"-", 
+            FractionBox[
+             InterpretationBox[
+              StyleBox["M",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`M,
+              Editable->False], 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"2", " ", 
+                 InterpretationBox[
+                  StyleBox["M",
+                   ShowAutoStyles->False,
+                   AutoSpacing->False],
+                  $CellContext`M,
+                  Editable->False]}], "-", 
+                InterpretationBox[
+                 StyleBox["r",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`r[],
+                 Editable->False]}], ")"}], " ", 
+              SuperscriptBox[
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False], "2"]}]]}], ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", 
+           FractionBox[
+            InterpretationBox[
+             StyleBox["M",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`M,
+             Editable->False], 
+            InterpretationBox[
+             StyleBox["r",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`r[],
+             Editable->False]], ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", 
+           FractionBox[
+            RowBox[{
+             InterpretationBox[
+              StyleBox["Cot",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              Cot,
+              Editable->False], "[", 
+             InterpretationBox[
+              StyleBox["\[Theta]",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`\[Theta][],
+              Editable->False], "]"}], 
+            RowBox[{"2", " ", 
+             InterpretationBox[
+              StyleBox["r",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`r[],
+              Editable->False]}]]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", 
+           RowBox[{
+            FractionBox["3", "2"], "-", 
+            FractionBox[
+             InterpretationBox[
+              StyleBox["M",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`M,
+              Editable->False], 
+             InterpretationBox[
+              StyleBox["r",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`r[],
+              Editable->False]]}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", 
+           FractionBox[
+            RowBox[{
+             RowBox[{
+              InterpretationBox[
+               StyleBox["Cos",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               Cos,
+               Editable->False], "[", 
+              InterpretationBox[
+               StyleBox["\[Theta]",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`\[Theta][],
+               Editable->False], "]"}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"2", " ", 
+                InterpretationBox[
+                 StyleBox["M",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`M,
+                 Editable->False]}], "-", 
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False]}], ")"}], " ", 
+             RowBox[{
+              InterpretationBox[
+               StyleBox["Sin",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               Sin,
+               Editable->False], "[", 
+              InterpretationBox[
+               StyleBox["\[Theta]",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`\[Theta][],
+               Editable->False], "]"}]}], 
+            InterpretationBox[
+             StyleBox["r",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`r[],
+             Editable->False]], ",", 
+           FractionBox[
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "2"}], " ", 
+                InterpretationBox[
+                 StyleBox["M",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`M,
+                 Editable->False]}], "+", 
+               RowBox[{"3", " ", 
+                InterpretationBox[
+                 StyleBox["r",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`r[],
+                 Editable->False]}]}], ")"}], " ", 
+             SuperscriptBox[
+              RowBox[{
+               InterpretationBox[
+                StyleBox["Sin",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                Sin,
+                Editable->False], "[", 
+               InterpretationBox[
+                StyleBox["\[Theta]",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`\[Theta][],
+                Editable->False], "]"}], "2"]}], 
+            SuperscriptBox[
+             InterpretationBox[
+              StyleBox["r",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`r[],
+              Editable->False], "2"]], ",", "0"}], "}"}]}], "}"}]}], "}"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", 
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{
+              InterpretationBox[
+               StyleBox["M",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`M,
+               Editable->False], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"2", " ", 
+                 InterpretationBox[
+                  StyleBox["M",
+                   ShowAutoStyles->False,
+                   AutoSpacing->False],
+                  $CellContext`M,
+                  Editable->False]}], "-", 
+                InterpretationBox[
+                 StyleBox["r",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`r[],
+                 Editable->False]}], ")"}]}], 
+             RowBox[{"2", " ", 
+              SuperscriptBox[
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False], "4"]}]]}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{
+              InterpretationBox[
+               StyleBox["M",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`M,
+               Editable->False], " ", 
+              SuperscriptBox[
+               RowBox[{
+                InterpretationBox[
+                 StyleBox["Sin",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 Sin,
+                 Editable->False], "[", 
+                InterpretationBox[
+                 StyleBox["\[Theta]",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`\[Theta][],
+                 Editable->False], "]"}], "2"]}], 
+             SuperscriptBox[
+              InterpretationBox[
+               StyleBox["r",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`r[],
+               Editable->False], "2"]]}], ",", "0", ",", "0", ",", "0"}], 
+          "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", 
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "4"}], " ", 
+               InterpretationBox[
+                StyleBox["M",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`M,
+                Editable->False]}], "+", 
+              InterpretationBox[
+               StyleBox["r",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`r[],
+               Editable->False]}], 
+             RowBox[{"4", " ", 
+              SuperscriptBox[
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False], "2"], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "2"}], " ", 
+                 InterpretationBox[
+                  StyleBox["M",
+                   ShowAutoStyles->False,
+                   AutoSpacing->False],
+                  $CellContext`M,
+                  Editable->False]}], "+", 
+                InterpretationBox[
+                 StyleBox["r",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`r[],
+                 Editable->False]}], ")"}]}]]}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", 
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{
+              InterpretationBox[
+               StyleBox["Cot",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               Cot,
+               Editable->False], "[", 
+              InterpretationBox[
+               StyleBox["\[Theta]",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`\[Theta][],
+               Editable->False], "]"}], 
+             RowBox[{"2", " ", 
+              InterpretationBox[
+               StyleBox["r",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`r[],
+               Editable->False]}]]}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", 
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"4", " ", 
+                 InterpretationBox[
+                  StyleBox["M",
+                   ShowAutoStyles->False,
+                   AutoSpacing->False],
+                  $CellContext`M,
+                  Editable->False]}], "-", 
+                InterpretationBox[
+                 StyleBox["r",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`r[],
+                 Editable->False]}], ")"}], " ", 
+              SuperscriptBox[
+               RowBox[{
+                InterpretationBox[
+                 StyleBox["Sin",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 Sin,
+                 Editable->False], "[", 
+                InterpretationBox[
+                 StyleBox["\[Theta]",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`\[Theta][],
+                 Editable->False], "]"}], "2"]}], 
+             RowBox[{"2", " ", 
+              SuperscriptBox[
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False], "2"]}]]}], ",", 
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{
+              RowBox[{
+               InterpretationBox[
+                StyleBox["Cos",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                Cos,
+                Editable->False], "[", 
+               InterpretationBox[
+                StyleBox["\[Theta]",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`\[Theta][],
+                Editable->False], "]"}], " ", 
+              RowBox[{
+               InterpretationBox[
+                StyleBox["Sin",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                Sin,
+                Editable->False], "[", 
+               InterpretationBox[
+                StyleBox["\[Theta]",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`\[Theta][],
+                Editable->False], "]"}]}], 
+             SuperscriptBox[
+              InterpretationBox[
+               StyleBox["r",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`r[],
+               Editable->False], "2"]]}], ",", "0"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", 
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{
+              InterpretationBox[
+               StyleBox["Cot",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               Cot,
+               Editable->False], "[", 
+              InterpretationBox[
+               StyleBox["\[Theta]",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`\[Theta][],
+               Editable->False], "]"}], 
+             RowBox[{"2", " ", 
+              InterpretationBox[
+               StyleBox["r",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`r[],
+               Editable->False]}]]}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", 
+           RowBox[{
+            RowBox[{"-", 
+             FractionBox["3", "2"]}], "+", 
+            FractionBox[
+             InterpretationBox[
+              StyleBox["M",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`M,
+              Editable->False], 
+             InterpretationBox[
+              StyleBox["r",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`r[],
+              Editable->False]]}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", 
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{
+              RowBox[{
+               InterpretationBox[
+                StyleBox["Cos",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                Cos,
+                Editable->False], "[", 
+               InterpretationBox[
+                StyleBox["\[Theta]",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`\[Theta][],
+                Editable->False], "]"}], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"2", " ", 
+                 InterpretationBox[
+                  StyleBox["M",
+                   ShowAutoStyles->False,
+                   AutoSpacing->False],
+                  $CellContext`M,
+                  Editable->False]}], "-", 
+                InterpretationBox[
+                 StyleBox["r",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`r[],
+                 Editable->False]}], ")"}], " ", 
+              RowBox[{
+               InterpretationBox[
+                StyleBox["Sin",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                Sin,
+                Editable->False], "[", 
+               InterpretationBox[
+                StyleBox["\[Theta]",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`\[Theta][],
+                Editable->False], "]"}]}], 
+             InterpretationBox[
+              StyleBox["r",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`r[],
+              Editable->False]]}], ",", 
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "2"}], " ", 
+                 InterpretationBox[
+                  StyleBox["M",
+                   ShowAutoStyles->False,
+                   AutoSpacing->False],
+                  $CellContext`M,
+                  Editable->False]}], "+", 
+                RowBox[{"3", " ", 
+                 InterpretationBox[
+                  StyleBox["r",
+                   ShowAutoStyles->False,
+                   AutoSpacing->False],
+                  $CellContext`r[],
+                  Editable->False]}]}], ")"}], " ", 
+              SuperscriptBox[
+               RowBox[{
+                InterpretationBox[
+                 StyleBox["Sin",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 Sin,
+                 Editable->False], "[", 
+                InterpretationBox[
+                 StyleBox["\[Theta]",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`\[Theta][],
+                 Editable->False], "]"}], "2"]}], 
+             SuperscriptBox[
+              InterpretationBox[
+               StyleBox["r",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`r[],
+               Editable->False], "2"]]}], ",", "0"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}]}], 
+      "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "cb"}], ",", 
+     RowBox[{"-", "cb"}], ",", 
+     RowBox[{"-", "cb"}], ",", "cb"}], "}"}], ",", "0"}], "]"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"riemann", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{"-", "cb"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", 
+     RowBox[{"-", "cb"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{"-", "cb"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "cb"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"2", " ", 
+   InterpretationBox[
+    StyleBox["M",
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`M,
+    Editable->False], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "2"}], " ", 
+      InterpretationBox[
+       StyleBox["M",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`M,
+       Editable->False]}], "+", 
+     InterpretationBox[
+      StyleBox["r",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`r[],
+      Editable->False]}], ")"}]}], 
+  SuperscriptBox[
+   InterpretationBox[
+    StyleBox["r",
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`r[],
+    Editable->False], "4"]]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"riemann", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"3", ",", 
+     RowBox[{"-", "cb"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", 
+     RowBox[{"-", "cb"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", 
+     RowBox[{"-", "cb"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "cb"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "2"}], " ", 
+       InterpretationBox[
+        StyleBox["M",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`M,
+        Editable->False]}], "+", 
+      RowBox[{"3", " ", 
+       InterpretationBox[
+        StyleBox["r",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`r[],
+        Editable->False]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{
+      InterpretationBox[
+       StyleBox["Sin",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       Sin,
+       Editable->False], "[", 
+      InterpretationBox[
+       StyleBox["\[Theta]",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`\[Theta][],
+       Editable->False], "]"}], "2"]}], 
+   SuperscriptBox[
+    InterpretationBox[
+     StyleBox["r",
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`r[],
+     Editable->False], "2"]]}]], "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[CellGroupData[{
+
+Cell["The Ricci Tensor and Ricci Scalar", "Section"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Ricci", "[", "cd", "]"}], "[", 
+  RowBox[{
+   RowBox[{"-", "\[Alpha]"}], ",", 
+   RowBox[{"-", "\[Beta]"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[GridBox[{
+     {
+      StyleBox[
+       TagBox[
+        RowBox[{"(", "\[NoBreak]", GridBox[{
+           {
+            TagBox[
+             TooltipBox[
+              FractionBox[
+               RowBox[{
+                InterpretationBox[
+                 StyleBox["M",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`M,
+                 Editable->False], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"-", "2"}], " ", 
+                   InterpretationBox[
+                    StyleBox["M",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                    $CellContext`M,
+                    Editable->False]}], "+", 
+                  InterpretationBox[
+                   StyleBox["r",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                   $CellContext`r[],
+                   Editable->False]}], ")"}]}], 
+               RowBox[{"2", " ", 
+                SuperscriptBox[
+                 InterpretationBox[
+                  StyleBox["r",
+                   ShowAutoStyles->False,
+                   AutoSpacing->False],
+                  $CellContext`r[],
+                  Editable->False], "4"]}]],
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "1"}], "}"}], "\[Rule]", 
+                FractionBox[
+                 RowBox[{
+                   InterpretationBox[
+                    StyleBox[
+                    RowBox[{"M"}], AutoSpacing -> False, ShowAutoStyles -> 
+                    False], $CellContext`M, Editable -> False], " ", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "2"}], " ", 
+                    InterpretationBox[
+                    StyleBox[
+                    RowBox[{"M"}], AutoSpacing -> False, ShowAutoStyles -> 
+                    False], $CellContext`M, Editable -> False]}], "+", 
+                    InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False]}], ")"}]}], 
+                 RowBox[{"2", " ", 
+                   SuperscriptBox[
+                    InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False], "4"]}]]}]],
+             
+             Annotation[#, {1, 
+               1} -> ((
+                 Rational[
+                  1, 2] $CellContext`M) $CellContext`r[]^(-4)) ((-2) \
+$CellContext`M + $CellContext`r[]), "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "2"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {1, 2} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "3"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {1, 3} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "4"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {1, 4} -> 0, "Tooltip"]& ]},
+           {
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"2", ",", "1"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {2, 1} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox[
+              RowBox[{"-", 
+               FractionBox["1", 
+                RowBox[{
+                 RowBox[{"8", " ", 
+                  InterpretationBox[
+                   StyleBox["M",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                   $CellContext`M,
+                   Editable->False], " ", 
+                  InterpretationBox[
+                   StyleBox["r",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                   $CellContext`r[],
+                   Editable->False]}], "-", 
+                 RowBox[{"4", " ", 
+                  SuperscriptBox[
+                   InterpretationBox[
+                    StyleBox["r",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                    $CellContext`r[],
+                    Editable->False], "2"]}]}]]}],
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"2", ",", "2"}], "}"}], "\[Rule]", 
+                RowBox[{"-", 
+                  FractionBox["1", 
+                   RowBox[{
+                    RowBox[{"8", " ", 
+                    InterpretationBox[
+                    StyleBox[
+                    RowBox[{"M"}], AutoSpacing -> False, ShowAutoStyles -> 
+                    False], $CellContext`M, Editable -> False], " ", 
+                    InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False]}], "-", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox[
+                    InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False], "2"]}]}]]}]}]],
+             
+             Annotation[#, {2, 
+               2} -> (-1)/((8 $CellContext`M) $CellContext`r[] - 
+               4 $CellContext`r[]^2), "Tooltip"]& ], 
+            TagBox[
+             TooltipBox[
+              FractionBox[
+               RowBox[{
+                InterpretationBox[
+                 StyleBox["Cot",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 Cot,
+                 Editable->False], "[", 
+                InterpretationBox[
+                 StyleBox["\[Theta]",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`\[Theta][],
+                 Editable->False], "]"}], 
+               RowBox[{"2", " ", 
+                InterpretationBox[
+                 StyleBox["r",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`r[],
+                 Editable->False]}]],
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"2", ",", "3"}], "}"}], "\[Rule]", 
+                FractionBox[
+                 RowBox[{
+                   InterpretationBox[
+                    StyleBox[
+                    RowBox[{"Cot"}], AutoSpacing -> False, ShowAutoStyles -> 
+                    False], Cot, Editable -> False], "[", 
+                   InterpretationBox[
+                    StyleBox[
+                    "\[Theta]", AutoSpacing -> False, ShowAutoStyles -> 
+                    False], 
+                    $CellContext`\[Theta][], Editable -> False], "]"}], 
+                 RowBox[{"2", " ", 
+                   InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False]}]]}]],
+             Annotation[#, {2, 3} -> Rational[1, 2] (Cot[
+                  $CellContext`\[Theta][]]/$CellContext`r[]), "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"2", ",", "4"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {2, 4} -> 0, "Tooltip"]& ]},
+           {
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"3", ",", "1"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {3, 1} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox[
+              FractionBox[
+               RowBox[{
+                InterpretationBox[
+                 StyleBox["Cot",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 Cot,
+                 Editable->False], "[", 
+                InterpretationBox[
+                 StyleBox["\[Theta]",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`\[Theta][],
+                 Editable->False], "]"}], 
+               RowBox[{"2", " ", 
+                InterpretationBox[
+                 StyleBox["r",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`r[],
+                 Editable->False]}]],
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"3", ",", "2"}], "}"}], "\[Rule]", 
+                FractionBox[
+                 RowBox[{
+                   InterpretationBox[
+                    StyleBox[
+                    RowBox[{"Cot"}], AutoSpacing -> False, ShowAutoStyles -> 
+                    False], Cot, Editable -> False], "[", 
+                   InterpretationBox[
+                    StyleBox[
+                    "\[Theta]", AutoSpacing -> False, ShowAutoStyles -> 
+                    False], 
+                    $CellContext`\[Theta][], Editable -> False], "]"}], 
+                 RowBox[{"2", " ", 
+                   InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False]}]]}]],
+             Annotation[#, {3, 2} -> Rational[1, 2] (Cot[
+                  $CellContext`\[Theta][]]/$CellContext`r[]), "Tooltip"]& ], 
+            TagBox[
+             TooltipBox[
+              RowBox[{
+               FractionBox["3", "2"], "+", 
+               FractionBox[
+                InterpretationBox[
+                 StyleBox["M",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`M,
+                 Editable->False], 
+                InterpretationBox[
+                 StyleBox["r",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`r[],
+                 Editable->False]]}],
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"3", ",", "3"}], "}"}], "\[Rule]", 
+                RowBox[{
+                  FractionBox["3", "2"], "+", 
+                  FractionBox[
+                   InterpretationBox[
+                    StyleBox[
+                    RowBox[{"M"}], AutoSpacing -> False, ShowAutoStyles -> 
+                    False], $CellContext`M, Editable -> False], 
+                   InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False]]}]}]],
+             
+             Annotation[#, {3, 3} -> 
+              Rational[3, 2] + $CellContext`M/$CellContext`r[], "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"3", ",", "4"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {3, 4} -> 0, "Tooltip"]& ]},
+           {
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"4", ",", "1"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {4, 1} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"4", ",", "2"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {4, 2} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"4", ",", "3"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {4, 3} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox[
+              RowBox[{"-", 
+               FractionBox[
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"2", " ", 
+                    InterpretationBox[
+                    StyleBox["M",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                    $CellContext`M,
+                    Editable->False]}], "+", 
+                   RowBox[{"5", " ", 
+                    InterpretationBox[
+                    StyleBox["r",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                    $CellContext`r[],
+                    Editable->False]}]}], ")"}], " ", 
+                 SuperscriptBox[
+                  RowBox[{
+                   InterpretationBox[
+                    StyleBox["Sin",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                    Sin,
+                    Editable->False], "[", 
+                   InterpretationBox[
+                    StyleBox["\[Theta]",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                    $CellContext`\[Theta][],
+                    Editable->False], "]"}], "2"]}], 
+                RowBox[{"2", " ", 
+                 SuperscriptBox[
+                  InterpretationBox[
+                   StyleBox["r",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                   $CellContext`r[],
+                   Editable->False], "2"]}]]}],
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"4", ",", "4"}], "}"}], "\[Rule]", 
+                RowBox[{"-", 
+                  FractionBox[
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"2", " ", 
+                    InterpretationBox[
+                    StyleBox[
+                    RowBox[{"M"}], AutoSpacing -> False, ShowAutoStyles -> 
+                    False], $CellContext`M, Editable -> False]}], "+", 
+                    RowBox[{"5", " ", 
+                    InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False]}]}], ")"}], " ", 
+                    SuperscriptBox[
+                    RowBox[{
+                    InterpretationBox[
+                    StyleBox[
+                    RowBox[{"Sin"}], AutoSpacing -> False, ShowAutoStyles -> 
+                    False], Sin, Editable -> False], "[", 
+                    InterpretationBox[
+                    StyleBox[
+                    "\[Theta]", AutoSpacing -> False, ShowAutoStyles -> 
+                    False], 
+                    $CellContext`\[Theta][], Editable -> False], "]"}], 
+                    "2"]}], 
+                   RowBox[{"2", " ", 
+                    SuperscriptBox[
+                    InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False], "2"]}]]}]}]],
+             
+             Annotation[#, {4, 
+               4} -> ((Rational[-1, 2] $CellContext`r[]^(-2)) (
+                 2 $CellContext`M + 5 $CellContext`r[])) Sin[
+                  $CellContext`\[Theta][]]^2, "Tooltip"]& ]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.7]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+        Function[BoxForm`e$, 
+         MatrixForm[BoxForm`e$]]],
+       StripOnInput->False,
+       FontSize->Small], 
+      StyleBox[GridBox[{
+         {" ", " "},
+         {"\[Alpha]", "\[Beta]"}
+        },
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.], {
+             Offset[0.034999999999999996`]}, 
+            Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.]}}, "RowsIndexed" -> {}}],
+       FontSize->15]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.034999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   ShowAutoStyles->False,
+   AutoSpacing->False],
+  xAct`xCoba`CTensor[{{((
+       Rational[
+        1, 2] $CellContext`M) $CellContext`r[]^(-4)) ((-2) $CellContext`M + \
+$CellContext`r[]), 0, 0, 0}, {
+    0, (-1)/((8 $CellContext`M) $CellContext`r[] - 4 $CellContext`r[]^2), 
+     Rational[1, 2] (Cot[
+        $CellContext`\[Theta][]]/$CellContext`r[]), 0}, {
+    0, Rational[1, 2] (Cot[
+        $CellContext`\[Theta][]]/$CellContext`r[]), 
+     Rational[3, 2] + $CellContext`M/$CellContext`r[], 0}, {
+    0, 0, 0, ((Rational[-1, 2] $CellContext`r[]^(-2)) (2 $CellContext`M + 
+       5 $CellContext`r[])) Sin[
+        $CellContext`\[Theta][]]^2}}, {-$CellContext`cb, -$CellContext`cb}, 
+   0][-$CellContext`\[Alpha], -$CellContext`\[Beta]],
+  Editable->False]], "Output",
+ FontFamily->"Courier New",
+ FontSize->14]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Ricci", "[", "cd", "]"}], "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{"-", "cb"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{"-", "cb"}]}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   InterpretationBox[
+    StyleBox["M",
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`M,
+    Editable->False], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "2"}], " ", 
+      InterpretationBox[
+       StyleBox["M",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`M,
+       Editable->False]}], "+", 
+     InterpretationBox[
+      StyleBox["r",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`r[],
+      Editable->False]}], ")"}]}], 
+  RowBox[{"2", " ", 
+   SuperscriptBox[
+    InterpretationBox[
+     StyleBox["r",
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`r[],
+     Editable->False], "4"]}]]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"rs", "=", 
+  RowBox[{
+   RowBox[{"RicciScalar", "[", "cd", "]"}], "[", 
+   RowBox[{"[", "1", "]"}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"2", " ", 
+     InterpretationBox[
+      StyleBox["M",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`M,
+      Editable->False]}], "+", 
+    RowBox[{"5", " ", 
+     InterpretationBox[
+      StyleBox["r",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`r[],
+      Editable->False]}]}], 
+   RowBox[{"2", " ", 
+    SuperscriptBox[
+     InterpretationBox[
+      StyleBox["r",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`r[],
+      Editable->False], "3"]}]]}]], "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[CellGroupData[{
+
+Cell["The Einstein Tensor", "Section"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Einstein", "[", "cd", "]"}], "[", 
+  RowBox[{
+   RowBox[{"-", "\[Alpha]"}], ",", 
+   RowBox[{"-", "\[Beta]"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[GridBox[{
+     {
+      StyleBox[
+       TagBox[
+        RowBox[{"(", "\[NoBreak]", GridBox[{
+           {
+            TagBox[
+             TooltipBox[
+              RowBox[{"-", 
+               FractionBox[
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"2", " ", 
+                    InterpretationBox[
+                    StyleBox["M",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                    $CellContext`M,
+                    Editable->False]}], "-", 
+                   InterpretationBox[
+                    StyleBox["r",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                    $CellContext`r[],
+                    Editable->False]}], ")"}], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"4", " ", 
+                    InterpretationBox[
+                    StyleBox["M",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                    $CellContext`M,
+                    Editable->False]}], "+", 
+                   RowBox[{"5", " ", 
+                    InterpretationBox[
+                    StyleBox["r",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                    $CellContext`r[],
+                    Editable->False]}]}], ")"}]}], 
+                RowBox[{"4", " ", 
+                 SuperscriptBox[
+                  InterpretationBox[
+                   StyleBox["r",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                   $CellContext`r[],
+                   Editable->False], "4"]}]]}],
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "1"}], "}"}], "\[Rule]", 
+                RowBox[{"-", 
+                  FractionBox[
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"2", " ", 
+                    InterpretationBox[
+                    StyleBox[
+                    RowBox[{"M"}], AutoSpacing -> False, ShowAutoStyles -> 
+                    False], $CellContext`M, Editable -> False]}], "-", 
+                    InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False]}], ")"}], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"4", " ", 
+                    InterpretationBox[
+                    StyleBox[
+                    RowBox[{"M"}], AutoSpacing -> False, ShowAutoStyles -> 
+                    False], $CellContext`M, Editable -> False]}], "+", 
+                    RowBox[{"5", " ", 
+                    InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False]}]}], ")"}]}], 
+                   RowBox[{"4", " ", 
+                    SuperscriptBox[
+                    InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False], "4"]}]]}]}]],
+             
+             Annotation[#, {1, 
+               1} -> ((
+                 Rational[-1, 4] (
+                  2 $CellContext`M - $CellContext`r[])) \
+$CellContext`r[]^(-4)) (4 $CellContext`M + 5 $CellContext`r[]), "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "2"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {1, 2} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "3"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {1, 3} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "4"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {1, 4} -> 0, "Tooltip"]& ]},
+           {
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"2", ",", "1"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {2, 1} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox[
+              RowBox[{"-", 
+               FractionBox[
+                RowBox[{
+                 InterpretationBox[
+                  StyleBox["M",
+                   ShowAutoStyles->False,
+                   AutoSpacing->False],
+                  $CellContext`M,
+                  Editable->False], "+", 
+                 RowBox[{"3", " ", 
+                  InterpretationBox[
+                   StyleBox["r",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                   $CellContext`r[],
+                   Editable->False]}]}], 
+                RowBox[{
+                 RowBox[{"4", " ", 
+                  InterpretationBox[
+                   StyleBox["M",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                   $CellContext`M,
+                   Editable->False], " ", 
+                  SuperscriptBox[
+                   InterpretationBox[
+                    StyleBox["r",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                    $CellContext`r[],
+                    Editable->False], "2"]}], "-", 
+                 RowBox[{"2", " ", 
+                  SuperscriptBox[
+                   InterpretationBox[
+                    StyleBox["r",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                    $CellContext`r[],
+                    Editable->False], "3"]}]}]]}],
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"2", ",", "2"}], "}"}], "\[Rule]", 
+                RowBox[{"-", 
+                  FractionBox[
+                   RowBox[{
+                    InterpretationBox[
+                    StyleBox[
+                    RowBox[{"M"}], AutoSpacing -> False, ShowAutoStyles -> 
+                    False], $CellContext`M, Editable -> False], "+", 
+                    RowBox[{"3", " ", 
+                    InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False]}]}], 
+                   RowBox[{
+                    RowBox[{"4", " ", 
+                    InterpretationBox[
+                    StyleBox[
+                    RowBox[{"M"}], AutoSpacing -> False, ShowAutoStyles -> 
+                    False], $CellContext`M, Editable -> False], " ", 
+                    SuperscriptBox[
+                    InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False], "2"]}], "-", 
+                    RowBox[{"2", " ", 
+                    SuperscriptBox[
+                    InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False], "3"]}]}]]}]}]],
+             Annotation[#, {2, 
+               2} -> (-($CellContext`M + 3 $CellContext`r[]))/((
+                 4 $CellContext`M) $CellContext`r[]^2 - 2 $CellContext`r[]^3),
+               "Tooltip"]& ], 
+            TagBox[
+             TooltipBox[
+              FractionBox[
+               RowBox[{
+                InterpretationBox[
+                 StyleBox["Cot",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 Cot,
+                 Editable->False], "[", 
+                InterpretationBox[
+                 StyleBox["\[Theta]",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`\[Theta][],
+                 Editable->False], "]"}], 
+               RowBox[{"2", " ", 
+                InterpretationBox[
+                 StyleBox["r",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`r[],
+                 Editable->False]}]],
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"2", ",", "3"}], "}"}], "\[Rule]", 
+                FractionBox[
+                 RowBox[{
+                   InterpretationBox[
+                    StyleBox[
+                    RowBox[{"Cot"}], AutoSpacing -> False, ShowAutoStyles -> 
+                    False], Cot, Editable -> False], "[", 
+                   InterpretationBox[
+                    StyleBox[
+                    "\[Theta]", AutoSpacing -> False, ShowAutoStyles -> 
+                    False], 
+                    $CellContext`\[Theta][], Editable -> False], "]"}], 
+                 RowBox[{"2", " ", 
+                   InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False]}]]}]],
+             Annotation[#, {2, 3} -> Rational[1, 2] (Cot[
+                  $CellContext`\[Theta][]]/$CellContext`r[]), "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"2", ",", "4"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {2, 4} -> 0, "Tooltip"]& ]},
+           {
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"3", ",", "1"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {3, 1} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox[
+              FractionBox[
+               RowBox[{
+                InterpretationBox[
+                 StyleBox["Cot",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 Cot,
+                 Editable->False], "[", 
+                InterpretationBox[
+                 StyleBox["\[Theta]",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`\[Theta][],
+                 Editable->False], "]"}], 
+               RowBox[{"2", " ", 
+                InterpretationBox[
+                 StyleBox["r",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`r[],
+                 Editable->False]}]],
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"3", ",", "2"}], "}"}], "\[Rule]", 
+                FractionBox[
+                 RowBox[{
+                   InterpretationBox[
+                    StyleBox[
+                    RowBox[{"Cot"}], AutoSpacing -> False, ShowAutoStyles -> 
+                    False], Cot, Editable -> False], "[", 
+                   InterpretationBox[
+                    StyleBox[
+                    "\[Theta]", AutoSpacing -> False, ShowAutoStyles -> 
+                    False], 
+                    $CellContext`\[Theta][], Editable -> False], "]"}], 
+                 RowBox[{"2", " ", 
+                   InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False]}]]}]],
+             Annotation[#, {3, 2} -> Rational[1, 2] (Cot[
+                  $CellContext`\[Theta][]]/$CellContext`r[]), "Tooltip"]& ], 
+            TagBox[
+             TooltipBox[
+              FractionBox[
+               RowBox[{
+                RowBox[{"2", " ", 
+                 InterpretationBox[
+                  StyleBox["M",
+                   ShowAutoStyles->False,
+                   AutoSpacing->False],
+                  $CellContext`M,
+                  Editable->False]}], "+", 
+                InterpretationBox[
+                 StyleBox["r",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`r[],
+                 Editable->False]}], 
+               RowBox[{"4", " ", 
+                InterpretationBox[
+                 StyleBox["r",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`r[],
+                 Editable->False]}]],
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"3", ",", "3"}], "}"}], "\[Rule]", 
+                FractionBox[
+                 RowBox[{
+                   RowBox[{"2", " ", 
+                    InterpretationBox[
+                    StyleBox[
+                    RowBox[{"M"}], AutoSpacing -> False, ShowAutoStyles -> 
+                    False], $CellContext`M, Editable -> False]}], "+", 
+                   InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False]}], 
+                 RowBox[{"4", " ", 
+                   InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False]}]]}]],
+             
+             Annotation[#, {3, 
+               3} -> (Rational[1, 4]/$CellContext`r[]) (
+                2 $CellContext`M + $CellContext`r[]), "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"3", ",", "4"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {3, 4} -> 0, "Tooltip"]& ]},
+           {
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"4", ",", "1"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {4, 1} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"4", ",", "2"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {4, 2} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"4", ",", "3"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {4, 3} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"4", ",", "4"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {4, 4} -> 0, "Tooltip"]& ]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.7]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+        Function[BoxForm`e$, 
+         MatrixForm[BoxForm`e$]]],
+       StripOnInput->False,
+       FontSize->Small], 
+      StyleBox[GridBox[{
+         {" ", " "},
+         {"\[Alpha]", "\[Beta]"}
+        },
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.], {
+             Offset[0.034999999999999996`]}, 
+            Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.]}}, "RowsIndexed" -> {}}],
+       FontSize->15]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.034999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   ShowAutoStyles->False,
+   AutoSpacing->False],
+  xAct`xCoba`CTensor[{{((
+       Rational[-1, 4] (
+        2 $CellContext`M - $CellContext`r[])) $CellContext`r[]^(-4)) (
+      4 $CellContext`M + 5 $CellContext`r[]), 0, 0, 0}, {
+    0, (-($CellContext`M + 3 $CellContext`r[]))/((
+       4 $CellContext`M) $CellContext`r[]^2 - 2 $CellContext`r[]^3), 
+     Rational[1, 2] (Cot[
+        $CellContext`\[Theta][]]/$CellContext`r[]), 0}, {
+    0, Rational[1, 2] (Cot[
+        $CellContext`\[Theta][]]/$CellContext`r[]), (
+      Rational[1, 4]/$CellContext`r[]) (2 $CellContext`M + $CellContext`r[]), 
+     0}, {0, 0, 0, 0}}, {-$CellContext`cb, -$CellContext`cb}, 
+   0][-$CellContext`\[Alpha], -$CellContext`\[Beta]],
+  Editable->False]], "Output",
+ FontFamily->"Courier New",
+ FontSize->14]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Einstein", "[", "cd", "]"}], "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{"-", "cb"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{"-", "cb"}]}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", " ", 
+       InterpretationBox[
+        StyleBox["M",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`M,
+        Editable->False]}], "-", 
+      InterpretationBox[
+       StyleBox["r",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`r[],
+       Editable->False]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"4", " ", 
+       InterpretationBox[
+        StyleBox["M",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`M,
+        Editable->False]}], "+", 
+      RowBox[{"5", " ", 
+       InterpretationBox[
+        StyleBox["r",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`r[],
+        Editable->False]}]}], ")"}]}], 
+   RowBox[{"4", " ", 
+    SuperscriptBox[
+     InterpretationBox[
+      StyleBox["r",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`r[],
+      Editable->False], "4"]}]]}]], "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[CellGroupData[{
+
+Cell["The Stress Energy Tensor", "Section"],
+
+Cell["\<\
+We next need to calculate the stress-energy tensor. we begin by defining the \
+density field.\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DefTensor", "[", 
+  RowBox[{"\[Rho]", ",", "M4"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"DefTensor", "[", 
+  RowBox[{"\[Rho]", ",", "M4", ",", 
+   RowBox[{"GenSet", "[", "]"}]}], "]"}]], "Output"]
+}, Open  ]],
+
+Cell["Here we define the 4-velocity.", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"U", "=", 
+  RowBox[{"CTensor", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"-", "cb"}], "}"}]}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"CTensor", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"-", "cb"}], "}"}], ",", "0"}], "]"}]], "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell["Here is the stress-energy tensor for a pressure-less dust", "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Td", "[", 
+   RowBox[{"\[Alpha]_", ",", "\[Beta]_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"\[Rho]", "[", "]"}], " ", 
+   RowBox[{"U", "[", 
+    RowBox[{"-", "\[Alpha]"}], "]"}], 
+   RowBox[{"U", "[", 
+    RowBox[{"-", "\[Beta]"}], "]"}]}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Td", "[", 
+  RowBox[{"\[Alpha]", ",", "\[Beta]"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[GridBox[{
+     {
+      StyleBox[
+       TagBox[
+        RowBox[{"(", "\[NoBreak]", GridBox[{
+           {
+            TagBox[
+             TooltipBox[
+              RowBox[{"\[Rho]", "[", "]"}],
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "1"}], "}"}], "\[Rule]", 
+                RowBox[{"\[Rho]", "[", "]"}]}]],
+             Annotation[#, {1, 1} -> $CellContext`\[Rho][], "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "2"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {1, 2} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "3"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {1, 3} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "4"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {1, 4} -> 0, "Tooltip"]& ]},
+           {
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"2", ",", "1"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {2, 1} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"2", ",", "2"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {2, 2} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"2", ",", "3"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {2, 3} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"2", ",", "4"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {2, 4} -> 0, "Tooltip"]& ]},
+           {
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"3", ",", "1"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {3, 1} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"3", ",", "2"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {3, 2} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"3", ",", "3"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {3, 3} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"3", ",", "4"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {3, 4} -> 0, "Tooltip"]& ]},
+           {
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"4", ",", "1"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {4, 1} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"4", ",", "2"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {4, 2} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"4", ",", "3"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {4, 3} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"4", ",", "4"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {4, 4} -> 0, "Tooltip"]& ]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.7]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+        Function[BoxForm`e$, 
+         MatrixForm[BoxForm`e$]]],
+       StripOnInput->False,
+       FontSize->Small], 
+      StyleBox[GridBox[{
+         {" ", " "},
+         {"\[Beta]", "\[Alpha]"}
+        },
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.], {
+             Offset[0.034999999999999996`]}, 
+            Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.]}}, "RowsIndexed" -> {}}],
+       FontSize->15]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.034999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   ShowAutoStyles->False,
+   AutoSpacing->False],
+  xAct`xCoba`CTensor[{{
+     $CellContext`\[Rho][], 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 
+    0}}, {-$CellContext`cb, -$CellContext`cb}, 
+   0][-$CellContext`\[Beta], -$CellContext`\[Alpha]],
+  Editable->False]], "Output",
+ FontSize->48]
+}, Open  ]],
+
+Cell[TextData[{
+ "Here we have the ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["T", "tt"], TraditionalForm]]],
+ " component."
+}], "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Td", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0", ",", "cb"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "cb"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"\[Rho]", "[", "]"}]], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell["\<\
+The pressure-less dust is very simple. A little more complicated is the \
+perfect fluid. This requires us to define a pressure field.\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DefTensor", "[", 
+  RowBox[{"p", ",", "M4"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"DefTensor", "[", 
+  RowBox[{"p", ",", "M4", ",", 
+   RowBox[{"GenSet", "[", "]"}]}], "]"}]], "Output"]
+}, Open  ]],
+
+Cell["The stress-energy tensor for this situation is,", "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Tf", "[", 
+   RowBox[{"\[Alpha]_", ",", "\[Beta]_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"\[Rho]", "[", "]"}], "+", 
+      RowBox[{"p", "[", "]"}]}], ")"}], " ", 
+    RowBox[{"U", "[", 
+     RowBox[{"-", "\[Alpha]"}], "]"}], 
+    RowBox[{"U", "[", 
+     RowBox[{"-", "\[Beta]"}], "]"}]}], "+", 
+   RowBox[{
+    RowBox[{"p", "[", "]"}], " ", 
+    RowBox[{"g", "[", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]"}], ",", 
+      RowBox[{"-", "\[Beta]"}]}], "]"}]}]}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Tf", "[", 
+  RowBox[{"\[Alpha]", ",", "\[Beta]"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[GridBox[{
+     {
+      StyleBox[
+       TagBox[
+        RowBox[{"(", "\[NoBreak]", GridBox[{
+           {
+            TagBox[
+             TooltipBox[
+              RowBox[{
+               RowBox[{"p", "[", "]"}], "+", 
+               RowBox[{
+                RowBox[{"p", "[", "]"}], " ", 
+                RowBox[{"(", 
+                 RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{"2", " ", 
+                    InterpretationBox[
+                    StyleBox["M",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                    $CellContext`M,
+                    Editable->False]}], 
+                   InterpretationBox[
+                    StyleBox["r",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                    $CellContext`r[],
+                    Editable->False]]}], ")"}]}], "+", 
+               RowBox[{"\[Rho]", "[", "]"}]}],
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "1"}], "}"}], "\[Rule]", 
+                RowBox[{
+                  RowBox[{"p", "[", "]"}], "+", 
+                  RowBox[{
+                    RowBox[{"p", "[", "]"}], " ", 
+                    RowBox[{"(", 
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{"2", " ", 
+                    InterpretationBox[
+                    StyleBox[
+                    RowBox[{"M"}], AutoSpacing -> False, ShowAutoStyles -> 
+                    False], $CellContext`M, Editable -> False]}], 
+                    InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False]]}], ")"}]}], "+", 
+                  RowBox[{"\[Rho]", "[", "]"}]}]}]],
+             
+             Annotation[#, {1, 
+               1} -> $CellContext`p[] + $CellContext`p[] (1 - 
+                 2 ($CellContext`M/$CellContext`r[])) + $CellContext`\[Rho][],
+               "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "2"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {1, 2} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "3"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {1, 3} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "4"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {1, 4} -> 0, "Tooltip"]& ]},
+           {
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"2", ",", "1"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {2, 1} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox[
+              FractionBox[
+               RowBox[{"p", "[", "]"}], 
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{"2", " ", 
+                  InterpretationBox[
+                   StyleBox["M",
+                    ShowAutoStyles->False,
+                    AutoSpacing->False],
+                   $CellContext`M,
+                   Editable->False]}], 
+                 InterpretationBox[
+                  StyleBox["r",
+                   ShowAutoStyles->False,
+                   AutoSpacing->False],
+                  $CellContext`r[],
+                  Editable->False]]}]],
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"2", ",", "2"}], "}"}], "\[Rule]", 
+                FractionBox[
+                 RowBox[{"p", "[", "]"}], 
+                 RowBox[{"1", "-", 
+                   FractionBox[
+                    RowBox[{"2", " ", 
+                    InterpretationBox[
+                    StyleBox[
+                    RowBox[{"M"}], AutoSpacing -> False, ShowAutoStyles -> 
+                    False], $CellContext`M, Editable -> False]}], 
+                    InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False]]}]]}]],
+             
+             Annotation[#, {2, 2} -> $CellContext`p[]/(1 - 
+               2 ($CellContext`M/$CellContext`r[])), "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"2", ",", "3"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {2, 3} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"2", ",", "4"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {2, 4} -> 0, "Tooltip"]& ]},
+           {
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"3", ",", "1"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {3, 1} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"3", ",", "2"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {3, 2} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox[
+              RowBox[{
+               RowBox[{"-", 
+                RowBox[{"p", "[", "]"}]}], " ", 
+               SuperscriptBox[
+                InterpretationBox[
+                 StyleBox["r",
+                  ShowAutoStyles->False,
+                  AutoSpacing->False],
+                 $CellContext`r[],
+                 Editable->False], "2"]}],
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"3", ",", "3"}], "}"}], "\[Rule]", 
+                RowBox[{
+                  RowBox[{"-", 
+                    RowBox[{"p", "[", "]"}]}], " ", 
+                  SuperscriptBox[
+                   InterpretationBox[
+                    StyleBox[
+                    "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                    $CellContext`r[], Editable -> False], "2"]}]}]],
+             
+             Annotation[#, {3, 3} -> (-$CellContext`p[]) $CellContext`r[]^2, 
+              "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"3", ",", "4"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {3, 4} -> 0, "Tooltip"]& ]},
+           {
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"4", ",", "1"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {4, 1} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"4", ",", "2"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {4, 2} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox["0",
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"4", ",", "3"}], "}"}], "\[Rule]", "0"}]],
+             Annotation[#, {4, 3} -> 0, "Tooltip"]& ], 
+            TagBox[
+             TooltipBox[
+              RowBox[{"2", " ", 
+               RowBox[{"p", "[", "]"}], " ", 
+               InterpretationBox[
+                StyleBox["r",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`r[],
+                Editable->False], " ", 
+               SuperscriptBox[
+                RowBox[{
+                 InterpretationBox[
+                  StyleBox["Sin",
+                   ShowAutoStyles->False,
+                   AutoSpacing->False],
+                  Sin,
+                  Editable->False], "[", 
+                 InterpretationBox[
+                  StyleBox["\[Theta]",
+                   ShowAutoStyles->False,
+                   AutoSpacing->False],
+                  $CellContext`\[Theta][],
+                  Editable->False], "]"}], "2"]}],
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"4", ",", "4"}], "}"}], "\[Rule]", 
+                RowBox[{"2", " ", 
+                  RowBox[{"p", "[", "]"}], " ", 
+                  InterpretationBox[
+                   StyleBox[
+                   "r", AutoSpacing -> False, ShowAutoStyles -> False], 
+                   $CellContext`r[], Editable -> False], " ", 
+                  SuperscriptBox[
+                   RowBox[{
+                    InterpretationBox[
+                    StyleBox[
+                    RowBox[{"Sin"}], AutoSpacing -> False, ShowAutoStyles -> 
+                    False], Sin, Editable -> False], "[", 
+                    InterpretationBox[
+                    StyleBox[
+                    "\[Theta]", AutoSpacing -> False, ShowAutoStyles -> 
+                    False], 
+                    $CellContext`\[Theta][], Editable -> False], "]"}], 
+                   "2"]}]}]],
+             
+             Annotation[#, {4, 4} -> ((2 $CellContext`p[]) $CellContext`r[]) 
+               Sin[
+                  $CellContext`\[Theta][]]^2, "Tooltip"]& ]}
+          },
+          
+          GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.7]}, 
+              Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+        Function[BoxForm`e$, 
+         MatrixForm[BoxForm`e$]]],
+       StripOnInput->False,
+       FontSize->Small], 
+      StyleBox[GridBox[{
+         {" ", " "},
+         {"\[Alpha]", "\[Beta]"}
+        },
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.], {
+             Offset[0.034999999999999996`]}, 
+            Offset[0.]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.]}}, "RowsIndexed" -> {}}],
+       FontSize->15]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.034999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   ShowAutoStyles->False,
+   AutoSpacing->False],
+  xAct`xCoba`CTensor[{{$CellContext`p[] + $CellContext`p[] (1 - 
+       2 ($CellContext`M/$CellContext`r[])) + $CellContext`\[Rho][], 0, 0, 
+     0}, {0, $CellContext`p[]/(1 - 2 ($CellContext`M/$CellContext`r[])), 0, 
+     0}, {0, 0, (-$CellContext`p[]) $CellContext`r[]^2, 0}, {
+    0, 0, 0, ((2 $CellContext`p[]) $CellContext`r[]) Sin[
+        $CellContext`\[Theta][]]^2}}, {-$CellContext`cb, -$CellContext`cb}, 
+   0][-$CellContext`\[Alpha], -$CellContext`\[Beta]],
+  Editable->False]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Tf", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "0"}], ",", "cb"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "0"}], ",", "cb"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"p", "[", "]"}], "+", 
+  RowBox[{
+   RowBox[{"p", "[", "]"}], " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "-", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       InterpretationBox[
+        StyleBox["M",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`M,
+        Editable->False]}], 
+      InterpretationBox[
+       StyleBox["r",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`r[],
+       Editable->False]]}], ")"}]}], "+", 
+  RowBox[{"\[Rho]", "[", "]"}]}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Tf", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "1"}], ",", "cb"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "1"}], ",", "cb"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"p", "[", "]"}], 
+  RowBox[{"1", "-", 
+   FractionBox[
+    RowBox[{"2", " ", 
+     InterpretationBox[
+      StyleBox["M",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`M,
+      Editable->False]}], 
+    InterpretationBox[
+     StyleBox["r",
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`r[],
+     Editable->False]]}]]], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[CellGroupData[{
+
+Cell["Einstein\[CloseCurlyQuote]s Field Equations", "Section"],
+
+Cell["\<\
+We will now try to write Einstein\[CloseCurlyQuote]s equation for the tt \
+components of the Einstein and stress-energy tensors. We begin with this \
+formulation,\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox["R", "tt"], "-", 
+   RowBox[{
+    FractionBox["1", "2"], " ", "R", " ", 
+    SubscriptBox["g", "tt"]}]}], "=", 
+  RowBox[{"8", " ", "\[Pi]", " ", "G", " ", 
+   SubscriptBox["T", "tt"]}]}]], "DisplayFormula",
+ TextAlignment->Center,
+ FontFamily->"Garamond"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"tteq", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Ricci", "[", "cd", "]"}], "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{"-", "cb"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{"-", "cb"}]}], "}"}]}], "]"}], "-", 
+    RowBox[{
+     FractionBox["1", "2"], "rs", " ", 
+     RowBox[{"g", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         RowBox[{"-", "cb"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         RowBox[{"-", "cb"}]}], "}"}]}], "]"}]}]}], "\[Equal]", 
+   RowBox[{"8", " ", "\[Pi]", "  ", "G", " ", 
+    RowBox[{"Tf", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "0"}], ",", "cb"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "0"}], ",", "cb"}], "}"}]}], "]"}]}]}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     InterpretationBox[
+      StyleBox["M",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`M,
+      Editable->False], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "2"}], " ", 
+        InterpretationBox[
+         StyleBox["M",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`M,
+         Editable->False]}], "+", 
+       InterpretationBox[
+        StyleBox["r",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`r[],
+        Editable->False]}], ")"}]}], 
+    RowBox[{"2", " ", 
+     SuperscriptBox[
+      InterpretationBox[
+       StyleBox["r",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`r[],
+       Editable->False], "4"]}]], "+", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       FractionBox[
+        RowBox[{"2", " ", 
+         InterpretationBox[
+          StyleBox["M",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`M,
+          Editable->False]}], 
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False]]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", " ", 
+        InterpretationBox[
+         StyleBox["M",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`M,
+         Editable->False]}], "+", 
+       RowBox[{"5", " ", 
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False]}]}], ")"}]}], 
+    RowBox[{"4", " ", 
+     SuperscriptBox[
+      InterpretationBox[
+       StyleBox["r",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`r[],
+       Editable->False], "3"]}]]}], "\[Equal]", 
+  RowBox[{"8", " ", 
+   InterpretationBox[
+    StyleBox["G",
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`G,
+    Editable->False], " ", "\[Pi]", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"p", "[", "]"}], "+", 
+     RowBox[{
+      RowBox[{"p", "[", "]"}], " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        FractionBox[
+         RowBox[{"2", " ", 
+          InterpretationBox[
+           StyleBox["M",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`M,
+           Editable->False]}], 
+         InterpretationBox[
+          StyleBox["r",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`r[],
+          Editable->False]]}], ")"}]}], "+", 
+     RowBox[{"\[Rho]", "[", "]"}]}], ")"}]}]}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"tteq", "//", "FullSimplify"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", " ", 
+        InterpretationBox[
+         StyleBox["M",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`M,
+         Editable->False]}], "-", 
+       InterpretationBox[
+        StyleBox["r",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`r[],
+        Editable->False]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"4", " ", 
+        InterpretationBox[
+         StyleBox["M",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`M,
+         Editable->False]}], "+", 
+       RowBox[{"5", " ", 
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False]}]}], ")"}]}], 
+    RowBox[{"4", " ", 
+     SuperscriptBox[
+      InterpretationBox[
+       StyleBox["r",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`r[],
+       Editable->False], "4"]}]]}], "\[Equal]", 
+  RowBox[{"8", " ", 
+   InterpretationBox[
+    StyleBox["G",
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`G,
+    Editable->False], " ", "\[Pi]", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"p", "[", "]"}], " ", 
+      RowBox[{"(", 
+       RowBox[{"2", "-", 
+        FractionBox[
+         RowBox[{"2", " ", 
+          InterpretationBox[
+           StyleBox["M",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`M,
+           Editable->False]}], 
+         InterpretationBox[
+          StyleBox["r",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`r[],
+          Editable->False]]}], ")"}]}], "+", 
+     RowBox[{"\[Rho]", "[", "]"}]}], ")"}]}]}]], "Output"]
+}, Open  ]],
+
+Cell["We can also write the equation,", "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["G", "tt"], "=", 
+  RowBox[{"8", " ", "\[Pi]", " ", "G", " ", 
+   SubscriptBox["T", "tt"]}]}]], "DisplayFormula",
+ TextAlignment->Center,
+ FontFamily->"Garamond"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"tteq2", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Einstein", "[", "cd", "]"}], "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{"-", "cb"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{"-", "cb"}]}], "}"}]}], "]"}], "\[Equal]", 
+    RowBox[{"8", " ", "\[Pi]", "  ", "G", " ", 
+     RowBox[{"Tf", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "0"}], ",", "cb"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "0"}], ",", "cb"}], "}"}]}], "]"}]}]}], "//", 
+   "FullSimplify"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", " ", 
+        InterpretationBox[
+         StyleBox["M",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`M,
+         Editable->False]}], "-", 
+       InterpretationBox[
+        StyleBox["r",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`r[],
+        Editable->False]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"4", " ", 
+        InterpretationBox[
+         StyleBox["M",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`M,
+         Editable->False]}], "+", 
+       RowBox[{"5", " ", 
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False]}]}], ")"}]}], 
+    RowBox[{"4", " ", 
+     SuperscriptBox[
+      InterpretationBox[
+       StyleBox["r",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`r[],
+       Editable->False], "4"]}]]}], "\[Equal]", 
+  RowBox[{"8", " ", 
+   InterpretationBox[
+    StyleBox["G",
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`G,
+    Editable->False], " ", "\[Pi]", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"p", "[", "]"}], " ", 
+      RowBox[{"(", 
+       RowBox[{"2", "-", 
+        FractionBox[
+         RowBox[{"2", " ", 
+          InterpretationBox[
+           StyleBox["M",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`M,
+           Editable->False]}], 
+         InterpretationBox[
+          StyleBox["r",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`r[],
+          Editable->False]]}], ")"}]}], "+", 
+     RowBox[{"\[Rho]", "[", "]"}]}], ")"}]}]}]], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell["We can genralize this", "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"eineq", "[", 
+   RowBox[{"a_", ",", "b_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Einstein", "[", "cd", "]"}], "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"a", ",", 
+        RowBox[{"-", "cb"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"b", ",", 
+        RowBox[{"-", "cb"}]}], "}"}]}], "]"}], "-", 
+    RowBox[{"8", " ", "\[Pi]", "  ", "G", " ", 
+     RowBox[{"Tf", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "a"}], ",", "cb"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "b"}], ",", "cb"}], "}"}]}], "]"}]}]}], "//", 
+   "FullSimplify"}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eineq", "[", 
+  RowBox[{"0", ",", "0"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", " ", 
+        InterpretationBox[
+         StyleBox["M",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`M,
+         Editable->False]}], "-", 
+       InterpretationBox[
+        StyleBox["r",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`r[],
+        Editable->False]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"4", " ", 
+        InterpretationBox[
+         StyleBox["M",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`M,
+         Editable->False]}], "+", 
+       RowBox[{"5", " ", 
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False]}]}], ")"}]}], 
+    RowBox[{"4", " ", 
+     SuperscriptBox[
+      InterpretationBox[
+       StyleBox["r",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`r[],
+       Editable->False], "4"]}]]}], "-", 
+  RowBox[{"8", " ", 
+   InterpretationBox[
+    StyleBox["G",
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`G,
+    Editable->False], " ", "\[Pi]", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"p", "[", "]"}], " ", 
+      RowBox[{"(", 
+       RowBox[{"2", "-", 
+        FractionBox[
+         RowBox[{"2", " ", 
+          InterpretationBox[
+           StyleBox["M",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`M,
+           Editable->False]}], 
+         InterpretationBox[
+          StyleBox["r",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`r[],
+          Editable->False]]}], ")"}]}], "+", 
+     RowBox[{"\[Rho]", "[", "]"}]}], ")"}]}]}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eineq", "[", 
+  RowBox[{"1", ",", "1"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   InterpretationBox[
+    StyleBox["M",
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`M,
+    Editable->False], "+", 
+   RowBox[{"3", " ", 
+    InterpretationBox[
+     StyleBox["r",
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`r[],
+     Editable->False]}], "-", 
+   RowBox[{"16", " ", 
+    InterpretationBox[
+     StyleBox["G",
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`G,
+     Editable->False], " ", "\[Pi]", " ", 
+    RowBox[{"p", "[", "]"}], " ", 
+    SuperscriptBox[
+     InterpretationBox[
+      StyleBox["r",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`r[],
+      Editable->False], "3"]}]}], 
+  RowBox[{"2", " ", 
+   SuperscriptBox[
+    InterpretationBox[
+     StyleBox["r",
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`r[],
+     Editable->False], "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "2"}], " ", 
+      InterpretationBox[
+       StyleBox["M",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`M,
+       Editable->False]}], "+", 
+     InterpretationBox[
+      StyleBox["r",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`r[],
+      Editable->False]}], ")"}]}]]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eineq", "[", 
+  RowBox[{"0", ",", "1"}], "]"}]], "Input"],
+
+Cell[BoxData["0"], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"eineq", "[", 
+     RowBox[{"a", ",", "b"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "0", ",", "3"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"b", ",", "0", ",", "3"}], "}"}]}], "]"}], "//", 
+  "TableForm"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", 
+            InterpretationBox[
+             StyleBox["M",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`M,
+             Editable->False]}], "-", 
+           InterpretationBox[
+            StyleBox["r",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`r[],
+            Editable->False]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"4", " ", 
+            InterpretationBox[
+             StyleBox["M",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`M,
+             Editable->False]}], "+", 
+           RowBox[{"5", " ", 
+            InterpretationBox[
+             StyleBox["r",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`r[],
+             Editable->False]}]}], ")"}]}], 
+        RowBox[{"4", " ", 
+         SuperscriptBox[
+          InterpretationBox[
+           StyleBox["r",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`r[],
+           Editable->False], "4"]}]]}], "-", 
+      RowBox[{"8", " ", 
+       InterpretationBox[
+        StyleBox["G",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`G,
+        Editable->False], " ", "\[Pi]", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"p", "[", "]"}], " ", 
+          RowBox[{"(", 
+           RowBox[{"2", "-", 
+            FractionBox[
+             RowBox[{"2", " ", 
+              InterpretationBox[
+               StyleBox["M",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`M,
+               Editable->False]}], 
+             InterpretationBox[
+              StyleBox["r",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`r[],
+              Editable->False]]}], ")"}]}], "+", 
+         RowBox[{"\[Rho]", "[", "]"}]}], ")"}]}]}], "0", "0", "0"},
+    {"0", 
+     FractionBox[
+      RowBox[{
+       InterpretationBox[
+        StyleBox["M",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`M,
+        Editable->False], "+", 
+       RowBox[{"3", " ", 
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False]}], "-", 
+       RowBox[{"16", " ", 
+        InterpretationBox[
+         StyleBox["G",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`G,
+         Editable->False], " ", "\[Pi]", " ", 
+        RowBox[{"p", "[", "]"}], " ", 
+        SuperscriptBox[
+         InterpretationBox[
+          StyleBox["r",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`r[],
+          Editable->False], "3"]}]}], 
+      RowBox[{"2", " ", 
+       SuperscriptBox[
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "2"}], " ", 
+          InterpretationBox[
+           StyleBox["M",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`M,
+           Editable->False]}], "+", 
+         InterpretationBox[
+          StyleBox["r",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`r[],
+          Editable->False]}], ")"}]}]], 
+     FractionBox[
+      RowBox[{
+       InterpretationBox[
+        StyleBox["Cot",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        Cot,
+        Editable->False], "[", 
+       InterpretationBox[
+        StyleBox["\[Theta]",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`\[Theta][],
+        Editable->False], "]"}], 
+      RowBox[{"2", " ", 
+       InterpretationBox[
+        StyleBox["r",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`r[],
+        Editable->False]}]], "0"},
+    {"0", 
+     FractionBox[
+      RowBox[{
+       InterpretationBox[
+        StyleBox["Cot",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        Cot,
+        Editable->False], "[", 
+       InterpretationBox[
+        StyleBox["\[Theta]",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`\[Theta][],
+        Editable->False], "]"}], 
+      RowBox[{"2", " ", 
+       InterpretationBox[
+        StyleBox["r",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`r[],
+        Editable->False]}]], 
+     RowBox[{
+      FractionBox["1", "4"], "+", 
+      FractionBox[
+       InterpretationBox[
+        StyleBox["M",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`M,
+        Editable->False], 
+       RowBox[{"2", " ", 
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False]}]], "+", 
+      RowBox[{"8", " ", 
+       InterpretationBox[
+        StyleBox["G",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`G,
+        Editable->False], " ", "\[Pi]", " ", 
+       RowBox[{"p", "[", "]"}], " ", 
+       SuperscriptBox[
+        InterpretationBox[
+         StyleBox["r",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`r[],
+         Editable->False], "2"]}]}], "0"},
+    {"0", "0", "0", 
+     RowBox[{
+      RowBox[{"-", "16"}], " ", 
+      InterpretationBox[
+       StyleBox["G",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`G,
+       Editable->False], " ", "\[Pi]", " ", 
+      RowBox[{"p", "[", "]"}], " ", 
+      InterpretationBox[
+       StyleBox["r",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`r[],
+       Editable->False], " ", 
+      SuperscriptBox[
+       RowBox[{
+        InterpretationBox[
+         StyleBox["Sin",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         Sin,
+         Editable->False], "[", 
+        InterpretationBox[
+         StyleBox["\[Theta]",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`\[Theta][],
+         Editable->False], "]"}], "2"]}]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ FontSize->10]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+
+Cell["Thank You!", "Title",
+ TextAlignment->Center,
+ FontSize->48]
+}, Open  ]]
+},
+WindowToolbars->"EditBar",
+WindowSize->{1200, 726},
+Visible->True,
+ScrollingOptions->{"VerticalScrollRange"->Fit},
+ShowCellBracket->Automatic,
+TaggingRules->{"SlideShow" -> True},
+CellContext->Notebook,
+TrackCellChangeTimes->False,
+Magnification->1.5,
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 29, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "SlideShowHeader"->{
+  Cell[1486, 35, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[129153, 2151, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[129974, 2195, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[131006, 2236, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[133351, 2319, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[134702, 2364, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[145812, 2653, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[147175, 2700, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[147525, 2715, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[148887, 2769, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[152217, 2891, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[209661, 4476, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[239705, 5286, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[241319, 5359, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[254102, 5750, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[327329, 7707, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[369598, 8975, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[389662, 9532, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[408428, 10041, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[409513, 10091, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[416127, 10294, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[430216, 10707, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[430915, 10736, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[439700, 11074, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[444221, 11260, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"],
+  Cell[451827, 11529, 64, 1, 75, "SlideShowNavigationBar",
+   CellTags->"SlideShowHeader"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"SlideShowHeader", 452452, 11554}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[1486, 35, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[1553, 38, 107, 2, 190, "Title"],
+Cell[1663, 42, 91, 5, 97, "Subtitle"],
+Cell[1757, 49, 127247, 2091, 203, "Input"],
+Cell[129007, 2142, 109, 4, 74, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[129153, 2151, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[129242, 2156, 36, 0, 95, "Section"],
+Cell[CellGroupData[{
+Cell[129303, 2160, 43, 1, 46, "Item"],
+Cell[129349, 2163, 58, 1, 46, "Item"],
+Cell[129410, 2166, 66, 1, 46, "Item"],
+Cell[129479, 2169, 53, 1, 46, "Item"],
+Cell[129535, 2172, 53, 1, 46, "Item"],
+Cell[129591, 2175, 64, 1, 46, "Item"],
+Cell[129658, 2178, 120, 4, 46, "Item"],
+Cell[129781, 2184, 55, 1, 46, "Item"],
+Cell[129839, 2187, 74, 1, 46, "Item"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[129974, 2195, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[130063, 2200, 31, 0, 95, "Section"],
+Cell[130097, 2202, 181, 5, 45, "Text"],
+Cell[130281, 2209, 100, 2, 45, "Text"],
+Cell[130384, 2213, 236, 4, 74, "Text"],
+Cell[130623, 2219, 108, 3, 45, "Text"],
+Cell[130734, 2224, 55, 0, 45, "Text"],
+Cell[130792, 2226, 113, 2, 64, "Text"],
+Cell[130908, 2230, 49, 0, 45, "Text"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[131006, 2236, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[131095, 2241, 45, 0, 95, "Section"],
+Cell[131143, 2243, 56, 0, 45, "Text"],
+Cell[CellGroupData[{
+Cell[131224, 2247, 57, 1, 45, "Input"],
+Cell[CellGroupData[{
+Cell[131306, 2252, 110, 2, 29, "Print"],
+Cell[131419, 2256, 379, 9, 29, "Print"],
+Cell[131801, 2267, 131, 2, 29, "Print"],
+Cell[131935, 2271, 90, 1, 29, "Print"],
+Cell[132028, 2274, 71, 1, 29, "Print"],
+Cell[132102, 2277, 110, 2, 29, "Print"],
+Cell[132215, 2281, 386, 10, 29, "Print"],
+Cell[132604, 2293, 131, 2, 29, "Print"],
+Cell[132738, 2297, 110, 2, 29, "Print"],
+Cell[132851, 2301, 265, 4, 52, "Print"],
+Cell[133119, 2307, 110, 2, 29, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[133256, 2313, 46, 0, 45, "Text"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[133351, 2319, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[133440, 2324, 274, 7, 45, "Input"],
+Cell[CellGroupData[{
+Cell[133739, 2335, 430, 9, 32, "Print"],
+Cell[134172, 2346, 440, 9, 32, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[134639, 2359, 26, 0, 45, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[134702, 2364, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[134791, 2369, 378, 10, 45, "Input"],
+Cell[CellGroupData[{
+Cell[135194, 2383, 628, 15, 32, "Print"],
+Cell[135825, 2400, 750, 16, 32, "Print"],
+Cell[136578, 2418, 725, 15, 32, "Print"],
+Cell[137306, 2435, 743, 15, 32, "Print"],
+Cell[138052, 2452, 526, 11, 32, "Print"],
+Cell[138581, 2465, 674, 15, 32, "Print"],
+Cell[139258, 2482, 694, 16, 32, "Print"],
+Cell[139955, 2500, 730, 16, 32, "Print"],
+Cell[140688, 2518, 628, 15, 32, "Print"],
+Cell[141319, 2535, 105, 1, 32, "Print"],
+Cell[141427, 2538, 479, 9, 32, "Print"],
+Cell[141909, 2549, 109, 1, 32, "Print"],
+Cell[142021, 2552, 640, 15, 32, "Print"],
+Cell[142664, 2569, 715, 15, 32, "Print"],
+Cell[143382, 2586, 636, 15, 32, "Print"],
+Cell[144021, 2603, 494, 10, 32, "Print"],
+Cell[144518, 2615, 240, 5, 32, "Print"],
+Cell[144761, 2622, 232, 5, 32, "Print"],
+Cell[144996, 2629, 244, 5, 32, "Print"],
+Cell[145243, 2636, 508, 10, 32, "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[145812, 2653, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[145901, 2658, 42, 0, 95, "Section"],
+Cell[CellGroupData[{
+Cell[145968, 2662, 55, 1, 45, "Input"],
+Cell[CellGroupData[{
+Cell[146048, 2667, 96, 1, 32, "Print"],
+Cell[146147, 2670, 365, 8, 32, "Print"],
+Cell[146515, 2680, 135, 1, 58, "Print"],
+Cell[146653, 2683, 96, 1, 32, "Print"],
+Cell[146752, 2686, 251, 3, 83, "Print"],
+Cell[147006, 2691, 96, 1, 32, "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[147175, 2700, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[147242, 2703, 246, 7, 104, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[147525, 2715, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[147592, 2718, 360, 10, 45, "Input"],
+Cell[147955, 2730, 152, 4, 45, "Input"],
+Cell[148110, 2736, 152, 4, 45, "Input"],
+Cell[148265, 2742, 162, 5, 45, "Input"],
+Cell[148430, 2749, 157, 4, 45, "Input"],
+Cell[148590, 2755, 114, 3, 45, "Text"],
+Cell[148707, 2760, 70, 1, 45, "Input"],
+Cell[148780, 2763, 70, 1, 45, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[148887, 2769, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[148976, 2774, 49, 0, 95, "Section"],
+Cell[CellGroupData[{
+Cell[149050, 2778, 760, 25, 69, "Input"],
+Cell[149813, 2805, 2343, 79, 158, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[152217, 2891, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[152306, 2896, 160, 4, 45, "Input"],
+Cell[CellGroupData[{
+Cell[152491, 2904, 2008, 57, 52, "Print"],
+Cell[154502, 2963, 1586, 42, 51, "Print"],
+Cell[156091, 3007, 1593, 42, 51, "Print"],
+Cell[157687, 3051, 1591, 42, 51, "Print"],
+Cell[159281, 3095, 2808, 74, 51, "Print"],
+Cell[162092, 3171, 2053, 58, 64, "Print"],
+Cell[164148, 3231, 1593, 42, 51, "Print"],
+Cell[165744, 3275, 1591, 42, 51, "Print"],
+Cell[167338, 3319, 2822, 74, 51, "Print"],
+Cell[170163, 3395, 2822, 74, 51, "Print"],
+Cell[172988, 3471, 1821, 51, 51, "Print"],
+Cell[174812, 3524, 1598, 42, 51, "Print"],
+Cell[176413, 3568, 2818, 74, 51, "Print"],
+Cell[179234, 3644, 2818, 74, 51, "Print"],
+Cell[182055, 3720, 2832, 74, 51, "Print"],
+Cell[184890, 3796, 2213, 64, 51, "Print"]
+}, Open  ]],
+Cell[187118, 3863, 22494, 607, 203, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[209661, 4476, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[209750, 4481, 65, 1, 45, "Input"],
+Cell[209818, 4484, 29561, 786, 216, "Output"]
+}, Open  ]],
+Cell[239394, 5273, 274, 8, 45, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[239705, 5286, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[239772, 5289, 76, 0, 45, "Text"],
+Cell[239851, 5291, 230, 8, 45, "Input"],
+Cell[240084, 5301, 126, 4, 45, "Input"],
+Cell[240213, 5307, 146, 6, 45, "Text"],
+Cell[CellGroupData[{
+Cell[240384, 5317, 219, 8, 45, "Input"],
+Cell[240606, 5327, 367, 15, 65, "Output"]
+}, Open  ]],
+Cell[240988, 5345, 294, 9, 45, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[241319, 5359, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[241386, 5362, 56, 0, 45, "Text"],
+Cell[CellGroupData[{
+Cell[241467, 5366, 89, 2, 45, "Input"],
+Cell[241559, 5370, 12494, 374, 430, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[254102, 5750, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[254191, 5755, 60, 0, 95, "Section"],
+Cell[254254, 5757, 63, 0, 45, "Text"],
+Cell[CellGroupData[{
+Cell[254342, 5761, 211, 6, 45, "Input"],
+Cell[254556, 5769, 1185, 33, 61, "Output"]
+}, Open  ]],
+Cell[255756, 5805, 69, 0, 45, "Text"],
+Cell[CellGroupData[{
+Cell[255850, 5809, 168, 5, 45, "Input"],
+Cell[256021, 5816, 71247, 1884, 1824, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[327329, 7707, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[327418, 7712, 37, 0, 95, "Section"],
+Cell[CellGroupData[{
+Cell[327480, 7716, 90, 2, 45, "Input"],
+Cell[327573, 7720, 39327, 1136, 926, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[366937, 8861, 366, 13, 45, "Input"],
+Cell[367306, 8876, 764, 31, 67, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[368107, 8912, 366, 13, 45, "Input"],
+Cell[368476, 8927, 1061, 41, 71, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[369598, 8975, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[369687, 8980, 52, 0, 95, "Section"],
+Cell[CellGroupData[{
+Cell[369764, 8984, 161, 5, 45, "Input"],
+Cell[369928, 8991, 17789, 450, 167, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[387754, 9446, 252, 9, 45, "Input"],
+Cell[388009, 9457, 784, 32, 68, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[388830, 9494, 142, 4, 45, "Input"],
+Cell[388975, 9500, 626, 25, 68, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[389662, 9532, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[389751, 9537, 38, 0, 95, "Section"],
+Cell[CellGroupData[{
+Cell[389814, 9541, 164, 5, 45, "Input"],
+Cell[389981, 9548, 17000, 428, 145, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[407018, 9981, 255, 9, 45, "Input"],
+Cell[407276, 9992, 1091, 42, 68, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[408428, 10041, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[408517, 10046, 43, 0, 95, "Section"],
+Cell[408563, 10048, 117, 3, 45, "Text"],
+Cell[CellGroupData[{
+Cell[408705, 10055, 91, 2, 45, "Input"],
+Cell[408799, 10059, 131, 3, 44, "Output"]
+}, Open  ]],
+Cell[408945, 10065, 46, 0, 45, "Text"],
+Cell[CellGroupData[{
+Cell[409016, 10069, 225, 7, 45, "Input"],
+Cell[409244, 10078, 208, 6, 44, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[409513, 10091, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[409580, 10094, 73, 0, 45, "Text"],
+Cell[409656, 10096, 286, 9, 45, "Input"],
+Cell[CellGroupData[{
+Cell[409967, 10109, 91, 2, 45, "Input"],
+Cell[410061, 10113, 5603, 153, 99, "Output"]
+}, Open  ]],
+Cell[415679, 10269, 138, 6, 45, "Text"],
+Cell[CellGroupData[{
+Cell[415842, 10279, 178, 6, 45, "Input"],
+Cell[416023, 10287, 55, 1, 44, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[416127, 10294, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[416194, 10297, 157, 3, 74, "Text"],
+Cell[CellGroupData[{
+Cell[416376, 10304, 86, 2, 45, "Input"],
+Cell[416465, 10308, 126, 3, 44, "Output"]
+}, Open  ]],
+Cell[416606, 10314, 63, 0, 45, "Text"],
+Cell[416672, 10316, 557, 19, 45, "Input"],
+Cell[CellGroupData[{
+Cell[417254, 10339, 91, 2, 45, "Input"],
+Cell[417348, 10343, 11308, 290, 143, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[428693, 10638, 220, 8, 45, "Input"],
+Cell[428916, 10648, 566, 21, 67, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[429519, 10674, 220, 8, 45, "Input"],
+Cell[429742, 10684, 425, 17, 75, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[430216, 10707, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[430305, 10712, 62, 0, 95, "Section"],
+Cell[430370, 10714, 186, 4, 74, "Text"],
+Cell[430559, 10720, 307, 10, 55, "DisplayFormula"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[430915, 10736, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[431004, 10741, 903, 31, 96, "Input"],
+Cell[431910, 10774, 2830, 105, 77, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[434777, 10884, 64, 1, 45, "Input"],
+Cell[434844, 10887, 1930, 71, 68, "Output"]
+}, Open  ]],
+Cell[436789, 10961, 47, 0, 45, "Text"],
+Cell[436839, 10963, 201, 6, 36, "DisplayFormula"],
+Cell[CellGroupData[{
+Cell[437065, 10973, 653, 22, 45, "Input"],
+Cell[437721, 10997, 1930, 71, 68, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[439700, 11074, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[439767, 11077, 37, 0, 45, "Text"],
+Cell[439807, 11079, 701, 24, 75, "Input"],
+Cell[CellGroupData[{
+Cell[440533, 11107, 81, 2, 45, "Input"],
+Cell[440617, 11111, 1923, 71, 68, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[442577, 11187, 81, 2, 45, "Input"],
+Cell[442661, 11191, 1362, 54, 75, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[444060, 11250, 81, 2, 45, "Input"],
+Cell[444144, 11254, 28, 0, 44, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[444221, 11260, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[444310, 11265, 309, 10, 45, "Input"],
+Cell[444622, 11277, 7156, 246, 158, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[451827, 11529, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[451894, 11532, 66, 2, 144, "Title"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
+(* NotebookSignature JuDU9HCJ4CAc1BgQPWjOV2QW *)

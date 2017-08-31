@@ -1,0 +1,1022 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     41275,       1012]
+NotebookOptionsPosition[     39807,        958]
+NotebookOutlinePosition[     40444,        983]
+CellTagsIndexPosition[     40401,        980]
+WindowTitle->The Smith Chart - Source
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["The Smith Chart", "Section",
+ CellFrame->{{0, 0}, {0, 0}},
+ ShowCellBracket->False,
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[BoxData[
+ GraphicsBox[RasterBox[CompressedData["
+1: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
+FP/69esnAAAAAAAAAAAAwM74B4thROM=
+   "], {{0, 0}, {1800, 25}}, {0, 255},
+   ColorFunction->RGBColor],
+  ImageSize->{1800, 25},
+  PlotRange->{{0, 1800}, {0, 25}}]], "Section",
+ CellFrame->{{0, 0}, {0, 0}},
+ ShowCellBracket->False],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Show", "[", 
+    RowBox[{"smith", ",", "\[IndentingNewLine]", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"Text", "[", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<\[CircleDot]\>\"", ",", "24", ",", "Bold"}], "]"}], 
+           ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"\[Xi]", "[", 
+              RowBox[{"f", ",", "R", ",", "L", ",", "c"}], "]"}], ",", 
+             RowBox[{"\[Eta]", "[", 
+              RowBox[{"f", ",", "R", ",", "L", ",", "c"}], "]"}]}], "}"}]}], 
+          "]"}]}], ",", 
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"Text", "[", 
+          RowBox[{
+           RowBox[{"Row", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Style", "[", 
+               RowBox[{
+               "\"\<z =  \>\"", ",", "16", ",", "Italic", ",", "Bold"}], 
+               "]"}], ",", 
+              RowBox[{"Style", "[", 
+               RowBox[{
+                RowBox[{"r", "[", "R", "]"}], ",", "16", ",", "Bold"}], "]"}],
+               ",", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"x", "[", 
+                  RowBox[{"f", ",", "L", ",", "c"}], "]"}], "\[GreaterEqual]",
+                  "0"}], ",", 
+                RowBox[{"Style", "[", 
+                 RowBox[{"\"\<+\>\"", ",", "16", ",", "Bold"}], "]"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"Style", "[", 
+                 RowBox[{"\"\<-\>\"", ",", "16", ",", "Bold"}], "]"}]}], 
+               "]"}], ",", 
+              RowBox[{"Style", "[", 
+               RowBox[{
+                RowBox[{"Abs", "[", 
+                 RowBox[{"x", "[", 
+                  RowBox[{"f", ",", "L", ",", "c"}], "]"}], "]"}], ",", "16", 
+                ",", "Bold"}], "]"}], ",", 
+              RowBox[{"Style", "[", 
+               RowBox[{"\"\<j\>\"", ",", "16", ",", "Bold", ",", "Italic"}], 
+               "]"}]}], "}"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"\[Xi]", "[", 
+              RowBox[{"f", ",", "R", ",", "L", ",", "c"}], "]"}], ",", 
+             RowBox[{
+              RowBox[{"\[Eta]", "[", 
+               RowBox[{"f", ",", "R", ",", "L", ",", "c"}], "]"}], "+", 
+              ".15"}]}], "}"}], ",", 
+           RowBox[{"Background", "\[Rule]", 
+            RowBox[{"Directive", "[", 
+             RowBox[{
+              RowBox[{"Opacity", "[", ".3", "]"}], ",", "Yellow"}], "]"}]}]}],
+           "]"}]}]}], "}"}], "]"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"400", ",", "400"}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"f", ",", "500", ",", "\"\<frequency MHz\>\""}], "}"}], ",", 
+     "0", ",", "1000", ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"R", ",", "50", ",", "\"\<resistance \[CapitalOmega]\>\""}], 
+      "}"}], ",", "0", ",", "100", ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"L", ",", "10", ",", "\"\<inductance nH\>\""}], "}"}], ",", "0",
+      ",", "100", ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c", ",", "10", ",", "\"\<capacitance pF\>\""}], "}"}], ",", 
+     "0", ",", "100", ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], ",", 
+   RowBox[{"TrackedSymbols", "\[Rule]", "Manipulate"}], ",", 
+   RowBox[{"ControlPlacement", "\[Rule]", "Left"}], ",", 
+   RowBox[{"SynchronousInitialization", "\[Rule]", "False"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Initialization", "\[RuleDelayed]", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "[", 
+        RowBox[{"X_", ",", "Y_"}], "]"}], ":=", 
+       FractionBox[
+        RowBox[{"2", " ", "Y"}], 
+        RowBox[{"1", "-", 
+         RowBox[{"2", " ", "X"}], "+", 
+         SuperscriptBox["X", "2"], "+", 
+         SuperscriptBox["Y", "2"]}]]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"r", "[", 
+        RowBox[{"X_", ",", "Y_"}], "]"}], ":=", 
+       FractionBox[
+        RowBox[{"1", "-", 
+         SuperscriptBox["X", "2"], "-", 
+         SuperscriptBox["Y", "2"]}], 
+        RowBox[{"1", "-", 
+         RowBox[{"2", " ", "X"}], "+", 
+         SuperscriptBox["X", "2"], "+", 
+         SuperscriptBox["Y", "2"]}]]}], ";", 
+      RowBox[{"gx", "=", 
+       RowBox[{"ContourPlot", "[", 
+        RowBox[{
+         RowBox[{"x", "[", 
+          RowBox[{"X", ",", "Y"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"X", ",", 
+           RowBox[{"-", "1"}], ",", ".999"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"Y", ",", 
+           RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+         RowBox[{"ContourShading", "\[Rule]", "None"}], ",", 
+         RowBox[{"Contours", "\[Rule]", "20"}], ",", 
+         RowBox[{"ContourStyle", "\[Rule]", "\[IndentingNewLine]", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{".6", ",", ".73", ",", ".36"}], "]"}]}], ",", 
+         RowBox[{"RegionFunction", "\[Rule]", 
+          RowBox[{"Function", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"X", ",", "Y"}], "}"}], ",", 
+            RowBox[{"0", "\[LessEqual]", 
+             RowBox[{"r", "[", 
+              RowBox[{"X", ",", "Y"}], "]"}]}]}], "]"}]}], ",", 
+         RowBox[{"PerformanceGoal", "\[Rule]", "\"\<Quality\>\""}]}], "]"}]}],
+       ";", 
+      RowBox[{"gr", "=", 
+       RowBox[{"ContourPlot", "[", 
+        RowBox[{
+         RowBox[{"r", "[", 
+          RowBox[{"X", ",", "Y"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"X", ",", 
+           RowBox[{"-", "1"}], ",", ".999"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"Y", ",", 
+           RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+         RowBox[{"ContourShading", "\[Rule]", "None"}], ",", 
+         RowBox[{"Contours", "\[Rule]", "20"}], ",", 
+         RowBox[{"ContourStyle", "\[Rule]", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{"1", ",", ".47", ",", "0"}], "]"}]}], ",", 
+         RowBox[{"RegionFunction", "\[Rule]", 
+          RowBox[{"Function", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"X", ",", "Y"}], "}"}], ",", 
+            RowBox[{"0", "\[LessEqual]", 
+             RowBox[{"r", "[", 
+              RowBox[{"X", ",", "Y"}], "]"}]}]}], "]"}]}], ",", 
+         RowBox[{"PerformanceGoal", "\[Rule]", "\"\<Quality\>\""}]}], "]"}]}],
+       ";", 
+      RowBox[{"g0", "=", 
+       RowBox[{"Graphics", "[", 
+        RowBox[{"{", 
+         RowBox[{"Thick", ",", "Black", ",", 
+          RowBox[{"Circle", "[", "]"}], ",", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"1.01", 
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"n", " ", "\[Pi]"}], "]"}]}], ",", 
+                 RowBox[{"1.01", 
+                  RowBox[{"Sin", "[", 
+                   RowBox[{"n", " ", "\[Pi]"}], "]"}]}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"1.02", 
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"n", " ", "\[Pi]"}], "]"}]}], ",", 
+                 RowBox[{"1.02", 
+                  RowBox[{"Sin", "[", 
+                   RowBox[{"n", " ", "\[Pi]"}], "]"}]}]}], "}"}]}], "}"}], 
+             "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"n", ",", "0", ",", "1.9", ",", ".1"}], "}"}]}], "]"}], 
+          ",", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"Text", "[", 
+             RowBox[{
+              RowBox[{"Style", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Mod", "[", 
+                  RowBox[{
+                   RowBox[{".25", 
+                    RowBox[{"(", 
+                    RowBox[{"1", "-", "n"}], ")"}]}], ",", ".5"}], "]"}], 
+                 "\"\<\[Lambda]\>\""}], ",", "10", ",", "Black"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"1.15", 
+                 RowBox[{"Cos", "[", 
+                  RowBox[{"n", " ", "\[Pi]"}], "]"}]}], ",", 
+                RowBox[{"1.15", 
+                 RowBox[{"Sin", "[", 
+                  RowBox[{"n", " ", "\[Pi]"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"n", ",", "0", ",", "1.9", ",", ".1"}], "}"}]}], "]"}]}],
+          "}"}], "]"}]}], ";", 
+      RowBox[{"smith", "=", 
+       RowBox[{"Show", "[", 
+        RowBox[{"gx", ",", "gr", ",", "g0", ",", 
+         RowBox[{"FrameTicks", "\[Rule]", "None"}], ",", 
+         RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", "1.25"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"r", "[", "R_", "]"}], ":=", 
+       RowBox[{"Round", "[", 
+        RowBox[{
+         RowBox[{"R", "/", "50"}], ",", ".1"}], "]"}]}], ";", " ", 
+      RowBox[{
+       RowBox[{"x", "[", 
+        RowBox[{"f_", ",", "L_", ",", "c_"}], "]"}], ":=", 
+       RowBox[{"Round", "[", 
+        RowBox[{
+         RowBox[{
+          FractionBox["1", "50"], 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", "\[Pi]", " ", 
+             RowBox[{"(", 
+              RowBox[{"f", "+", ".01"}], ")"}], " ", "L", "*", 
+             SuperscriptBox["10", 
+              RowBox[{"-", "3"}]]}], "-", 
+            FractionBox["1", 
+             RowBox[{"2", "\[Pi]", " ", 
+              RowBox[{"(", 
+               RowBox[{"f", " ", "+", ".01"}], ")"}], 
+              RowBox[{"(", 
+               RowBox[{"c", "+", ".01"}], ")"}], "*", 
+              SuperscriptBox["10", 
+               RowBox[{"-", "6"}]]}]]}], ")"}]}], ",", ".1"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"\[Xi]", "[", 
+        RowBox[{"f_", ",", "R_", ",", "L_", ",", "c_"}], "]"}], ":=", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         SuperscriptBox[
+          RowBox[{"r", "[", "R", "]"}], "2"], "+", 
+         SuperscriptBox[
+          RowBox[{"x", "[", 
+           RowBox[{"f", ",", "L", ",", "c"}], "]"}], "2"]}], 
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"1", "+", 
+            RowBox[{"r", "[", "R", "]"}]}], ")"}], "2"], "+", 
+         SuperscriptBox[
+          RowBox[{"x", "[", 
+           RowBox[{"f", ",", "L", ",", "c"}], "]"}], "2"]}]]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"\[Eta]", "[", 
+        RowBox[{"f_", ",", "R_", ",", "L_", ",", "c_"}], "]"}], ":=", 
+       FractionBox[
+        RowBox[{"2", "  ", 
+         RowBox[{"x", "[", 
+          RowBox[{"f", ",", "L", ",", "c"}], "]"}]}], 
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"1", "+", " ", 
+            RowBox[{"r", "[", "R", "]"}]}], ")"}], "2"], "+", 
+         SuperscriptBox[
+          RowBox[{"x", "[", 
+           RowBox[{"f", ",", "L", ",", "c"}], "]"}], "2"]}]]}], ";"}], 
+     "\[IndentingNewLine]", "}"}]}]}], "\[IndentingNewLine]", "]"}]], "Input",\
+
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.411684080660392*^9, 3.411684092885557*^9}, {
+   3.411684230802224*^9, 3.411684289304881*^9}, {3.411684555928631*^9, 
+   3.4116846373535357`*^9}, {3.411684697541428*^9, 3.411684699590095*^9}, {
+   3.411685027597549*^9, 3.411685078342902*^9}, {3.411685173592215*^9, 
+   3.411685209197248*^9}, {3.411685248105633*^9, 3.411685283607378*^9}, {
+   3.411688393465239*^9, 3.411688396469795*^9}, {3.411688428968102*^9, 
+   3.411688752616631*^9}, {3.411688783645505*^9, 3.411688801332398*^9}, {
+   3.411688878863357*^9, 3.411688906420483*^9}, {3.411689098485544*^9, 
+   3.4116892492996273`*^9}, {3.411689282239545*^9, 3.411689305309698*^9}, {
+   3.41168939482777*^9, 3.411689425191935*^9}, {3.4116894557941008`*^9, 
+   3.411689466268278*^9}, {3.411689550742858*^9, 3.411689573686858*^9}, {
+   3.4116897329448566`*^9, 3.411689790396422*^9}, {3.411689834371963*^9, 
+   3.4116898673102703`*^9}, {3.4116898988649282`*^9, 3.411690019012322*^9}, {
+   3.411690058787019*^9, 3.411690080574078*^9}, {3.411690480174848*^9, 
+   3.411690578997942*^9}, {3.411690702245137*^9, 3.4116907392158937`*^9}, {
+   3.411694711768491*^9, 3.411694715048122*^9}, {3.4116948183381863`*^9, 
+   3.411694844110322*^9}, 3.411694921941235*^9, {3.4117319329690866`*^9, 
+   3.411731934473814*^9}, {3.411736115835124*^9, 3.411736139268896*^9}, {
+   3.411736193951919*^9, 3.411736202237603*^9}, {3.4117365663120117`*^9, 
+   3.411736613233117*^9}, {3.411736658412066*^9, 3.4117367401226883`*^9}, {
+   3.411739745121833*^9, 3.411739769626111*^9}, {3.41174049799549*^9, 
+   3.411740562647252*^9}, {3.411740732364156*^9, 3.4117407469755373`*^9}, {
+   3.411740841017816*^9, 3.411740880064519*^9}, {3.411740953183592*^9, 
+   3.411740973036048*^9}, {3.4117410350133343`*^9, 3.411741095794386*^9}, {
+   3.411741133268572*^9, 3.4117412225433893`*^9}, {3.411741308494952*^9, 
+   3.4117413150042048`*^9}, 3.4117413450209*^9, {3.4117413892695513`*^9, 
+   3.4117414027334957`*^9}, {3.411741437476975*^9, 3.4117414430408573`*^9}, 
+   3.4117414733774347`*^9, {3.411741821404601*^9, 3.411741879112855*^9}, {
+   3.411741933707871*^9, 3.41174196814645*^9}, {3.411742068497637*^9, 
+   3.41174209583508*^9}, {3.411742231090699*^9, 3.4117422392968884`*^9}, {
+   3.411744734656741*^9, 3.411744748852426*^9}, {3.411744850428659*^9, 
+   3.411744947011465*^9}, {3.411745022950564*^9, 3.411745065002248*^9}, {
+   3.4117451052949553`*^9, 3.411745171607576*^9}, {3.411745203734476*^9, 
+   3.411745258229454*^9}, {3.411745325015113*^9, 3.411745334444827*^9}, {
+   3.411747132819417*^9, 3.411747189132609*^9}, {3.411747318964526*^9, 
+   3.41174737443198*^9}, {3.411747704634965*^9, 3.4117477415604973`*^9}, {
+   3.411747822833394*^9, 3.4117478557924833`*^9}, {3.411747985562356*^9, 
+   3.4117480379155817`*^9}, {3.41174806994982*^9, 3.4117481126406918`*^9}, {
+   3.41174815641628*^9, 3.411748172034811*^9}, {3.411748991155588*^9, 
+   3.4117491037451363`*^9}, {3.411755010446603*^9, 3.411755107245194*^9}, {
+   3.41175514147637*^9, 3.41175522459647*^9}, {3.411755256531324*^9, 
+   3.411755437197091*^9}, {3.4117554874355993`*^9, 3.411755496651615*^9}, {
+   3.411755604111486*^9, 3.411755658184272*^9}, {3.411755708811818*^9, 
+   3.411755723535774*^9}, {3.411756663006693*^9, 3.411756773490552*^9}, {
+   3.411756822061624*^9, 3.411756843028349*^9}, 3.4118304738048983`*^9, {
+   3.411830504540641*^9, 3.411830514286345*^9}, 3.411830546522344*^9, {
+   3.411831069060382*^9, 3.4118311037675667`*^9}, {3.4118315507023087`*^9, 
+   3.411831560304281*^9}, {3.411831789370466*^9, 3.4118319006953297`*^9}, {
+   3.411835505641457*^9, 3.411835512158888*^9}, {3.411835561001566*^9, 
+   3.411835632463567*^9}, 3.4118360334520817`*^9, {3.411836198298993*^9, 
+   3.411836207639654*^9}, 3.4118362520657177`*^9, 3.411836351105652*^9, {
+   3.411848363212455*^9, 3.411848394398801*^9}, {3.411848520546362*^9, 
+   3.411848599711635*^9}, {3.4118486308954144`*^9, 3.411848635288445*^9}, {
+   3.41184867073595*^9, 3.411848679503682*^9}, {3.411848761066846*^9, 
+   3.4118488100418653`*^9}, {3.411848964330027*^9, 3.411848989023*^9}, {
+   3.411849019129489*^9, 3.411849019735013*^9}, {3.411849642251891*^9, 
+   3.411849651653221*^9}, {3.411850034705299*^9, 3.411850069589489*^9}, {
+   3.4118503422478333`*^9, 3.411850357293214*^9}, {3.411862500569202*^9, 
+   3.411862520164215*^9}, {3.411862782113097*^9, 3.411862800183105*^9}, {
+   3.4118628601063128`*^9, 3.411862900008397*^9}, {3.411863015121277*^9, 
+   3.4118630183193483`*^9}, {3.411908922192092*^9, 3.4119089255016823`*^9}, {
+   3.411908973665061*^9, 3.411908993425549*^9}, {3.411909123704887*^9, 
+   3.411909128909287*^9}, {3.411915388894609*^9, 3.411915449391994*^9}, {
+   3.411915487240131*^9, 3.411915528701092*^9}, {3.411915570230835*^9, 
+   3.411915602680624*^9}, {3.4119156469532948`*^9, 3.4119156797353973`*^9}, {
+   3.411915725240458*^9, 3.4119157621627913`*^9}, {3.411915802372343*^9, 
+   3.4119158170491037`*^9}, {3.411915879626046*^9, 3.41191590124854*^9}, 
+   3.41191593847959*^9, {3.41191602329138*^9, 3.411916035734424*^9}, {
+   3.4119161600837793`*^9, 3.411916286568995*^9}, {3.411916372230009*^9, 
+   3.4119163807319317`*^9}, {3.41191646643465*^9, 3.411916527757882*^9}, {
+   3.4119166647728453`*^9, 3.4119167280586443`*^9}, {3.4119167662051888`*^9, 
+   3.411916806674253*^9}, {3.411916893439206*^9, 3.41191693794672*^9}, {
+   3.411916988924817*^9, 3.411916995722012*^9}, {3.411917046062868*^9, 
+   3.4119170490727882`*^9}, {3.411917646955855*^9, 3.411917924512339*^9}, {
+   3.411917964694623*^9, 3.411918067088135*^9}, {3.411918101105897*^9, 
+   3.411918103392766*^9}, {3.41191815608431*^9, 3.4119181665854187`*^9}, 
+   3.411918227833296*^9, {3.4119187247226477`*^9, 3.411918796224906*^9}, {
+   3.411918954195407*^9, 3.4119189569395647`*^9}, {3.4119189906590633`*^9, 
+   3.411918996266798*^9}, {3.4119190657536182`*^9, 3.411919164971204*^9}, {
+   3.4119192120968113`*^9, 3.4119193568909483`*^9}, {3.411919397350656*^9, 
+   3.4119194129150543`*^9}, {3.4119194546471977`*^9, 3.411919470649722*^9}, {
+   3.411919512355777*^9, 3.411919530564391*^9}, 3.4119195877089653`*^9, {
+   3.411919685550647*^9, 3.411919708125082*^9}, {3.411920034215542*^9, 
+   3.411920061735445*^9}, {3.411920099905998*^9, 3.411920197727293*^9}, 
+   3.411920230375392*^9, {3.411920261386017*^9, 3.411920328758726*^9}, {
+   3.411920366832808*^9, 3.411920371916294*^9}, 3.411920421096283*^9, {
+   3.4119251535969353`*^9, 3.411925235003073*^9}, 3.411925276824831*^9, {
+   3.411926609549862*^9, 3.4119266195813046`*^9}, {3.411927780140606*^9, 
+   3.4119278473589253`*^9}, {3.411934570391838*^9, 3.411934571782454*^9}, {
+   3.4119558650526648`*^9, 3.411955887240449*^9}, {3.411956026882861*^9, 
+   3.411956030226654*^9}, {3.4120967535719833`*^9, 3.412096756400036*^9}, {
+   3.412100782472971*^9, 3.412100807582346*^9}, {3.4121029402750072`*^9, 
+   3.412102943261071*^9}, {3.412106460269846*^9, 3.412106477488596*^9}, {
+   3.412106512129221*^9, 3.412106624972971*^9}, {3.412107859019846*^9, 
+   3.412107879847971*^9}, {3.412107926051096*^9, 3.412107963629221*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`c$$ = 10, $CellContext`f$$ = 
+    500, $CellContext`L$$ = 10, $CellContext`R$$ = 50, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`f$$], 500, "frequency MHz"}, 0, 1000, 1}, {{
+       Hold[$CellContext`R$$], 50, "resistance \[CapitalOmega]"}, 0, 100, 
+      1}, {{
+       Hold[$CellContext`L$$], 10, "inductance nH"}, 0, 100, 1}, {{
+       Hold[$CellContext`c$$], 10, "capacitance pF"}, 0, 100, 1}}, 
+    Typeset`size$$ = {400., {198., 202.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`f$577380$$ = 0, $CellContext`R$577381$$ = 
+    0, $CellContext`L$577382$$ = 0, $CellContext`c$577383$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`c$$ = 10, $CellContext`f$$ = 
+        500, $CellContext`L$$ = 10, $CellContext`R$$ = 50}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`f$$, $CellContext`f$577380$$, 0], 
+        Hold[$CellContext`R$$, $CellContext`R$577381$$, 0], 
+        Hold[$CellContext`L$$, $CellContext`L$577382$$, 0], 
+        Hold[$CellContext`c$$, $CellContext`c$577383$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[$CellContext`smith, 
+        Graphics[{
+          Dynamic[
+           Text[
+            Style["\[CircleDot]", 24, Bold], {
+             $CellContext`\[Xi][$CellContext`f$$, $CellContext`R$$, \
+$CellContext`L$$, $CellContext`c$$], 
+             $CellContext`\[Eta][$CellContext`f$$, $CellContext`R$$, \
+$CellContext`L$$, $CellContext`c$$]}]], 
+          Dynamic[
+           Text[
+            Row[{
+              Style["z =  ", 16, Italic, Bold], 
+              Style[
+               $CellContext`r[$CellContext`R$$], 16, Bold], 
+              
+              If[$CellContext`x[$CellContext`f$$, $CellContext`L$$, \
+$CellContext`c$$] >= 0, 
+               Style["+", 16, Bold], 
+               Style["-", 16, Bold]], 
+              Style[
+               Abs[
+                $CellContext`x[$CellContext`f$$, $CellContext`L$$, \
+$CellContext`c$$]], 16, Bold], 
+              Style["j", 16, Bold, Italic]}], {
+             $CellContext`\[Xi][$CellContext`f$$, $CellContext`R$$, \
+$CellContext`L$$, $CellContext`c$$], $CellContext`\[Eta][$CellContext`f$$, \
+$CellContext`R$$, $CellContext`L$$, $CellContext`c$$] + 0.15}, Background -> 
+            Directive[
+              Opacity[0.3], Yellow]]]}], ImageSize -> {400, 400}], 
+      "Specifications" :> {{{$CellContext`f$$, 500, "frequency MHz"}, 0, 1000,
+          1, Appearance -> "Labeled", ImageSize -> 
+         Tiny}, {{$CellContext`R$$, 50, "resistance \[CapitalOmega]"}, 0, 100,
+          1, Appearance -> "Labeled", ImageSize -> 
+         Tiny}, {{$CellContext`L$$, 10, "inductance nH"}, 0, 100, 1, 
+         Appearance -> "Labeled", ImageSize -> 
+         Tiny}, {{$CellContext`c$$, 10, "capacitance pF"}, 0, 100, 1, 
+         Appearance -> "Labeled", ImageSize -> Tiny}}, 
+      "Options" :> {
+       TrackedSymbols -> Manipulate, ControlPlacement -> Left, 
+        SynchronousInitialization -> False}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{469., {55., 60.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`x[
+          Pattern[$CellContext`X, 
+           Blank[]], 
+          Pattern[$CellContext`Y, 
+           Blank[]]] := 
+        2 ($CellContext`Y/(1 - 
+          2 $CellContext`X + $CellContext`X^2 + $CellContext`Y^2)); \
+$CellContext`r[
+          Pattern[$CellContext`X, 
+           Blank[]], 
+          Pattern[$CellContext`Y, 
+           Blank[]]] := (1 - $CellContext`X^2 - $CellContext`Y^2)/(1 - 
+         2 $CellContext`X + $CellContext`X^2 + $CellContext`Y^2); \
+$CellContext`gx = ContourPlot[
+          $CellContext`x[$CellContext`X, $CellContext`Y], {$CellContext`X, -1,
+            0.999}, {$CellContext`Y, -1, 1}, ContourShading -> None, Contours -> 
+          20, ContourStyle -> RGBColor[0.6, 0.73, 0.36], RegionFunction -> 
+          Function[{$CellContext`X, $CellContext`Y}, 
+            0 <= $CellContext`r[$CellContext`X, $CellContext`Y]], 
+          PerformanceGoal -> "Quality"]; $CellContext`gr = ContourPlot[
+          $CellContext`r[$CellContext`X, $CellContext`Y], {$CellContext`X, -1,
+            0.999}, {$CellContext`Y, -1, 1}, ContourShading -> None, Contours -> 
+          20, ContourStyle -> RGBColor[1, 0.47, 0], RegionFunction -> 
+          Function[{$CellContext`X, $CellContext`Y}, 
+            0 <= $CellContext`r[$CellContext`X, $CellContext`Y]], 
+          PerformanceGoal -> "Quality"]; $CellContext`g0 = 
+        Graphics[{Thick, Black, 
+           Circle[], 
+           Table[
+            
+            Line[{{1.01 Cos[$CellContext`n Pi], 1.01 
+               Sin[$CellContext`n Pi]}, {
+              1.02 Cos[$CellContext`n Pi], 1.02 
+               Sin[$CellContext`n Pi]}}], {$CellContext`n, 0, 1.9, 0.1}], 
+           Table[
+            Text[
+             Style[
+             Mod[0.25 (1 - $CellContext`n), 0.5] "\[Lambda]", 10, Black], {
+             1.15 Cos[$CellContext`n Pi], 1.15 
+              Sin[$CellContext`n Pi]}], {$CellContext`n, 0, 1.9, 
+             0.1}]}]; $CellContext`smith = 
+        Show[$CellContext`gx, $CellContext`gr, $CellContext`g0, FrameTicks -> 
+          None, Frame -> False, PlotRange -> 1.25]; $CellContext`r[
+          Pattern[$CellContext`R, 
+           Blank[]]] := Round[$CellContext`R/50, 0.1]; $CellContext`x[
+          Pattern[$CellContext`f, 
+           Blank[]], 
+          Pattern[$CellContext`L, 
+           Blank[]], 
+          Pattern[$CellContext`c, 
+           Blank[]]] := 
+        Round[(1/
+           50) ((((2 Pi) ($CellContext`f + 0.01)) $CellContext`L) 10^(-3) - 
+           1/((((2 Pi) ($CellContext`f + 0.01)) ($CellContext`c + 0.01)) 
+           10^(-6))), 0.1]; $CellContext`\[Xi][
+          Pattern[$CellContext`f, 
+           Blank[]], 
+          Pattern[$CellContext`R, 
+           Blank[]], 
+          Pattern[$CellContext`L, 
+           Blank[]], 
+          Pattern[$CellContext`c, 
+           
+           Blank[]]] := (-1 + $CellContext`r[$CellContext`R]^2 + \
+$CellContext`x[$CellContext`f, $CellContext`L, $CellContext`c]^2)/((
+           1 + $CellContext`r[$CellContext`R])^2 + \
+$CellContext`x[$CellContext`f, $CellContext`L, $CellContext`c]^2); \
+$CellContext`\[Eta][
+          Pattern[$CellContext`f, 
+           Blank[]], 
+          Pattern[$CellContext`R, 
+           Blank[]], 
+          Pattern[$CellContext`L, 
+           Blank[]], 
+          Pattern[$CellContext`c, 
+           Blank[]]] := 
+        2 ($CellContext`x[$CellContext`f, $CellContext`L, $CellContext`c]/((
+            1 + $CellContext`r[$CellContext`R])^2 + \
+$CellContext`x[$CellContext`f, $CellContext`L, $CellContext`c]^2)); Null}; 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->False,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->134193449],
+
+Cell[CellGroupData[{
+
+Cell["CAPTION", "Section",
+ CellFrame->{{0, 0}, {1, 0}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->12,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell["\<\
+The Smith chart was developed by the electrical engineer Phillip H. Smith \
+around 1939. It is a useful graphical aid for matching impedances of circuit \
+elements, to optimize their performance.\
+\>", "Text"]
+}, Close]]
+}, Open  ]],
+
+Cell[TextData[{
+ "A Smith chart is a plot in the complex plane giving the real and imaginary \
+parts of the complex voltage reflection coefficient \[CapitalGamma]. The \
+contour lines on the chart represent values of the normalized resistance ",
+ Cell[BoxData[
+  FormBox["r", TraditionalForm]], "InlineMath",
+  FontSize->12],
+ " (orange circles) and reactance ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]], "InlineMath",
+  FontSize->12],
+ " (green arcs) of a circuit element. The relevant formulas are\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[CapitalGamma]", "=", 
+    FractionBox[
+     RowBox[{"z", "-", "1"}], 
+     RowBox[{"z", "+", "1"}]]}], TraditionalForm]], "InlineMath",
+  FontSize->12],
+ ", where ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"z", " ", "=", " ", 
+    RowBox[{"r", "+", Cell[TextData[{
+      "j x = ",
+      Cell[BoxData[
+       FormBox[
+        FractionBox["Z", 
+         SubscriptBox["Z", "0"]], TraditionalForm]], "InlineMath"]
+     }], "InlineMath",
+      FontSlant->"Italic"]}]}], TraditionalForm]], "InlineMath",
+  FontSize->12],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"Z", "=", 
+    RowBox[{"R", "+", 
+     RowBox[{"j", " ", "X", Cell["", "InlineMath"]}]}]}], TraditionalForm]], 
+  "InlineMath"],
+ ",  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"X", "=", 
+    RowBox[{
+     RowBox[{"2", "\[Pi]", " ", "f", " ", "L"}], "-", 
+     FractionBox["1", 
+      RowBox[{"2", "\[Pi]", " ", "f", " ", "C"}]]}]}], TraditionalForm]], 
+  "InlineMath"],
+ ",\nand ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["Z", "0"], TraditionalForm]], "InlineMath",
+  FontSize->12],
+ " is a characteristic impedance, often chosen as a resistance of 50\
+\[CapitalOmega]. Note that electrical engineers use ",
+ Cell[BoxData[
+  FormBox["j", TraditionalForm]], "InlineMath",
+  FontSize->12],
+ " for ",
+ Cell[BoxData[
+  FormBox[
+   SqrtBox[
+    RowBox[{"-", "1"}]], TraditionalForm]], "InlineMath",
+  FontSize->12],
+ " to avoid confusion with the current ",
+ Cell[BoxData[
+  FormBox["i", TraditionalForm]], "InlineMath",
+  FontSize->12],
+ ". The circumference of the chart gives the relative phase of the reflection \
+coefficient, expressed as a multiple of the signal wavelength \[Lambda]. This \
+is useful in determining the length of transmission lines, so as to enable \
+standing waves."
+}], "Text"],
+
+Cell[TextData[{
+ "In this Demonstration, you can vary the resistance (",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"R", " "}], TraditionalForm]], "InlineMath"],
+ " in ohms \[CapitalOmega]), inductance (",
+ Cell[BoxData[
+  FormBox["L", TraditionalForm]], "InlineMath"],
+ " in nanohenries nH=",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["10", 
+    RowBox[{"-", "9"}]], TraditionalForm]], "InlineMath"],
+ "H), and capacitance (",
+ Cell[BoxData[
+  FormBox["C", TraditionalForm]], "InlineMath"],
+ " in picofarads pF=",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["10", 
+    RowBox[{"-", "12"}]], TraditionalForm]], "InlineMath"],
+ " F) of the circuit element, as well as the frequency of the propagated \
+signal (",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", " "}], TraditionalForm]], "InlineMath"],
+ " in megahertz MHz=",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["10", "6"], TraditionalForm]], "InlineMath"],
+ "Hz). The complex reduced impedance ",
+ Cell[BoxData[
+  FormBox["z", TraditionalForm]], "InlineMath"],
+ " is then marked on the Smith chart."
+}], "Text"],
+
+Cell[CellGroupData[{
+
+Cell["DETAILS", "Section",
+ CellFrame->{{0, 0}, {1, 0}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->12,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell["\<\
+Snapshot 1: reactance equals zero when capacitive and inductive contributions \
+cancel\
+\>", "Text"],
+
+Cell[TextData[{
+ "Snapshot 2: increasing inductive reactance (by increasing ",
+ Cell[BoxData[
+  FormBox["C", TraditionalForm]], "InlineMath"],
+ " or ",
+ Cell[BoxData[
+  FormBox["L", TraditionalForm]], "InlineMath"],
+ ") gives a clockwise rotation about a red circle contour; increasing \
+capacitive reactance would result in a counterclockwise rotation"
+}], "Text"],
+
+Cell["\<\
+Snapshot 3: the circumference of the Smith chart represents a resistance of \
+zero\
+\>", "Text"],
+
+Cell[TextData[{
+ "A more complete, full-scale Smith chart is given on this ",
+ ButtonBox["website",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://www.sss-mag.com/pdf/smithchart.pdf"], None}],
+ ". See also: P. H. Smith, ",
+ StyleBox["Electronic Applications of the Smith Chart in Waveguide: Circuit \
+and Component Analysis",
+  FontSlant->"Italic"],
+ ", 2nd ed., Raleigh, NC: SciTech Publishing, 2000."
+}], "Text"]
+}, Close]],
+
+Cell[CellGroupData[{
+
+Cell["THIS NOTEBOOK IS THE SOURCE CODE FROM", "Text",
+ CellFrame->{{0, 0}, {0, 0}},
+ CellMargins->{{48, 10}, {4, 28}},
+ CellGroupingRules->{"SectionGrouping", 25},
+ CellFrameMargins->{{48, 48}, {6, 5}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->10,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[TextData[{
+ "\"",
+ ButtonBox["The Smith Chart",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/TheSmithChart/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/TheSmithChart/"],
+ "\"",
+ " from ",
+ ButtonBox["the Wolfram Demonstrations Project",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/"],
+ "\[ParagraphSeparator]\[NonBreakingSpace]",
+ ButtonBox["http://demonstrations.wolfram.com/TheSmithChart/",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/TheSmithChart/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/TheSmithChart/"]
+}], "Text",
+ CellMargins->{{48, Inherited}, {0, Inherited}},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.5]],
+
+Cell[TextData[{
+ "Contributed by: ",
+ ButtonBox["S. M. Blinder",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/author.html?author=S.+M.+Blinder"],
+     None},
+  ButtonNote->
+   "http://demonstrations.wolfram.com/author.html?author=S.+M.+Blinder"]
+}], "Text",
+ CellDingbat->"\[FilledSmallSquare]",
+ CellMargins->{{66, 48}, {2, 4}},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.6]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "A full-function Wolfram ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " system (Version 6 or higher) is required to edit this notebook.\n",
+ StyleBox[ButtonBox["GET WOLFRAM MATHEMATICA \[RightGuillemet]",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://www.wolfram.com/products/mathematica/"], None},
+  ButtonNote->"http://www.wolfram.com/products/mathematica/"],
+  FontFamily->"Helvetica",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0.42, 0]]
+}], "Text",
+ CellFrame->True,
+ CellMargins->{{48, 68}, {8, 28}},
+ CellFrameMargins->12,
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ CellChangeTimes->{3.3750111182355957`*^9},
+ ParagraphSpacing->{1., 1.},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.411765],
+ Background->RGBColor[1, 1, 1]],
+
+Cell[TextData[{
+ "\[Copyright] ",
+ StyleBox[ButtonBox["Wolfram Demonstrations Project & Contributors",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/"],
+  FontColor->GrayLevel[0.6]],
+ "\[ThickSpace]\[ThickSpace]\[ThickSpace]|\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+ StyleBox[ButtonBox["Terms of Use",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/termsofuse.html"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/termsofuse.html"],
+  FontColor->GrayLevel[0.6]],
+ "\[ThickSpace]\[ThickSpace]\[ThickSpace]|\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+ StyleBox[ButtonBox["Make a new version of this Demonstration \
+\[RightGuillemet]",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/participate/upload.jsp?id=\
+TheSmithChart"], None},
+  ButtonNote->None],
+  FontColor->GrayLevel[0.6]]
+}], "Text",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellMargins->{{48, 10}, {20, 50}},
+ CellFrameMargins->{{6, 0}, {6, 6}},
+ CellFrameColor->GrayLevel[0.6],
+ FontFamily->"Verdana",
+ FontSize->9,
+ FontColor->GrayLevel[0.6]]
+}, Open  ]]
+}, Open  ]]
+},
+Editable->True,
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+CellInsertionPointCell->None,
+WindowSize->{780, 650},
+WindowMargins->{{Inherited, Inherited}, {Inherited, 0}},
+WindowElements->{
+ "StatusArea", "MemoryMonitor", "MagnificationPopUp", "VerticalScrollBar", 
+  "MenuBar"},
+WindowTitle->"The Smith Chart - Source",
+DockedCells->{},
+CellContext->Notebook,
+FrontEndVersion->"8.0 for Microsoft Windows (32-bit) (November 7, 2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[617, 23, 135, 3, 70, "Section"],
+Cell[755, 28, 3700, 64, 70, "Section"],
+Cell[4458, 94, 18927, 402, 70, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23422, 501, 7539, 162, 70, "Output",
+ CellID->134193449],
+Cell[CellGroupData[{
+Cell[30986, 667, 209, 6, 70, "Section"],
+Cell[31198, 675, 219, 4, 70, "Text"]
+}, Close]]
+}, Open  ]],
+Cell[31443, 683, 2305, 72, 70, "Text"],
+Cell[33751, 757, 1058, 34, 70, "Text"],
+Cell[CellGroupData[{
+Cell[34834, 795, 209, 6, 70, "Section"],
+Cell[35046, 803, 110, 3, 70, "Text"],
+Cell[35159, 808, 365, 9, 70, "Text"],
+Cell[35527, 819, 106, 3, 70, "Text"],
+Cell[35636, 824, 425, 11, 70, "Text"]
+}, Close]],
+Cell[CellGroupData[{
+Cell[36097, 840, 355, 9, 70, "Text",
+ CellGroupingRules->{"SectionGrouping", 25}],
+Cell[36455, 851, 857, 24, 70, "Text"],
+Cell[37315, 877, 436, 14, 70, "Text"],
+Cell[CellGroupData[{
+Cell[37776, 895, 815, 24, 70, "Text"],
+Cell[38594, 921, 1185, 33, 70, "Text"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+(* NotebookSignature 9R4H8aWV77qlDA0W3D#cDY@I *)

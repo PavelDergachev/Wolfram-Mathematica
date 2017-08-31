@@ -1,0 +1,2914 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[    116457,       2905]
+NotebookOptionsPosition[    110340,       2710]
+NotebookOutlinePosition[    111982,       2762]
+CellTagsIndexPosition[    111646,       2750]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Geodesics in the Morris-Thorne Wormhole Spacetime", "DemoTitle",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.452092601759796*^9, 3.45209260619252*^9}, {
+   3.481709819240133*^9, 3.481709821301529*^9}, {3.48172906414428*^9, 
+   3.481729069321442*^9}, {3.481799311743483*^9, 3.481799327385333*^9}, {
+   3.487957251543284*^9, 3.4879572538175116`*^9}, 3.665155216127481*^9, 
+   3.665167017130131*^9}],
+
+Cell[CellGroupData[{
+
+Cell["", "InitializationSection"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"z", "[", 
+    RowBox[{"b0_", ",", "r_"}], "]"}], ":=", 
+   RowBox[{"b0", " ", 
+    RowBox[{"Log", "[", 
+     RowBox[{
+      RowBox[{"r", "/", "b0"}], "+", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"r", "/", "b0"}], ")"}], "^", "2"}], "-", "1"}], "]"}]}], 
+     "]"}]}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487956921130246*^9, 3.4879569228334165`*^9}},
+ CellID->24500202],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"embr", "[", 
+    RowBox[{"b0_", ",", "t_"}], "]"}], ":=", 
+   RowBox[{"b0", " ", 
+    RowBox[{"Cosh", "[", 
+     RowBox[{"t", "/", "b0"}], "]"}]}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487956921130246*^9, 3.487956924095543*^9}},
+ CellID->204817178],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"ksiCrit", "[", 
+    RowBox[{"b0_", ",", "li_"}], "]"}], ":=", 
+   RowBox[{"ArcSin", "[", 
+    RowBox[{"b0", "/", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{
+       RowBox[{"b0", "^", "2"}], "+", 
+       RowBox[{"li", "^", "2"}]}], "]"}]}], "]"}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487956921130246*^9, 3.487956925336667*^9}},
+ CellID->659084499],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"initL", "[", 
+    RowBox[{"b0_", ",", "ri_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Sign", "[", "ri", "]"}], 
+    RowBox[{"Sqrt", "[", 
+     RowBox[{
+      RowBox[{"ri", "^", "2"}], "-", 
+      RowBox[{"b0", "^", "2"}]}], "]"}]}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487956921130246*^9, 3.4879569265157843`*^9}},
+ CellID->308218945],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"paramA", "[", 
+    RowBox[{"b0_", ",", "\[Xi]_", ",", "li_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"b0", "/", 
+     RowBox[{"Sin", "[", "\[Xi]", "]"}]}], "/", 
+    RowBox[{"Sqrt", "[", 
+     RowBox[{
+      RowBox[{"b0", "^", "2"}], "+", 
+      RowBox[{"li", "^", "2"}]}], "]"}]}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487956921130246*^9, 3.4879569281859517`*^9}},
+ CellID->10002490],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"paramA2", "[", 
+    RowBox[{"b0_", ",", "\[Xi]_", ",", "li_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"paramA", "[", 
+     RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}], "^", "2"}]}], 
+  ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487956921130246*^9, 3.4879569293820715`*^9}},
+ CellID->198450173],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"ts", "[", 
+    RowBox[{"b0_", ",", "\[Xi]_", ",", "li_", ",", "\[Phi]_"}], "]"}], ":=", 
+   RowBox[{"Re", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"JacobiSN", "[", 
+         RowBox[{"\[Phi]", ",", 
+          RowBox[{"paramA2", "[", 
+           RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}], "]"}], 
+        RowBox[{"Cos", "[", "\[Xi]", "]"}], 
+        RowBox[{"Sqrt", "[", 
+         RowBox[{"1", "-", 
+          RowBox[{
+           RowBox[{"b0", "^", "2"}], "/", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"b0", "^", "2"}], "+", 
+             RowBox[{"li", "^", "2"}]}], ")"}]}]}], "]"}]}], "+", 
+       RowBox[{
+        RowBox[{"Sin", "[", "\[Xi]", "]"}], 
+        RowBox[{"JacobiCN", "[", 
+         RowBox[{"\[Phi]", ",", 
+          RowBox[{"paramA2", "[", 
+           RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}], "]"}], 
+        RowBox[{"JacobiDN", "[", 
+         RowBox[{"\[Phi]", ",", 
+          RowBox[{"paramA2", "[", 
+           RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}], "]"}]}]}], ")"}],
+      "/", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"b0", "^", "2"}], "/", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"b0", "^", "2"}], "+", 
+           RowBox[{"li", "^", "2"}]}], ")"}]}], 
+        RowBox[{
+         RowBox[{"JacobiSN", "[", 
+          RowBox[{"\[Phi]", ",", 
+           RowBox[{"paramA2", "[", 
+            RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}], "]"}], "^", 
+         "2"}]}]}], ")"}]}], "]"}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487956921130246*^9, 3.487956931406274*^9}},
+ CellID->4481139],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"ls", "[", 
+    RowBox[{"b0_", ",", "\[Xi]_", ",", "li_", ",", "\[Phi]_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Sign", "[", "li", "]"}], "b0", " ", 
+    RowBox[{"Sqrt", "[", 
+     RowBox[{
+      RowBox[{"1", "/", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"paramA", "[", 
+           RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}], 
+          RowBox[{"ts", "[", 
+           RowBox[{"b0", ",", "\[Xi]", ",", "li", ",", "\[Phi]"}], "]"}]}], 
+         ")"}], "^", "2"}]}], "-", "1"}], "]"}]}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487956921130246*^9, 3.4879569328104143`*^9}},
+ CellID->422062580],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"rs", "[", 
+    RowBox[{"b0_", ",", "\[Xi]_", ",", "li_", ",", "\[Phi]_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Sign", "[", "li", "]"}], 
+    RowBox[{"Sqrt", "[", 
+     RowBox[{
+      RowBox[{"b0", "^", "2"}], "+", 
+      RowBox[{
+       RowBox[{"ls", "[", 
+        RowBox[{"b0", ",", "\[Xi]", ",", "li", ",", "\[Phi]"}], "]"}], "^", 
+       "2"}]}], "]"}]}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487956921130246*^9, 3.4879569340635395`*^9}},
+ CellID->455798444],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"phiSmax", "[", 
+    RowBox[{"b0_", ",", "\[Xi]_", ",", "li_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"2", 
+     RowBox[{"EllipticK", "[", 
+      RowBox[{"paramA2", "[", 
+       RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}], "]"}]}], "-", 
+    RowBox[{"EllipticF", "[", 
+     RowBox[{"\[Xi]", ",", 
+      RowBox[{"paramA2", "[", 
+       RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}], "]"}]}]}], 
+  ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487956921130246*^9, 3.4879569353666697`*^9}},
+ CellID->150918917],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"tb", "[", 
+    RowBox[{"b0_", ",", "\[Xi]_", ",", "li_", ",", "\[Phi]_"}], "]"}], ":=", 
+   RowBox[{"Re", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"JacobiSN", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"paramA", "[", 
+             RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}], "\[Phi]"}], ",", 
+           RowBox[{"1", "/", 
+            RowBox[{"paramA2", "[", 
+             RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}]}], "]"}], 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"1", "-", 
+           RowBox[{
+            RowBox[{"b0", "^", "2"}], "/", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"b0", "^", "2"}], "+", 
+              RowBox[{"li", "^", "2"}]}], ")"}]}]}], "]"}], 
+         RowBox[{"Cos", "[", "\[Xi]", "]"}]}], "+", 
+        RowBox[{
+         RowBox[{"Sqrt", "[", 
+          RowBox[{
+           RowBox[{"b0", "^", "2"}], "/", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"b0", "^", "2"}], "+", 
+             RowBox[{"li", "^", "2"}]}], ")"}]}], "]"}], 
+         RowBox[{"JacobiCN", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"paramA", "[", 
+             RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}], "\[Phi]"}], ",", 
+           RowBox[{"1", "/", 
+            RowBox[{"paramA2", "[", 
+             RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}]}], "]"}], 
+         RowBox[{"JacobiDN", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"paramA", "[", 
+             RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}], "\[Phi]"}], ",", 
+           RowBox[{"1", "/", 
+            RowBox[{"paramA2", "[", 
+             RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}]}], "]"}]}]}], 
+       ")"}], "/", 
+      RowBox[{"paramA", "[", 
+       RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}], "/", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Sin", "[", "\[Xi]", "]"}], "^", "2"}], 
+        RowBox[{
+         RowBox[{"JacobiSN", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"paramA", "[", 
+             RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}], "\[Phi]"}], ",", 
+           RowBox[{"1", "/", 
+            RowBox[{"paramA2", "[", 
+             RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}]}], "]"}], "^", 
+         "2"}]}]}], ")"}]}], "]"}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487956921130246*^9, 3.4879569381219454`*^9}},
+ CellID->16859448],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"phiBinf", "[", 
+    RowBox[{"b0_", ",", "\[Xi]_", ",", "li_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"1", "/", 
+     RowBox[{"paramA", "[", 
+      RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}], 
+    RowBox[{"EllipticF", "[", 
+     RowBox[{
+      RowBox[{"ArcSin", "[", 
+       RowBox[{
+        RowBox[{"Sin", "[", "\[Xi]", "]"}], 
+        RowBox[{"paramA", "[", 
+         RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}], "]"}], ",", 
+      RowBox[{"1", "/", 
+       RowBox[{"paramA2", "[", 
+        RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}]}], "]"}]}]}], 
+  ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487956921130246*^9, 3.4879569392240553`*^9}},
+ CellID->776352721],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"phiBmax", "[", 
+    RowBox[{"b0_", ",", "\[Xi]_", ",", "li_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"2", "/", 
+      RowBox[{"paramA", "[", 
+       RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}], 
+     RowBox[{"EllipticK", "[", 
+      RowBox[{"1", "/", 
+       RowBox[{"paramA2", "[", 
+        RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}], "]"}]}], "-", 
+    RowBox[{
+     RowBox[{"EllipticF", "[", 
+      RowBox[{
+       RowBox[{"ArcSin", "[", 
+        RowBox[{
+         RowBox[{"Sin", "[", "\[Xi]", "]"}], 
+         RowBox[{"paramA", "[", 
+          RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}], "]"}], ",", 
+       RowBox[{"1", "/", 
+        RowBox[{"paramA2", "[", 
+         RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}]}], "]"}], "/", 
+     RowBox[{"paramA", "[", 
+      RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}]}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487956921130246*^9, 3.487956941350268*^9}},
+ CellID->75746071],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"phiChart", "[", 
+    RowBox[{"b0_", ",", "\[Xi]_", ",", "li_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"1", "/", 
+     RowBox[{"paramA", "[", 
+      RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"EllipticK", "[", 
+       RowBox[{"1", "/", 
+        RowBox[{"paramA2", "[", 
+         RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}], "]"}], "-", 
+      RowBox[{"EllipticF", "[", 
+       RowBox[{
+        RowBox[{"ArcSin", "[", 
+         RowBox[{
+          RowBox[{"Sin", "[", "\[Xi]", "]"}], 
+          RowBox[{"paramA", "[", 
+           RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}], "]"}], ",", 
+        RowBox[{"1", "/", 
+         RowBox[{"paramA2", "[", 
+          RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}]}], "]"}]}], 
+     ")"}]}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487956921130246*^9, 3.487956942938427*^9}},
+ CellID->46650914],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"lb", "[", 
+    RowBox[{"b0_", ",", "\[Xi]_", ",", "li_", ",", "\[Phi]_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Sign", "[", 
+     RowBox[{
+      RowBox[{"phiChart", "[", 
+       RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}], "-", "\[Phi]"}], "]"}], 
+    RowBox[{"Sign", "[", "li", "]"}], "b0", " ", 
+    RowBox[{"Sqrt", "[", 
+     RowBox[{
+      RowBox[{"1", "/", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"paramA", "[", 
+           RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}], 
+          RowBox[{"tb", "[", 
+           RowBox[{"b0", ",", "\[Xi]", ",", "li", ",", "\[Phi]"}], "]"}]}], 
+         ")"}], "^", "2"}]}], "-", "1"}], "]"}]}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487956921130246*^9, 3.487956944130546*^9}},
+ CellID->735447146],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"rb", "[", 
+    RowBox[{"b0_", ",", "\[Xi]_", ",", "li_", ",", "\[Phi]_"}], "]"}], ":=", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{
+     RowBox[{"b0", "^", "2"}], "+", 
+     RowBox[{
+      RowBox[{"lb", "[", 
+       RowBox[{"b0", ",", "\[Xi]", ",", "li", ",", "\[Phi]"}], "]"}], "^", 
+      "2"}]}], "]"}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487956921130246*^9, 3.4879569454736805`*^9}},
+ CellID->411826410],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"curve1", "[", 
+    RowBox[{"b0_", ",", "\[Xi]_", ",", "li_", ",", "pg_"}], "]"}], ":=", 
+   RowBox[{"ParametricPlot3D", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"rs", "[", 
+         RowBox[{"b0", ",", "\[Xi]", ",", "li", ",", "phi"}], "]"}], 
+        RowBox[{"Cos", "[", "phi", "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"rs", "[", 
+         RowBox[{"b0", ",", "\[Xi]", ",", "li", ",", "phi"}], "]"}], 
+        RowBox[{"Sin", "[", "phi", "]"}]}], ",", 
+       RowBox[{"z", "[", 
+        RowBox[{"b0", ",", 
+         RowBox[{"rs", "[", 
+          RowBox[{"b0", ",", "\[Xi]", ",", "li", ",", "phi"}], "]"}]}], 
+        "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"phi", ",", "0", ",", 
+       RowBox[{"phiSmax", "[", 
+        RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}], "}"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Thick"}], ",", 
+     RowBox[{"PerformanceGoal", "\[Rule]", "pg"}]}], "]"}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487956921130246*^9, 3.4879569472778606`*^9}, {
+   3.4881295154861336`*^9, 3.4881295170372887`*^9}, 3.488129615601144*^9},
+ CellID->202116101],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"curve2", "[", 
+   RowBox[{"b0_", ",", "\[Xi]_", ",", "li_", ",", "pg_"}], "]"}], ":=", 
+  RowBox[{"ParametricPlot3D", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"rb", "[", 
+        RowBox[{"b0", ",", "\[Xi]", ",", "li", ",", "phi"}], "]"}], 
+       RowBox[{"Cos", "[", "phi", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"rb", "[", 
+        RowBox[{"b0", ",", "\[Xi]", ",", "li", ",", "phi"}], "]"}], 
+       RowBox[{"Sin", "[", "phi", "]"}]}], ",", 
+      RowBox[{"Piecewise", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"z", "[", 
+            RowBox[{"b0", ",", 
+             RowBox[{"rb", "[", 
+              RowBox[{"b0", ",", "\[Xi]", ",", "li", ",", "phi"}], "]"}]}], 
+            "]"}], ",", 
+           RowBox[{"phi", "<", 
+            RowBox[{"phiChart", "[", 
+             RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}]}], "}"}], "}"}],
+         ",", 
+        RowBox[{"-", 
+         RowBox[{"z", "[", 
+          RowBox[{"b0", ",", 
+           RowBox[{"rb", "[", 
+            RowBox[{"b0", ",", "\[Xi]", ",", "li", ",", "phi"}], "]"}]}], 
+          "]"}]}]}], "]"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"phi", ",", "0", ",", 
+      RowBox[{"phiBmax", "[", 
+       RowBox[{"b0", ",", "\[Xi]", ",", "li"}], "]"}]}], "}"}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", "Thick"}], ",", 
+    RowBox[{"PerformanceGoal", "\[Rule]", "pg"}]}], "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487956921130246*^9, 3.4879569472778606`*^9}, {
+   3.488129519402525*^9, 3.4881295238469696`*^9}, {3.4881296174403276`*^9, 
+   3.4881296209096746`*^9}},
+ CellID->538542807]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["", "ManipulateSection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"ri", "<", "b0"}], ",", 
+      RowBox[{"ri", "=", "b0"}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"li", "=", 
+     RowBox[{"initL", "[", 
+      RowBox[{"b0", ",", "ri"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"kC", "=", 
+     RowBox[{"ksiCrit", "[", 
+      RowBox[{"b0", ",", "li"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"ksi", "=", 
+     RowBox[{
+      RowBox[{"xi", "/", "180"}], "Pi"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Show", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"RevolutionPlot3D", "[", 
+       RowBox[{
+        RowBox[{"Evaluate", "@", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"embr", "[", 
+            RowBox[{"b0", ",", "t"}], "]"}], ",", "t"}], "}"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"t", ",", 
+          RowBox[{"-", "4.2"}], ",", "4.2"}], "}"}], ",", 
+        RowBox[{"PlotStyle", "\[Rule]", 
+         RowBox[{"Opacity", "[", "p", "]"}]}]}], "]"}], ",", 
+      RowBox[{"Piecewise", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"curve1", "[", 
+            RowBox[{"b0", ",", "ksi", ",", "li", ",", "\"\<Speed\>\""}], 
+            "]"}], ",", 
+           RowBox[{"ksi", ">", "kC"}]}], "}"}], "}"}], ",", 
+        RowBox[{"curve2", "[", 
+         RowBox[{"b0", ",", "ksi", ",", "li", ",", "\"\<Speed\>\""}], "]"}]}],
+        "]"}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "8"}], ",", "8"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "8"}], ",", "8"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "5"}], ",", "5"}], "}"}]}], "}"}]}], ",", 
+      RowBox[{"ImageSize", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"400", ",", "400"}], "}"}]}], ",", 
+      RowBox[{"PlotLabel", "\[Rule]", 
+       RowBox[{"Grid", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<\!\(\*SubscriptBox[\(\[Xi]\), \(krit\)]\)\>\"", ",", 
+            "\"\<=\>\"", ",", 
+            RowBox[{
+             RowBox[{"N", "[", 
+              RowBox[{
+               RowBox[{"kC", "/", "Pi"}], " ", "180"}], "]"}], 
+             "\"\<\[Degree]\>\""}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<\!\(\*SubscriptBox[\(\[Phi]\), \(max\)]\)\>\"", ",", 
+            "\"\<=\>\"", ",", 
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"ksi", ">", "kC"}], ",", 
+               RowBox[{"N", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Re", "[", 
+                   RowBox[{"phiSmax", "[", 
+                    RowBox[{"b0", ",", "ksi", ",", "li"}], "]"}], "]"}], "/", 
+                  "Pi"}], " ", "180"}], "]"}], ",", 
+               RowBox[{"N", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"phiBmax", "[", 
+                   RowBox[{"b0", ",", "ksi", ",", "li"}], "]"}], "/", "Pi"}], 
+                 " ", "180"}], "]"}]}], "]"}], "\"\<\[Degree]\>\""}]}], 
+           "}"}]}], "}"}], "]"}]}], ",", 
+      RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+      RowBox[{"Axes", "\[Rule]", "False"}]}], "]"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Style", "[", 
+    RowBox[{"\"\<parameters\>\"", ",", "Bold"}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "b0", ",", "2", ",", "\"\<\!\(\*SubscriptBox[\(b\), \(0\)]\)\>\""}], 
+      "}"}], ",", "1", ",", "3", ",", ".01", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "ri", ",", "8", ",", "\"\<\!\(\*SubscriptBox[\(r\), \(i\)]\)\>\""}], 
+      "}"}], ",", "b0", ",", "8", ",", ".01", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"xi", ",", "16", ",", "\"\<\[Xi]\>\""}], "}"}], ",", "0.1", ",",
+      "179", ",", ".01", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"p", ",", "0.5", ",", "\"\<opacity\>\""}], "}"}], ",", "0.0", 
+     ",", "1.0", ",", ".01", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"ControlPlacement", "\[Rule]", "Left"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"AutorunSequencing", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"SaveDefinitions", "\[Rule]", "True"}], ",", 
+   RowBox[{"TrackedSymbols", "\[Rule]", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.4879564187098317`*^9, 3.48795670714985*^9}, {
+   3.4879567505901937`*^9, 3.4879569135484877`*^9}, {3.4879569511462474`*^9, 
+   3.4879569562877617`*^9}, {3.487957011758308*^9, 3.487957017585891*^9}, {
+   3.4879572125903893`*^9, 3.487957291499279*^9}, {3.4879701033765297`*^9, 
+   3.4879701106421084`*^9}, {3.487970178766672*^9, 3.487970188797858*^9}, {
+   3.487970229344474*^9, 3.4879702380162935`*^9}, {3.488129450655651*^9, 
+   3.4881295015137367`*^9}, {3.4881295566712513`*^9, 3.488129592178802*^9}, {
+   3.4881296386604495`*^9, 3.488129663513935*^9}, {3.4881297469582787`*^9, 
+   3.488129748684451*^9}, {3.488129792626845*^9, 3.4881298485944405`*^9}},
+ CellID->1822417073],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`b0$$ = 2, $CellContext`p$$ = 
+    0.5, $CellContext`ri$$ = 8, $CellContext`xi$$ = 16, Typeset`show$$ = True,
+     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[
+       Style["parameters", Bold]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`b0$$], 2, "\!\(\*SubscriptBox[\(b\), \(0\)]\)"}, 1, 
+      3, 0.01}, {{
+       Hold[$CellContext`ri$$], 8, "\!\(\*SubscriptBox[\(r\), \(i\)]\)"}, 
+      Dynamic[$CellContext`b0$$], 8, 0.01}, {{
+       Hold[$CellContext`xi$$], 16, "\[Xi]"}, 0.1, 179, 0.01}, {{
+       Hold[$CellContext`p$$], 0.5, "opacity"}, 0., 1., 0.01}}, 
+    Typeset`size$$ = {400., {198., 202.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`b0$1973402$$ = 0, $CellContext`ri$1973403$$ = 
+    0, $CellContext`xi$1973404$$ = 0, $CellContext`p$1973405$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`b0$$ = 2, $CellContext`p$$ = 
+        0.5, $CellContext`ri$$ = 8, $CellContext`xi$$ = 16}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`b0$$, $CellContext`b0$1973402$$, 0], 
+        Hold[$CellContext`ri$$, $CellContext`ri$1973403$$, 0], 
+        Hold[$CellContext`xi$$, $CellContext`xi$1973404$$, 0], 
+        Hold[$CellContext`p$$, $CellContext`p$1973405$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> (
+       If[$CellContext`ri$$ < $CellContext`b0$$, $CellContext`ri$$ = \
+$CellContext`b0$$]; $CellContext`li = $CellContext`initL[$CellContext`b0$$, \
+$CellContext`ri$$]; $CellContext`kC = $CellContext`ksiCrit[$CellContext`b0$$, \
+$CellContext`li]; $CellContext`ksi = ($CellContext`xi$$/180) Pi; Show[
+         RevolutionPlot3D[
+          Evaluate[{
+            $CellContext`embr[$CellContext`b0$$, $CellContext`t], \
+$CellContext`t}], {$CellContext`t, -4.2, 4.2}, PlotStyle -> 
+          Opacity[$CellContext`p$$]], 
+         Piecewise[{{
+            $CellContext`curve1[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li, "Speed"], $CellContext`ksi > $CellContext`kC}}, 
+          $CellContext`curve2[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li, "Speed"]], PlotRange -> {{-8, 8}, {-8, 8}, {-5, 5}}, 
+         ImageSize -> {400, 400}, PlotLabel -> 
+         Grid[{{"\!\(\*SubscriptBox[\(\[Xi]\), \(krit\)]\)", "=", 
+             N[($CellContext`kC/Pi) 180] "\[Degree]"}, {
+            "\!\(\*SubscriptBox[\(\[Phi]\), \(max\)]\)", "=", 
+             If[$CellContext`ksi > $CellContext`kC, 
+               N[(Re[
+                   $CellContext`phiSmax[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li]]/Pi) 180], 
+               
+               N[($CellContext`phiBmax[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li]/Pi) 180]] "\[Degree]"}}], Boxed -> False, Axes -> False]), 
+      "Specifications" :> {
+        Style[
+        "parameters", 
+         Bold], {{$CellContext`b0$$, 2, "\!\(\*SubscriptBox[\(b\), \(0\)]\)"},
+          1, 3, 0.01, ImageSize -> Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`ri$$, 8, 
+          "\!\(\*SubscriptBox[\(r\), \(i\)]\)"}, 
+         Dynamic[$CellContext`b0$$], 8, 0.01, ImageSize -> Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`xi$$, 16, "\[Xi]"}, 0.1, 179, 0.01, 
+         ImageSize -> Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`p$$, 0.5, "opacity"}, 0., 1., 0.01, 
+         ImageSize -> Tiny, Appearance -> "Labeled"}}, 
+      "Options" :> {
+       ControlPlacement -> Left, AutorunSequencing -> {1, 2, 3, 4}, 
+        TrackedSymbols -> True}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{605., {224., 230.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`li = 2 Sqrt[15], $CellContext`initL[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`ri, 
+          Blank[]]] := 
+       Sign[$CellContext`ri] 
+        Sqrt[$CellContext`ri^2 - $CellContext`b0^2], $CellContext`kC = 
+       ArcSin[1/4], $CellContext`ksiCrit[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := 
+       ArcSin[$CellContext`b0/
+         Sqrt[$CellContext`b0^2 + $CellContext`li^2]], $CellContext`ksi = (4 
+         Pi)/45, $CellContext`embr[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`t, 
+          Blank[]]] := $CellContext`b0 
+        Cosh[$CellContext`t/$CellContext`b0], $CellContext`curve1[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`pg, 
+          Blank[]]] := 
+       ParametricPlot3D[{$CellContext`rs[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi] 
+          Cos[$CellContext`phi], $CellContext`rs[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`phi] Sin[$CellContext`phi], 
+          $CellContext`z[$CellContext`b0, 
+           $CellContext`rs[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi]]}, {$CellContext`phi, 0, 
+          $CellContext`phiSmax[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]}, PlotStyle -> Thick, 
+         PerformanceGoal -> $CellContext`pg], $CellContext`rs[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := 
+       Sign[$CellContext`li] 
+        Sqrt[$CellContext`b0^2 + $CellContext`ls[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`\[Phi]]^2], $CellContext`ls[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := (Sign[$CellContext`li] $CellContext`b0) 
+        Sqrt[1/($CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`ts[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`\[Phi]])^2 - 1], $CellContext`paramA[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := $CellContext`b0/(Sin[$CellContext`\[Xi]] 
+        Sqrt[$CellContext`b0^2 + $CellContext`li^2]), $CellContext`ts[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := Re[((JacobiSN[$CellContext`\[Phi], 
+              $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] Cos[$CellContext`\[Xi]]) 
+           Sqrt[1 - $CellContext`b0^2/($CellContext`b0^2 + \
+$CellContext`li^2)] + (Sin[$CellContext`\[Xi]] JacobiCN[$CellContext`\[Phi], 
+              $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]) JacobiDN[$CellContext`\[Phi], 
+             $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]])/(
+         1 - ($CellContext`b0^2/($CellContext`b0^2 + $CellContext`li^2)) 
+         JacobiSN[$CellContext`\[Phi], 
+            $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]^2)], $CellContext`paramA2[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          
+          Blank[]]] := $CellContext`paramA[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li]^2, $CellContext`z[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`r, 
+          Blank[]]] := $CellContext`b0 
+        Log[$CellContext`r/$CellContext`b0 + 
+          Sqrt[($CellContext`r/$CellContext`b0)^2 - 1]], $CellContext`phiSmax[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := 2 EllipticK[
+           $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] - EllipticF[$CellContext`\[Xi], 
+         $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]], $CellContext`curve2[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`pg, 
+          Blank[]]] := 
+       ParametricPlot3D[{$CellContext`rb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi] 
+          Cos[$CellContext`phi], $CellContext`rb[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`phi] Sin[$CellContext`phi], 
+          Piecewise[{{
+             $CellContext`z[$CellContext`b0, 
+              $CellContext`rb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi]], $CellContext`phi < \
+$CellContext`phiChart[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]}}, -$CellContext`z[$CellContext`b0, 
+             $CellContext`rb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi]]]}, {$CellContext`phi, 0, 
+          $CellContext`phiBmax[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]}, PlotStyle -> Thick, 
+         PerformanceGoal -> $CellContext`pg], $CellContext`rb[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := 
+       Sqrt[$CellContext`b0^2 + $CellContext`lb[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`\[Phi]]^2], $CellContext`lb[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := ((
+          Sign[$CellContext`phiChart[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] - $CellContext`\[Phi]] 
+          Sign[$CellContext`li]) $CellContext`b0) 
+        Sqrt[1/($CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`tb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`\[Phi]])^2 - 1], $CellContext`phiChart[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := (
+         1/$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]) (
+         EllipticK[
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] - EllipticF[
+          ArcSin[
+          Sin[$CellContext`\[Xi]] $CellContext`paramA[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li]], 
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]), $CellContext`tb[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := 
+       Re[((JacobiSN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+              1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] 
+            Sqrt[1 - $CellContext`b0^2/($CellContext`b0^2 + \
+$CellContext`li^2)]) 
+           Cos[$CellContext`\[Xi]] + (
+            Sqrt[$CellContext`b0^2/($CellContext`b0^2 + $CellContext`li^2)] 
+            JacobiCN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+              1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]) 
+           JacobiDN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+             1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]])/($CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] (1 - Sin[$CellContext`\[Xi]]^2 
+          JacobiSN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+             1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]^2))], $CellContext`phiBmax[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := (
+          2/$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]) 
+         EllipticK[
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] - EllipticF[
+          ArcSin[
+          Sin[$CellContext`\[Xi]] $CellContext`paramA[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li]], 
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]/$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li], Attributes[PlotRange] = {ReadProtected}}; 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->200865786]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "ManipulateCaptionSection"],
+
+Cell[TextData[{
+ "The simplest wormhole geometry is given by the line element ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"d", "\[InvisibleSpace]", 
+     SuperscriptBox["s", "2"]}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       SuperscriptBox["c", "2"]}], "d", "\[InvisibleSpace]", 
+      SuperscriptBox["t", "2"]}], "+", 
+     RowBox[{"d", "\[InvisibleSpace]", 
+      SuperscriptBox["l", "2"]}], "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        SubsuperscriptBox["b", "0", "2"], "+", 
+        SuperscriptBox["l", "2"]}], ")"}], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"d", "\[InvisibleSpace]", 
+         SuperscriptBox["\[Theta]", "2"]}], "+", 
+        RowBox[{
+         SuperscriptBox["sin", "2"], "\[Theta]", " ", "d", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\[Phi]", "2"]}]}], ")"}]}]}]}], TraditionalForm]], 
+  "InlineMath"],
+ ", see [2]. The parameter ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["b", "0"], TraditionalForm]], "InlineMath"],
+ " defines the ",
+ "size of the",
+ " throat of the wormhole, and ",
+ Cell[BoxData[
+  FormBox["l", TraditionalForm]], "InlineMath"],
+ " represents the proper length radius. "
+}], "ManipulateCaption",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.481799679361608*^9, 3.481799998629386*^9}, {
+   3.481800053810479*^9, 3.481800053871369*^9}, {3.481800438824808*^9, 
+   3.481800466226807*^9}, {3.487971359212242*^9, 3.487971397430748*^9}, {
+   3.487971435524254*^9, 3.48797146436782*^9}},
+ CellID->1830826081],
+
+Cell[TextData[{
+ "Light rays and objects in free motion in four-dimensional spacetimes follow \
+lightlike or timelike geodesics. In general, these geodesics must be computed \
+numerically. However, in the ",
+ "Ellis",
+ " wormhole spacetime, there is an analytic solution of the geodesic equation \
+in terms of elliptic integral functions. Because of the spherical symmetry \
+and staticity of the metric, it suffices to consider geodesics in the \
+hypersurface ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"t", "=", "constant"}], ",", 
+     RowBox[{"\[Theta]", "=", 
+      FractionBox["\[Pi]", "2"]}]}], ")"}], TraditionalForm]], "InlineMath"],
+ ". This two-dimensional surface can be embedded in the three-dimensional \
+Euclidean space. The corresponding embedding function reads ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"z", "(", "r", ")"}], "=", 
+    RowBox[{
+     RowBox[{"\[PlusMinus]", 
+      SubscriptBox["b", "0"]}], " ", 
+     RowBox[{"ln", "(", 
+      RowBox[{
+       FractionBox["r", 
+        SubscriptBox["b", "0"]], "+", 
+       SqrtBox[
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"(", 
+           FractionBox["r", 
+            SubscriptBox["b", "0"]], ")"}], "2"], "-", "1"}]]}], ")"}]}]}], 
+   TraditionalForm]], "InlineMath"],
+ " with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["r", "2"], "=", 
+    RowBox[{
+     SubsuperscriptBox["b", "0", "2"], "+", 
+     SuperscriptBox["l", "2"]}]}], TraditionalForm]], "InlineMath"],
+ "."
+}], "ManipulateCaption",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.481800054836727*^9, 3.481800280445369*^9}, {
+   3.481800470087485*^9, 3.481800681494704*^9}, {3.4879574179589243`*^9, 
+   3.487957418358964*^9}, {3.4879715107737722`*^9, 3.4879715379454737`*^9}, {
+   3.488032096835388*^9, 3.488032121579883*^9}, 3.6651552505412807`*^9},
+ CellID->1216660688],
+
+Cell[TextData[{
+ "In this application, you can change the throat size ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["b", "0"], TraditionalForm]], "InlineMath"],
+ ", the initial position ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["r", "i"], " "}], TraditionalForm]], "InlineMath"],
+ "of the observer, and the initial angle ",
+ Cell[BoxData[
+  FormBox["\[Xi]", TraditionalForm]], "InlineMath"],
+ " of the geodesic with respect to the local reference frame of the observer."
+}], "ManipulateCaption",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.481800328590673*^9, 3.481800404292769*^9}, {
+   3.481800716317263*^9, 3.481800719462246*^9}, {3.4879715907576356`*^9, 
+   3.4879715912576323`*^9}},
+ CellID->771116822]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "ThumbnailSection"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`b0$$ = 2, $CellContext`p$$ = 
+    1, $CellContext`ri$$ = 8, $CellContext`xi$$ = 16, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[
+       Style["parameters", Bold]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`b0$$], 2, "\!\(\*SubscriptBox[\(b\), \(0\)]\)"}, 1, 
+      3, 0.01}, {{
+       Hold[$CellContext`ri$$], 8, "\!\(\*SubscriptBox[\(r\), \(i\)]\)"}, 
+      Dynamic[$CellContext`b0$$], 8, 0.01}, {{
+       Hold[$CellContext`xi$$], 16, "\[Xi]"}, 0.1, 179, 0.01}, {{
+       Hold[$CellContext`p$$], 1, "opacity"}, 0., 1., 0.01}}, 
+    Typeset`size$$ = {400., {198., 202.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`b0$1973472$$ = 0, $CellContext`ri$1973473$$ = 
+    0, $CellContext`xi$1973474$$ = 0, $CellContext`p$1973475$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`b0$$ = 2, $CellContext`p$$ = 
+        1, $CellContext`ri$$ = 8, $CellContext`xi$$ = 16}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`b0$$, $CellContext`b0$1973472$$, 0], 
+        Hold[$CellContext`ri$$, $CellContext`ri$1973473$$, 0], 
+        Hold[$CellContext`xi$$, $CellContext`xi$1973474$$, 0], 
+        Hold[$CellContext`p$$, $CellContext`p$1973475$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> (
+       If[$CellContext`ri$$ < $CellContext`b0$$, $CellContext`ri$$ = \
+$CellContext`b0$$]; $CellContext`li = $CellContext`initL[$CellContext`b0$$, \
+$CellContext`ri$$]; $CellContext`kC = $CellContext`ksiCrit[$CellContext`b0$$, \
+$CellContext`li]; $CellContext`ksi = ($CellContext`xi$$/180) Pi; Show[
+         RevolutionPlot3D[
+          Evaluate[{
+            $CellContext`embr[$CellContext`b0$$, $CellContext`t], \
+$CellContext`t}], {$CellContext`t, -4.2, 4.2}, PlotStyle -> 
+          Opacity[$CellContext`p$$]], 
+         Piecewise[{{
+            $CellContext`curve1[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li, "Speed"], $CellContext`ksi > $CellContext`kC}}, 
+          $CellContext`curve2[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li, "Speed"]], PlotRange -> {{-8, 8}, {-8, 8}, {-5, 5}}, 
+         ImageSize -> {400, 400}, PlotLabel -> 
+         Grid[{{"\!\(\*SubscriptBox[\(\[Xi]\), \(krit\)]\)", "=", 
+             N[($CellContext`kC/Pi) 180] "\[Degree]"}, {
+            "\!\(\*SubscriptBox[\(\[Phi]\), \(max\)]\)", "=", 
+             If[$CellContext`ksi > $CellContext`kC, 
+               N[(Re[
+                   $CellContext`phiSmax[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li]]/Pi) 180], 
+               
+               N[($CellContext`phiBmax[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li]/Pi) 180]] "\[Degree]"}}], Boxed -> False, Axes -> False]), 
+      "Specifications" :> {
+        Style[
+        "parameters", 
+         Bold], {{$CellContext`b0$$, 2, "\!\(\*SubscriptBox[\(b\), \(0\)]\)"},
+          1, 3, 0.01, ImageSize -> Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`ri$$, 8, 
+          "\!\(\*SubscriptBox[\(r\), \(i\)]\)"}, 
+         Dynamic[$CellContext`b0$$], 8, 0.01, ImageSize -> Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`xi$$, 16, "\[Xi]"}, 0.1, 179, 0.01, 
+         ImageSize -> Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`p$$, 1, "opacity"}, 0., 1., 0.01, 
+         ImageSize -> Tiny, Appearance -> "Labeled"}}, 
+      "Options" :> {
+       ControlPlacement -> Left, AutorunSequencing -> {1, 2, 3, 4}, 
+        TrackedSymbols -> True}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{605., {224., 230.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`li = 2 Sqrt[15], $CellContext`initL[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`ri, 
+          Blank[]]] := 
+       Sign[$CellContext`ri] 
+        Sqrt[$CellContext`ri^2 - $CellContext`b0^2], $CellContext`kC = 
+       ArcSin[1/4], $CellContext`ksiCrit[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := 
+       ArcSin[$CellContext`b0/
+         Sqrt[$CellContext`b0^2 + $CellContext`li^2]], $CellContext`ksi = (4 
+         Pi)/45, $CellContext`embr[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`t, 
+          Blank[]]] := $CellContext`b0 
+        Cosh[$CellContext`t/$CellContext`b0], $CellContext`curve1[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`pg, 
+          Blank[]]] := 
+       ParametricPlot3D[{$CellContext`rs[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi] 
+          Cos[$CellContext`phi], $CellContext`rs[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`phi] Sin[$CellContext`phi], 
+          $CellContext`z[$CellContext`b0, 
+           $CellContext`rs[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi]]}, {$CellContext`phi, 0, 
+          $CellContext`phiSmax[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]}, PlotStyle -> Thick, 
+         PerformanceGoal -> $CellContext`pg], $CellContext`rs[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := 
+       Sign[$CellContext`li] 
+        Sqrt[$CellContext`b0^2 + $CellContext`ls[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`\[Phi]]^2], $CellContext`ls[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := (Sign[$CellContext`li] $CellContext`b0) 
+        Sqrt[1/($CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`ts[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`\[Phi]])^2 - 1], $CellContext`paramA[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := $CellContext`b0/(Sin[$CellContext`\[Xi]] 
+        Sqrt[$CellContext`b0^2 + $CellContext`li^2]), $CellContext`ts[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := Re[((JacobiSN[$CellContext`\[Phi], 
+              $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] Cos[$CellContext`\[Xi]]) 
+           Sqrt[1 - $CellContext`b0^2/($CellContext`b0^2 + \
+$CellContext`li^2)] + (Sin[$CellContext`\[Xi]] JacobiCN[$CellContext`\[Phi], 
+              $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]) JacobiDN[$CellContext`\[Phi], 
+             $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]])/(
+         1 - ($CellContext`b0^2/($CellContext`b0^2 + $CellContext`li^2)) 
+         JacobiSN[$CellContext`\[Phi], 
+            $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]^2)], $CellContext`paramA2[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          
+          Blank[]]] := $CellContext`paramA[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li]^2, $CellContext`z[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`r, 
+          Blank[]]] := $CellContext`b0 
+        Log[$CellContext`r/$CellContext`b0 + 
+          Sqrt[($CellContext`r/$CellContext`b0)^2 - 1]], $CellContext`phiSmax[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := 2 EllipticK[
+           $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] - EllipticF[$CellContext`\[Xi], 
+         $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]], $CellContext`curve2[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`pg, 
+          Blank[]]] := 
+       ParametricPlot3D[{$CellContext`rb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi] 
+          Cos[$CellContext`phi], $CellContext`rb[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`phi] Sin[$CellContext`phi], 
+          Piecewise[{{
+             $CellContext`z[$CellContext`b0, 
+              $CellContext`rb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi]], $CellContext`phi < \
+$CellContext`phiChart[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]}}, -$CellContext`z[$CellContext`b0, 
+             $CellContext`rb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi]]]}, {$CellContext`phi, 0, 
+          $CellContext`phiBmax[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]}, PlotStyle -> Thick, 
+         PerformanceGoal -> $CellContext`pg], $CellContext`rb[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := 
+       Sqrt[$CellContext`b0^2 + $CellContext`lb[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`\[Phi]]^2], $CellContext`lb[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := ((
+          Sign[$CellContext`phiChart[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] - $CellContext`\[Phi]] 
+          Sign[$CellContext`li]) $CellContext`b0) 
+        Sqrt[1/($CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`tb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`\[Phi]])^2 - 1], $CellContext`phiChart[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := (
+         1/$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]) (
+         EllipticK[
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] - EllipticF[
+          ArcSin[
+          Sin[$CellContext`\[Xi]] $CellContext`paramA[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li]], 
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]), $CellContext`tb[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := 
+       Re[((JacobiSN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+              1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] 
+            Sqrt[1 - $CellContext`b0^2/($CellContext`b0^2 + \
+$CellContext`li^2)]) 
+           Cos[$CellContext`\[Xi]] + (
+            Sqrt[$CellContext`b0^2/($CellContext`b0^2 + $CellContext`li^2)] 
+            JacobiCN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+              1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]) 
+           JacobiDN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+             1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]])/($CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] (1 - Sin[$CellContext`\[Xi]]^2 
+          JacobiSN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+             1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]^2))], $CellContext`phiBmax[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := (
+          2/$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]) 
+         EllipticK[
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] - EllipticF[
+          ArcSin[
+          Sin[$CellContext`\[Xi]] $CellContext`paramA[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li]], 
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]/$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li], Attributes[PlotRange] = {ReadProtected}}; 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->16297013]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SnapshotsSection"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`b0$$ = 2, $CellContext`p$$ = 
+    0.5, $CellContext`ri$$ = 8, $CellContext`xi$$ = 14.5, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[
+       Style["parameters", Bold]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`b0$$], 2, "\!\(\*SubscriptBox[\(b\), \(0\)]\)"}, 1, 
+      3, 0.01}, {{
+       Hold[$CellContext`ri$$], 8, "\!\(\*SubscriptBox[\(r\), \(i\)]\)"}, 
+      Dynamic[$CellContext`b0$$], 8, 0.01}, {{
+       Hold[$CellContext`xi$$], 14.5, "\[Xi]"}, 0.1, 179, 0.01}, {{
+       Hold[$CellContext`p$$], 0.5, "opacity"}, 0., 1., 0.01}}, 
+    Typeset`size$$ = {400., {198., 202.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`b0$1973542$$ = 0, $CellContext`ri$1973543$$ = 
+    0, $CellContext`xi$1973544$$ = 0, $CellContext`p$1973545$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`b0$$ = 2, $CellContext`p$$ = 
+        0.5, $CellContext`ri$$ = 8, $CellContext`xi$$ = 14.5}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`b0$$, $CellContext`b0$1973542$$, 0], 
+        Hold[$CellContext`ri$$, $CellContext`ri$1973543$$, 0], 
+        Hold[$CellContext`xi$$, $CellContext`xi$1973544$$, 0], 
+        Hold[$CellContext`p$$, $CellContext`p$1973545$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> (
+       If[$CellContext`ri$$ < $CellContext`b0$$, $CellContext`ri$$ = \
+$CellContext`b0$$]; $CellContext`li = $CellContext`initL[$CellContext`b0$$, \
+$CellContext`ri$$]; $CellContext`kC = $CellContext`ksiCrit[$CellContext`b0$$, \
+$CellContext`li]; $CellContext`ksi = ($CellContext`xi$$/180) Pi; Show[
+         RevolutionPlot3D[
+          Evaluate[{
+            $CellContext`embr[$CellContext`b0$$, $CellContext`t], \
+$CellContext`t}], {$CellContext`t, -4.2, 4.2}, PlotStyle -> 
+          Opacity[$CellContext`p$$]], 
+         Piecewise[{{
+            $CellContext`curve1[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li, "Speed"], $CellContext`ksi > $CellContext`kC}}, 
+          $CellContext`curve2[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li, "Speed"]], PlotRange -> {{-8, 8}, {-8, 8}, {-5, 5}}, 
+         ImageSize -> {400, 400}, PlotLabel -> 
+         Grid[{{"\!\(\*SubscriptBox[\(\[Xi]\), \(krit\)]\)", "=", 
+             N[($CellContext`kC/Pi) 180] "\[Degree]"}, {
+            "\!\(\*SubscriptBox[\(\[Phi]\), \(max\)]\)", "=", 
+             If[$CellContext`ksi > $CellContext`kC, 
+               N[(Re[
+                   $CellContext`phiSmax[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li]]/Pi) 180], 
+               
+               N[($CellContext`phiBmax[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li]/Pi) 180]] "\[Degree]"}}], Boxed -> False, Axes -> False]), 
+      "Specifications" :> {
+        Style[
+        "parameters", 
+         Bold], {{$CellContext`b0$$, 2, "\!\(\*SubscriptBox[\(b\), \(0\)]\)"},
+          1, 3, 0.01, ImageSize -> Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`ri$$, 8, 
+          "\!\(\*SubscriptBox[\(r\), \(i\)]\)"}, 
+         Dynamic[$CellContext`b0$$], 8, 0.01, ImageSize -> Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`xi$$, 14.5, "\[Xi]"}, 0.1, 179, 0.01, 
+         ImageSize -> Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`p$$, 0.5, "opacity"}, 0., 1., 0.01, 
+         ImageSize -> Tiny, Appearance -> "Labeled"}}, 
+      "Options" :> {
+       ControlPlacement -> Left, AutorunSequencing -> {1, 2, 3, 4}, 
+        TrackedSymbols -> True}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{605., {224., 230.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`li = 2 Sqrt[15], $CellContext`initL[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`ri, 
+          Blank[]]] := 
+       Sign[$CellContext`ri] 
+        Sqrt[$CellContext`ri^2 - $CellContext`b0^2], $CellContext`kC = 
+       ArcSin[1/4], $CellContext`ksiCrit[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := 
+       ArcSin[$CellContext`b0/
+         Sqrt[$CellContext`b0^2 + $CellContext`li^2]], $CellContext`ksi = (4 
+         Pi)/45, $CellContext`embr[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`t, 
+          Blank[]]] := $CellContext`b0 
+        Cosh[$CellContext`t/$CellContext`b0], $CellContext`curve1[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`pg, 
+          Blank[]]] := 
+       ParametricPlot3D[{$CellContext`rs[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi] 
+          Cos[$CellContext`phi], $CellContext`rs[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`phi] Sin[$CellContext`phi], 
+          $CellContext`z[$CellContext`b0, 
+           $CellContext`rs[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi]]}, {$CellContext`phi, 0, 
+          $CellContext`phiSmax[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]}, PlotStyle -> Thick, 
+         PerformanceGoal -> $CellContext`pg], $CellContext`rs[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := 
+       Sign[$CellContext`li] 
+        Sqrt[$CellContext`b0^2 + $CellContext`ls[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`\[Phi]]^2], $CellContext`ls[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := (Sign[$CellContext`li] $CellContext`b0) 
+        Sqrt[1/($CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`ts[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`\[Phi]])^2 - 1], $CellContext`paramA[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := $CellContext`b0/(Sin[$CellContext`\[Xi]] 
+        Sqrt[$CellContext`b0^2 + $CellContext`li^2]), $CellContext`ts[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := Re[((JacobiSN[$CellContext`\[Phi], 
+              $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] Cos[$CellContext`\[Xi]]) 
+           Sqrt[1 - $CellContext`b0^2/($CellContext`b0^2 + \
+$CellContext`li^2)] + (Sin[$CellContext`\[Xi]] JacobiCN[$CellContext`\[Phi], 
+              $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]) JacobiDN[$CellContext`\[Phi], 
+             $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]])/(
+         1 - ($CellContext`b0^2/($CellContext`b0^2 + $CellContext`li^2)) 
+         JacobiSN[$CellContext`\[Phi], 
+            $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]^2)], $CellContext`paramA2[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          
+          Blank[]]] := $CellContext`paramA[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li]^2, $CellContext`z[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`r, 
+          Blank[]]] := $CellContext`b0 
+        Log[$CellContext`r/$CellContext`b0 + 
+          Sqrt[($CellContext`r/$CellContext`b0)^2 - 1]], $CellContext`phiSmax[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := 2 EllipticK[
+           $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] - EllipticF[$CellContext`\[Xi], 
+         $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]], $CellContext`curve2[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`pg, 
+          Blank[]]] := 
+       ParametricPlot3D[{$CellContext`rb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi] 
+          Cos[$CellContext`phi], $CellContext`rb[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`phi] Sin[$CellContext`phi], 
+          Piecewise[{{
+             $CellContext`z[$CellContext`b0, 
+              $CellContext`rb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi]], $CellContext`phi < \
+$CellContext`phiChart[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]}}, -$CellContext`z[$CellContext`b0, 
+             $CellContext`rb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi]]]}, {$CellContext`phi, 0, 
+          $CellContext`phiBmax[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]}, PlotStyle -> Thick, 
+         PerformanceGoal -> $CellContext`pg], $CellContext`rb[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := 
+       Sqrt[$CellContext`b0^2 + $CellContext`lb[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`\[Phi]]^2], $CellContext`lb[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := ((
+          Sign[$CellContext`phiChart[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] - $CellContext`\[Phi]] 
+          Sign[$CellContext`li]) $CellContext`b0) 
+        Sqrt[1/($CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`tb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`\[Phi]])^2 - 1], $CellContext`phiChart[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := (
+         1/$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]) (
+         EllipticK[
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] - EllipticF[
+          ArcSin[
+          Sin[$CellContext`\[Xi]] $CellContext`paramA[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li]], 
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]), $CellContext`tb[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := 
+       Re[((JacobiSN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+              1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] 
+            Sqrt[1 - $CellContext`b0^2/($CellContext`b0^2 + \
+$CellContext`li^2)]) 
+           Cos[$CellContext`\[Xi]] + (
+            Sqrt[$CellContext`b0^2/($CellContext`b0^2 + $CellContext`li^2)] 
+            JacobiCN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+              1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]) 
+           JacobiDN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+             1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]])/($CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] (1 - Sin[$CellContext`\[Xi]]^2 
+          JacobiSN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+             1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]^2))], $CellContext`phiBmax[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := (
+          2/$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]) 
+         EllipticK[
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] - EllipticF[
+          ArcSin[
+          Sin[$CellContext`\[Xi]] $CellContext`paramA[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li]], 
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]/$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li], Attributes[PlotRange] = {ReadProtected}}; 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->16141693],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`b0$$ = 
+    2.8600000000000003`, $CellContext`p$$ = 0.48, $CellContext`ri$$ = 
+    3.3100000000000005`, $CellContext`xi$$ = 152.02, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[
+       Style["parameters", Bold]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`b0$$], 2.8600000000000003`, 
+       "\!\(\*SubscriptBox[\(b\), \(0\)]\)"}, 1, 3, 0.01}, {{
+       Hold[$CellContext`ri$$], 3.3100000000000005`, 
+       "\!\(\*SubscriptBox[\(r\), \(i\)]\)"}, 
+      Dynamic[$CellContext`b0$$], 8, 0.01}, {{
+       Hold[$CellContext`xi$$], 152.02, "\[Xi]"}, 0.1, 179, 0.01}, {{
+       Hold[$CellContext`p$$], 0.48, "opacity"}, 0., 1., 0.01}}, 
+    Typeset`size$$ = {400., {198., 202.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`b0$1973612$$ = 0, $CellContext`ri$1973613$$ = 
+    0, $CellContext`xi$1973614$$ = 0, $CellContext`p$1973615$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`b0$$ = 
+        2.8600000000000003`, $CellContext`p$$ = 0.48, $CellContext`ri$$ = 
+        3.3100000000000005`, $CellContext`xi$$ = 152.02}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`b0$$, $CellContext`b0$1973612$$, 0], 
+        Hold[$CellContext`ri$$, $CellContext`ri$1973613$$, 0], 
+        Hold[$CellContext`xi$$, $CellContext`xi$1973614$$, 0], 
+        Hold[$CellContext`p$$, $CellContext`p$1973615$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> (
+       If[$CellContext`ri$$ < $CellContext`b0$$, $CellContext`ri$$ = \
+$CellContext`b0$$]; $CellContext`li = $CellContext`initL[$CellContext`b0$$, \
+$CellContext`ri$$]; $CellContext`kC = $CellContext`ksiCrit[$CellContext`b0$$, \
+$CellContext`li]; $CellContext`ksi = ($CellContext`xi$$/180) Pi; Show[
+         RevolutionPlot3D[
+          Evaluate[{
+            $CellContext`embr[$CellContext`b0$$, $CellContext`t], \
+$CellContext`t}], {$CellContext`t, -4.2, 4.2}, PlotStyle -> 
+          Opacity[$CellContext`p$$]], 
+         Piecewise[{{
+            $CellContext`curve1[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li, "Speed"], $CellContext`ksi > $CellContext`kC}}, 
+          $CellContext`curve2[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li, "Speed"]], PlotRange -> {{-8, 8}, {-8, 8}, {-5, 5}}, 
+         ImageSize -> {400, 400}, PlotLabel -> 
+         Grid[{{"\!\(\*SubscriptBox[\(\[Xi]\), \(krit\)]\)", "=", 
+             N[($CellContext`kC/Pi) 180] "\[Degree]"}, {
+            "\!\(\*SubscriptBox[\(\[Phi]\), \(max\)]\)", "=", 
+             If[$CellContext`ksi > $CellContext`kC, 
+               N[(Re[
+                   $CellContext`phiSmax[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li]]/Pi) 180], 
+               
+               N[($CellContext`phiBmax[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li]/Pi) 180]] "\[Degree]"}}], Boxed -> False, Axes -> False]), 
+      "Specifications" :> {
+        Style[
+        "parameters", 
+         Bold], {{$CellContext`b0$$, 2.8600000000000003`, 
+          "\!\(\*SubscriptBox[\(b\), \(0\)]\)"}, 1, 3, 0.01, ImageSize -> 
+         Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`ri$$, 3.3100000000000005`, 
+          "\!\(\*SubscriptBox[\(r\), \(i\)]\)"}, 
+         Dynamic[$CellContext`b0$$], 8, 0.01, ImageSize -> Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`xi$$, 152.02, "\[Xi]"}, 0.1, 179, 0.01, 
+         ImageSize -> Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`p$$, 0.48, "opacity"}, 0., 1., 0.01, 
+         ImageSize -> Tiny, Appearance -> "Labeled"}}, 
+      "Options" :> {
+       ControlPlacement -> Left, AutorunSequencing -> {1, 2, 3, 4}, 
+        TrackedSymbols -> True}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{605., {224., 230.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`li = 2 Sqrt[15], $CellContext`initL[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`ri, 
+          Blank[]]] := 
+       Sign[$CellContext`ri] 
+        Sqrt[$CellContext`ri^2 - $CellContext`b0^2], $CellContext`kC = 
+       ArcSin[1/4], $CellContext`ksiCrit[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := 
+       ArcSin[$CellContext`b0/
+         Sqrt[$CellContext`b0^2 + $CellContext`li^2]], $CellContext`ksi = (4 
+         Pi)/45, $CellContext`embr[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`t, 
+          Blank[]]] := $CellContext`b0 
+        Cosh[$CellContext`t/$CellContext`b0], $CellContext`curve1[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`pg, 
+          Blank[]]] := 
+       ParametricPlot3D[{$CellContext`rs[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi] 
+          Cos[$CellContext`phi], $CellContext`rs[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`phi] Sin[$CellContext`phi], 
+          $CellContext`z[$CellContext`b0, 
+           $CellContext`rs[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi]]}, {$CellContext`phi, 0, 
+          $CellContext`phiSmax[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]}, PlotStyle -> Thick, 
+         PerformanceGoal -> $CellContext`pg], $CellContext`rs[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := 
+       Sign[$CellContext`li] 
+        Sqrt[$CellContext`b0^2 + $CellContext`ls[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`\[Phi]]^2], $CellContext`ls[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := (Sign[$CellContext`li] $CellContext`b0) 
+        Sqrt[1/($CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`ts[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`\[Phi]])^2 - 1], $CellContext`paramA[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := $CellContext`b0/(Sin[$CellContext`\[Xi]] 
+        Sqrt[$CellContext`b0^2 + $CellContext`li^2]), $CellContext`ts[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := Re[((JacobiSN[$CellContext`\[Phi], 
+              $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] Cos[$CellContext`\[Xi]]) 
+           Sqrt[1 - $CellContext`b0^2/($CellContext`b0^2 + \
+$CellContext`li^2)] + (Sin[$CellContext`\[Xi]] JacobiCN[$CellContext`\[Phi], 
+              $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]) JacobiDN[$CellContext`\[Phi], 
+             $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]])/(
+         1 - ($CellContext`b0^2/($CellContext`b0^2 + $CellContext`li^2)) 
+         JacobiSN[$CellContext`\[Phi], 
+            $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]^2)], $CellContext`paramA2[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          
+          Blank[]]] := $CellContext`paramA[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li]^2, $CellContext`z[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`r, 
+          Blank[]]] := $CellContext`b0 
+        Log[$CellContext`r/$CellContext`b0 + 
+          Sqrt[($CellContext`r/$CellContext`b0)^2 - 1]], $CellContext`phiSmax[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := 2 EllipticK[
+           $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] - EllipticF[$CellContext`\[Xi], 
+         $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]], $CellContext`curve2[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`pg, 
+          Blank[]]] := 
+       ParametricPlot3D[{$CellContext`rb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi] 
+          Cos[$CellContext`phi], $CellContext`rb[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`phi] Sin[$CellContext`phi], 
+          Piecewise[{{
+             $CellContext`z[$CellContext`b0, 
+              $CellContext`rb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi]], $CellContext`phi < \
+$CellContext`phiChart[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]}}, -$CellContext`z[$CellContext`b0, 
+             $CellContext`rb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi]]]}, {$CellContext`phi, 0, 
+          $CellContext`phiBmax[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]}, PlotStyle -> Thick, 
+         PerformanceGoal -> $CellContext`pg], $CellContext`rb[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := 
+       Sqrt[$CellContext`b0^2 + $CellContext`lb[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`\[Phi]]^2], $CellContext`lb[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := ((
+          Sign[$CellContext`phiChart[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] - $CellContext`\[Phi]] 
+          Sign[$CellContext`li]) $CellContext`b0) 
+        Sqrt[1/($CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`tb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`\[Phi]])^2 - 1], $CellContext`phiChart[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := (
+         1/$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]) (
+         EllipticK[
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] - EllipticF[
+          ArcSin[
+          Sin[$CellContext`\[Xi]] $CellContext`paramA[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li]], 
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]), $CellContext`tb[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := 
+       Re[((JacobiSN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+              1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] 
+            Sqrt[1 - $CellContext`b0^2/($CellContext`b0^2 + \
+$CellContext`li^2)]) 
+           Cos[$CellContext`\[Xi]] + (
+            Sqrt[$CellContext`b0^2/($CellContext`b0^2 + $CellContext`li^2)] 
+            JacobiCN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+              1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]) 
+           JacobiDN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+             1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]])/($CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] (1 - Sin[$CellContext`\[Xi]]^2 
+          JacobiSN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+             1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]^2))], $CellContext`phiBmax[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := (
+          2/$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]) 
+         EllipticK[
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] - EllipticF[
+          ArcSin[
+          Sin[$CellContext`\[Xi]] $CellContext`paramA[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li]], 
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]/$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li], Attributes[PlotRange] = {ReadProtected}}; 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->760312429],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`b0$$ = 2.67, $CellContext`p$$ = 
+    0.47000000000000003`, $CellContext`ri$$ = 8., $CellContext`xi$$ = 0.1, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[
+       Style["parameters", Bold]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`b0$$], 2.67, "\!\(\*SubscriptBox[\(b\), \(0\)]\)"}, 
+      1, 3, 0.01}, {{
+       Hold[$CellContext`ri$$], 8., "\!\(\*SubscriptBox[\(r\), \(i\)]\)"}, 
+      Dynamic[$CellContext`b0$$], 8, 0.01}, {{
+       Hold[$CellContext`xi$$], 0.1, "\[Xi]"}, 0.1, 179, 0.01}, {{
+       Hold[$CellContext`p$$], 0.47000000000000003`, "opacity"}, 0., 1., 
+      0.01}}, Typeset`size$$ = {400., {198., 202.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`b0$1973682$$ = 0, $CellContext`ri$1973683$$ = 
+    0, $CellContext`xi$1973684$$ = 0, $CellContext`p$1973685$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`b0$$ = 2.67, $CellContext`p$$ = 
+        0.47000000000000003`, $CellContext`ri$$ = 8., $CellContext`xi$$ = 
+        0.1}, "ControllerVariables" :> {
+        Hold[$CellContext`b0$$, $CellContext`b0$1973682$$, 0], 
+        Hold[$CellContext`ri$$, $CellContext`ri$1973683$$, 0], 
+        Hold[$CellContext`xi$$, $CellContext`xi$1973684$$, 0], 
+        Hold[$CellContext`p$$, $CellContext`p$1973685$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> (
+       If[$CellContext`ri$$ < $CellContext`b0$$, $CellContext`ri$$ = \
+$CellContext`b0$$]; $CellContext`li = $CellContext`initL[$CellContext`b0$$, \
+$CellContext`ri$$]; $CellContext`kC = $CellContext`ksiCrit[$CellContext`b0$$, \
+$CellContext`li]; $CellContext`ksi = ($CellContext`xi$$/180) Pi; Show[
+         RevolutionPlot3D[
+          Evaluate[{
+            $CellContext`embr[$CellContext`b0$$, $CellContext`t], \
+$CellContext`t}], {$CellContext`t, -4.2, 4.2}, PlotStyle -> 
+          Opacity[$CellContext`p$$]], 
+         Piecewise[{{
+            $CellContext`curve1[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li, "Speed"], $CellContext`ksi > $CellContext`kC}}, 
+          $CellContext`curve2[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li, "Speed"]], PlotRange -> {{-8, 8}, {-8, 8}, {-5, 5}}, 
+         ImageSize -> {400, 400}, PlotLabel -> 
+         Grid[{{"\!\(\*SubscriptBox[\(\[Xi]\), \(krit\)]\)", "=", 
+             N[($CellContext`kC/Pi) 180] "\[Degree]"}, {
+            "\!\(\*SubscriptBox[\(\[Phi]\), \(max\)]\)", "=", 
+             If[$CellContext`ksi > $CellContext`kC, 
+               N[(Re[
+                   $CellContext`phiSmax[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li]]/Pi) 180], 
+               
+               N[($CellContext`phiBmax[$CellContext`b0$$, $CellContext`ksi, \
+$CellContext`li]/Pi) 180]] "\[Degree]"}}], Boxed -> False, Axes -> False]), 
+      "Specifications" :> {
+        Style[
+        "parameters", 
+         Bold], {{$CellContext`b0$$, 2.67, 
+          "\!\(\*SubscriptBox[\(b\), \(0\)]\)"}, 1, 3, 0.01, ImageSize -> 
+         Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`ri$$, 8., 
+          "\!\(\*SubscriptBox[\(r\), \(i\)]\)"}, 
+         Dynamic[$CellContext`b0$$], 8, 0.01, ImageSize -> Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`xi$$, 0.1, "\[Xi]"}, 0.1, 179, 0.01, 
+         ImageSize -> Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`p$$, 0.47000000000000003`, "opacity"}, 0.,
+          1., 0.01, ImageSize -> Tiny, Appearance -> "Labeled"}}, 
+      "Options" :> {
+       ControlPlacement -> Left, AutorunSequencing -> {1, 2, 3, 4}, 
+        TrackedSymbols -> True}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{605., {224., 230.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`li = 2 Sqrt[15], $CellContext`initL[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`ri, 
+          Blank[]]] := 
+       Sign[$CellContext`ri] 
+        Sqrt[$CellContext`ri^2 - $CellContext`b0^2], $CellContext`kC = 
+       ArcSin[1/4], $CellContext`ksiCrit[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := 
+       ArcSin[$CellContext`b0/
+         Sqrt[$CellContext`b0^2 + $CellContext`li^2]], $CellContext`ksi = (4 
+         Pi)/45, $CellContext`embr[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`t, 
+          Blank[]]] := $CellContext`b0 
+        Cosh[$CellContext`t/$CellContext`b0], $CellContext`curve1[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`pg, 
+          Blank[]]] := 
+       ParametricPlot3D[{$CellContext`rs[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi] 
+          Cos[$CellContext`phi], $CellContext`rs[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`phi] Sin[$CellContext`phi], 
+          $CellContext`z[$CellContext`b0, 
+           $CellContext`rs[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi]]}, {$CellContext`phi, 0, 
+          $CellContext`phiSmax[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]}, PlotStyle -> Thick, 
+         PerformanceGoal -> $CellContext`pg], $CellContext`rs[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := 
+       Sign[$CellContext`li] 
+        Sqrt[$CellContext`b0^2 + $CellContext`ls[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`\[Phi]]^2], $CellContext`ls[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := (Sign[$CellContext`li] $CellContext`b0) 
+        Sqrt[1/($CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`ts[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`\[Phi]])^2 - 1], $CellContext`paramA[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := $CellContext`b0/(Sin[$CellContext`\[Xi]] 
+        Sqrt[$CellContext`b0^2 + $CellContext`li^2]), $CellContext`ts[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := Re[((JacobiSN[$CellContext`\[Phi], 
+              $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] Cos[$CellContext`\[Xi]]) 
+           Sqrt[1 - $CellContext`b0^2/($CellContext`b0^2 + \
+$CellContext`li^2)] + (Sin[$CellContext`\[Xi]] JacobiCN[$CellContext`\[Phi], 
+              $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]) JacobiDN[$CellContext`\[Phi], 
+             $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]])/(
+         1 - ($CellContext`b0^2/($CellContext`b0^2 + $CellContext`li^2)) 
+         JacobiSN[$CellContext`\[Phi], 
+            $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]^2)], $CellContext`paramA2[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          
+          Blank[]]] := $CellContext`paramA[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li]^2, $CellContext`z[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`r, 
+          Blank[]]] := $CellContext`b0 
+        Log[$CellContext`r/$CellContext`b0 + 
+          Sqrt[($CellContext`r/$CellContext`b0)^2 - 1]], $CellContext`phiSmax[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := 2 EllipticK[
+           $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] - EllipticF[$CellContext`\[Xi], 
+         $CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]], $CellContext`curve2[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`pg, 
+          Blank[]]] := 
+       ParametricPlot3D[{$CellContext`rb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi] 
+          Cos[$CellContext`phi], $CellContext`rb[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`phi] Sin[$CellContext`phi], 
+          Piecewise[{{
+             $CellContext`z[$CellContext`b0, 
+              $CellContext`rb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi]], $CellContext`phi < \
+$CellContext`phiChart[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]}}, -$CellContext`z[$CellContext`b0, 
+             $CellContext`rb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`phi]]]}, {$CellContext`phi, 0, 
+          $CellContext`phiBmax[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]}, PlotStyle -> Thick, 
+         PerformanceGoal -> $CellContext`pg], $CellContext`rb[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := 
+       Sqrt[$CellContext`b0^2 + $CellContext`lb[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li, $CellContext`\[Phi]]^2], $CellContext`lb[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := ((
+          Sign[$CellContext`phiChart[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] - $CellContext`\[Phi]] 
+          Sign[$CellContext`li]) $CellContext`b0) 
+        Sqrt[1/($CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`tb[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li, $CellContext`\[Phi]])^2 - 1], $CellContext`phiChart[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := (
+         1/$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]) (
+         EllipticK[
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] - EllipticF[
+          ArcSin[
+          Sin[$CellContext`\[Xi]] $CellContext`paramA[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li]], 
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]), $CellContext`tb[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]], 
+         Pattern[$CellContext`\[Phi], 
+          Blank[]]] := 
+       Re[((JacobiSN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+              1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] 
+            Sqrt[1 - $CellContext`b0^2/($CellContext`b0^2 + \
+$CellContext`li^2)]) 
+           Cos[$CellContext`\[Xi]] + (
+            Sqrt[$CellContext`b0^2/($CellContext`b0^2 + $CellContext`li^2)] 
+            JacobiCN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+              1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]) 
+           JacobiDN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+             1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]])/($CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] (1 - Sin[$CellContext`\[Xi]]^2 
+          JacobiSN[$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li] $CellContext`\[Phi], 
+             1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]^2))], $CellContext`phiBmax[
+         Pattern[$CellContext`b0, 
+          Blank[]], 
+         Pattern[$CellContext`\[Xi], 
+          Blank[]], 
+         Pattern[$CellContext`li, 
+          Blank[]]] := (
+          2/$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]) 
+         EllipticK[
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]] - EllipticF[
+          ArcSin[
+          Sin[$CellContext`\[Xi]] $CellContext`paramA[$CellContext`b0, \
+$CellContext`\[Xi], $CellContext`li]], 
+          1/$CellContext`paramA2[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li]]/$CellContext`paramA[$CellContext`b0, $CellContext`\[Xi], \
+$CellContext`li], Attributes[PlotRange] = {ReadProtected}}; 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->802609099]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "DetailsSection"],
+
+Cell["\<\
+A detailed discussion about analytic geodesics in the Morris\[Dash]Thorne \
+wormhole spacetime can be found in [1].\
+\>", "DetailNotes",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.452098217583594*^9, 3.452098230418856*^9}, {
+   3.481730321448697*^9, 3.481730324095848*^9}, {3.48173042555467*^9, 
+   3.481730456821093*^9}, {3.481730703513592*^9, 3.481730714669805*^9}, {
+   3.481799403913116*^9, 3.481799420099107*^9}, {3.481799520981539*^9, 
+   3.481799524689214*^9}, {3.48179966661744*^9, 3.481799668593105*^9}, {
+   3.481799729155933*^9, 3.481799731691801*^9}, {3.487971638194832*^9, 
+   3.4879716405854416`*^9}, {3.665155346356868*^9, 3.665155357316057*^9}, {
+   3.665167452411058*^9, 3.6651674619561443`*^9}},
+ CellID->790379250],
+
+Cell["\<\
+The metric described in [2] was first mentioned in [3]. Hence, it should be \
+called Ellis wormhole instead. See also the apology in [4], Ref. 14.\
+\>", "DetailNotes",
+ CellChangeTimes->{{3.665167055507326*^9, 3.665167056961532*^9}, {
+  3.665167222596146*^9, 3.665167254306918*^9}, {3.665167433541212*^9, 
+  3.6651674345092363`*^9}},
+ CellID->1759552026],
+
+Cell["References", "DetailNotes",
+ CellChangeTimes->{{3.665155337846815*^9, 3.665155339276847*^9}},
+ CellID->1056491533],
+
+Cell[TextData[{
+ "[1] T. M\[UDoubleDot]ller, \"Exact Geometric Optics in a \
+Morris\[Dash]Thorne Wormhole Spacetime,\" ",
+ StyleBox["Physical Review D",
+  FontSlant->"Italic"],
+ ", ",
+ StyleBox["77",
+  FontWeight->"Bold"],
+ "(4) 2008. doi: 10.1103/PhysRevD.77.044043."
+}], "DetailNotes",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.452098217583594*^9, 3.452098230418856*^9}, {
+   3.481730321448697*^9, 3.481730324095848*^9}, {3.48173042555467*^9, 
+   3.481730456821093*^9}, {3.481730703513592*^9, 3.481730714669805*^9}, {
+   3.481799403913116*^9, 3.481799420099107*^9}, {3.481799520981539*^9, 
+   3.481799524689214*^9}, {3.48179966661744*^9, 3.481799668593105*^9}, {
+   3.481799729155933*^9, 3.481799733278446*^9}, {3.4879716601478167`*^9, 
+   3.487971684944533*^9}, 3.4879717617721663`*^9, {3.4880322887302637`*^9, 
+   3.4880323024721518`*^9}, {3.488032354288662*^9, 3.488032453848284*^9}, 
+   3.4880328737129803`*^9, {3.488097386928618*^9, 3.488097387366667*^9}, {
+   3.488098059830204*^9, 3.488098076459216*^9}},
+ CellID->163848257],
+
+Cell[TextData[{
+ "[2] M. S. Morris and K. S. Thorne, \"Wormholes in Spacetime and Their Use \
+for Interstellar Travel: A Tool for Teaching General Relativity,\" ",
+ StyleBox["American Journal of Physics",
+  FontSlant->"Italic"],
+ ", ",
+ StyleBox["56",
+  FontWeight->"Bold"],
+ "(5), 1988 pp. 395\[Dash]412."
+}], "DetailNotes",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.481799534113703*^9, 3.48179959531394*^9}, {
+   3.481799633784291*^9, 3.481799662624608*^9}, {3.481799736377525*^9, 
+   3.481799737582457*^9}, {3.4879716952882166`*^9, 3.4879717570534463`*^9}, {
+   3.488032806147245*^9, 3.488032860232572*^9}, {3.665155330326385*^9, 
+   3.6651553329649763`*^9}, 3.665167500356781*^9},
+ CellID->2068518432],
+
+Cell[TextData[{
+ "[3] H. G. Ellis, \"Ether Flow through a Drainhole: A Particle Model in \
+General Relativity,\" ",
+ StyleBox["Journal of Mathematical Physics",
+  FontSlant->"Italic"],
+ ", ",
+ StyleBox["14",
+  FontWeight->"Bold"],
+ ", 1973 pp. 104\[Dash]118; 1974 Errata: ",
+ StyleBox["15",
+  FontWeight->"Bold"],
+ ", p. 520."
+}], "DetailNotes",
+ CellChangeTimes->{{3.665155298679696*^9, 3.665155325805647*^9}, {
+   3.665155478704124*^9, 3.665155520535091*^9}, {3.665167183334723*^9, 
+   3.665167210500194*^9}, 3.6651675038990917`*^9},
+ CellID->325588176],
+
+Cell[TextData[{
+ "[4] O. James, E. von Tunzelmann, P. Franklin, and K. S. Thorne, \
+\"Visualizing Interstellar's Wormhole,\" ",
+ StyleBox["American Journal of Physics",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["83",
+  FontWeight->"Bold"],
+ ", 2015 pp. 483\[Dash]499."
+}], "DetailNotes",
+ CellChangeTimes->{{3.665167322634169*^9, 3.665167402511517*^9}},
+ CellID->549470046]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "ControlSuggestionsSection"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[True], Cell[" Resize Images"]}],
+  "\"Click inside an image to reveal its orange resize frame.\\nDrag any of \
+the orange resize handles to resize the image.\""]], "ControlSuggestions",
+ CellChangeTimes->{3.35696210375764*^9, 3.4879573611972485`*^9},
+ FontFamily->"Verdana",
+ CellTags->"ResizeImages"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[True], Cell[" Rotate and Zoom in 3D"]}],
+  RowBox[{
+   "\"Drag a 3D graphic to rotate it. Starting the drag near the center \
+tumbles\\nthe graphic; starting near a corner turns it parallel to the plane \
+of the screen.\\nHold down \"", 
+    FrameBox[
+    "Ctrl", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" (or \"", 
+    FrameBox[
+    "Cmd", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], 
+    "\" on Mac) and drag up and down to zoom.\""}]]], "ControlSuggestions",
+ CellChangeTimes->{3.35696210375764*^9, 3.487957361645293*^9},
+ FontFamily->"Verdana",
+ CellTags->"RotateAndZoomIn3D"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Drag Locators"]}],
+  RowBox[{"\"Drag any locator (\"", 
+    GraphicsBox[
+     LocatorBox[
+      Scaled[{0.5, 0.5}]], ImageSize -> 20], 
+    "\", etc.) to move it around.\""}]]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"DragLocators"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Create and Delete Locators"]}],
+  RowBox[{"\"Insert a new locator in the graphic by holding down the \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], 
+    "\" key\\nand clicking where you want it to be. Delete a locator by \
+clicking it\\nwhile holding down the \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" key.\""}]]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"CreateAndDeleteLocators"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[True], Cell[" Slider Zoom"]}],
+  RowBox[{"\"Hold down the \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], 
+    "\" key while moving a slider to make fine adjustments in the slider \
+value.\\nHold \"", 
+    FrameBox[
+    "Ctrl", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" and/or \"", 
+    FrameBox[
+    "Shift", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" at the same time as \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], 
+    "\" to make ever finer adjustments.\""}]]], "ControlSuggestions",
+ CellChangeTimes->{3.35696210375764*^9, 3.487971767100257*^9},
+ FontFamily->"Verdana",
+ CellTags->"SliderZoom"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[True], Cell[" Gamepad Controls"]}],
+  "\"Control this Demonstration with a gamepad or other\\nhuman interface \
+device connected to your computer.\""]], "ControlSuggestions",
+ CellChangeTimes->{3.35696210375764*^9, 3.3895522232313623`*^9, 
+  3.66515552426223*^9},
+ FontFamily->"Verdana",
+ CellTags->"GamepadControls"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[True], Cell[" Automatic Animation"]}],
+  RowBox[{"\"Animate a slider in this Demonstration by clicking the\"", 
+    AdjustmentBox[
+     Cell[
+      GraphicsData[
+      "CompressedBitmap", 
+       "eJzzTSzJSM1NLMlMTlRwL0osyMhMLlZwyy8CCjEzMjAwcIKwAgOI/R/IhBKc\n\
+/4EAyGAG0f+nTZsGwgysIJIRKsWKLAXGIHFmEpUgLADxWUAkI24jZs+eTaEt\n\
+IG+wQKRmzJgBlYf5lhEA30OqWA=="], "Graphics", ImageSize -> {9, 9}, ImageMargins -> 
+      0, CellBaseline -> Baseline], BoxBaselineShift -> 0.1839080459770115, 
+     BoxMargins -> {{0., 0.}, {-0.1839080459770115, 0.1839080459770115}}], 
+    "\"button\\nnext to the slider, and then clicking the play button that \
+appears.\\nAnimate all controls by selecting \"", 
+    StyleBox["Autorun", FontWeight -> "Bold"], "\" from the\"", 
+    AdjustmentBox[
+     Cell[
+      GraphicsData[
+      "CompressedBitmap", 
+       "eJyNULENwyAQfEySIlMwTVJlCGRFsosokeNtqBmDBagoaZjAI1C8/8GUUUC6\n\
+57h7cQ8PvU7Pl17nUav7oj/TPH7V7b2QJAUAXBkKmCPRowxICy64bRvGGNF7\n\
+X8CctGoDSN4xhIDGGDhzFXwUh3/ClBKrDQPmnGXtI6u0OOd+tZBVUqy1xSaH\n\
+UqiK6pPe4XdEdAz6563tx/gejuORGMxJaz8mdpJn7hc="], "Graphics", 
+      ImageSize -> {10, 10}, ImageMargins -> 0, CellBaseline -> Baseline], 
+     BoxBaselineShift -> 0.1839080459770115, 
+     BoxMargins -> {{0., 0.}, {-0.1839080459770115, 0.1839080459770115}}], 
+    "\"menu.\""}]]], "ControlSuggestions",
+ CellChangeTimes->{3.35696210375764*^9, 3.48171424069608*^9, 
+  3.48180084756003*^9, 3.4879717653658934`*^9},
+ FontFamily->"Verdana",
+ CellTags->"AutomaticAnimation"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Bookmark Animation"]}],
+  RowBox[{
+   "\"See a prepared animation of this Demonstration by selecting\\n\"", 
+    StyleBox["Animate Bookmarks", FontWeight -> "Bold"], "\" from the\"", 
+    AdjustmentBox[
+     Cell[
+      GraphicsData[
+      "CompressedBitmap", 
+       "eJyNULENwyAQfEySIlMwTVJlCGRFsosokeNtqBmDBagoaZjAI1C8/8GUUUC6\n\
+57h7cQ8PvU7Pl17nUav7oj/TPH7V7b2QJAUAXBkKmCPRowxICy64bRvGGNF7\n\
+X8CctGoDSN4xhIDGGDhzFXwUh3/ClBKrDQPmnGXtI6u0OOd+tZBVUqy1xSaH\n\
+UqiK6pPe4XdEdAz6563tx/gejuORGMxJaz8mdpJn7hc="], "Graphics", 
+      ImageSize -> {10, 10}, ImageMargins -> 0, CellBaseline -> Baseline], 
+     BoxBaselineShift -> 0.1839080459770115, 
+     BoxMargins -> {{0., 0.}, {-0.1839080459770115, 0.1839080459770115}}], 
+    "\"menu.\""}]]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"BookmarkAnimation"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SearchTermsSection"],
+
+Cell["Morris-Thorne spacetime", "SearchTerms",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.452093268153642*^9, 3.452093273367078*^9}, {
+   3.481711111736601*^9, 3.481711114565969*^9}, {3.481800851867918*^9, 
+   3.481800854872909*^9}, {3.487932383405531*^9, 3.487932394033873*^9}, {
+   3.4879573633404627`*^9, 3.48795736381151*^9}},
+ CellID->1397821341],
+
+Cell["General Relativity", "SearchTerms",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.452093268153642*^9, 3.452093273367078*^9}, {
+   3.481711111736601*^9, 3.481711114565969*^9}, {3.481800851867918*^9, 
+   3.481800854872909*^9}, {3.487932383405531*^9, 3.487932394033873*^9}, {
+   3.4879573633404627`*^9, 3.4879573638095093`*^9}},
+ CellID->691095011]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "RelatedLinksSection"],
+
+Cell[TextData[ButtonBox["Toy Model of an Inflating Wormhole",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["http://demonstrations.wolfram.com/ToyModelOfAnInflatingWormhole/"], 
+   None},
+ ButtonNote->
+  "http://demonstrations.wolfram.com/ToyModelOfAnInflatingWormhole/"]], \
+"RelatedLinks",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.487932372374542*^9, 3.487932372379622*^9}, {
+   3.4879573736214905`*^9, 3.4879573976848965`*^9}},
+ CellID->1075456867],
+
+Cell[TextData[ButtonBox["Wormhole",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["http://scienceworld.wolfram.com/physics/Wormhole.html"], None},
+ ButtonNote->
+  "http://scienceworld.wolfram.com/physics/Wormhole.html"]], "RelatedLinks",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.4879573792610545`*^9, 3.487957385425671*^9}},
+ CellID->1806398133]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "AuthorSection"],
+
+Cell[TextData[{
+ "Contributed by: ",
+ ButtonBox["Thomas M\[UDoubleDot]ller",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/author.html?author=Thomas+M%\
+FCller"], None},
+  ButtonNote->
+   "http://demonstrations.wolfram.com/author.html?author=Thomas+M%FCller"]
+}], "Author",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.432333043774981*^9, 3.432333045441087*^9}, {
+   3.452093258340268*^9, 3.452093262225171*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{975, 964},
+WindowMargins->{{71, Automatic}, {Automatic, 15}},
+ShowSelection->True,
+FrontEndVersion->"10.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 6, \
+2015)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Demonstration.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ResizeImages"->{
+  Cell[102408, 2492, 354, 8, 29, "ControlSuggestions",
+   CellTags->"ResizeImages"]},
+ "RotateAndZoomIn3D"->{
+  Cell[102765, 2502, 723, 17, 29, "ControlSuggestions",
+   CellTags->"RotateAndZoomIn3D"]},
+ "DragLocators"->{
+  Cell[103491, 2521, 318, 10, 29, "ControlSuggestions",
+   CellTags->"DragLocators"]},
+ "CreateAndDeleteLocators"->{
+  Cell[103812, 2533, 615, 14, 29, "ControlSuggestions",
+   CellTags->"CreateAndDeleteLocators"]},
+ "SliderZoom"->{
+  Cell[104430, 2549, 889, 22, 29, "ControlSuggestions",
+   CellTags->"SliderZoom"]},
+ "GamepadControls"->{
+  Cell[105322, 2573, 370, 9, 29, "ControlSuggestions",
+   CellTags->"GamepadControls"]},
+ "AutomaticAnimation"->{
+  Cell[105695, 2584, 1551, 32, 29, "ControlSuggestions",
+   CellTags->"AutomaticAnimation"]},
+ "BookmarkAnimation"->{
+  Cell[107249, 2618, 886, 20, 29, "ControlSuggestions",
+   CellTags->"BookmarkAnimation"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ResizeImages", 110739, 2723},
+ {"RotateAndZoomIn3D", 110849, 2726},
+ {"DragLocators", 110960, 2729},
+ {"CreateAndDeleteLocators", 111077, 2732},
+ {"SliderZoom", 111192, 2735},
+ {"GamepadControls", 111299, 2738},
+ {"AutomaticAnimation", 111413, 2741},
+ {"BookmarkAnimation", 111531, 2744}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 404, 6, 76, "DemoTitle"],
+Cell[CellGroupData[{
+Cell[996, 32, 33, 0, 275, "InitializationSection"],
+Cell[1032, 34, 534, 18, 27, "Input",
+ InitializationCell->True,
+ CellID->24500202],
+Cell[1569, 54, 350, 11, 27, "Input",
+ InitializationCell->True,
+ CellID->204817178],
+Cell[1922, 67, 448, 14, 27, "Input",
+ InitializationCell->True,
+ CellID->659084499],
+Cell[2373, 83, 437, 14, 27, "Input",
+ InitializationCell->True,
+ CellID->308218945],
+Cell[2813, 99, 486, 15, 27, "Input",
+ InitializationCell->True,
+ CellID->10002490],
+Cell[3302, 116, 390, 12, 27, "Input",
+ InitializationCell->True,
+ CellID->198450173],
+Cell[3695, 130, 1779, 52, 108, "Input",
+ InitializationCell->True,
+ CellID->4481139],
+Cell[5477, 184, 728, 21, 27, "Input",
+ InitializationCell->True,
+ CellID->422062580],
+Cell[6208, 207, 566, 17, 27, "Input",
+ InitializationCell->True,
+ CellID->455798444],
+Cell[6777, 226, 604, 18, 27, "Input",
+ InitializationCell->True,
+ CellID->150918917],
+Cell[7384, 246, 2612, 73, 128, "Input",
+ InitializationCell->True,
+ CellID->16859448],
+Cell[9999, 321, 772, 23, 27, "Input",
+ InitializationCell->True,
+ CellID->776352721],
+Cell[10774, 346, 1058, 30, 48, "Input",
+ InitializationCell->True,
+ CellID->75746071],
+Cell[11835, 378, 998, 29, 48, "Input",
+ InitializationCell->True,
+ CellID->46650914],
+Cell[12836, 409, 878, 25, 27, "Input",
+ InitializationCell->True,
+ CellID->735447146],
+Cell[13717, 436, 506, 15, 27, "Input",
+ InitializationCell->True,
+ CellID->411826410],
+Cell[14226, 453, 1240, 32, 68, "Input",
+ InitializationCell->True,
+ CellID->202116101],
+Cell[15469, 487, 1772, 47, 88, "Input",
+ InitializationCell->True,
+ CellID->538542807]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[17278, 539, 29, 0, 201, "ManipulateSection"],
+Cell[CellGroupData[{
+Cell[17332, 543, 6038, 151, 428, "Input",
+ CellID->1822417073],
+Cell[23373, 696, 14064, 307, 466, "Output",
+ CellID->200865786]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37483, 1009, 36, 0, 181, "ManipulateCaptionSection"],
+Cell[37522, 1011, 1520, 44, 43, "ManipulateCaption",
+ CellID->1830826081],
+Cell[39045, 1057, 1876, 51, 123, "ManipulateCaption",
+ CellID->1216660688],
+Cell[40924, 1110, 724, 19, 39, "ManipulateCaption",
+ CellID->771116822]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41685, 1134, 28, 0, 179, "ThumbnailSection"],
+Cell[41716, 1136, 14055, 307, 466, "Output",
+ CellID->16297013]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[55808, 1448, 28, 0, 149, "SnapshotsSection"],
+Cell[55839, 1450, 14071, 307, 466, "Output",
+ CellID->16141693],
+Cell[69913, 1759, 14262, 311, 466, "Output",
+ CellID->760312429],
+Cell[84178, 2072, 14167, 308, 466, "Output",
+ CellID->802609099]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[98382, 2385, 26, 0, 357, "DetailsSection"],
+Cell[98411, 2387, 746, 13, 23, "DetailNotes",
+ CellID->790379250],
+Cell[99160, 2402, 364, 7, 23, "DetailNotes",
+ CellID->1759552026],
+Cell[99527, 2411, 120, 2, 23, "DetailNotes",
+ CellID->1056491533],
+Cell[99650, 2415, 1037, 21, 39, "DetailNotes",
+ CellID->163848257],
+Cell[100690, 2438, 709, 16, 39, "DetailNotes",
+ CellID->2068518432],
+Cell[101402, 2456, 555, 16, 39, "DetailNotes",
+ CellID->325588176],
+Cell[101960, 2474, 371, 11, 39, "DetailNotes",
+ CellID->549470046]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[102368, 2490, 37, 0, 131, "ControlSuggestionsSection"],
+Cell[102408, 2492, 354, 8, 29, "ControlSuggestions",
+ CellTags->"ResizeImages"],
+Cell[102765, 2502, 723, 17, 29, "ControlSuggestions",
+ CellTags->"RotateAndZoomIn3D"],
+Cell[103491, 2521, 318, 10, 29, "ControlSuggestions",
+ CellTags->"DragLocators"],
+Cell[103812, 2533, 615, 14, 29, "ControlSuggestions",
+ CellTags->"CreateAndDeleteLocators"],
+Cell[104430, 2549, 889, 22, 29, "ControlSuggestions",
+ CellTags->"SliderZoom"],
+Cell[105322, 2573, 370, 9, 29, "ControlSuggestions",
+ CellTags->"GamepadControls"],
+Cell[105695, 2584, 1551, 32, 29, "ControlSuggestions",
+ CellTags->"AutomaticAnimation"],
+Cell[107249, 2618, 886, 20, 29, "ControlSuggestions",
+ CellTags->"BookmarkAnimation"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[108172, 2643, 30, 0, 165, "SearchTermsSection"],
+Cell[108205, 2645, 354, 6, 23, "SearchTerms",
+ CellID->1397821341],
+Cell[108562, 2653, 351, 6, 23, "SearchTerms",
+ CellID->691095011]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[108950, 2664, 31, 0, 149, "RelatedLinksSection"],
+Cell[108984, 2666, 457, 11, 23, "RelatedLinks",
+ CellID->1075456867],
+Cell[109444, 2679, 351, 8, 23, "RelatedLinks",
+ CellID->1806398133]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[109832, 2692, 25, 0, 149, "AuthorSection"],
+Cell[109860, 2694, 452, 12, 23, "Author"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
